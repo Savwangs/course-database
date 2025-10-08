@@ -1,0 +1,352 @@
+COMSC 110 sections:
+Term	Location	Section #	Course
+Start Date - End Date
+Meeting Days/Time/Building/Room	Units	Instructor(s)	Comments	Status	Seats Available
+2026SP	SRC	
+9024
+COMSC-110 - Introduction to Programming
+1/26/2026 - 5/22/2026
+ 		OFF	ONLINE
+4.00	
+Strickland, Joanne
+Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: See schedule of classes for programming language presented. Students may petition to repeat this course when software or hardware is changed. Only the first course completed will be applied toward a degree or certificate requirement. Units for both courses will apply towards the 60 units required for the degree.
+Note: Online course. All instruction will be provided via the internet through the college learning management system CANVAS and Zoom software. Go to www.dvc.edu/online for course access information.
+Open	27
+2026SP	DVC	
+8292
+COMSC-110 - Introduction to Programming
+1/26/2026 - 5/22/2026
+ 		OFF	PART-ONL
+T Th	6:30PM - 7:55PM	OFF	NEED RM
+4.00	
+Youn, Steve
+Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: See schedule of classes for programming language presented. Students may petition to repeat this course when software or hardware is changed. Only the first course completed will be applied toward a degree or certificate requirement. Units for both courses will apply towards the 60 units required for the degree.
+Note: Partially online course with required meetings Tu/Th (on-campus lab/lecture, see room on schedule) with all other instruction provided online through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to locate course.
+Open	35
+2026SP	DVC	
+5657
+COMSC-110 - Introduction to Programming
+1/26/2026 - 5/22/2026
+ 		OFF	ONLINE
+4.00	
+Aladegbami, Kemi
+Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: See schedule of classes for programming language presented. Students may petition to repeat this course when software or hardware is changed. Only the first course completed will be applied toward a degree or certificate requirement. Units for both courses will apply towards the 60 units required for the degree.
+Note: 100% online course. All instruction will be provided via the internet through the college learning management system CANVAS. Classes you are registered for will appear in Canvas on the first day of class unless published earlier by your instructor. There are no required class meetings. Go to www.dvc.edu/online for course access information.
+Open	35
+2026SP	DVC	
+5452
+COMSC-110 - Introduction to Programming
+1/26/2026 - 5/22/2026
+ 		OFF	ONLINE
+4.00	
+Jagpal, Rupinder
+Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: See schedule of classes for programming language presented. Students may petition to repeat this course when software or hardware is changed. Only the first course completed will be applied toward a degree or certificate requirement. Units for both courses will apply towards the 60 units required for the degree.
+Note: 100% online course. All instruction will be provided via the internet through the college learning management system CANVAS. Classes you are registered for will appear in Canvas on the first day of class unless published earlier by your instructor. There are no required class meetings. Go to www.dvc.edu/online for course access information.
+Open	35
+2026SP	DVC	
+5451
+COMSC-110 - Introduction to Programming
+1/26/2026 - 5/22/2026
+ 		OFF	ONLINE
+4.00	
+Jagpal, Rupinder
+Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: See schedule of classes for programming language presented. Students may petition to repeat this course when software or hardware is changed. Only the first course completed will be applied toward a degree or certificate requirement. Units for both courses will apply towards the 60 units required for the degree.
+Note: 100% online course. All instruction will be provided via the internet through the college learning management system CANVAS. Classes you are registered for will appear in Canvas on the first day of class unless published earlier by your instructor. There are no required class meetings. Go to www.dvc.edu/online for course access information.
+Open	35
+2026SP	DVC	
+5404
+COMSC-110 - Introduction to Programming
+1/26/2026 - 5/22/2026
+ 		OFF	ONLINE
+4.00	
+Khaja, Gene
+Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: See schedule of classes for programming language presented. Students may petition to repeat this course when software or hardware is changed. Only the first course completed will be applied toward a degree or certificate requirement. Units for both courses will apply towards the 60 units required for the degree.
+Note: 100% online course. All instruction will be provided via the internet through the college learning management system CANVAS. Classes you are registered for will appear in Canvas on the first day of class unless published earlier by your instructor. There are no required class meetings. Go to www.dvc.edu/online for course access information.
+Open	35
+2026SP	DVC	
+5207
+COMSC-110 - Introduction to Programming
+1/26/2026 - 5/22/2026
+ 		OFF	ONLINE
+4.00	
+Khaja, Gene
+Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: See schedule of classes for programming language presented. Students may petition to repeat this course when software or hardware is changed. Only the first course completed will be applied toward a degree or certificate requirement. Units for both courses will apply towards the 60 units required for the degree.
+Note: 100% online course. All instruction will be provided via the internet through the college learning management system CANVAS. Classes you are registered for will appear in Canvas on the first day of class unless published earlier by your instructor. There are no required class meetings. Go to www.dvc.edu/online for course access information.
+Open	35
+2026SP	DVC	
+5523
+COMSC-110 - Introduction to Programming
+2/09/2026 - 5/22/2026
+ 		OFF	ONLINE
+4.00	
+Amato, Nicholas
+Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: See schedule of classes for programming language presented. Students may petition to repeat this course when software or hardware is changed. Only the first course completed will be applied toward a degree or certificate requirement. Units for both courses will apply towards the 60 units required for the degree.
+Note: 100% online course. All instruction will be provided via the internet through the college learning management system CANVAS. Classes you are registered for will appear in Canvas on the first day of class unless published earlier by your instructor. There are no required class meetings. Go to www.dvc.edu/online for course access information.
+Open	35
+
+
+COMSC 165 sections:
+Term	Location	Section #	Course
+Start Date - End Date
+Meeting Days/Time/Building/Room	Units	Instructor(s)	Comments	Status	Seats Available
+2026SP	DVC	
+5460
+COMSC-165 - Advanced Programming with C and C++
+1/26/2026 - 5/22/2026
+ 		OFF	ONLINE
+4.00	
+Pentcheva, Caterina
+Prerequisite: COMSC-110 or ENGIN-135 or equivalent
+Note: 100% online course. All instruction will be online. Go to www.dvc.edu/online for course access information.
+Open	35
+2026SP	DVC	
+5458
+COMSC-165 - Advanced Programming with C and C++
+1/26/2026 - 3/20/2026
+ 		OFF	ONLINE
+4.00	
+Staff, DVC
+Prerequisite: COMSC-110 or ENGIN-135 or equivalent
+Note: 100% online course. All instruction will be provided via the internet through the college learning management system CANVAS. Classes you are registered for will appear in Canvas on the first day of class unless published earlier by your instructor. There are no required class meetings. Go to www.dvc.edu/online for course access information.
+Open	35
+2026SP	DVC	
+5457
+COMSC-165 - Advanced Programming with C and C++
+1/26/2026 - 3/20/2026
+ 		OFF	ONLINE
+4.00	
+Staff, DVC
+Prerequisite: COMSC-110 or ENGIN-135 or equivalent
+Note: 100% online course. All instruction will be online. Go to www.dvc.edu/online for course access information.
+Open	35
+2026SP	DVC	
+5456
+COMSC-165 - Advanced Programming with C and C++
+1/26/2026 - 5/22/2026
+ 		OFF	ONLINE
+4.00	
+Melvin, Ryan
+Prerequisite: COMSC-110 or ENGIN-135 or equivalent
+Note: 100% online course. All instruction will be provided via the internet through the college learning management system CANVAS. Classes you are registered for will appear in Canvas on the first day of class unless published earlier by your instructor. There are no required class meetings. Go to www.dvc.edu/online for course access information.
+Open	35
+2026SP	DVC	
+5455
+COMSC-165 - Advanced Programming with C and C++
+1/26/2026 - 5/22/2026
+ 		OFF	ONLINE
+4.00	
+Melvin, Ryan
+Prerequisite: COMSC-110 or ENGIN-135 or equivalent
+Note: 100% online course. All instruction will be provided via the internet through the college learning management system CANVAS. Classes you are registered for will appear in Canvas on the first day of class unless published earlier by your instructor. There are no required class meetings. Go to www.dvc.edu/online for course access information.
+Open	35
+2026SP	DVC	
+5454
+COMSC-165 - Advanced Programming with C and C++
+1/26/2026 - 5/22/2026
+ 		OFF	ONLINE
+4.00	
+Pentcheva, Caterina
+Prerequisite: COMSC-110 or ENGIN-135 or equivalent
+Note: 100% online course. All instruction will be provided via the internet through the college learning management system CANVAS. Classes you are registered for will appear in Canvas on the first day of class unless published earlier by your instructor. There are no required class meetings. Go to www.dvc.edu/online for course access information.
+Open	35
+2026SP	DVC	
+5453
+COMSC-165 - Advanced Programming with C and C++
+1/26/2026 - 3/20/2026
+ 		OFF	ONLINE
+4.00	
+Staff, DVC
+Prerequisite: COMSC-110 or ENGIN-135 or equivalent
+Note: 100% online course. All instruction will be provided via the internet through the college learning management system CANVAS. Classes you are registered for will appear in Canvas on the first day of class unless published earlier by your instructor. There are no required class meetings. Go to www.dvc.edu/online for course access information.
+Open	35
+2026SP	DVC	
+2405
+COMSC-165 - Advanced Programming with C and C++
+1/26/2026 - 5/22/2026
+ 		OFF	ONLINE
+T	9:35AM - 12:45PM	OFF	ONLINE
+4.00	
+Elkady, Amr
+Prerequisite: COMSC-110 or ENGIN-135 or equivalent
+Note: Language C++ Note: Online course. All instruction will be provided via the internet through the college learning management system CANVAS and Zoom software. Meets online weekly on Tuesdays 9:35-12:45pm for live lecture. Access to a computer with audio and video capability is required. Go to www.dvc.edu/online for course access information.
+Open	35
+
+
+COMSC 200 sections:
+Term	Location	Section #	Course
+Start Date - End Date
+Meeting Days/Time/Building/Room	Units	Instructor(s)	Comments	Status	Seats Available
+2026SP	DVC	
+5577
+COMSC-200 - Object Oriented Programming C++
+1/26/2026 - 5/22/2026
+ 		OFF	ONLINE
+4.00	
+Stalica, Henry
+Prerequisite: COMSC-165 or equivalent
+Note: 100% online course. All instruction will be provided via the internet through the college learning management system CANVAS. Classes you are registered for will appear in Canvas on the first day of class unless published earlier by your instructor. There are no required class meetings. Go to www.dvc.edu/online for course access information.
+Open	35
+2026SP	DVC	
+5119
+COMSC-200 - Object Oriented Programming C++
+1/26/2026 - 5/22/2026
+ 		OFF	ONLINE
+4.00	
+Melvin, Ryan
+Prerequisite: COMSC-165 or equivalent
+Note: 100% online course. All instruction will be provided via the internet through the college learning management system CANVAS. Classes you are registered for will appear in Canvas on the first day of class unless published earlier by your instructor. There are no required class meetings. Go to www.dvc.edu/online for course access information.
+Open	35
+2026SP	DVC	
+5104
+COMSC-200 - Object Oriented Programming C++
+1/26/2026 - 5/22/2026
+ 		OFF	ONLINE
+4.00	
+Andreopoulos, William
+Prerequisite: COMSC-165 or equivalent
+Note: 100% online course. All instruction will be online. Go to www.dvc.edu/online for course access information.
+Open	35
+2026SP	DVC	
+2521
+COMSC-200 - Object Oriented Programming C++
+2/09/2026 - 5/22/2026
+ 		OFF	PART-ONL
+W	11:10AM - 2:20PM	ST	113
+4.00	
+Hrycewicz, Paul
+Prerequisite: COMSC-165 or equivalent
+Note: Partially online course with required meetings Wednesdays from 11:10AM-2:20PM (on-campus, see room on schedule) with all other instruction provided online through the college learning management system Canvas.
+Open	35
+
+COMSC 210 sections:
+Term	Location	Section #	Course
+Start Date - End Date
+Meeting Days/Time/Building/Room	Units	Instructor(s)	Comments	Status	Seats Available
+2026SP	DVC	
+5125
+COMSC-210 - Program Design and Data Structures
+1/26/2026 - 5/22/2026
+ 		OFF	ONLINE
+4.00	
+Staff, DVC
+Prerequisite: COMSC-165 or equivalent Advisory: COMSC-200 or equivalent
+Note: 100% online course. All instruction will be provided via the internet through the college learning management system CANVAS. Classes you are registered for will appear in Canvas on the first day of class unless published earlier by your instructor. There are no required class meetings. Go to www.dvc.edu/online for course access information.
+Open	35
+2026SP	DVC	
+5097
+COMSC-210 - Program Design and Data Structures
+1/26/2026 - 5/22/2026
+ 		OFF	ONLINE
+4.00	
+Mortezaie, Faramarz
+Prerequisite: COMSC-165 or equivalent Advisory: COMSC-200 or equivalent
+Note: 100% online course. All instruction will be provided via the internet through the college learning management system CANVAS. Classes you are registered for will appear in Canvas on the first day of class unless published earlier by your instructor. There are no required class meetings. Go to www.dvc.edu/online for course access information.
+Open	35
+2026SP	DVC	
+5068
+COMSC-210 - Program Design and Data Structures
+1/26/2026 - 5/22/2026
+ 		OFF	ONLINE
+4.00	
+Dietrich, Mark
+Prerequisite: COMSC-165 or equivalent Advisory: COMSC-200 or equivalent
+Note: 100% online course - no scheduled meetings. Instruction will be provided through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to begin.
+Open	35
+2026SP	DVC	
+5003
+COMSC-210 - Program Design and Data Structures
+2/09/2026 - 5/22/2026
+ 		OFF	ONLINE
+4.00	
+Amato, Nicholas
+Prerequisite: COMSC-165 or equivalent Advisory: COMSC-200 or equivalent
+Note: 100% online course. All instruction will be provided via the internet through the college learning management system CANVAS. Classes you are registered for will appear in Canvas on the first day of class unless published earlier by your instructor. There are no required class meetings. Go to www.dvc.edu/online for course access information.
+Open	35
+2026SP	DVC	
+2948
+COMSC-210 - Program Design and Data Structures
+2/09/2026 - 5/22/2026
+ 		OFF	PART-ONL
+M	11:10AM - 2:20PM	ST	113
+4.00	
+Tsai, Peikun
+Prerequisite: COMSC-165 or equivalent Advisory: COMSC-200 or equivalent
+Note: Partially online course with required meetings Mondays from 11:10-2:20PM (on-campus, see room on schedule) with all other instruction provided online through the college learning management system Canvas.
+Open	35
+
+COMSC 260 sections:
+Term	Location	Section #	Course
+Start Date - End Date
+Meeting Days/Time/Building/Room	Units	Instructor(s)	Comments	Status	Seats Available
+2026SP	DVC	
+8204
+COMSC-260 - Assembly Language Programming/Computer Organization
+1/26/2026 - 5/22/2026
+ 		OFF	PART-ONL
+T	7:25PM - 9:30PM	ST	114
+4.00	
+Staff, DVC
+Prerequisite: COMSC-165 or equivalent
+Note: Partially online course with required meetings Tuesdays from 7:25-9:30PM (on-campus, see room on schedule) with all other instruction provided online through the college learning management system Canvas.
+Open	35
+2026SP	DVC	
+5447
+COMSC-260 - Assembly Language Programming/Computer Organization
+1/26/2026 - 5/22/2026
+ 		OFF	ONLINE
+4.00	
+Johnson, Samuel
+Prerequisite: COMSC-165 or equivalent
+Note: 100% online course - no required online meetings. Instruction will be provided through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to begin.
+Open	35
+2026SP	DVC	
+5343
+COMSC-260 - Assembly Language Programming/Computer Organization
+1/26/2026 - 5/22/2026
+ 		OFF	ONLINE
+4.00	
+Lai, Xinyi
+Prerequisite: COMSC-165 or equivalent
+Note: 100% online course. All instruction will be provided via the internet through the college learning management system CANVAS. Classes you are registered for will appear in Canvas on the first day of class unless published earlier by your instructor. There are no required class meetings. Go to www.dvc.edu/online for course access information.
+Open	35
+2026SP	DVC	
+5324
+COMSC-260 - Assembly Language Programming/Computer Organization
+1/26/2026 - 5/22/2026
+ 		OFF	ONLINE
+4.00	
+Pentcheva, Caterina
+Prerequisite: COMSC-165 or equivalent
+Note: 100% online course. All instruction will be provided via the internet through the college learning management system CANVAS. Classes you are registered for will appear in Canvas on the first day of class unless published earlier by your instructor. There are no required class meetings. Go to www.dvc.edu/online for course access information.
+Open	35
+2026SP	DVC	
+5159
+COMSC-260 - Assembly Language Programming/Computer Organization
+1/26/2026 - 5/22/2026
+ 		OFF	ONLINE
+4.00	
+Pentcheva, Caterina
+Prerequisite: COMSC-165 or equivalent
+Note: 100% online course. All instruction will be provided via the internet through the college learning management system CANVAS. Classes you are registered for will appear in Canvas on the first day of class unless published earlier by your instructor. There are no required class meetings. Go to www.dvc.edu/online for course access information.
+Open	35
+2026SP	DVC	
+5138
+COMSC-260 - Assembly Language Programming/Computer Organization
+1/26/2026 - 5/22/2026
+ 		OFF	ONLINE
+4.00	
+Melvin, Ryan
+Prerequisite: COMSC-165 or equivalent
+Note: 100% online course. All instruction will be provided via the internet through the college learning management system CANVAS. Classes you are registered for will appear in Canvas on the first day of class unless published earlier by your instructor. There are no required class meetings. Go to www.dvc.edu/online for course access information.
+Open	35
+2026SP	DVC	
+5071
+COMSC-260 - Assembly Language Programming/Computer Organization
+1/26/2026 - 5/22/2026
+ 		OFF	ONLINE
+4.00	
+Lo, Lan
+Prerequisite: COMSC-165 or equivalent
+Note: 100% online course. All instruction will be provided via the internet through the college learning management system CANVAS. Classes you are registered for will appear in Canvas on the first day of class unless published earlier by your instructor. There are no required class meetings. Go to www.dvc.edu/online for course access information.
+Open	35
+

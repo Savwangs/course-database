@@ -1,0 +1,268 @@
+Physics 231 sections:
+Term	Location	Section #	Course
+Start Date - End Date
+Meeting Days/Time/Building/Room	Units	Instructor(s)	Comments	Status	Seats Available
+2026SP	SRC	
+9441
+PHYS-231 - Physics for Engineers and Scientists C: Optics and Modern Physics
+1/26/2026 - 5/22/2026
+T Th	8:10AM - 9:35AM	SRC	W216
+T	9:45AM - 11:00AM	SRC	E181
+Th	9:45AM - 12:35PM	SRC	E181
+4.00	
+Chiang, Chien-I
+Prerequisite: PHYS-230 or equivalent; MATH-294 or equivalent (may be taken concurrently)
+Note: Class?meets at the scheduled times on the San Ramon Campus
+Open	24
+2026SP	DVC	
+6009
+PHYS-231 - Physics for Engineers and Scientists C: Optics and Modern Physics
+1/26/2026 - 5/22/2026
+F	11:10AM - 2:00PM	PS	121
+M W	12:45PM - 2:10PM	PS	175
+T	12:45PM - 2:00PM	PS	110
+4.00	
+Colwell, Kitran
+Prerequisite: PHYS-230 or equivalent; MATH-294 or equivalent (may be taken concurrently)
+Note: Section 6009 is part of the DVC MESA program. Students must be a current student in the MESA or friends of MESA program to enroll. For program and registration information please see http://www.dvc.edu/current/learning community/mesa/index.html or email Brandy Gibson at bgibson@dvc.edu. Note: Face to face course. This class will meet at the scheduled times on the Pleasant Hill Campus.
+Open	3
+2026SP	DVC	
+1206
+PHYS-231 - Physics for Engineers and Scientists C: Optics and Modern Physics
+1/26/2026 - 5/22/2026
+F	8:00AM - 10:50AM	PS	121
+W	9:35AM - 10:50AM	PS	105
+M W	4:05PM - 5:30PM	PS	175
+4.00	
+Speliotopoulos, Achilles
+Prerequisite: PHYS-230 or equivalent; MATH-294 or equivalent (may be taken concurrently)
+Note: Class meets weekly as scheduled.
+Open	24
+2026SP	DVC	
+1205
+PHYS-231 - Physics for Engineers and Scientists C: Optics and Modern Physics
+1/26/2026 - 5/22/2026
+T Th	11:10AM - 12:35PM	PS	175
+M	2:30PM - 5:20PM	PS	121
+W	2:30PM - 3:45PM	PS	121
+4.00	
+Rodriguez, John
+Prerequisite: PHYS-230 or equivalent; MATH-294 or equivalent (may be taken concurrently)
+Note: Class meets on-campus as scheduled.
+Open	24
+2026SP	DVC	
+1204
+PHYS-231 - Physics for Engineers and Scientists C: Optics and Modern Physics
+1/26/2026 - 5/22/2026
+M	11:10AM - 12:25PM	PS	121
+T Th	11:10AM - 12:35PM	PS	175
+W	11:10AM - 2:00PM	PS	121
+4.00	
+Rodriguez, John
+Prerequisite: PHYS-230 or equivalent; MATH-294 or equivalent (may be taken concurrently)
+Note: Class meets on-campus as scheduled.
+Open	24
+2026SP	DVC	
+1203
+PHYS-231 - Physics for Engineers and Scientists C: Optics and Modern Physics
+1/26/2026 - 5/22/2026
+M W	12:45PM - 2:10PM	PS	175
+F	2:30PM - 5:20PM	PS	121
+T	2:30PM - 3:45PM	PS	110
+4.00	
+Colwell, Kitran
+Prerequisite: PHYS-230 or equivalent; MATH-294 or equivalent (may be taken concurrently)
+Note: Class meets on-campus as scheduled.
+Open	24
+2026SP	DVC	
+1202
+PHYS-231 - Physics for Engineers and Scientists C: Optics and Modern Physics
+1/26/2026 - 5/22/2026
+F	11:10AM - 2:00PM	PS	121
+M W	12:45PM - 2:10PM	PS	175
+T	12:45PM - 2:00PM	PS	110
+4.00	
+Colwell, Kitran
+Prerequisite: PHYS-230 or equivalent; MATH-294 or equivalent (may be taken concurrently)
+Note: Class meets on-campus as scheduled.
+Open	21
+
+
+Physics 230 sections:
+Term	Location	Section #	Course
+Start Date - End Date
+Meeting Days/Time/Building/Room	Units	Instructor(s)	Comments	Status	Seats Available
+2026SP	SRC	
+9183
+PHYS-230 - Physics for Engineers and Scientists B: Heat and Electro-Magnetism
+1/26/2026 - 5/22/2026
+M	1:05PM - 3:55PM	SRC	E181
+W	2:40PM - 3:55PM	SRC	E225
+M W	4:05PM - 5:30PM	SRC	E230
+4.00	
+Chiang, Chien-I
+Prerequisite: PHYS-130 or equivalent; MATH-292 (may be taken concurrently) or equivalent.
+Note: Class?meets at the scheduled times on the San Ramon Campus
+Open	25
+2026SP	SRC	
+9031
+PHYS-230 - Physics for Engineers and Scientists B: Heat and Electro-Magnetism
+1/26/2026 - 5/22/2026
+M W	4:05PM - 5:30PM	SRC	E230
+M	5:40PM - 8:30PM	SRC	E181
+M	8:40PM - 9:55PM	SRC	E181
+4.00	
+Chiang, Chien-I
+Prerequisite: PHYS-130 or equivalent; MATH-292 (may be taken concurrently) or equivalent.
+Note: Class?meets at the scheduled times on the San Ramon Campus
+Open	25
+2026SP	DVC	
+6008
+PHYS-230 - Physics for Engineers and Scientists B: Heat and Electro-Magnetism
+1/26/2026 - 5/22/2026
+M W	11:10AM - 12:35PM	PS	177
+T	11:10AM - 2:00PM	PS	117
+Th	12:45PM - 2:00PM	PS	110
+4.00	
+Hamida, Youcef
+Prerequisite: PHYS-130 or equivalent; MATH-292 (may be taken concurrently) or equivalent.
+Note: Section 6008 is part of the DVC MESA program. Students must be a current student in the MESA or friends of MESA program to enroll. For program and registration information please see http://www.dvc.edu/current/learning community/mesa/index.html or email Brandy Gibson at bgibson@dvc.edu. Note: Face to face course. This class will meet at the scheduled times on the Pleasant Hill Campus.
+Open	8
+2026SP	DVC	
+1211
+PHYS-230 - Physics for Engineers and Scientists B: Heat and Electro-Magnetism
+1/26/2026 - 5/22/2026
+M	2:30PM - 3:45PM	PS	110
+T Th	2:30PM - 3:55PM	PS	177
+W	2:30PM - 5:20PM	PS	113
+4.00	
+Self, Matthew
+Prerequisite: PHYS-130 or equivalent; MATH-292 (may be taken concurrently) or equivalent.
+Note: Class meets on-campus as scheduled.
+Open	25
+2026SP	DVC	
+1201
+PHYS-230 - Physics for Engineers and Scientists B: Heat and Electro-Magnetism
+1/26/2026 - 5/22/2026
+M W	11:10AM - 12:35PM	PS	177
+T	11:10AM - 2:00PM	PS	117
+Th	12:45PM - 2:00PM	PS	110
+4.00	
+Hamida, Youcef
+Prerequisite: PHYS-130 or equivalent; MATH-292 (may be taken concurrently) or equivalent.
+Note: Class meets weekly as scheduled.
+Open	17
+2026SP	DVC	
+1200
+PHYS-230 - Physics for Engineers and Scientists B: Heat and Electro-Magnetism
+1/26/2026 - 5/22/2026
+M W	11:10AM - 12:35PM	PS	177
+T	2:30PM - 5:20PM	PS	117
+Th	2:30PM - 3:45PM	PS	110
+4.00	
+Hamida, Youcef
+Prerequisite: PHYS-130 or equivalent; MATH-292 (may be taken concurrently) or equivalent.
+Note: Class meets on-campus as scheduled.
+Open	25
+2026SP	DVC	
+1199
+PHYS-230 - Physics for Engineers and Scientists B: Heat and Electro-Magnetism
+1/26/2026 - 5/22/2026
+M W	11:10AM - 12:35PM	PS	177
+T	11:10AM - 2:00PM	PS	117
+Th	12:45PM - 2:00PM	PS	110
+4.00	
+Hamida, Youcef
+Prerequisite: PHYS-130 or equivalent; MATH-292 (may be taken concurrently) or equivalent.
+Note: Class meets on-campus as scheduled.
+Open	25
+
+
+Physics 130 sections:
+Term	Location	Section #	Course
+Start Date - End Date
+Meeting Days/Time/Building/Room	Units	Instructor(s)	Comments	Status	Seats Available
+2026SP	DVC	
+6585
+PHYS-130 - Physics for Engineers and Scientists A: Mechanics and Wave Motion
+1/26/2026 - 5/22/2026
+T Th	11:10AM - 12:35PM	PS	177
+W	11:10AM - 2:00PM	PS	113
+T	12:45PM - 2:00PM	PS	121
+4.00	
+Katdare, Sonia
+Prerequisite: PHYS-110 and PHYS-111 combined or PHYS-112 or PHYS-120 or PHYS-129 or one year high school physics or equivalent Co-requisite: MATH-193 (may be taken previously) or equivalent Note: PHYS-129 is strongly advised for students who have not yet completed an equivalent prerequisite or for students who completed the prerequisite more than a year ago.
+Note: It is strongly recommended that Physics 129 be taken before Physics 130. Class meets weekly as scheduled. Note: This section is part of the DVC MESA program. Students must be a current student in the MESA or friends of MESA program to enroll. For program and registration information, please see http://www.dvc.edu/current/learningcommunity/mesa/index.html Note: Class meets on-campus as scheduled.
+Open	15
+2026SP	DVC	
+1197
+PHYS-130 - Physics for Engineers and Scientists A: Mechanics and Wave Motion
+1/26/2026 - 5/22/2026
+M	11:10AM - 2:00PM	PS	113
+W	12:45PM - 2:00PM	WLC	1
+T Th	2:30PM - 3:55PM	PS	175
+4.00	
+Christianson, Kent
+Prerequisite: PHYS-110 and PHYS-111 combined or PHYS-112 or PHYS-120 or PHYS-129 or one year high school physics or equivalent Co-requisite: MATH-193 (may be taken previously) or equivalent Note: PHYS-129 is strongly advised for students who have not yet completed an equivalent prerequisite or for students who completed the prerequisite more than a year ago.
+Note: It is strongly recommended that Physics 129 be taken before Physics 130. Class meets weekly as scheduled.
+Open	25
+2026SP	DVC	
+1196
+PHYS-130 - Physics for Engineers and Scientists A: Mechanics and Wave Motion
+1/26/2026 - 5/22/2026
+T Th	11:10AM - 12:35PM	PS	177
+W	11:10AM - 2:00PM	PS	113
+T	12:45PM - 2:00PM	PS	121
+4.00	
+Katdare, Sonia
+Prerequisite: PHYS-110 and PHYS-111 combined or PHYS-112 or PHYS-120 or PHYS-129 or one year high school physics or equivalent Co-requisite: MATH-193 (may be taken previously) or equivalent Note: PHYS-129 is strongly advised for students who have not yet completed an equivalent prerequisite or for students who completed the prerequisite more than a year ago.
+Note: It is strongly recommended that Physics 129 be taken before Physics 130. Class meets weekly as scheduled.
+Open	10
+2026SP	DVC	
+1195
+PHYS-130 - Physics for Engineers and Scientists A: Mechanics and Wave Motion
+1/26/2026 - 5/22/2026
+M	9:35AM - 10:50AM	PS	113
+M W	12:45PM - 2:10PM	PS	177
+F	2:30PM - 5:20PM	PS	113
+4.00	
+Speliotopoulos, Achilles
+Prerequisite: PHYS-110 and PHYS-111 combined or PHYS-112 or PHYS-120 or PHYS-129 or one year high school physics or equivalent Co-requisite: MATH-193 (may be taken previously) or equivalent Note: PHYS-129 is strongly advised for students who have not yet completed an equivalent prerequisite or for students who completed the prerequisite more than a year ago.
+Note: It is strongly recommended that Physics 129 be taken before Physics 130. Class meets weekly as scheduled.
+Open	25
+2026SP	DVC	
+1194
+PHYS-130 - Physics for Engineers and Scientists A: Mechanics and Wave Motion
+1/26/2026 - 5/22/2026
+M	8:00AM - 9:15AM	PS	113
+F	11:10AM - 2:00PM	PS	113
+M W	12:45PM - 2:10PM	PS	177
+4.00	
+Speliotopoulos, Achilles
+Prerequisite: PHYS-110 and PHYS-111 combined or PHYS-112 or PHYS-120 or PHYS-129 or one year high school physics or equivalent Co-requisite: MATH-193 (may be taken previously) or equivalent Note: PHYS-129 is strongly advised for students who have not yet completed an equivalent prerequisite or for students who completed the prerequisite more than a year ago.
+Note: It is strongly recommended that Physics 129 be taken before Physics 130. Class meets weekly as scheduled.
+Open	25
+2026SP	DVC	
+1193
+PHYS-130 - Physics for Engineers and Scientists A: Mechanics and Wave Motion
+1/26/2026 - 5/22/2026
+M W	9:35AM - 11:00AM	PS	177
+T	11:10AM - 12:25PM	PS	113
+Th	11:10AM - 2:00PM	PS	113
+4.00	
+Large, Evan
+Prerequisite: PHYS-110 and PHYS-111 combined or PHYS-112 or PHYS-120 or PHYS-129 or one year high school physics or equivalent Co-requisite: MATH-193 (may be taken previously) or equivalent Note: PHYS-129 is strongly advised for students who have not yet completed an equivalent prerequisite or for students who completed the prerequisite more than a year ago.
+Note: It is strongly recommended that Physics 129 be taken before Physics 130. Class meets weekly as scheduled.
+Open	25
+2026SP	DVC	
+1191
+PHYS-130 - Physics for Engineers and Scientists A: Mechanics and Wave Motion
+1/26/2026 - 5/22/2026
+T	8:00AM - 10:50AM	PS	113
+M W	9:35AM - 11:00AM	PS	177
+Th	9:35AM - 10:50AM	PS	113
+4.00	
+Large, Evan
+Prerequisite: PHYS-110 and PHYS-111 combined or PHYS-112 or PHYS-120 or PHYS-129 or one year high school physics or equivalent Co-requisite: MATH-193 (may be taken previously) or equivalent Note: PHYS-129 is strongly advised for students who have not yet completed an equivalent prerequisite or for students who completed the prerequisite more than a year ago.
+Note: It is strongly recommended that Physics 129 be taken before Physics 130. Class meets weekly as scheduled.
+Open	25

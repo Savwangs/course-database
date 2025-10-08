@@ -1,0 +1,50 @@
+Course,Section,Instructor,Days/Times,Room,Status
+STAT-C1000,9203,"Badal, David",T Th 4:05PM - 6:10PM,SRC E225,Waitlist
+STAT-C1000,9104,"Valdez, Michael",T Th 11:10AM - 1:15PM,SRC E225,Waitlist
+STAT-C1000,9084,"Cruz, Edward",M W 6:00PM - 8:00PM,SRC W218,Waitlist
+STAT-C1000,8208,"Ashraf, Farooq",T Th 5:30PM - 7:35PM,MA 108,Waitlist
+STAT-C1000,8111,"Gomez, Concha",M 5:00PM - 7:00PM,L 149,Open
+STAT-C1000,8009,"Willett, Peter",W 5:00PM - 7:00PM,L 149,Waitlist
+STAT-C1000,6233,"McCarter, Sarah",T Th 11:10AM - 1:15PM,AQ 101,Closed
+STAT-C1000,3860,"Maiti, Baishali",T Th 8:55AM - 11:00AM,L 143,Waitlist
+STAT-C1000,3859,"Ahmadieh, Cyrous",M W 1:30PM - 3:35PM,MA 108,Waitlist
+STAT-C1000,3222,"Keating, Katrina",M W 12:45PM - 2:50PM,MA 245,Closed
+STAT-C1000,3212,"Batra, Preeti",M W 8:00AM - 10:05AM,MA 250,Waitlist
+STAT-C1000,3084,"McCarter, Sarah",T Th 8:55AM - 11:00AM,AQ 102,Waitlist
+STAT-C1000,2437,"Willett, Peter",M W 11:10AM - 1:15PM,MA 105,Waitlist
+STAT-C1000,764,"Carroll, James",T Th 12:45PM - 2:50PM,MA 244,Waitlist
+STAT-C1000,740,"Willett, Peter",M W 1:25PM - 3:30PM,MA 105,Waitlist
+STAT-C1000,197,"Shah, Meetal",M W 2:30PM - 4:35PM,L 142,Waitlist
+STAT-C1000,49,"Shah, Meetal",T Th 2:30PM - 4:35PM,MA 251,Waitlist
+STAT-C1000,43,"McNeill, Amber",T Th 12:05PM - 2:10PM,L 143,Waitlist
+STAT-C1000,3273,"McNeill, Amber",M W 9:35AM - 12:00PM,LA 209,Waitlist
+STAT-C1000,2992,"Gomez, Concha",T Th 8:30AM - 11:00AM,MA 250,Waitlist
+BUS-240,6363,"Lacayo, Allan",T Thu 11:10AM - 12:35PM; Th 2:20PM - 3:10PM,"BWL 102, BWL 108",Closed
+BUS-240,6161,"Lacayo, Allan",Online,,Closed
+BUS-240,5493,"Lacayo, Allan",Online,,Waitlist
+BUS-240,5300,"Lacayo, Allan",Online,,Waitlist
+BUS-240,5299,"Fogli, John",Online,,Waitlist
+BUS-240,5222,"Lacayo, Allan",Online,,Waitlist
+BUS-240,2611,"Lacayo, Allan",T Th 12:45PM - 2:10PM; T 2:20PM - 3:10PM,"BWL 102, BWL 108",Waitlist
+BUS-240,2610,"Kelman, Stanislav",M W 11:10AM - 12:35PM; W 2:20PM - 3:10PM,"BWL 102, BWL 108",Waitlist
+BUS-240,2565,"Lacayo, Allan",T Th 11:10AM - 12:35PM; Th 2:20PM - 3:10PM,"BWL 102, BWL 108",Waitlist
+BUS-240,2552,"Kelman, Stanislav",M W 12:45PM - 2:10PM; M 2:20PM - 3:10PM,"BWL 102, BWL 108",Waitlist
+BUS-240,5221,"Lacayo, Allan",Online,,Waitlist
+BUS-240,8338,"Danko, Christopher",T 5:30PM - 6:20PM; T 6:30PM - 9:40PM,"BWL 108, BWL 102",Waitlist
+STAT-C1000E,9005,"Valdez, Michael","M W 9:35AM - 11:55AM, M W 11:55AM - 12:40PM",SRC W219,Open
+STAT-C1000E,8011,"Shah, Meetal","M W 5:00PM - 7:20PM, M W 7:20PM - 8:05PM",MA 108,Open
+STAT-C1000E,8010,"Carter, Jamylle","M W 6:30PM - 8:50PM, W 6:30PM - 8:50PM, M W 8:50PM - 9:35PM, W 8:50PM - 9:35PM",OFF PART-ONL / L148,Open
+STAT-C1000E,6009,"Carter, Jamylle","M W 6:30PM - 8:50PM, W 6:30PM - 8:50PM, M W 8:50PM - 9:35PM, W 8:50PM - 9:35PM",OFF PART-ONL / L148,Clsd
+STAT-C1000E,6008,"Lantzy, Henry","T Th 11:10AM - 1:30PM, T Th 1:30PM - 2:15PM",L142,Open
+STAT-C1000E,6007,"Gomez, Concha","T Th 11:10AM - 1:30PM, T Th 1:30PM - 2:15PM",MA250,Open
+STAT-C1000E,6006,"Vanderbilt, Read","M W 11:10AM - 1:30PM, M W 1:30PM - 2:15PM",L149,Open
+STAT-C1000E,3757,"Keating, Katrina","T 11:10AM - 1:30PM, T Th 11:10AM - 1:30PM, T 1:30PM - 2:15PM, T Th 1:30PM - 2:15PM",L149 / OFF PART-ONL,Wcls
+STAT-C1000E,1998,"Huynh, My","M W 12:45PM - 3:05PM, M W 3:05PM - 3:50PM",L143,Wcls
+STAT-C1000E,1997,"Vincent, Marcus","T Th 7:55AM - 10:15AM, T Th 10:15AM - 11:00AM",MA245,Wcls
+STAT-C1000E,1996,"Vanderbilt, Read","M W 11:10AM - 1:30PM, M W 1:30PM - 2:15PM",L149,Clsd
+STAT-C1000E,1974,"Lantzy, Henry","T Th 11:10AM - 1:30PM, T Th 1:30PM - 2:15PM",L142,Clsd
+STAT-C1000E,1970,"Gomez, Concha","T Th 11:10AM - 1:30PM, T Th 1:30PM - 2:15PM",MA250,Clsd
+STAT-C1000E,1969,"Arthur, James","M W 2:30PM - 4:50PM, M W 4:50PM - 5:35PM",L148,Wcls
+STAT-C1000E,1087,"Carter, Jamylle","T Th 12:45PM - 3:05PM, T Th 3:05PM - 3:50PM",L148,Wcls
+PSYC-214,3360,"Catterson, Arman",T 8:55AM - 11:00AM,OFF ONLINE,Wcls
+PSYC-214,3359,"Catterson, Arman",W 8:55AM - 11:00AM,A226,Wcls

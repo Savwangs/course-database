@@ -1,0 +1,549 @@
+Math 192 sections:
+Term	Location	Section #	Course
+Start Date - End Date
+Meeting Days/Time/Building/Room	Units	Instructor(s)	Comments	Status	Seats Available
+2026SP	SRC	
+9300
+MATH-192 - Analytic Geometry and Calculus I
+1/26/2026 - 5/22/2026
+M W	11:25AM - 1:55PM	SRC	W220
+5.00	
+Staff, SRC
+Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of pre-calculus.
+Note: Class meets weekly as scheduled on the San Ramon Campus.
+Open	36
+2026SP	SRC	
+9281
+MATH-192 - Analytic Geometry and Calculus I
+1/26/2026 - 5/22/2026
+T Th	4:05PM - 6:35PM	SRC	E164
+5.00	
+Staff, SRC
+Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of pre-calculus.
+Note: Class meets weekly as scheduled on the San Ramon Campus.
+Open	36
+2026SP	DVC	
+8212
+MATH-192 - Analytic Geometry and Calculus I
+1/26/2026 - 5/22/2026
+ 		OFF	PART-ONL
+T	5:00PM - 7:30PM	MA	107
+5.00	
+Leon-Bravo, Paula
+Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of pre-calculus.
+Note: Partially online course. In addition to online instruction, this class has mandatory in-person meetings 5:00-7:30PM on Tuesdays 1/27 (orientation), and 2/24, 3/31, 4/28 (exams) and 5/19 (final exam). All other instruction provided online through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to locate course.
+Open	36
+2026SP	DVC	
+6133
+MATH-192 - Analytic Geometry and Calculus I
+1/26/2026 - 5/22/2026
+M W	8:00AM - 10:30AM	MA	108
+5.00	
+Vincent, Marcus
+Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of pre-calculus.
+Note: Section 6133 is part of the DVC MESA program. Students must be a current student in the MESA or friends of MESA program to enroll. For program and registration information please see http://www.dvc.edu/current/learning community/mesa/index.html or email Brandy Gibson at bgibson@dvc.edu. Note: Face to face course. This class will meet at the scheduled times on the Pleasant Hill Campus.
+Open	17
+2026SP	DVC	
+3689
+MATH-192 - Analytic Geometry and Calculus I
+1/26/2026 - 5/22/2026
+T Th	2:30PM - 5:00PM	MA	103
+5.00	
+Knight, Lynn Knight
+Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of pre-calculus.
+Note: Class meets on-campus as scheduled.
+Open	36
+2026SP	DVC	
+3379
+MATH-192 - Analytic Geometry and Calculus I
+1/26/2026 - 5/22/2026
+M W	9:35AM - 12:05PM	MA	245
+5.00	
+Lang, Lindsey
+Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of pre-calculus.
+Note: Class meets on-campus as scheduled.
+Open	36
+2026SP	DVC	
+2972
+MATH-192 - Analytic Geometry and Calculus I
+1/26/2026 - 5/22/2026
+M T W Th	11:30AM - 1:00PM	MA	107
+5.00	
+Mircheva, Diana
+Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of pre-calculus.
+Note: Section 2972 is linked to MATH-002-2974, a support course for MATH-192 students. Students must enroll in both MATH-192-2972 and MATH-002-2974 in order to be eligible for this section. The combined classes meet on Monday, Tuesday, Wednesday, Thursday 11:10am-1:00pm. Class meets weekly as scheduled.
+Open	36
+2026SP	DVC	
+2949
+MATH-192 - Analytic Geometry and Calculus I
+1/26/2026 - 5/22/2026
+M T W Th	9:20AM - 10:50AM	OFF	NEED RM
+5.00	
+Sohi, Anna
+Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of pre-calculus.
+Note: Section 2949 is linked to MATH-002-2950, a support course for MATH-192 students. Students must enroll in both MATH-192-2949 and MATH-002-2950 in order to be eligible for this section. The combined classes meet on Monday, Tuesday, Wednesday, Thursday 9:00am-10:50am. Class meets weekly as scheduled.
+Open	36
+2026SP	DVC	
+2945
+MATH-192 - Analytic Geometry and Calculus I
+1/26/2026 - 5/22/2026
+M W	1:25PM - 3:55PM	MA	241
+5.00	
+Ahmadieh, Cyrous
+Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of pre-calculus.
+Note: Class meets on campus as scheduled.
+Open	36
+2026SP	DVC	
+1835
+MATH-192 - Analytic Geometry and Calculus I
+1/26/2026 - 5/22/2026
+M W	12:45PM - 3:15PM	MA	251
+5.00	
+Leon-Bravo, Paula
+Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of pre-calculus.
+Note: Class meets on-campus as scheduled.
+Open	36
+2026SP	DVC	
+1244
+MATH-192 - Analytic Geometry and Calculus I
+1/26/2026 - 5/22/2026
+T Th	11:10AM - 1:40PM	MA	249
+5.00	
+Matlock, Elizabeth
+Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of pre-calculus.
+Note: Class meets on-campus as scheduled.
+Open	36
+2026SP	DVC	
+1222
+MATH-192 - Analytic Geometry and Calculus I
+1/26/2026 - 5/22/2026
+T Th	12:45PM - 3:15PM	MA	244
+5.00	
+Parks, Will
+Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of pre-calculus.
+Note: Class meets on-campus as scheduled.
+Open	36
+2026SP	DVC	
+1214
+MATH-192 - Analytic Geometry and Calculus I
+1/26/2026 - 5/22/2026
+T Th	9:35AM - 12:05PM	MA	250
+5.00	
+Carter, Jamylle
+Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of pre-calculus.
+Note: Class meets on-campus as scheduled.
+Open	36
+2026SP	DVC	
+1212
+MATH-192 - Analytic Geometry and Calculus I
+1/26/2026 - 5/22/2026
+M W	11:10AM - 1:40PM	MA	108
+5.00	
+Jacob, Cooper
+Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of pre-calculus.
+Note: Class meets on-campus as scheduled.
+Open	36
+2026SP	DVC	
+1210
+MATH-192 - Analytic Geometry and Calculus I
+1/26/2026 - 5/22/2026
+M W	8:00AM - 10:30AM	MA	108
+5.00	
+Vincent, Marcus
+Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of pre-calculus.
+Note: Class meets on-campus as scheduled.
+Open	19
+2026SP	DVC	
+1209
+MATH-192 - Analytic Geometry and Calculus I
+1/26/2026 - 5/22/2026
+T Th	8:30AM - 11:00AM	LA	209
+5.00	
+Wylie, Lindsay
+Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of pre-calculus.
+Note: Class meets on campus as scheduled.
+Open	36
+2026SP	DVC	
+4045
+MATH-192 - Analytic Geometry and Calculus I
+2/09/2026 - 5/22/2026
+M W	9:35AM - 12:40PM	LA	207
+5.00	
+Staff, DVC
+Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of pre-calculus.
+Note: Class meets on-campus as scheduled.
+Open	36
+
+Math 193 sections:
+Term	Location	Section #	Course
+Start Date - End Date
+Meeting Days/Time/Building/Room	Units	Instructor(s)	Comments	Status	Seats Available
+2026SP	SRC	
+9292
+MATH-193 - Analytic Geometry and Calculus II
+1/26/2026 - 5/22/2026
+T Th	4:05PM - 6:35PM	SRC	W219
+5.00	
+Staff, SRC
+Prerequisite: MATH-192 or equivalent
+Note: Class meets weekly as scheduled on the San Ramon Campus.
+Open	36
+2026SP	DVC	
+8085
+MATH-193 - Analytic Geometry and Calculus II
+1/26/2026 - 5/22/2026
+M W	5:00PM - 7:30PM	MA	108
+5.00	
+Shah, Meetal
+Prerequisite: MATH-192 or equivalent
+Note: Class meets on-campus as scheduled.
+Open	36
+2026SP	DVC	
+8084
+MATH-193 - Analytic Geometry and Calculus II
+1/26/2026 - 5/22/2026
+ 		OFF	PART-ONL
+T	5:00PM - 7:30PM	MA	240
+5.00	
+Matlock, Elizabeth
+Prerequisite: MATH-192 or equivalent
+Note: Partially online course. In addition to online instruction, this class has mandatory in-person meetings 5:00-7:30pm on Tuesdays 1/28 (orientation) and 2/18, 3/18, 4/22 (exams) and 5/20 (final exam). All other instruction provided online through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to locate course.
+Open	36
+2026SP	DVC	
+6134
+MATH-193 - Analytic Geometry and Calculus II
+1/26/2026 - 5/22/2026
+M W	8:30AM - 11:00AM	L	209
+5.00	
+Willett, Peter
+Prerequisite: MATH-192 or equivalent
+Note: Section 6134 is part of the DVC MESA program. Students must be a current student in the MESA or friends of MESA program to enroll. For program and registration information please see http://www.dvc.edu/current/learning community/mesa/index.html or email Brandy Gibson at bgibson@dvc.edu. Note: Face to face course. This class will meet at the scheduled times on the Pleasant Hill Campus.
+Open	15
+2026SP	DVC	
+3625
+MATH-193 - Analytic Geometry and Calculus II
+1/26/2026 - 5/22/2026
+T	1:25PM - 3:55PM	L	143
+T Th	1:25PM - 3:55PM	OFF	PART-ONL
+5.00	
+Wylie, Lindsay
+Prerequisite: MATH-192 or equivalent
+Note: Partially online course with required on-campus meetings 1:25-3:55pm on Tuesdays 2/24, 3/31, 4/28 (exams) and 5/19 (final exam) and online meetings, Mondays and Wednesdays 1:25-3:55pm, through Zoom. Online instruction will be provided through the college learning management system Canvas and Zoom software. Access to a computer with audio and video capability is required. On the course start date, log into Canvas, www.dvc.edu/online to locate course.
+Open	36
+2026SP	DVC	
+2975
+MATH-193 - Analytic Geometry and Calculus II
+1/26/2026 - 5/22/2026
+T Th	11:10AM - 1:40PM	OFF	NEED RM
+5.00	
+Newton, Kit
+Prerequisite: MATH-192 or equivalent
+Note: Class meets on-campus as scheduled.
+Open	36
+2026SP	DVC	
+2666
+MATH-193 - Analytic Geometry and Calculus II
+1/26/2026 - 5/22/2026
+M W	2:30PM - 5:00PM	MA	245
+5.00	
+Riazati, Farzan
+Prerequisite: MATH-192 or equivalent
+Note: Class meets on-campus as scheduled.
+Open	36
+2026SP	DVC	
+2283
+MATH-193 - Analytic Geometry and Calculus II
+1/26/2026 - 5/22/2026
+T Th	11:10AM - 1:40PM	MA	109
+5.00	
+Mohan, Adhitya
+Prerequisite: MATH-192 or equivalent
+Note: Class meets on-campus as scheduled.
+Open	36
+2026SP	DVC	
+1562
+MATH-193 - Analytic Geometry and Calculus II
+1/26/2026 - 5/22/2026
+T Th	1:25PM - 3:55PM	MA	241
+5.00	
+Gomez, Concha
+Prerequisite: MATH-192 or equivalent
+Note: Class meets on-campus as scheduled.
+Open	36
+2026SP	DVC	
+1341
+MATH-193 - Analytic Geometry and Calculus II
+1/26/2026 - 5/22/2026
+M W	8:30AM - 11:00AM	LA	209
+5.00	
+Willett, Peter
+Prerequisite: MATH-192 or equivalent
+Note: Class meets on-campus as scheduled.
+Open	21
+2026SP	DVC	
+1294
+MATH-193 - Analytic Geometry and Calculus II
+1/26/2026 - 5/22/2026
+M W	12:45PM - 3:15PM	MA	109
+5.00	
+Lum, Munlok
+Prerequisite: MATH-192 or equivalent
+Note: Class meets on-campus as scheduled.
+Open	36
+2026SP	DVC	
+1285
+MATH-193 - Analytic Geometry and Calculus II
+1/26/2026 - 5/22/2026
+T Th	12:45PM - 3:15PM	MA	108
+5.00	
+Pineda-Carranza, Servando
+Prerequisite: MATH-192 or equivalent
+Note: Class meets on-campus as scheduled.
+Open	36
+2026SP	DVC	
+1250
+MATH-193 - Analytic Geometry and Calculus II
+1/26/2026 - 5/22/2026
+T Th	9:35AM - 12:05PM	MA	240
+5.00	
+Leon-Bravo, Paula
+Prerequisite: MATH-192 or equivalent
+Note: Class meets on-campus as scheduled.
+Open	36
+2026SP	DVC	
+1240
+MATH-193 - Analytic Geometry and Calculus II
+1/26/2026 - 5/22/2026
+M W	9:35AM - 12:05PM	MA	109
+5.00	
+Raymond, Brian
+Prerequisite: MATH-192 or equivalent
+Note: Class meets on-campus as scheduled.
+Open	36
+
+
+Math 194 sections:
+Term	Location	Section #	Course
+Start Date - End Date
+Meeting Days/Time/Building/Room	Units	Instructor(s)	Comments	Status	Seats Available
+2026SP	DVC	
+8242
+MATH-194 - Linear Algebra
+1/26/2026 - 5/22/2026
+ 		OFF	PART-ONL
+Th	5:30PM - 7:30PM	MA	101
+3.00	
+Gomez, Concha
+Prerequisite: MATH-193 or equivalent
+Note: Partially online course. In addition to online instruction, this class has mandatory in-person meetings 5:30-7:30pm on Thursdays 2/26, 3/19, 4/30 (exams) and 5/21 (final exam). All other instruction provided online through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to locate course.
+Open	36
+2026SP	DVC	
+2788
+MATH-194 - Linear Algebra
+1/26/2026 - 5/22/2026
+T Th	12:45PM - 2:10PM	MA	245
+3.00	
+Knight, Lynn Knight
+Prerequisite: MATH-193 or equivalent
+Note: Class meets on-campus as scheduled.
+Open	36
+2026SP	DVC	
+2703
+MATH-194 - Linear Algebra
+1/26/2026 - 5/22/2026
+M W	11:10AM - 12:35PM	OFF	NEED RM
+3.00	
+Parks, Will
+Prerequisite: MATH-193 or equivalent
+Note: Class meets on-campus as scheduled.
+Open	36
+2026SP	DVC	
+1339
+MATH-194 - Linear Algebra
+1/26/2026 - 5/22/2026
+T Th	9:35AM - 11:00AM	L	143
+3.00	
+Moreno-Vasquez, Arcie
+Prerequisite: MATH-193 or equivalent
+Note: Class meets on-campus as scheduled.
+Open	36
+
+Math 195 sections:
+Term	Location	Section #	Course
+Start Date - End Date
+Meeting Days/Time/Building/Room	Units	Instructor(s)	Comments	Status	Seats Available
+2026SP	SRC	
+9294
+MATH-195 - Discrete Mathematics
+1/26/2026 - 5/22/2026
+M W	12:45PM - 2:50PM	SRC	E164
+4.00	
+Staff, SRC
+Prerequisite: MATH-193 or equivalent may be taken either as a prerequisite or concurrently
+Note: Class meets weekly as scheduled on the San Ramon Campus.
+Open	36
+2026SP	DVC	
+8213
+MATH-195 - Discrete Mathematics
+1/26/2026 - 5/22/2026
+ 		OFF	PART-ONL
+T	4:30PM - 6:35PM	MA	241
+4.00	
+Needham, Sam
+Prerequisite: MATH-193 or equivalent may be taken either as a prerequisite or concurrently
+Note: Partially online course. In addition to online instruction, this class has mandatory in-person meetings 4:30-6:35pm on Tuesdays 1/27 (orientation) and 2/24, 3/31, 4/28 (exams) and 5/19 (final exam). All other instruction provided online through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to locate course.
+Open	36
+2026SP	DVC	
+3790
+MATH-195 - Discrete Mathematics
+1/26/2026 - 5/22/2026
+T Th	9:35AM - 11:40AM	MA	245
+4.00	
+Needham, Sam
+Prerequisite: MATH-193 or equivalent may be taken either as a prerequisite or concurrently
+Note: Class meets on-campus as scheduled.
+Open	36
+2026SP	DVC	
+1686
+MATH-195 - Discrete Mathematics
+1/26/2026 - 5/22/2026
+M W	8:55AM - 11:00AM	L	143
+4.00	
+McNeill, Amber
+Prerequisite: MATH-193 or equivalent may be taken either as a prerequisite or concurrently
+Note: Class meets on-campus as scheduled.
+Open	36
+
+
+Math 292 sections:
+Term	Location	Section #	Course
+Start Date - End Date
+Meeting Days/Time/Building/Room	Units	Instructor(s)	Comments	Status	Seats Available
+2026SP	SRC	
+9098
+MATH-292 - Analytic Geometry and Calculus III
+1/26/2026 - 5/22/2026
+T Th	9:35AM - 12:05PM	SRC	E164
+5.00	
+Staff, SRC
+Prerequisite: MATH-193 or equivalent
+Note: Class meets weekly as scheduled on the San Ramon Campus.
+Open	36
+2026SP	DVC	
+6153
+MATH-292 - Analytic Geometry and Calculus III
+1/26/2026 - 5/22/2026
+M W	9:35AM - 12:05PM	MA	240
+5.00	
+Walters, Julie
+Prerequisite: MATH-193 or equivalent
+Note: Section 6153 is part of the DVC MESA program. Students must be a current student in the MESA or friends of MESA program to enroll. For program and registration information please see http://www.dvc.edu/current/learning community/mesa/index.html or email Brandy Gibson at bgibson@dvc.edu. Note: Face to face course. This class will meet at the scheduled times on the Pleasant Hill Campus.
+Open	5
+2026SP	DVC	
+2936
+MATH-292 - Analytic Geometry and Calculus III
+1/26/2026 - 5/22/2026
+ 		OFF	PART-ONL
+F	11:30AM - 2:00PM	MA	241
+5.00	
+Carter, Jamylle
+Prerequisite: MATH-193 or equivalent
+Note: Partially online course. In addition to online instruction, this class has mandatory in-person meetings 11:30AM-2:00PM on Fridays 1/30 (orientation) and 3/6, 4/10, 5/15 (exams) and 5/22 (final exam). All other instruction provided online through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to locate course.
+Open	36
+2026SP	DVC	
+2926
+MATH-292 - Analytic Geometry and Calculus III
+1/26/2026 - 5/22/2026
+T Th	1:25PM - 3:55PM	MA	240
+5.00	
+Freidenreich, Jenny
+Prerequisite: MATH-193 or equivalent
+Note: Class meets on-campus as scheduled.
+Open	36
+2026SP	DVC	
+2042
+MATH-292 - Analytic Geometry and Calculus III
+1/26/2026 - 5/22/2026
+T Th	8:30AM - 11:00AM	L	142
+5.00	
+Lam, Quan
+Prerequisite: MATH-193 or equivalent
+Note: Class meets on-campus as scheduled.
+Open	36
+2026SP	DVC	
+1274
+MATH-292 - Analytic Geometry and Calculus III
+1/26/2026 - 5/22/2026
+M W	12:45PM - 3:15PM	MA	104
+5.00	
+Newton, Kit
+Prerequisite: MATH-193 or equivalent
+Note: Class meets on-campus as scheduled.
+Open	36
+2026SP	DVC	
+0242
+MATH-292 - Analytic Geometry and Calculus III
+1/26/2026 - 5/22/2026
+M W	9:35AM - 12:05PM	MA	240
+5.00	
+Walters, Julie
+Prerequisite: MATH-193 or equivalent
+Note: Class meets on-campus as scheduled.
+Open	31
+
+
+Math 294 sections:
+Term	Location	Section #	Course
+Start Date - End Date
+Meeting Days/Time/Building/Room	Units	Instructor(s)	Comments	Status	Seats Available
+2026SP	SRC	
+9146
+MATH-294 - Differential Equations
+1/26/2026 - 5/22/2026
+T Th	1:00PM - 3:30PM	SRC	E164
+5.00	
+Staff, SRC
+Prerequisite: MATH-292 or equivalent Advisory: MATH-194 or equivalent (may be taken concurrently) Note: TI-83 or TI-84 graphing calculator required.
+Note: Class meets weekly as scheduled on the San Ramon Campus.
+Open	36
+2026SP	DVC	
+8168
+MATH-294 - Differential Equations
+1/26/2026 - 5/22/2026
+ 		OFF	PART-ONL
+Th	5:30PM - 8:00PM	MA	107
+5.00	
+Tardivel, Dominic
+Prerequisite: MATH-292 or equivalent Advisory: MATH-194 or equivalent (may be taken concurrently) Note: TI-83 or TI-84 graphing calculator required.
+Note: Partially online course. In addition to online instruction, this class has mandatory in-person meetings 5:30-8:00pm on Thursdays 2/26, 4/2, 4/30 (exams) and 5/21 (final exam). All other instruction provided online through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to locate course.
+Open	36
+2026SP	DVC	
+2701
+MATH-294 - Differential Equations
+1/26/2026 - 5/22/2026
+T Th	2:30PM - 5:00PM	MA	104
+5.00	
+Newton, Kit
+Prerequisite: MATH-292 or equivalent Advisory: MATH-194 or equivalent (may be taken concurrently) Note: TI-83 or TI-84 graphing calculator required.
+Note: Class meets on-campus as scheduled.
+Open	36
+2026SP	DVC	
+1342
+MATH-294 - Differential Equations
+1/26/2026 - 5/22/2026
+M W	12:45PM - 3:15PM	MA	240
+5.00	
+Tardivel, Dominic
+Prerequisite: MATH-292 or equivalent Advisory: MATH-194 or equivalent (may be taken concurrently) Note: TI-83 or TI-84 graphing calculator required.
+Note: Class meets on-campus as scheduled.
+Open	36
+2026SP	DVC	
+1328
+MATH-294 - Differential Equations
+1/26/2026 - 5/22/2026
+M W	8:30AM - 11:00AM	MA	249
+5.00	
+Mohan, Adhitya
+Prerequisite: MATH-292 or equivalent Advisory: MATH-194 or equivalent (may be taken concurrently) Note: TI-83 or TI-84 graphing calculator required.
+Note: Class meets on-campus as scheduled.
+Open	36

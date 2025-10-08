@@ -1,0 +1,132 @@
+BIOSC 130 sections:
+Term	Location	Section #	Course
+Start Date - End Date
+Meeting Days/Time/Building/Room	Units	Instructor(s)	Comments	Status	Seats Available
+2026SP	SRC	
+9060
+BIOSC-130 - Principles of Cellular and Molecular Biology
+1/26/2026 - 5/22/2026
+T Th	8:00AM - 9:25AM	SRC	W222
+T Th	9:45AM - 12:50PM	SRC	E240
+5.00	
+Cole Ekberg, Marci
+Prerequisite: CHEM-120 or equivalent Advisory: ENGL-C1000 or equivalent and BIOSC-101 or BIOSC-102 or equivalents
+Note: Class?meets at the scheduled times on the San Ramon Campus
+Open	24
+2026SP	DVC	
+8150
+BIOSC-130 - Principles of Cellular and Molecular Biology
+1/26/2026 - 5/22/2026
+M W	2:25PM - 5:30PM	LS	201
+M W	5:35PM - 7:00PM	LS	115
+5.00	
+Matern, Scott
+Prerequisite: CHEM-120 or equivalent Advisory: ENGL-C1000 or equivalent and BIOSC-101 or BIOSC-102 or equivalents
+Note: Class meets on campus as scheduled.
+Open	24
+2026SP	DVC	
+8014
+BIOSC-130 - Principles of Cellular and Molecular Biology
+1/26/2026 - 5/22/2026
+M W	5:35PM - 7:00PM	LS	115
+M W	7:05PM - 10:10PM	LS	201
+5.00	
+Matern, Scott
+Prerequisite: CHEM-120 or equivalent Advisory: ENGL-C1000 or equivalent and BIOSC-101 or BIOSC-102 or equivalents
+Note: Class meets on campus as scheduled.
+Open	24
+2026SP	DVC	
+6004
+BIOSC-130 - Principles of Cellular and Molecular Biology
+1/26/2026 - 5/22/2026
+M W	11:10AM - 2:15PM	LS	201
+M W	2:30PM - 3:55PM	LS	223
+5.00	
+Pandev, Nichole
+Prerequisite: CHEM-120 or equivalent Advisory: ENGL-C1000 or equivalent and BIOSC-101 or BIOSC-102 or equivalents
+Note: Section 6004 is part of the DVC MESA program. Students must be a current student in the MESA or friends of MESA program to enroll. For program and registration information, please see www.dvc.edu/current/learning-community/mesa/index.html. Note: Class meets on campus as scheduled.
+Clsd	
+2026SP	DVC	
+1082
+BIOSC-130 - Principles of Cellular and Molecular Biology
+1/26/2026 - 5/22/2026
+M W	11:10AM - 2:15PM	LS	201
+M W	2:30PM - 3:55PM	LS	223
+5.00	
+Pandev, Nichole
+Prerequisite: CHEM-120 or equivalent Advisory: ENGL-C1000 or equivalent and BIOSC-101 or BIOSC-102 or equivalents
+Note: Class meets on campus as scheduled.
+Open	24
+2026SP	DVC	
+1081
+BIOSC-130 - Principles of Cellular and Molecular Biology
+1/26/2026 - 5/22/2026
+M W	7:55AM - 11:00AM	LS	201
+M W	11:10AM - 12:35PM	LS	212
+5.00	
+Vandervorst, Kacey
+Prerequisite: CHEM-120 or equivalent Advisory: ENGL-C1000 or equivalent and BIOSC-101 or BIOSC-102 or equivalents
+Note: Class meets on campus as scheduled.
+Open	24
+
+
+
+BIOSC 131 sections:
+Term	Location	Section #	Course
+Start Date - End Date
+Meeting Days/Time/Building/Room	Units	Instructor(s)	Comments	Status	Seats Available
+2026SP	SRC	
+9071
+BIOSC-131 - Principles of Organismal Biology, Evolution and Ecology
+1/26/2026 - 5/22/2026
+M W	11:10AM - 2:15PM	SRC	E240
+M W	2:30PM - 3:55PM	SRC	W220
+5.00	
+Reyes, Brandon
+Prerequisite: CHEM-120 (may be taken concurrently) or equivalent Advisory: ENGL-C1000 or equivalent. BIOSC-101 or 102 and BIOSC-130 or equivalents.
+Note: Class meets at the scheduled times on the San Ramon Campus. CHEM-120-9115 and BIOSC-131-9071 are scheduled to encourage enrollment and collaboration between students in both sections.
+Open	26
+2026SP	DVC	
+8015
+BIOSC-131 - Principles of Organismal Biology, Evolution and Ecology
+1/26/2026 - 5/22/2026
+T Th	5:30PM - 6:55PM	LS	223
+T Th	7:00PM - 10:05PM	LS	201
+5.00	
+McPheron, Linda
+Prerequisite: CHEM-120 (may be taken concurrently) or equivalent Advisory: ENGL-C1000 or equivalent. BIOSC-101 or 102 and BIOSC-130 or equivalents.
+Note: Class meets on campus as scheduled. Class field trips will occur on select Fridays throughout the semester. Details will be given at the first class meeting. Field trip to Bodega Bay on dates TBD.
+Open	26
+2026SP	DVC	
+1085
+BIOSC-131 - Principles of Organismal Biology, Evolution and Ecology
+1/26/2026 - 5/22/2026
+M W	9:35AM - 11:00AM	LS	217
+T Th	11:10AM - 2:15PM	LS	201
+5.00	
+Greene, Valerie
+Prerequisite: CHEM-120 (may be taken concurrently) or equivalent Advisory: ENGL-C1000 or equivalent. BIOSC-101 or 102 and BIOSC-130 or equivalents.
+Note: Class meets on campus as scheduled. Additional intertidal field trip on Friday, April 24 or Saturday, April 25, 2026. Details will be given at the first class meeting
+Open	26
+2026SP	DVC	
+1084
+BIOSC-131 - Principles of Organismal Biology, Evolution and Ecology
+1/26/2026 - 5/22/2026
+T Th	7:55AM - 11:00AM	LS	201
+M W	9:35AM - 11:00AM	LS	217
+5.00	
+Greene, Valerie
+Prerequisite: CHEM-120 (may be taken concurrently) or equivalent Advisory: ENGL-C1000 or equivalent. BIOSC-101 or 102 and BIOSC-130 or equivalents.
+Note: Class meets on campus as scheduled. Additional intertidal field trip on Friday, April 24 or Saturday, April 25, 2026. Details will be given at the first class meeting
+Open	26
+2026SP	DVC	
+1083
+BIOSC-131 - Principles of Organismal Biology, Evolution and Ecology
+1/26/2026 - 5/22/2026
+M W	12:45PM - 2:10PM	LS	223
+T Th	2:25PM - 5:30PM	LS	201
+5.00	
+Halbrook, Kandres
+Prerequisite: CHEM-120 (may be taken concurrently) or equivalent Advisory: ENGL-C1000 or equivalent. BIOSC-101 or 102 and BIOSC-130 or equivalents.
+Note: Class meets on campus as scheduled. Additional intertidal field trip on Friday, April 24 or Saturday, April 25, 2026. Details will be given at the first class meeting
+Open	26

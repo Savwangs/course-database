@@ -1,0 +1,210 @@
+CHEM 120 sections:
+Term	Location	Section #	Course
+Start Date - End Date
+Meeting Days/Time/Building/Room	Units	Instructor(s)	Comments	Status	Seats Available
+2026SP	SRC	
+9212
+CHEM-120 - General College Chemistry I
+1/26/2026 - 5/22/2026
+M W	2:30PM - 3:55PM	SRC	E230
+M W	4:30PM - 7:35PM	SRC	E237
+5.00	
+Symmank, Beverly
+Prerequisite: Prerequisite: CHEM-108 or score of 3, 4, or 5 on AP Chemistry Test or appropriate chemistry skill level demonstrated through Chemistry Diagnostic Test or equivalent; Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra.
+Note: Class?meets at the scheduled times on the San Ramon Campus
+Open	28
+2026SP	SRC	
+9115
+CHEM-120 - General College Chemistry I
+1/26/2026 - 5/22/2026
+T Th	9:35AM - 11:00AM	SRC	E230
+T Th	11:20AM - 2:25PM	SRC	E237
+5.00	
+Petersen, Anne
+Prerequisite: Prerequisite: CHEM-108 or score of 3, 4, or 5 on AP Chemistry Test or appropriate chemistry skill level demonstrated through Chemistry Diagnostic Test or equivalent; Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra.
+Note: Class meets at the scheduled times on the San Ramon Campus. CHEM-120-9115 and BIOSC-131-9071 are scheduled to encourage enrollment and collaboration between students in both sections.
+Open	28
+2026SP	DVC	
+8010
+CHEM-120 - General College Chemistry I
+1/26/2026 - 5/22/2026
+M W	5:30PM - 6:55PM	PS	275
+M W	7:05PM - 10:10PM	PS	201
+5.00	
+Staff, DVC
+Prerequisite: Prerequisite: CHEM-108 or score of 3, 4, or 5 on AP Chemistry Test or appropriate chemistry skill level demonstrated through Chemistry Diagnostic Test or equivalent; Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra.
+Note: Face to face course. This class will meet at the scheduled times on the Pleasant Hill campus.
+Open	28
+2026SP	DVC	
+8009
+CHEM-120 - General College Chemistry I
+1/26/2026 - 5/22/2026
+T Th	2:30PM - 3:55PM	PS	267
+T Th	4:05PM - 7:10PM	PS	205
+5.00	
+Eskandari, Vahid
+Prerequisite: Prerequisite: CHEM-108 or score of 3, 4, or 5 on AP Chemistry Test or appropriate chemistry skill level demonstrated through Chemistry Diagnostic Test or equivalent; Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra.
+Note:?Face to face course.?This class will meet at the scheduled times on the Pleasant Hill Campus.
+Open	28
+2026SP	DVC	
+6001
+CHEM-120 - General College Chemistry I
+1/26/2026 - 5/22/2026
+T Th	9:35AM - 11:00AM	PS	267
+T Th	11:10AM - 2:15PM	PS	205
+5.00	
+Wilson, Kathryn
+Prerequisite: Prerequisite: CHEM-108 or score of 3, 4, or 5 on AP Chemistry Test or appropriate chemistry skill level demonstrated through Chemistry Diagnostic Test or equivalent; Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra.
+Section 6001 is part of the DVC MESA program. Students must be a current student in the MESA or friends of MESA program to enroll. For program and registration information please see http://www.dvc.edu/current/learning community/mesa/index.html or email Brandy Gibson at bgibson@dvc.edu. Note: Face to face course. This class will meet at the scheduled times on the Pleasant Hill Campus.
+Open	14
+2026SP	DVC	
+1043
+CHEM-120 - General College Chemistry I
+1/26/2026 - 5/22/2026
+T Th	9:35AM - 11:00AM	PS	267
+T Th	11:10AM - 2:15PM	PS	205
+5.00	
+Wilson, Kathryn
+Prerequisite: Prerequisite: CHEM-108 or score of 3, 4, or 5 on AP Chemistry Test or appropriate chemistry skill level demonstrated through Chemistry Diagnostic Test or equivalent; Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra.
+Note:?Face to face course.?This class will meet at the scheduled times on the Pleasant Hill Campus.
+Open	14
+2026SP	DVC	
+1041
+CHEM-120 - General College Chemistry I
+1/26/2026 - 5/22/2026
+M W	11:10AM - 2:15PM	PS	205
+T Th	11:10AM - 12:35PM	PS	275
+5.00	
+Gerken, Craig
+Prerequisite: Prerequisite: CHEM-108 or score of 3, 4, or 5 on AP Chemistry Test or appropriate chemistry skill level demonstrated through Chemistry Diagnostic Test or equivalent; Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra.
+Note:?Face to face course.?This class will meet at the scheduled times on the Pleasant Hill Campus.
+Open	28
+2026SP	DVC	
+1040
+CHEM-120 - General College Chemistry I
+1/26/2026 - 5/22/2026
+T Th	11:10AM - 12:35PM	PS	275
+M W	2:30PM - 5:35PM	PS	205
+5.00	
+Gerken, Craig
+Prerequisite: Prerequisite: CHEM-108 or score of 3, 4, or 5 on AP Chemistry Test or appropriate chemistry skill level demonstrated through Chemistry Diagnostic Test or equivalent; Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra.
+Note:?Face to face course.?This class will meet at the scheduled times on the Pleasant Hill Campus.
+Open	28
+2026SP	DVC	
+1039
+CHEM-120 - General College Chemistry I
+1/26/2026 - 5/22/2026
+ 		OFF	PART-ONL
+T Th	11:10AM - 2:15PM	PS	201
+W	11:10AM - 12:35PM	PS	110
+5.00	
+Antonakos, Cory
+Prerequisite: Prerequisite: CHEM-108 or score of 3, 4, or 5 on AP Chemistry Test or appropriate chemistry skill level demonstrated through Chemistry Diagnostic Test or equivalent; Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra.
+Note: Partially online course with required meetings Wednesdays 11:10AM-12:35PM and Tuesdays and Thursdays 11:10AM-2:15PM (on-campus, see room on schedule) with all other instruction provided online through the college learning management system Canvas. Class meets on-campus as scheduled.
+Open	28
+2026SP	DVC	
+1038
+CHEM-120 - General College Chemistry I
+1/26/2026 - 5/22/2026
+ 		OFF	PART-ONL
+W	11:10AM - 12:35PM	PS	110
+T Th	2:30PM - 5:35PM	PS	201
+5.00	
+Antonakos, Cory
+Prerequisite: Prerequisite: CHEM-108 or score of 3, 4, or 5 on AP Chemistry Test or appropriate chemistry skill level demonstrated through Chemistry Diagnostic Test or equivalent; Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra.
+Note: Partially online course with required meetings Wednesdays 11:10AM-12:35PM and Tuesdays and Thursdays 2:30-5:40PM (on-campus, see room on schedule) with all other instruction provided online through the college learning management system Canvas. Class meets on-campus as scheduled.
+Open	28
+2026SP	DVC	
+1037
+CHEM-120 - General College Chemistry I
+1/26/2026 - 5/22/2026
+M W	9:35AM - 11:00AM	PS	277
+M W	11:10AM - 2:15PM	PS	201
+5.00	
+Kulp, Jamie
+Prerequisite: Prerequisite: CHEM-108 or score of 3, 4, or 5 on AP Chemistry Test or appropriate chemistry skill level demonstrated through Chemistry Diagnostic Test or equivalent; Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra.
+Note:?Face to face course.?This class will meet at the scheduled times on the Pleasant Hill Campus.
+Open	28
+
+
+CHEM 121 sections:
+Term	Location	Section #	Course
+Start Date - End Date
+Meeting Days/Time/Building/Room	Units	Instructor(s)	Comments	Status	Seats Available
+2026SP	DVC	
+8011
+CHEM-121 - General College Chemistry II
+1/26/2026 - 5/22/2026
+M W	5:30PM - 6:55PM	PS	267
+M W	7:05PM - 10:10PM	PS	213
+5.00	
+Fraund, Matthew
+Prerequisite: CHEM-120 or equivalent Advisory: MATH-191 or equivalent
+Note:?Face to face course.?This class will meet at the scheduled times on the Pleasant Hill Campus.
+Open	26
+2026SP	DVC	
+6002
+CHEM-121 - General College Chemistry II
+1/26/2026 - 5/22/2026
+M W	11:10AM - 12:35PM	PS	275
+T Th	11:10AM - 2:15PM	PS	213
+5.00	
+Burns, Laura
+Prerequisite: CHEM-120 or equivalent Advisory: MATH-191 or equivalent
+Note: Section 6002 is part of the DVC MESA program. Students must be a current student in the MESA or friends of MESA program to enroll. For program and registration information please see http://www.dvc.edu/current/learning community/mesa/index.html or email Brandy Gibson at bgibson@dvc.edu. Note:?Face to face course.?This class will meet at the scheduled times on the Pleasant Hill Campus.
+Open	10
+2026SP	DVC	
+1048
+CHEM-121 - General College Chemistry II
+1/26/2026 - 5/22/2026
+T Th	4:05PM - 5:30PM	PS	277
+T Th	5:45PM - 8:50PM	PS	213
+5.00	
+Fell, Jason
+Prerequisite: CHEM-120 or equivalent Advisory: MATH-191 or equivalent
+Note:?Face to face course.?This class will meet at the scheduled times on the Pleasant Hill Campus.
+Open	26
+2026SP	DVC	
+1047
+CHEM-121 - General College Chemistry II
+1/26/2026 - 5/22/2026
+M W	9:35AM - 11:00AM	PS	110
+M W	11:10AM - 2:15PM	PS	213
+5.00	
+Ruehl, Jean
+Prerequisite: CHEM-120 or equivalent Advisory: MATH-191 or equivalent
+Note:?Face to face course.?This class will meet at the scheduled times on the Pleasant Hill Campus.
+Open	26
+2026SP	DVC	
+1046
+CHEM-121 - General College Chemistry II
+1/26/2026 - 5/22/2026
+T Th	7:55AM - 11:00AM	PS	213
+M W	11:10AM - 12:35PM	PS	275
+5.00	
+Burns, Laura
+Prerequisite: CHEM-120 or equivalent Advisory: MATH-191 or equivalent
+Note:?Face to face course.?This class will meet at the scheduled times on the Pleasant Hill Campus.
+Open	26
+2026SP	DVC	
+1045
+CHEM-121 - General College Chemistry II
+1/26/2026 - 5/22/2026
+M W	11:10AM - 12:35PM	PS	275
+T Th	11:10AM - 2:15PM	PS	213
+5.00	
+Burns, Laura
+Prerequisite: CHEM-120 or equivalent Advisory: MATH-191 or equivalent
+Note:?Face to face course.?This class will meet at the scheduled times on the Pleasant Hill Campus.
+Open	16
+2026SP	DVC	
+1044
+CHEM-121 - General College Chemistry II
+1/26/2026 - 5/22/2026
+M W	9:35AM - 11:00AM	PS	110
+T Th	2:30PM - 5:35PM	PS	213
+5.00	
+Ruehl, Jean
+Prerequisite: CHEM-120 or equivalent Advisory: MATH-191 or equivalent
+Note:?Face to face course.?This class will meet at the scheduled times on the Pleasant Hill Campus.
+Open	26

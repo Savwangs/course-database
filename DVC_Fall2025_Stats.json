@@ -1,0 +1,394 @@
+[
+  {
+    "Course":"STAT-C1000",
+    "Section":9203,
+    "Instructor":"Badal, David",
+    "Days\/Times":"T Th 4:05PM - 6:10PM",
+    "Room":"SRC E225",
+    "Status":"Waitlist"
+  },
+  {
+    "Course":"STAT-C1000",
+    "Section":9104,
+    "Instructor":"Valdez, Michael",
+    "Days\/Times":"T Th 11:10AM - 1:15PM",
+    "Room":"SRC E225",
+    "Status":"Waitlist"
+  },
+  {
+    "Course":"STAT-C1000",
+    "Section":9084,
+    "Instructor":"Cruz, Edward",
+    "Days\/Times":"M W 6:00PM - 8:00PM",
+    "Room":"SRC W218",
+    "Status":"Waitlist"
+  },
+  {
+    "Course":"STAT-C1000",
+    "Section":8208,
+    "Instructor":"Ashraf, Farooq",
+    "Days\/Times":"T Th 5:30PM - 7:35PM",
+    "Room":"MA 108",
+    "Status":"Waitlist"
+  },
+  {
+    "Course":"STAT-C1000",
+    "Section":8111,
+    "Instructor":"Gomez, Concha",
+    "Days\/Times":"M 5:00PM - 7:00PM",
+    "Room":"L 149",
+    "Status":"Open"
+  },
+  {
+    "Course":"STAT-C1000",
+    "Section":8009,
+    "Instructor":"Willett, Peter",
+    "Days\/Times":"W 5:00PM - 7:00PM",
+    "Room":"L 149",
+    "Status":"Waitlist"
+  },
+  {
+    "Course":"STAT-C1000",
+    "Section":6233,
+    "Instructor":"McCarter, Sarah",
+    "Days\/Times":"T Th 11:10AM - 1:15PM",
+    "Room":"AQ 101",
+    "Status":"Closed"
+  },
+  {
+    "Course":"STAT-C1000",
+    "Section":3860,
+    "Instructor":"Maiti, Baishali",
+    "Days\/Times":"T Th 8:55AM - 11:00AM",
+    "Room":"L 143",
+    "Status":"Waitlist"
+  },
+  {
+    "Course":"STAT-C1000",
+    "Section":3859,
+    "Instructor":"Ahmadieh, Cyrous",
+    "Days\/Times":"M W 1:30PM - 3:35PM",
+    "Room":"MA 108",
+    "Status":"Waitlist"
+  },
+  {
+    "Course":"STAT-C1000",
+    "Section":3222,
+    "Instructor":"Keating, Katrina",
+    "Days\/Times":"M W 12:45PM - 2:50PM",
+    "Room":"MA 245",
+    "Status":"Closed"
+  },
+  {
+    "Course":"STAT-C1000",
+    "Section":3212,
+    "Instructor":"Batra, Preeti",
+    "Days\/Times":"M W 8:00AM - 10:05AM",
+    "Room":"MA 250",
+    "Status":"Waitlist"
+  },
+  {
+    "Course":"STAT-C1000",
+    "Section":3084,
+    "Instructor":"McCarter, Sarah",
+    "Days\/Times":"T Th 8:55AM - 11:00AM",
+    "Room":"AQ 102",
+    "Status":"Waitlist"
+  },
+  {
+    "Course":"STAT-C1000",
+    "Section":2437,
+    "Instructor":"Willett, Peter",
+    "Days\/Times":"M W 11:10AM - 1:15PM",
+    "Room":"MA 105",
+    "Status":"Waitlist"
+  },
+  {
+    "Course":"STAT-C1000",
+    "Section":764,
+    "Instructor":"Carroll, James",
+    "Days\/Times":"T Th 12:45PM - 2:50PM",
+    "Room":"MA 244",
+    "Status":"Waitlist"
+  },
+  {
+    "Course":"STAT-C1000",
+    "Section":740,
+    "Instructor":"Willett, Peter",
+    "Days\/Times":"M W 1:25PM - 3:30PM",
+    "Room":"MA 105",
+    "Status":"Waitlist"
+  },
+  {
+    "Course":"STAT-C1000",
+    "Section":197,
+    "Instructor":"Shah, Meetal",
+    "Days\/Times":"M W 2:30PM - 4:35PM",
+    "Room":"L 142",
+    "Status":"Waitlist"
+  },
+  {
+    "Course":"STAT-C1000",
+    "Section":49,
+    "Instructor":"Shah, Meetal",
+    "Days\/Times":"T Th 2:30PM - 4:35PM",
+    "Room":"MA 251",
+    "Status":"Waitlist"
+  },
+  {
+    "Course":"STAT-C1000",
+    "Section":43,
+    "Instructor":"McNeill, Amber",
+    "Days\/Times":"T Th 12:05PM - 2:10PM",
+    "Room":"L 143",
+    "Status":"Waitlist"
+  },
+  {
+    "Course":"STAT-C1000",
+    "Section":3273,
+    "Instructor":"McNeill, Amber",
+    "Days\/Times":"M W 9:35AM - 12:00PM",
+    "Room":"LA 209",
+    "Status":"Waitlist"
+  },
+  {
+    "Course":"STAT-C1000",
+    "Section":2992,
+    "Instructor":"Gomez, Concha",
+    "Days\/Times":"T Th 8:30AM - 11:00AM",
+    "Room":"MA 250",
+    "Status":"Waitlist"
+  },
+  {
+    "Course":"BUS-240",
+    "Section":6363,
+    "Instructor":"Lacayo, Allan",
+    "Days\/Times":"T Thu 11:10AM - 12:35PM; Th 2:20PM - 3:10PM",
+    "Room":"BWL 102, BWL 108",
+    "Status":"Closed"
+  },
+  {
+    "Course":"BUS-240",
+    "Section":6161,
+    "Instructor":"Lacayo, Allan",
+    "Days\/Times":"Online",
+    "Room":null,
+    "Status":"Closed"
+  },
+  {
+    "Course":"BUS-240",
+    "Section":5493,
+    "Instructor":"Lacayo, Allan",
+    "Days\/Times":"Online",
+    "Room":null,
+    "Status":"Waitlist"
+  },
+  {
+    "Course":"BUS-240",
+    "Section":5300,
+    "Instructor":"Lacayo, Allan",
+    "Days\/Times":"Online",
+    "Room":null,
+    "Status":"Waitlist"
+  },
+  {
+    "Course":"BUS-240",
+    "Section":5299,
+    "Instructor":"Fogli, John",
+    "Days\/Times":"Online",
+    "Room":null,
+    "Status":"Waitlist"
+  },
+  {
+    "Course":"BUS-240",
+    "Section":5222,
+    "Instructor":"Lacayo, Allan",
+    "Days\/Times":"Online",
+    "Room":null,
+    "Status":"Waitlist"
+  },
+  {
+    "Course":"BUS-240",
+    "Section":2611,
+    "Instructor":"Lacayo, Allan",
+    "Days\/Times":"T Th 12:45PM - 2:10PM; T 2:20PM - 3:10PM",
+    "Room":"BWL 102, BWL 108",
+    "Status":"Waitlist"
+  },
+  {
+    "Course":"BUS-240",
+    "Section":2610,
+    "Instructor":"Kelman, Stanislav",
+    "Days\/Times":"M W 11:10AM - 12:35PM; W 2:20PM - 3:10PM",
+    "Room":"BWL 102, BWL 108",
+    "Status":"Waitlist"
+  },
+  {
+    "Course":"BUS-240",
+    "Section":2565,
+    "Instructor":"Lacayo, Allan",
+    "Days\/Times":"T Th 11:10AM - 12:35PM; Th 2:20PM - 3:10PM",
+    "Room":"BWL 102, BWL 108",
+    "Status":"Waitlist"
+  },
+  {
+    "Course":"BUS-240",
+    "Section":2552,
+    "Instructor":"Kelman, Stanislav",
+    "Days\/Times":"M W 12:45PM - 2:10PM; M 2:20PM - 3:10PM",
+    "Room":"BWL 102, BWL 108",
+    "Status":"Waitlist"
+  },
+  {
+    "Course":"BUS-240",
+    "Section":5221,
+    "Instructor":"Lacayo, Allan",
+    "Days\/Times":"Online",
+    "Room":null,
+    "Status":"Waitlist"
+  },
+  {
+    "Course":"BUS-240",
+    "Section":8338,
+    "Instructor":"Danko, Christopher",
+    "Days\/Times":"T 5:30PM - 6:20PM; T 6:30PM - 9:40PM",
+    "Room":"BWL 108, BWL 102",
+    "Status":"Waitlist"
+  },
+  {
+    "Course":"STAT-C1000E",
+    "Section":9005,
+    "Instructor":"Valdez, Michael",
+    "Days\/Times":"M W 9:35AM - 11:55AM, M W 11:55AM - 12:40PM",
+    "Room":"SRC W219",
+    "Status":"Open"
+  },
+  {
+    "Course":"STAT-C1000E",
+    "Section":8011,
+    "Instructor":"Shah, Meetal",
+    "Days\/Times":"M W 5:00PM - 7:20PM, M W 7:20PM - 8:05PM",
+    "Room":"MA 108",
+    "Status":"Open"
+  },
+  {
+    "Course":"STAT-C1000E",
+    "Section":8010,
+    "Instructor":"Carter, Jamylle",
+    "Days\/Times":"M W 6:30PM - 8:50PM, W 6:30PM - 8:50PM, M W 8:50PM - 9:35PM, W 8:50PM - 9:35PM",
+    "Room":"OFF PART-ONL \/ L148",
+    "Status":"Open"
+  },
+  {
+    "Course":"STAT-C1000E",
+    "Section":6009,
+    "Instructor":"Carter, Jamylle",
+    "Days\/Times":"M W 6:30PM - 8:50PM, W 6:30PM - 8:50PM, M W 8:50PM - 9:35PM, W 8:50PM - 9:35PM",
+    "Room":"OFF PART-ONL \/ L148",
+    "Status":"Clsd"
+  },
+  {
+    "Course":"STAT-C1000E",
+    "Section":6008,
+    "Instructor":"Lantzy, Henry",
+    "Days\/Times":"T Th 11:10AM - 1:30PM, T Th 1:30PM - 2:15PM",
+    "Room":"L142",
+    "Status":"Open"
+  },
+  {
+    "Course":"STAT-C1000E",
+    "Section":6007,
+    "Instructor":"Gomez, Concha",
+    "Days\/Times":"T Th 11:10AM - 1:30PM, T Th 1:30PM - 2:15PM",
+    "Room":"MA250",
+    "Status":"Open"
+  },
+  {
+    "Course":"STAT-C1000E",
+    "Section":6006,
+    "Instructor":"Vanderbilt, Read",
+    "Days\/Times":"M W 11:10AM - 1:30PM, M W 1:30PM - 2:15PM",
+    "Room":"L149",
+    "Status":"Open"
+  },
+  {
+    "Course":"STAT-C1000E",
+    "Section":3757,
+    "Instructor":"Keating, Katrina",
+    "Days\/Times":"T 11:10AM - 1:30PM, T Th 11:10AM - 1:30PM, T 1:30PM - 2:15PM, T Th 1:30PM - 2:15PM",
+    "Room":"L149 \/ OFF PART-ONL",
+    "Status":"Wcls"
+  },
+  {
+    "Course":"STAT-C1000E",
+    "Section":1998,
+    "Instructor":"Huynh, My",
+    "Days\/Times":"M W 12:45PM - 3:05PM, M W 3:05PM - 3:50PM",
+    "Room":"L143",
+    "Status":"Wcls"
+  },
+  {
+    "Course":"STAT-C1000E",
+    "Section":1997,
+    "Instructor":"Vincent, Marcus",
+    "Days\/Times":"T Th 7:55AM - 10:15AM, T Th 10:15AM - 11:00AM",
+    "Room":"MA245",
+    "Status":"Wcls"
+  },
+  {
+    "Course":"STAT-C1000E",
+    "Section":1996,
+    "Instructor":"Vanderbilt, Read",
+    "Days\/Times":"M W 11:10AM - 1:30PM, M W 1:30PM - 2:15PM",
+    "Room":"L149",
+    "Status":"Clsd"
+  },
+  {
+    "Course":"STAT-C1000E",
+    "Section":1974,
+    "Instructor":"Lantzy, Henry",
+    "Days\/Times":"T Th 11:10AM - 1:30PM, T Th 1:30PM - 2:15PM",
+    "Room":"L142",
+    "Status":"Clsd"
+  },
+  {
+    "Course":"STAT-C1000E",
+    "Section":1970,
+    "Instructor":"Gomez, Concha",
+    "Days\/Times":"T Th 11:10AM - 1:30PM, T Th 1:30PM - 2:15PM",
+    "Room":"MA250",
+    "Status":"Clsd"
+  },
+  {
+    "Course":"STAT-C1000E",
+    "Section":1969,
+    "Instructor":"Arthur, James",
+    "Days\/Times":"M W 2:30PM - 4:50PM, M W 4:50PM - 5:35PM",
+    "Room":"L148",
+    "Status":"Wcls"
+  },
+  {
+    "Course":"STAT-C1000E",
+    "Section":1087,
+    "Instructor":"Carter, Jamylle",
+    "Days\/Times":"T Th 12:45PM - 3:05PM, T Th 3:05PM - 3:50PM",
+    "Room":"L148",
+    "Status":"Wcls"
+  },
+  {
+    "Course":"PSYC-214",
+    "Section":3360,
+    "Instructor":"Catterson, Arman",
+    "Days\/Times":"T 8:55AM - 11:00AM",
+    "Room":"OFF ONLINE",
+    "Status":"Wcls"
+  },
+  {
+    "Course":"PSYC-214",
+    "Section":3359,
+    "Instructor":"Catterson, Arman",
+    "Days\/Times":"W 8:55AM - 11:00AM",
+    "Room":"A226",
+    "Status":"Wcls"
+  }
+]

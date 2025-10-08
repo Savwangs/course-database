@@ -1,0 +1,3792 @@
+[
+  {
+    "course_code": "BIOSC-130",
+    "course_title": "Principles of Cellular and Molecular Biology",
+    "sections": [
+      {
+        "section_number": "9060",
+        "instructor": "Cole Ekberg, Marci",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "8:00AM - 9:25AM",
+            "room": "SRC W222",
+            "format": "in-person"
+          },
+          {
+            "days": "T Th",
+            "time": "9:45AM - 12:50PM",
+            "room": "SRC E240",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "8150",
+        "instructor": "Matern, Scott",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "2:25PM - 5:30PM",
+            "room": "LS 201",
+            "format": "in-person"
+          },
+          {
+            "days": "M W",
+            "time": "5:35PM - 7:00PM",
+            "room": "LS 115",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "8014",
+        "instructor": "Matern, Scott",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "5:35PM - 7:00PM",
+            "room": "LS 115",
+            "format": "in-person"
+          },
+          {
+            "days": "M W",
+            "time": "7:05PM - 10:10PM",
+            "room": "LS 201",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "6004",
+        "instructor": "Pandev, Nichole",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "11:10AM - 2:15PM",
+            "room": "LS 201",
+            "format": "in-person"
+          },
+          {
+            "days": "M W",
+            "time": "2:30PM - 3:55PM",
+            "room": "LS 223",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1082",
+        "instructor": "Pandev, Nichole",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "11:10AM - 2:15PM",
+            "room": "LS 201",
+            "format": "in-person"
+          },
+          {
+            "days": "M W",
+            "time": "2:30PM - 3:55PM",
+            "room": "LS 223",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1081",
+        "instructor": "Vandervorst, Kacey",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "7:55AM - 11:00AM",
+            "room": "LS 201",
+            "format": "in-person"
+          },
+          {
+            "days": "M W",
+            "time": "11:10AM - 12:35PM",
+            "room": "LS 212",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      }
+    ],
+    "prerequisites": "CHEM-120 or equivalent"
+  },
+  {
+    "course_code": "BIOSC-131",
+    "course_title": "Principles of Organismal Biology, Evolution and Ecology",
+    "sections": [
+      {
+        "section_number": "9071",
+        "instructor": "Reyes, Brandon",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "11:10AM - 2:15PM",
+            "room": "SRC E240",
+            "format": "in-person"
+          },
+          {
+            "days": "M W",
+            "time": "2:30PM - 3:55PM",
+            "room": "SRC W220",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "8015",
+        "instructor": "McPheron, Linda",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "5:30PM - 6:55PM",
+            "room": "LS 223",
+            "format": "in-person"
+          },
+          {
+            "days": "T Th",
+            "time": "7:00PM - 10:05PM",
+            "room": "LS 201",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1085",
+        "instructor": "Greene, Valerie",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "9:35AM - 11:00AM",
+            "room": "LS 217",
+            "format": "in-person"
+          },
+          {
+            "days": "T Th",
+            "time": "11:10AM - 2:15PM",
+            "room": "LS 201",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1084",
+        "instructor": "Greene, Valerie",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "7:55AM - 11:00AM",
+            "room": "LS 201",
+            "format": "in-person"
+          },
+          {
+            "days": "M W",
+            "time": "9:35AM - 11:00AM",
+            "room": "LS 217",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1083",
+        "instructor": "Halbrook, Kandres",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "12:45PM - 2:10PM",
+            "room": "LS 223",
+            "format": "in-person"
+          },
+          {
+            "days": "T Th",
+            "time": "2:25PM - 5:30PM",
+            "room": "LS 201",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      }
+    ],
+    "prerequisites": "CHEM-120 (may be taken concurrently) or equivalent"
+  },
+  {
+    "course_code": "CHEM-120",
+    "course_title": "General College Chemistry I",
+    "sections": [
+      {
+        "section_number": "9212",
+        "instructor": "Symmank, Beverly",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "2:30PM - 3:55PM",
+            "room": "SRC E230",
+            "format": "in-person"
+          },
+          {
+            "days": "M W",
+            "time": "4:30PM - 7:35PM",
+            "room": "SRC E237",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "9115",
+        "instructor": "Petersen, Anne",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "9:35AM - 11:00AM",
+            "room": "SRC E230",
+            "format": "in-person"
+          },
+          {
+            "days": "T Th",
+            "time": "11:20AM - 2:25PM",
+            "room": "SRC E237",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "8010",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "5:30PM - 6:55PM",
+            "room": "PS 275",
+            "format": "in-person"
+          },
+          {
+            "days": "M W",
+            "time": "7:05PM - 10:10PM",
+            "room": "PS 201",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "8009",
+        "instructor": "Eskandari, Vahid",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "2:30PM - 3:55PM",
+            "room": "PS 267",
+            "format": "in-person"
+          },
+          {
+            "days": "T Th",
+            "time": "4:05PM - 7:10PM",
+            "room": "PS 205",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "6001",
+        "instructor": "Wilson, Kathryn",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "9:35AM - 11:00AM",
+            "room": "PS 267",
+            "format": "in-person"
+          },
+          {
+            "days": "T Th",
+            "time": "11:10AM - 2:15PM",
+            "room": "PS 205",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1043",
+        "instructor": "Wilson, Kathryn",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "9:35AM - 11:00AM",
+            "room": "PS 267",
+            "format": "in-person"
+          },
+          {
+            "days": "T Th",
+            "time": "11:10AM - 2:15PM",
+            "room": "PS 205",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1041",
+        "instructor": "Gerken, Craig",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "11:10AM - 2:15PM",
+            "room": "PS 205",
+            "format": "in-person"
+          },
+          {
+            "days": "T Th",
+            "time": "11:10AM - 12:35PM",
+            "room": "PS 275",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1040",
+        "instructor": "Gerken, Craig",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "11:10AM - 12:35PM",
+            "room": "PS 275",
+            "format": "in-person"
+          },
+          {
+            "days": "M W",
+            "time": "2:30PM - 5:35PM",
+            "room": "PS 205",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1039",
+        "instructor": "Antonakos, Cory",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "11:10AM - 2:15PM",
+            "room": "PS 201",
+            "format": "hybrid"
+          },
+          {
+            "days": "W",
+            "time": "11:10AM - 12:35PM",
+            "room": "PS 110",
+            "format": "hybrid"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1038",
+        "instructor": "Antonakos, Cory",
+        "meetings": [
+          {
+            "days": "W",
+            "time": "11:10AM - 12:35PM",
+            "room": "PS 110",
+            "format": "hybrid"
+          },
+          {
+            "days": "T Th",
+            "time": "2:30PM - 5:35PM",
+            "room": "PS 201",
+            "format": "hybrid"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1037",
+        "instructor": "Kulp, Jamie",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "9:35AM - 11:00AM",
+            "room": "PS 277",
+            "format": "in-person"
+          },
+          {
+            "days": "M W",
+            "time": "11:10AM - 2:15PM",
+            "room": "PS 201",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      }
+    ],
+    "prerequisites": "Prerequisite: CHEM-108 or score of 3, 4, or 5 on AP Chemistry Test or appropriate chemistry skill level demonstrated through Chemistry Diagnostic Test or equivalent; Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra."
+  },
+  {
+    "course_code": "CHEM-121",
+    "course_title": "General College Chemistry II",
+    "sections": [
+      {
+        "section_number": "8011",
+        "instructor": "Fraund, Matthew",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "5:30PM - 6:55PM",
+            "room": "PS 267",
+            "format": "in-person"
+          },
+          {
+            "days": "M W",
+            "time": "7:05PM - 10:10PM",
+            "room": "PS 213",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "6002",
+        "instructor": "Burns, Laura",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "11:10AM - 12:35PM",
+            "room": "PS 275",
+            "format": "in-person"
+          },
+          {
+            "days": "T Th",
+            "time": "11:10AM - 2:15PM",
+            "room": "PS 213",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1048",
+        "instructor": "Fell, Jason",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "4:05PM - 5:30PM",
+            "room": "PS 277",
+            "format": "in-person"
+          },
+          {
+            "days": "T Th",
+            "time": "5:45PM - 8:50PM",
+            "room": "PS 213",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1047",
+        "instructor": "Ruehl, Jean",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "9:35AM - 11:00AM",
+            "room": "PS 110",
+            "format": "in-person"
+          },
+          {
+            "days": "M W",
+            "time": "11:10AM - 2:15PM",
+            "room": "PS 213",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1046",
+        "instructor": "Burns, Laura",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "7:55AM - 11:00AM",
+            "room": "PS 213",
+            "format": "in-person"
+          },
+          {
+            "days": "M W",
+            "time": "11:10AM - 12:35PM",
+            "room": "PS 275",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1045",
+        "instructor": "Burns, Laura",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "11:10AM - 12:35PM",
+            "room": "PS 275",
+            "format": "in-person"
+          },
+          {
+            "days": "T Th",
+            "time": "11:10AM - 2:15PM",
+            "room": "PS 213",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1044",
+        "instructor": "Ruehl, Jean",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "9:35AM - 11:00AM",
+            "room": "PS 110",
+            "format": "in-person"
+          },
+          {
+            "days": "T Th",
+            "time": "2:30PM - 5:35PM",
+            "room": "PS 213",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      }
+    ],
+    "prerequisites": "CHEM-120 or equivalent"
+  },
+  {
+    "course_code": "ENGL-C1000",
+    "course_title": "Academic Reading and Writing",
+    "sections": [
+      {
+        "section_number": "9397",
+        "instructor": "Colson, Michael",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "9345",
+        "instructor": "Colson, Michael",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "9325",
+        "instructor": "Huang, Lynn",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "9:35AM - 11:00AM",
+            "room": "SRC E174",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "9221",
+        "instructor": "Colson, Michael",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "9202",
+        "instructor": "Katko, Clarissa",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "9:35AM - 11:00AM",
+            "room": "SRC E188",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "9181",
+        "instructor": "Colson, Michael",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "12:45PM - 2:10PM",
+            "room": "SRC E188",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "9156",
+        "instructor": "Colson, Michael",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "6018",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "9:35AM - 11:00AM",
+            "room": "AQ 101",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "6010",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "T",
+            "time": "9:35AM - 11:00AM",
+            "room": "OFF NEED",
+            "format": "hybrid"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "5096",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "5095",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "5092",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "5091",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "5088",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "5087",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1242",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "9:35AM - 11:00AM",
+            "room": "OFF NEED",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1241",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "12:45PM - 2:10PM",
+            "room": "LA 113",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1238",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "T",
+            "time": "12:45PM - 2:10PM",
+            "room": "LA 113",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1237",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "T",
+            "time": "11:10AM - 12:35PM",
+            "room": "LA 113",
+            "format": "hybrid"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1236",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "M",
+            "time": "12:45PM - 2:10PM",
+            "room": "LA 114",
+            "format": "hybrid"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1234",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "W",
+            "time": "11:10AM - 12:35PM",
+            "room": "LA 114",
+            "format": "hybrid"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1233",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "12:45PM - 2:10PM",
+            "room": "LA 118",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1231",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "9:35AM - 11:00AM",
+            "room": "LA 115",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1230",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "11:10AM - 12:35PM",
+            "room": "LA 214",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1229",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "12:45PM - 2:10PM",
+            "room": "LC 110",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1227",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "11:10AM - 12:35PM",
+            "room": "LC 103",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1226",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "9:35AM - 11:00AM",
+            "room": "LA 114",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1225",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "9:35AM - 11:00AM",
+            "room": "LA 113",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1224",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "T",
+            "time": "9:35AM - 11:00AM",
+            "room": "OFF NEED",
+            "format": "hybrid"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1223",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "9:35AM - 11:00AM",
+            "room": "LA 114",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1221",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "11:10AM - 12:35PM",
+            "room": "LA 113",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1220",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "9:35AM - 11:00AM",
+            "room": "LA 113",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1219",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "9:35AM - 11:00AM",
+            "room": "LA 212",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1218",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "9:35AM - 11:00AM",
+            "room": "LA 118",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1217",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "11:10AM - 12:35PM",
+            "room": "OFF NEED",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1216",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "11:10AM - 12:35PM",
+            "room": "LA 211",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1215",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "9:35AM - 11:00AM",
+            "room": "LA 214",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1213",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "11:10AM - 12:35PM",
+            "room": "LA 118",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "5089",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      }
+    ],
+    "prerequisites": "Placement as determined by the college's multiple measures assessment process.",
+    "equivalent_courses_for_ENGL-C1000": [
+      {
+        "course_code": "ENGL-C1000E",
+        "course_title": "Academic Reading and Writing",
+        "sections": [
+          {
+            "section_number": "9199",
+            "instructor": "Katko, Clarissa",
+            "meetings": [
+              {
+                "days": "T Th",
+                "time": "11:10AM - 1:40PM",
+                "room": "SRC E176",
+                "format": "hybrid"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "8059",
+            "instructor": "Staff, DVC",
+            "meetings": [
+              {
+                "days": "M",
+                "time": "6:00PM - 8:30PM",
+                "room": "OFF ONLINE",
+                "format": "hybrid"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "6012",
+            "instructor": "Staff, DVC",
+            "meetings": [
+              {
+                "days": "M",
+                "time": "6:00PM - 8:30PM",
+                "room": "OFF ONLINE",
+                "format": "hybrid"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "6011",
+            "instructor": "Staff, DVC",
+            "meetings": [
+              {
+                "days": "T",
+                "time": "9:35AM - 12:05PM",
+                "room": "LA 213",
+                "format": "hybrid"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "5113",
+            "instructor": "Staff, DVC",
+            "meetings": [
+              {
+              "days": "Online",
+              "time": "Asynchronous",
+              "room": "Online",
+              "format": "online"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "1254",
+            "instructor": "Staff, DVC",
+            "meetings": [
+              {
+                "days": "T Th",
+                "time": "9:35AM - 12:05PM",
+                "room": "LA 118",
+                "format": "hybrid"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "1253",
+            "instructor": "Staff, DVC",
+            "meetings": [
+              {
+                "days": "W",
+                "time": "11:10AM - 1:40PM",
+                "room": "",
+                "format": "hybrid"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "1252",
+            "instructor": "Staff, DVC",
+            "meetings": [
+              {
+                "days": "T",
+                "time": "9:35AM - 12:05PM",
+                "room": "LA 213",
+                "format": "hybrid"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "1251",
+            "instructor": "Staff, DVC",
+            "meetings": [
+              {
+                "days": "M W",
+                "time": "9:35AM - 12:05PM",
+                "room": "LC 110",
+                "format": "hybrid"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "1247",
+            "instructor": "Staff, DVC",
+            "meetings": [
+              {
+                "days": "T",
+                "time": "11:10AM - 1:40PM",
+                "room": "LC 109",
+                "format": "hybrid"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "1249",
+            "instructor": "Staff, DVC",
+            "meetings": [
+              {
+                "days": "M W",
+                "time": "9:35AM - 12:05PM",
+                "room": "OFF NEED RM",
+                "format": "hybrid"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "1248",
+            "instructor": "Staff, DVC",
+            "meetings": [
+              {
+                "days": "M W",
+                "time": "9:35AM - 12:05PM",
+                "room": "LC 103",
+                "format": "hybrid"
+              }
+            ],
+            "status": "Open, Seats Available"
+          }
+        ], 
+        "prerequisites": "Prerequisite: Placement as determined by the college's multiple measures assessment process."
+      },
+      {
+        "course_code": "ENGL-122AL",
+        "course_title": "Academic Reading and Writing for Multilingual Students",
+        "sections": [
+          {
+            "section_number": "5108",
+            "instructor": "DuLaney-Greger, Keri",
+            "meetings": [
+              {
+              "days": "Online",
+              "time": "Asynchronous",
+              "room": "Online",
+              "format": "online"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "5107",
+            "instructor": "DuLaney-Greger, Keri",
+            "meetings": [
+              {
+              "days": "Online",
+              "time": "Asynchronous",
+              "room": "Online",
+              "format": "online"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "1246",
+            "instructor": "Khabiri, Mona",
+            "meetings": [
+              {
+                "days": "W",
+                "time": "9:35AM - 12:05PM",
+                "room": "LA 117",
+                "format": "hybrid"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "1245",
+            "instructor": "Rossini, Sara",
+            "meetings": [
+              {
+                "days": "M",
+                "time": "9:35AM - 12:05PM",
+                "room": "LA 116",
+                "format": "hybrid"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "1243",
+            "instructor": "Rogers, Jill",
+            "meetings": [
+              {
+                "days": "T Th",
+                "time": "11:10AM - 1:40PM",
+                "room": "LA 116",
+                "format": "hybrid"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "5111",
+            "instructor": "Fischer-Mikolavich, Ema",
+            "meetings": [
+              {
+              "days": "Online",
+              "time": "Asynchronous",
+              "room": "Online",
+              "format": "online"
+              }
+            ],
+            "status": "Open, Seats Available"
+          }
+        ], 
+        "prerequisites": "Placement as determined by the college's multiple measures assessment process"
+      }
+    ]
+  },
+  {
+    "course_code": "ENGL-123",
+    "course_title": "Critical Thinking: Writing About Literature",
+    "sections": [
+      {
+        "section_number": "9295",
+        "instructor": "Huang, Lynn",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "12:45PM - 2:10PM",
+            "room": "SRC E174",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "9104",
+        "instructor": "Huang, Lynn",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "11:10AM - 12:35PM",
+            "room": "SRC E174",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "6016",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "9:35AM - 11:00AM",
+            "room": "LC 110",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "6015",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "9:35AM - 11:00AM",
+            "room": "OFF NEED",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "6014",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "6013",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "T",
+            "time": "12:45PM - 2:10PM",
+            "room": "LA 115",
+            "format": "hybrid"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "5128",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "5127",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "5126",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "5122",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "5121",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "5120",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "5118",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "5115",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "4875",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "11:10AM - 12:35PM",
+            "room": "AQ 101",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1277",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "T",
+            "time": "11:10AM - 12:35PM",
+            "room": "LA 115",
+            "format": "hybrid"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1276",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "9:35AM - 11:00AM",
+            "room": "OFF NEED",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1275",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "11:00AM - 12:25PM",
+            "room": "OFF NEED",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1273",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "T",
+            "time": "12:45PM - 2:10PM",
+            "room": "LA 115",
+            "format": "hybrid"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1272",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "W",
+            "time": "12:45PM - 2:10PM",
+            "room": "LA 214",
+            "format": "hybrid"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1271",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "M",
+            "time": "9:35AM - 11:00AM",
+            "room": "LA 211",
+            "format": "hybrid"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1270",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "9:35AM - 11:00AM",
+            "room": "LA 210",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1269",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "11:10AM - 12:35PM",
+            "room": "OFF NEED",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1268",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "9:35AM - 11:00AM",
+            "room": "LC 103",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1267",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "11:10AM - 12:35PM",
+            "room": "LA 211",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1265",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "9:35AM - 11:00AM",
+            "room": "LA 210",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1264",
+        "instructor": "Ang, Lisa",
+        "meetings": [
+          {
+            "days": "W",
+            "time": "11:10AM - 12:35PM",
+            "room": "LA 210",
+            "format": "hybrid"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1263",
+        "instructor": "Thomas, John",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "12:45PM - 2:10PM",
+            "room": "LA 115",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1262",
+        "instructor": "Carrick, Jason",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "12:45PM - 2:10PM",
+            "room": "LA 212",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1261",
+        "instructor": "Bessie, Adam",
+        "meetings": [
+          {
+            "days": "T",
+            "time": "9:35AM - 11:00AM",
+            "room": "LA 115",
+            "format": "hybrid"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1260",
+        "instructor": "Agnost, Catherine",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "9:35AM - 11:00AM",
+            "room": "OFF NEED",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1259",
+        "instructor": "Vinson, Pauline",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "12:45PM - 2:10PM",
+            "room": "LA 114",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1258",
+        "instructor": "Hansen, Megan",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "11:10AM - 12:35PM",
+            "room": "LA 115",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1256",
+        "instructor": "Thomas, John",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "9:35AM - 11:00AM",
+            "room": "OFF NEED",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1255",
+        "instructor": "Forgette, Chalisse",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      }
+    ],
+    "prerequisites": "ENGL-C1000 or equivalent",
+
+    "equivalent_courses_for_ENGL-123": [
+      {
+        "course_code": "ENGL-C1001",
+        "course_title": "Critical Thinking and Writing",
+        "sections": [
+          {
+            "section_number": "9220",
+            "instructor": "Zeigler, Katie",
+            "meetings": [
+              {
+                "days": "Online",
+                "time": "Asynchronous",
+                "room": "Online",
+                "format": "online"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "9196",
+            "instructor": "Burgess, Susan",
+            "meetings": [
+              {
+                "days": "M W",
+                "time": "11:10AM - 12:35PM",
+                "room": "SRC E176",
+                "format": "in-person"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "9112",
+            "instructor": "Burgess, Susan",
+            "meetings": [
+              {
+                "days": "M",
+                "time": "12:45PM - 2:10PM",
+                "room": "SRC E176",
+                "format": "hybrid"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "6019",
+            "instructor": "Staff, DVC",
+            "meetings": [
+              {
+                "days": "M W",
+                "time": "12:45PM - 2:10PM",
+                "room": "LC 109",
+                "format": "in-person"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "5140",
+            "instructor": "Staff, DVC",
+            "meetings": [
+              {
+                "days": "Online",
+                "time": "Asynchronous",
+                "room": "Online",
+                "format": "online"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "5137",
+            "instructor": "Staff, DVC",
+            "meetings": [
+              {
+                "days": "Online",
+                "time": "Asynchronous",
+                "room": "Online",
+                "format": "online"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "5133",
+            "instructor": "Staff, DVC",
+            "meetings": [
+              {
+                "days": "Online",
+                "time": "Asynchronous",
+                "room": "Online",
+                "format": "online"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "5132",
+            "instructor": "Staff, DVC",
+            "meetings": [
+              {
+                "days": "Online",
+                "time": "Asynchronous",
+                "room": "Online",
+                "format": "online"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "5130",
+            "instructor": "Staff, DVC",
+            "meetings": [
+              {
+                "days": "Online",
+                "time": "Asynchronous",
+                "room": "Online",
+                "format": "online"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "1290",
+            "instructor": "Staff, DVC",
+            "meetings": [
+              {
+                "days": "M W",
+                "time": "9:35AM - 11:00AM",
+                "room": "OFF NEED",
+                "format": "in-person"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "1288",
+            "instructor": "Staff, DVC",
+            "meetings": [
+              {
+                "days": "T",
+                "time": "12:45PM - 2:10PM",
+                "room": "LA 211",
+                "format": "in-person"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "1287",
+            "instructor": "Staff, DVC",
+            "meetings": [
+              {
+                "days": "T Th",
+                "time": "11:10AM - 12:35PM",
+                "room": "LA 210",
+                "format": "in-person"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "1286",
+            "instructor": "Staff, DVC",
+            "meetings": [
+              {
+                "days": "T Th",
+                "time": "9:35AM - 11:00AM",
+                "room": "LA 116",
+                "format": "in-person"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "1284",
+            "instructor": "Staff, DVC",
+            "meetings": [
+              {
+                "days": "M W",
+                "time": "9:35AM - 11:00AM",
+                "room": "LC 101",
+                "format": "in-person"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "1283",
+            "instructor": "Staff, DVC",
+            "meetings": [
+              {
+                "days": "T Th",
+                "time": "11:10AM - 12:35PM",
+                "room": "OFF NEED",
+                "format": "in-person"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "1282",
+            "instructor": "Staff, DVC",
+            "meetings": [
+              {
+                "days": "T",
+                "time": "12:45PM - 2:10PM",
+                "room": "LA 210",
+                "format": "in-person"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "1281",
+            "instructor": "Staff, DVC",
+            "meetings": [
+              {
+                "days": "M W",
+                "time": "9:35AM - 11:00AM",
+                "room": "LA 211",
+                "format": "in-person"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "1280",
+            "instructor": "Staff, DVC",
+            "meetings": [
+              {
+                "days": "M W",
+                "time": "11:10AM - 12:35PM",
+                "room": "LA 212",
+                "format": "in-person"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "1279",
+            "instructor": "Staff, DVC",
+            "meetings": [
+              {
+                "days": "M",
+                "time": "9:35AM - 11:00AM",
+                "room": "LA 212",
+                "format": "in-person"
+              }
+            ],
+            "status": "Open, Seats Available"
+          }
+        ],
+        "prerequisites": "College-level composition (ENGL C1000/ ENGL C1000H/ ENGL C1000E/C-ID ENGL 100) or equivalent"
+      }, 
+      {
+        "course_code": "ENGL-126A",
+        "course_title": "Critical Thinking and Writing for Multilingual Students",
+        "sections": [
+          {
+            "section_number": "5307",
+            "instructor": "Staff, DVC",
+            "meetings": [
+              {
+              "days": "Online",
+              "time": "Asynchronous",
+              "room": "Online",
+              "format": "online"
+              }
+            ],
+            "status": "Open, Seats Available"
+          }
+        ], 
+        "prerequisites": "ENGL-C1000 or equivalent"
+      }
+    ]
+  },
+  {
+    "course_code": "PHYS-231",
+    "course_title": "Physics for Engineers and Scientists C: Optics and Modern Physics",
+    "sections": [
+      {
+        "section_number": "9441",
+        "instructor": "Chiang, Chien-I",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "8:10AM - 9:35AM",
+            "room": "SRC W216",
+            "format": "in-person"
+          },
+          {
+            "days": "T",
+            "time": "9:45AM - 11:00AM",
+            "room": "SRC E181",
+            "format": "in-person"
+          },
+          {
+            "days": "Th",
+            "time": "9:45AM - 12:35PM",
+            "room": "SRC E181",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "6009",
+        "instructor": "Colwell, Kitran",
+        "meetings": [
+          {
+            "days": "F",
+            "time": "11:10AM - 2:00PM",
+            "room": "PS 121",
+            "format": "in-person"
+          },
+          {
+            "days": "M W",
+            "time": "12:45PM - 2:10PM",
+            "room": "PS 175",
+            "format": "in-person"
+          },
+          {
+            "days": "T",
+            "time": "12:45PM - 2:00PM",
+            "room": "PS 110",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1206",
+        "instructor": "Speliotopoulos, Achilles",
+        "meetings": [
+          {
+            "days": "F",
+            "time": "8:00AM - 10:50AM",
+            "room": "PS 121",
+            "format": "in-person"
+          },
+          {
+            "days": "W",
+            "time": "9:35AM - 10:50AM",
+            "room": "PS 105",
+            "format": "in-person"
+          },
+          {
+            "days": "M W",
+            "time": "4:05PM - 5:30PM",
+            "room": "PS 175",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1205",
+        "instructor": "Rodriguez, John",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "11:10AM - 12:35PM",
+            "room": "PS 175",
+            "format": "in-person"
+          },
+          {
+            "days": "M",
+            "time": "2:30PM - 5:20PM",
+            "room": "PS 121",
+            "format": "in-person"
+          },
+          {
+            "days": "W",
+            "time": "2:30PM - 3:45PM",
+            "room": "PS 121",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1204",
+        "instructor": "Rodriguez, John",
+        "meetings": [
+          {
+            "days": "M",
+            "time": "11:10AM - 12:25PM",
+            "room": "PS 121",
+            "format": "in-person"
+          },
+          {
+            "days": "T Th",
+            "time": "11:10AM - 12:35PM",
+            "room": "PS 175",
+            "format": "in-person"
+          },
+          {
+            "days": "W",
+            "time": "11:10AM - 2:00PM",
+            "room": "PS 121",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1203",
+        "instructor": "Colwell, Kitran",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "12:45PM - 2:10PM",
+            "room": "PS 175",
+            "format": "in-person"
+          },
+          {
+            "days": "F",
+            "time": "2:30PM - 5:20PM",
+            "room": "PS 121",
+            "format": "in-person"
+          },
+          {
+            "days": "T",
+            "time": "2:30PM - 3:45PM",
+            "room": "PS 110",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1202",
+        "instructor": "Colwell, Kitran",
+        "meetings": [
+          {
+            "days": "F",
+            "time": "11:10AM - 2:00PM",
+            "room": "PS 121",
+            "format": "in-person"
+          },
+          {
+            "days": "M W",
+            "time": "12:45PM - 2:10PM",
+            "room": "PS 175",
+            "format": "in-person"
+          },
+          {
+            "days": "T",
+            "time": "12:45PM - 2:00PM",
+            "room": "PS 110",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      }
+    ],
+    "prerequisites": "PHYS-230 or equivalent; MATH-294 or equivalent (may be taken concurrently)"
+  },
+  {
+    "course_code": "PHYS-230",
+    "course_title": "Physics for Engineers and Scientists B: Heat and Electro-Magnetism",
+    "sections": [
+      {
+        "section_number": "9183",
+        "instructor": "Chiang, Chien-I",
+        "meetings": [
+          {
+            "days": "M",
+            "time": "1:05PM - 3:55PM",
+            "room": "SRC E181",
+            "format": "in-person"
+          },
+          {
+            "days": "W",
+            "time": "2:40PM - 3:55PM",
+            "room": "SRC E225",
+            "format": "in-person"
+          },
+          {
+            "days": "M W",
+            "time": "4:05PM - 5:30PM",
+            "room": "SRC E230",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "9031",
+        "instructor": "Chiang, Chien-I",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "4:05PM - 5:30PM",
+            "room": "SRC E230",
+            "format": "in-person"
+          },
+          {
+            "days": "M",
+            "time": "5:40PM - 8:30PM",
+            "room": "SRC E181",
+            "format": "in-person"
+          },
+          {
+            "days": "M",
+            "time": "8:40PM - 9:55PM",
+            "room": "SRC E181",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "6008",
+        "instructor": "Hamida, Youcef",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "11:10AM - 12:35PM",
+            "room": "PS 177",
+            "format": "in-person"
+          },
+          {
+            "days": "T",
+            "time": "11:10AM - 2:00PM",
+            "room": "PS 117",
+            "format": "in-person"
+          },
+          {
+            "days": "Th",
+            "time": "12:45PM - 2:00PM",
+            "room": "PS 110",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1211",
+        "instructor": "Self, Matthew",
+        "meetings": [
+          {
+            "days": "M",
+            "time": "2:30PM - 3:45PM",
+            "room": "PS 110",
+            "format": "in-person"
+          },
+          {
+            "days": "T Th",
+            "time": "2:30PM - 3:55PM",
+            "room": "PS 177",
+            "format": "in-person"
+          },
+          {
+            "days": "W",
+            "time": "2:30PM - 5:20PM",
+            "room": "PS 113",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1201",
+        "instructor": "Hamida, Youcef",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "11:10AM - 12:35PM",
+            "room": "PS 177",
+            "format": "in-person"
+          },
+          {
+            "days": "T",
+            "time": "11:10AM - 2:00PM",
+            "room": "PS 117",
+            "format": "in-person"
+          },
+          {
+            "days": "Th",
+            "time": "12:45PM - 2:00PM",
+            "room": "PS 110",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1200",
+        "instructor": "Hamida, Youcef",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "11:10AM - 12:35PM",
+            "room": "PS 177",
+            "format": "in-person"
+          },
+          {
+            "days": "T",
+            "time": "2:30PM - 5:20PM",
+            "room": "PS 117",
+            "format": "in-person"
+          },
+          {
+            "days": "Th",
+            "time": "2:30PM - 3:45PM",
+            "room": "PS 110",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1199",
+        "instructor": "Hamida, Youcef",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "11:10AM - 12:35PM",
+            "room": "PS 177",
+            "format": "in-person"
+          },
+          {
+            "days": "T",
+            "time": "11:10AM - 2:00PM",
+            "room": "PS 117",
+            "format": "in-person"
+          },
+          {
+            "days": "Th",
+            "time": "12:45PM - 2:00PM",
+            "room": "PS 110",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      }
+    ],
+    "prerequisites": "PHYS-130 or equivalent; MATH-292 (may be taken concurrently) or equivalent."
+  },
+  {
+    "course_code": "PHYS-130",
+    "course_title": "Physics for Engineers and Scientists A: Mechanics and Wave Motion",
+    "sections": [
+      {
+        "section_number": "6585",
+        "instructor": "Katdare, Sonia",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "11:10AM - 12:35PM",
+            "room": "PS 177",
+            "format": "in-person"
+          },
+          {
+            "days": "W",
+            "time": "11:10AM - 2:00PM",
+            "room": "PS 113",
+            "format": "in-person"
+          },
+          {
+            "days": "T",
+            "time": "12:45PM - 2:00PM",
+            "room": "PS 121",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1197",
+        "instructor": "Christianson, Kent",
+        "meetings": [
+          {
+            "days": "M",
+            "time": "11:10AM - 2:00PM",
+            "room": "PS 113",
+            "format": "in-person"
+          },
+          {
+            "days": "W",
+            "time": "12:45PM - 2:00PM",
+            "room": "WLC 1",
+            "format": "in-person"
+          },
+          {
+            "days": "T Th",
+            "time": "2:30PM - 3:55PM",
+            "room": "PS 175",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1196",
+        "instructor": "Katdare, Sonia",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "11:10AM - 12:35PM",
+            "room": "PS 177",
+            "format": "in-person"
+          },
+          {
+            "days": "W",
+            "time": "11:10AM - 2:00PM",
+            "room": "PS 113",
+            "format": "in-person"
+          },
+          {
+            "days": "T",
+            "time": "12:45PM - 2:00PM",
+            "room": "PS 121",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1195",
+        "instructor": "Speliotopoulos, Achilles",
+        "meetings": [
+          {
+            "days": "M",
+            "time": "9:35AM - 10:50AM",
+            "room": "PS 113",
+            "format": "in-person"
+          },
+          {
+            "days": "M W",
+            "time": "12:45PM - 2:10PM",
+            "room": "PS 177",
+            "format": "in-person"
+          },
+          {
+            "days": "F",
+            "time": "2:30PM - 5:20PM",
+            "room": "PS 113",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1194",
+        "instructor": "Speliotopoulos, Achilles",
+        "meetings": [
+          {
+            "days": "M",
+            "time": "8:00AM - 9:15AM",
+            "room": "PS 113",
+            "format": "in-person"
+          },
+          {
+            "days": "F",
+            "time": "11:10AM - 2:00PM",
+            "room": "PS 113",
+            "format": "in-person"
+          },
+          {
+            "days": "M W",
+            "time": "12:45PM - 2:10PM",
+            "room": "PS 177",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1193",
+        "instructor": "Large, Evan",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "9:35AM - 11:00AM",
+            "room": "PS 177",
+            "format": "in-person"
+          },
+          {
+            "days": "T",
+            "time": "11:10AM - 12:25PM",
+            "room": "PS 113",
+            "format": "in-person"
+          },
+          {
+            "days": "Th",
+            "time": "11:10AM - 2:00PM",
+            "room": "PS 113",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1191",
+        "instructor": "Large, Evan",
+        "meetings": [
+          {
+            "days": "T",
+            "time": "8:00AM - 10:50AM",
+            "room": "PS 113",
+            "format": "in-person"
+          },
+          {
+            "days": "M W",
+            "time": "9:35AM - 11:00AM",
+            "room": "PS 177",
+            "format": "in-person"
+          },
+          {
+            "days": "Th",
+            "time": "9:35AM - 10:50AM",
+            "room": "PS 113",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      }
+    ],
+    "prerequisites": "PHYS-110 and PHYS-111 combined or PHYS-112 or PHYS-120 or PHYS-129 or one year high school physics or equivalent"
+  },
+  {
+    "course_code": "MATH-192",
+    "course_title": "Analytic Geometry and Calculus I",
+    "sections": [
+      {
+        "section_number": "9300",
+        "instructor": "Staff, SRC",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "11:25AM - 1:55PM",
+            "room": "SRC W220",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "9281",
+        "instructor": "Staff, SRC",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "4:05PM - 6:35PM",
+            "room": "SRC E164",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "8212",
+        "instructor": "Leon-Bravo, Paula",
+        "meetings": [
+          {
+            "days": "T",
+            "time": "5:00PM - 7:30PM",
+            "room": "MA 107",
+            "format": "hybrid"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "6133",
+        "instructor": "Vincent, Marcus",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "8:00AM - 10:30AM",
+            "room": "MA 108",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "3689",
+        "instructor": "Knight, Lynn Knight",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "2:30PM - 5:00PM",
+            "room": "MA 103",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "3379",
+        "instructor": "Lang, Lindsey",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "9:35AM - 12:05PM",
+            "room": "MA 245",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "2972",
+        "instructor": "Mircheva, Diana",
+        "meetings": [
+          {
+            "days": "M T W Th",
+            "time": "11:30AM - 1:00PM",
+            "room": "MA 107",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "2949",
+        "instructor": "Sohi, Anna",
+        "meetings": [
+          {
+            "days": "M T W Th",
+            "time": "9:20AM - 10:50AM",
+            "room": "OFF NEED",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "2945",
+        "instructor": "Ahmadieh, Cyrous",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "1:25PM - 3:55PM",
+            "room": "MA 241",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1835",
+        "instructor": "Leon-Bravo, Paula",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "12:45PM - 3:15PM",
+            "room": "MA 251",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1244",
+        "instructor": "Matlock, Elizabeth",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "11:10AM - 1:40PM",
+            "room": "MA 249",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1222",
+        "instructor": "Parks, Will",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "12:45PM - 3:15PM",
+            "room": "MA 244",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1214",
+        "instructor": "Carter, Jamylle",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "9:35AM - 12:05PM",
+            "room": "MA 250",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1212",
+        "instructor": "Jacob, Cooper",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "11:10AM - 1:40PM",
+            "room": "MA 108",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1210",
+        "instructor": "Vincent, Marcus",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "8:00AM - 10:30AM",
+            "room": "MA 108",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1209",
+        "instructor": "Wylie, Lindsay",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "8:30AM - 11:00AM",
+            "room": "LA 209",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "4045",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "9:35AM - 12:40PM",
+            "room": "LA 207",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      }
+    ],
+    "prerequisites": "Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of pre-calculus."
+  },
+  {
+    "course_code": "MATH-193",
+    "course_title": "Analytic Geometry and Calculus II",
+    "sections": [
+      {
+        "section_number": "9292",
+        "instructor": "Staff, SRC",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "4:05PM - 6:35PM",
+            "room": "SRC W219",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "8085",
+        "instructor": "Shah, Meetal",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "5:00PM - 7:30PM",
+            "room": "MA 108",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "8084",
+        "instructor": "Matlock, Elizabeth",
+        "meetings": [
+          {
+            "days": "T",
+            "time": "5:00PM - 7:30PM",
+            "room": "MA 240",
+            "format": "hybrid"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "6134",
+        "instructor": "Willett, Peter",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "8:30AM - 11:00AM",
+            "room": "L 209",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "3625",
+        "instructor": "Wylie, Lindsay",
+        "meetings": [
+          {
+            "days": "T",
+            "time": "1:25PM - 3:55PM",
+            "room": "L 143",
+            "format": "hybrid"
+          },
+          {
+            "days": "T Th",
+            "time": "1:25PM - 3:55PM",
+            "room": "OFF PART-ONL",
+            "format": "hybrid"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "2975",
+        "instructor": "Newton, Kit",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "11:10AM - 1:40PM",
+            "room": "OFF NEED",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "2666",
+        "instructor": "Riazati, Farzan",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "2:30PM - 5:00PM",
+            "room": "MA 245",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "2283",
+        "instructor": "Mohan, Adhitya",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "11:10AM - 1:40PM",
+            "room": "MA 109",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1562",
+        "instructor": "Gomez, Concha",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "1:25PM - 3:55PM",
+            "room": "MA 241",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1341",
+        "instructor": "Willett, Peter",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "8:30AM - 11:00AM",
+            "room": "LA 209",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1294",
+        "instructor": "Lum, Munlok",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "12:45PM - 3:15PM",
+            "room": "MA 109",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1285",
+        "instructor": "Pineda-Carranza, Servando",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "12:45PM - 3:15PM",
+            "room": "MA 108",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1250",
+        "instructor": "Leon-Bravo, Paula",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "9:35AM - 12:05PM",
+            "room": "MA 240",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1240",
+        "instructor": "Raymond, Brian",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "9:35AM - 12:05PM",
+            "room": "MA 109",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      }
+    ],
+    "prerequisites": "MATH-192 or equivalent"
+  },
+  {
+    "course_code": "MATH-194",
+    "course_title": "Linear Algebra",
+    "sections": [
+      {
+        "section_number": "8242",
+        "instructor": "Gomez, Concha",
+        "meetings": [
+          {
+            "days": "Th",
+            "time": "5:30PM - 7:30PM",
+            "room": "MA 101",
+            "format": "hybrid"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "2788",
+        "instructor": "Knight, Lynn Knight",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "12:45PM - 2:10PM",
+            "room": "MA 245",
+            "format": "in-person"
+          }
+        ],
+        "status": "Waitlist"
+      },
+      {
+        "section_number": "2703",
+        "instructor": "Parks, Will",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "11:10AM - 12:35PM",
+            "room": "OFF NEED",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1339",
+        "instructor": "Moreno-Vasquez, Arcie",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "9:35AM - 11:00AM",
+            "room": "L 143",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      }
+    ],
+    "prerequisites": "MATH-193 or equivalent"
+  },
+  {
+    "course_code": "MATH-195",
+    "course_title": "Discrete Mathematics",
+    "sections": [
+      {
+        "section_number": "9294",
+        "instructor": "Staff, SRC",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "12:45PM - 2:50PM",
+            "room": "SRC E164",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "8213",
+        "instructor": "Needham, Sam",
+        "meetings": [
+          {
+            "days": "T",
+            "time": "4:30PM - 6:35PM",
+            "room": "MA 241",
+            "format": "hybrid"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "3790",
+        "instructor": "Needham, Sam",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "9:35AM - 11:40AM",
+            "room": "MA 245",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1686",
+        "instructor": "McNeill, Amber",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "8:55AM - 11:00AM",
+            "room": "L 143",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      }
+    ],
+    "prerequisites": "MATH-193 or equivalent may be taken either as a prerequisite or concurrently"
+  },
+  {
+    "course_code": "MATH-292",
+    "course_title": "Analytic Geometry and Calculus III",
+    "sections": [
+      {
+        "section_number": "9098",
+        "instructor": "Staff, SRC",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "9:35AM - 12:05PM",
+            "room": "SRC E164",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "6153",
+        "instructor": "Walters, Julie",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "9:35AM - 12:05PM",
+            "room": "MA 240",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "2936",
+        "instructor": "Carter, Jamylle",
+        "meetings": [
+          {
+            "days": "F",
+            "time": "11:30AM - 2:00PM",
+            "room": "MA 241",
+            "format": "hybrid"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "2926",
+        "instructor": "Freidenreich, Jenny",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "1:25PM - 3:55PM",
+            "room": "MA 240",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "2042",
+        "instructor": "Lam, Quan",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "8:30AM - 11:00AM",
+            "room": "L 142",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1274",
+        "instructor": "Newton, Kit",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "12:45PM - 3:15PM",
+            "room": "MA 104",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "0242",
+        "instructor": "Walters, Julie",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "9:35AM - 12:05PM",
+            "room": "MA 240",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      }
+    ],
+    "prerequisites": "MATH-193 or equivalent"
+  },
+  {
+    "course_code": "MATH-294",
+    "course_title": "Differential Equations",
+    "sections": [
+      {
+        "section_number": "9146",
+        "instructor": "Staff, SRC",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "1:00PM - 3:30PM",
+            "room": "SRC E164",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "8168",
+        "instructor": "Tardivel, Dominic",
+        "meetings": [
+          {
+            "days": "Th",
+            "time": "5:30PM - 8:00PM",
+            "room": "MA 107",
+            "format": "hybrid"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "2701",
+        "instructor": "Newton, Kit",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "2:30PM - 5:00PM",
+            "room": "MA 104",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1342",
+        "instructor": "Tardivel, Dominic",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "12:45PM - 3:15PM",
+            "room": "MA 240",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "1328",
+        "instructor": "Mohan, Adhitya",
+        "meetings": [
+          {
+            "days": "M W",
+            "time": "8:30AM - 11:00AM",
+            "room": "MA 249",
+            "format": "in-person"
+          }
+        ],
+        "status": "Open, Seats Available"
+      }
+    ],
+    "prerequisites": "MATH-292 or equivalent"
+  },
+  {
+    "course_code": "COMSC-110",
+    "course_title": "Introduction to Programming",
+    "sections": [
+      {
+        "section_number": "9024",
+        "instructor": "Strickland, Joanne",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "8292",
+        "instructor": "Youn, Steve",
+        "meetings": [
+          {
+            "days": "T Th",
+            "time": "6:30PM - 7:55PM",
+            "room": "OFF NEED",
+            "format": "hybrid"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "5657",
+        "instructor": "Aladegbami, Kemi",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "5452",
+        "instructor": "Jagpal, Rupinder",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "5451",
+        "instructor": "Jagpal, Rupinder",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "5404",
+        "instructor": "Khaja, Gene",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "5207",
+        "instructor": "Khaja, Gene",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "5523",
+        "instructor": "Amato, Nicholas",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      }
+    ],
+    "prerequisites": "Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra."
+  },
+  {
+    "course_code": "COMSC-165",
+    "course_title": "Advanced Programming with C and C++",
+    "sections": [
+      {
+        "section_number": "5460",
+        "instructor": "Pentcheva, Caterina",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "5458",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "5457",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "5456",
+        "instructor": "Melvin, Ryan",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "5455",
+        "instructor": "Melvin, Ryan",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "5454",
+        "instructor": "Pentcheva, Caterina",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "5453",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "2405",
+        "instructor": "Elkady, Amr",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      }
+    ],
+    "prerequisites": "COMSC-110 or ENGIN-135 or equivalent"
+  },
+  {
+    "course_code": "COMSC-200",
+    "course_title": "Object Oriented Programming C++",
+    "sections": [
+      {
+        "section_number": "5577",
+        "instructor": "Stalica, Henry",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "5119",
+        "instructor": "Melvin, Ryan",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "5104",
+        "instructor": "Andreopoulos, William",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "2521",
+        "instructor": "Hrycewicz, Paul",
+        "meetings": [
+          {
+            "days": "W",
+            "time": "11:10AM - 2:20PM",
+            "room": "ST 113",
+            "format": "hybrid"
+          }
+        ],
+        "status": "Open, Seats Available"
+      }
+    ],
+    "prerequisites": "COMSC-165 or equivalent"
+  },
+  {
+    "course_code": "COMSC-210",
+    "course_title": "Program Design and Data Structures",
+    "sections": [
+      {
+        "section_number": "5125",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "5097",
+        "instructor": "Mortezaie, Faramarz",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "5068",
+        "instructor": "Dietrich, Mark",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "5003",
+        "instructor": "Amato, Nicholas",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "2948",
+        "instructor": "Tsai, Peikun",
+        "meetings": [
+          {
+            "days": "M",
+            "time": "11:10AM - 2:20PM",
+            "room": "ST 113",
+            "format": "hybrid"
+          }
+        ],
+        "status": "Open, Seats Available"
+      }
+    ],
+    "prerequisites": "COMSC-165 or equivalent"
+  },
+  {
+    "course_code": "COMSC-260",
+    "course_title": "Assembly Language Programming/Computer Organization",
+    "sections": [
+      {
+        "section_number": "8204",
+        "instructor": "Staff, DVC",
+        "meetings": [
+          {
+            "days": "T",
+            "time": "7:25PM - 9:30PM",
+            "room": "ST 114",
+            "format": "hybrid"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "5447",
+        "instructor": "Johnson, Samuel",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "5343",
+        "instructor": "Lai, Xinyi",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "5324",
+        "instructor": "Pentcheva, Caterina",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "5159",
+        "instructor": "Pentcheva, Caterina",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "5138",
+        "instructor": "Melvin, Ryan",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      },
+      {
+        "section_number": "5071",
+        "instructor": "Lo, Lan",
+        "meetings": [
+          {
+            "days": "Online",
+            "time": "Asynchronous",
+            "room": "Online",
+            "format": "online"
+          }
+        ],
+        "status": "Open, Seats Available"
+      }
+    ],
+    "prerequisites": "COMSC-165 or equivalent"
+  }
+]
