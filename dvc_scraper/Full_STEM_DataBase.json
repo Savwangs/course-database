@@ -5375,7 +5375,257 @@
         "status": "Open"
       }
     ],
-    "prerequisites": "Placement as determined by the college's multiple measures assessment process."
+    "prerequisites": "Placement as determined by the college's multiple measures assessment process.",
+    "equivalent_courses_for_ENGL-C1000": [
+      {
+        "course_code": "ENGL-C1000E",
+        "course_title": "Academic Reading and Writing",
+        "sections": [
+          {
+            "section_number": "9199",
+            "instructor": "Katko, Clarissa",
+            "meetings": [
+              {
+                "days": "T Th",
+                "time": "11:10AM - 1:40PM",
+                "room": "SRC E176",
+                "format": "hybrid"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "8059",
+            "instructor": "Staff, DVC",
+            "meetings": [
+              {
+                "days": "M",
+                "time": "6:00PM - 8:30PM",
+                "room": "OFF ONLINE",
+                "format": "hybrid"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "6012",
+            "instructor": "Staff, DVC",
+            "meetings": [
+              {
+                "days": "M",
+                "time": "6:00PM - 8:30PM",
+                "room": "OFF ONLINE",
+                "format": "hybrid"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "6011",
+            "instructor": "Staff, DVC",
+            "meetings": [
+              {
+                "days": "T",
+                "time": "9:35AM - 12:05PM",
+                "room": "LA 213",
+                "format": "hybrid"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "5113",
+            "instructor": "Staff, DVC",
+            "meetings": [
+              {
+              "days": "Online",
+              "time": "Asynchronous",
+              "room": "Online",
+              "format": "online"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "1254",
+            "instructor": "Staff, DVC",
+            "meetings": [
+              {
+                "days": "T Th",
+                "time": "9:35AM - 12:05PM",
+                "room": "LA 118",
+                "format": "hybrid"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "1253",
+            "instructor": "Staff, DVC",
+            "meetings": [
+              {
+                "days": "W",
+                "time": "11:10AM - 1:40PM",
+                "room": "",
+                "format": "hybrid"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "1252",
+            "instructor": "Staff, DVC",
+            "meetings": [
+              {
+                "days": "T",
+                "time": "9:35AM - 12:05PM",
+                "room": "LA 213",
+                "format": "hybrid"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "1251",
+            "instructor": "Staff, DVC",
+            "meetings": [
+              {
+                "days": "M W",
+                "time": "9:35AM - 12:05PM",
+                "room": "LC 110",
+                "format": "hybrid"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "1247",
+            "instructor": "Staff, DVC",
+            "meetings": [
+              {
+                "days": "T",
+                "time": "11:10AM - 1:40PM",
+                "room": "LC 109",
+                "format": "hybrid"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "1249",
+            "instructor": "Staff, DVC",
+            "meetings": [
+              {
+                "days": "M W",
+                "time": "9:35AM - 12:05PM",
+                "room": "OFF NEED RM",
+                "format": "hybrid"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "1248",
+            "instructor": "Staff, DVC",
+            "meetings": [
+              {
+                "days": "M W",
+                "time": "9:35AM - 12:05PM",
+                "room": "LC 103",
+                "format": "hybrid"
+              }
+            ],
+            "status": "Open, Seats Available"
+          }
+        ], 
+        "prerequisites": "Prerequisite: Placement as determined by the college's multiple measures assessment process."
+      },
+      {
+        "course_code": "ENGL-122AL",
+        "course_title": "Academic Reading and Writing for Multilingual Students",
+        "sections": [
+          {
+            "section_number": "5108",
+            "instructor": "DuLaney-Greger, Keri",
+            "meetings": [
+              {
+              "days": "Online",
+              "time": "Asynchronous",
+              "room": "Online",
+              "format": "online"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "5107",
+            "instructor": "DuLaney-Greger, Keri",
+            "meetings": [
+              {
+              "days": "Online",
+              "time": "Asynchronous",
+              "room": "Online",
+              "format": "online"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "1246",
+            "instructor": "Khabiri, Mona",
+            "meetings": [
+              {
+                "days": "W",
+                "time": "9:35AM - 12:05PM",
+                "room": "LA 117",
+                "format": "hybrid"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "1245",
+            "instructor": "Rossini, Sara",
+            "meetings": [
+              {
+                "days": "M",
+                "time": "9:35AM - 12:05PM",
+                "room": "LA 116",
+                "format": "hybrid"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "1243",
+            "instructor": "Rogers, Jill",
+            "meetings": [
+              {
+                "days": "T Th",
+                "time": "11:10AM - 1:40PM",
+                "room": "LA 116",
+                "format": "hybrid"
+              }
+            ],
+            "status": "Open, Seats Available"
+          },
+          {
+            "section_number": "5111",
+            "instructor": "Fischer-Mikolavich, Ema",
+            "meetings": [
+              {
+              "days": "Online",
+              "time": "Asynchronous",
+              "room": "Online",
+              "format": "online"
+              }
+            ],
+            "status": "Open, Seats Available"
+          }
+        ], 
+        "prerequisites": "Placement as determined by the college's multiple measures assessment process"
+      }
+    ]
   },
   {
     "course_code": "ENGL-C1000E",
