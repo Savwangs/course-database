@@ -1,0 +1,66 @@
+{
+  "course_code": "",
+  "course_title": "",
+  "last_update": "2025-10-15T08:16:21",
+  "sections": [
+    {
+      "section_number": "5577",
+      "instructor": "Stalica, Henry",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "5119",
+      "instructor": "Melvin, Ryan",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "5104",
+      "instructor": "Andreopoulos, William",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "2521",
+      "instructor": "Hrycewicz, Paul",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "W",
+          "time": "11:10AM - 2:20PM",
+          "room": "113",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "COMSC-165 or equivalent"
+}

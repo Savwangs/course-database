@@ -1,0 +1,8 @@
+ENGL-173 sections (2025-10-15T08:23:52):
+Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
+2026SP;DVC;4877;ENGL-173 - Queer Literature Across Cultures 1/26/2026 - 5/22/2026 OFF PART-ONL W 11:10AM - 12:35PM H 105;;;OFF;PART-ONL;W;11:10AM - 12:35PM;H;105;3.00;Wilson, James;Wilson, James;Advisory: ENGL-C1000 or equivalent Note: This section is part of the Community of Pride learning community, a community designed for queer and trans students and allies. To join, email charrington@dvc.edu.  Note: Partially online course with required meetings Wednesdays, 12:45-2:10 PM (on-campus, see room on schedule) with all other instruction provided online through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to locate course.;Open;25
+;;OFF;PART-ONL
+W;11:10AM - 12:35PM;H;105
+2026SP;DVC;1293;ENGL-173 - Queer Literature Across Cultures 1/26/2026 - 5/22/2026 OFF PART-ONL W 11:10AM - 12:35PM H 105;;;OFF;PART-ONL;W;11:10AM - 12:35PM;H;105;3.00;Wilson, James;Wilson, James;Advisory: ENGL-C1000 or equivalent Note: Partially online course with required meetings Wednesdays, 12:45-2:10 PM (on-campus, see room on schedule) with all other instruction provided online through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to locate course.;Open;20
+;;OFF;PART-ONL
+W;11:10AM - 12:35PM;H;105

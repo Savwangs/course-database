@@ -1,0 +1,279 @@
+{
+  "course_code": "ENGL-C1001",
+  "course_title": "Critical Thinking and Writing",
+  "last_update": "2025-10-15T08:27:34",
+  "sections": [
+    {
+      "section_number": "9220",
+      "instructor": "Zeigler, Katie",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "9196",
+      "instructor": "Burgess, Susan",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "11:10AM - 12:35PM",
+          "room": "E176",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "9112",
+      "instructor": "Burgess, Susan",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "M",
+          "time": "12:45PM - 2:10PM",
+          "room": "E176",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "6019",
+      "instructor": "Wilson, James",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "12:45PM - 2:10PM",
+          "room": "109",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "5140",
+      "instructor": "Chiu, Jeannie",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "5137",
+      "instructor": "Escudero, Renato",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "5133",
+      "instructor": "Chiu, Jeannie",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "5132",
+      "instructor": "Zink, Amy",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "5130",
+      "instructor": "Goen-Salter, Heidi",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1290",
+      "instructor": "Felder, Sara",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "9:35AM - 11:00AM",
+          "room": "NEED RM",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1288",
+      "instructor": "Ikeda, Ryan Staff, DVC",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "T",
+          "time": "12:45PM - 2:10PM",
+          "room": "211",
+          "format": "in-person"
+        }
+      ],
+      "status": "Prerequisite: College-level composition (ENGL C1000/ ENGL C1000H/ ENGL C1000E/C-ID ENGL 100) or equivalent Note: Partially online course with required meetings Tuesdays, 12:45PM-2:10PM. All other instruction provided through the college learning management system, Canvas. On the course start date, log into Canvas, www.dvc.edu/online to begin."
+    },
+    {
+      "section_number": "1287",
+      "instructor": "Ghori, Hajera",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "11:10AM - 12:35PM",
+          "room": "210",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1286",
+      "instructor": "Ghori, Hajera",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "9:35AM - 11:00AM",
+          "room": "116",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1284",
+      "instructor": "Chavez, Pauline",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "9:35AM - 11:00AM",
+          "room": "101",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1283",
+      "instructor": "Fischer, Laurence",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "11:10AM - 12:35PM",
+          "room": "NEED RM",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1282",
+      "instructor": "Bowman, Graham",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "T",
+          "time": "12:45PM - 2:10PM",
+          "room": "210",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1281",
+      "instructor": "Ghori, Hajera",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "9:35AM - 11:00AM",
+          "room": "211",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1280",
+      "instructor": "Ghori, Hajera",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "11:10AM - 12:35PM",
+          "room": "212",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1279",
+      "instructor": "Laemmlen, Louise",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "M",
+          "time": "9:35AM - 11:00AM",
+          "room": "212",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "College-level composition (ENGL C1000/ ENGL C1000H/ ENGL C1000E/C-ID ENGL 100) or equivalent"
+}

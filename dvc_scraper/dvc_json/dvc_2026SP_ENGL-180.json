@@ -1,0 +1,26 @@
+{
+  "course_code": "ENGL-180",
+  "course_title": "Drama and Performance As Literature",
+  "last_update": "2025-10-15T08:24:54",
+  "sections": [
+    {
+      "section_number": "2789",
+      "instructor": "Wilson, James",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "M",
+          "time": "11:10AM - 12:35PM",
+          "room": "NEED RM",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ]
+}

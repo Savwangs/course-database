@@ -1,0 +1,363 @@
+{
+  "course_code": "ENGL-C1000",
+  "course_title": "Academic Reading and Writing",
+  "last_update": "2025-10-15T08:26:57",
+  "sections": [
+    {
+      "section_number": "9397",
+      "instructor": "Colson, Michael",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "9345",
+      "instructor": "Colson, Michael",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "9325",
+      "instructor": "Huang, Lynn",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "9:35AM - 11:00AM",
+          "room": "E174",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "9221",
+      "instructor": "Colson, Michael",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "9202",
+      "instructor": "Katko, Clarissa",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "9:35AM - 11:00AM",
+          "room": "E188",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "9181",
+      "instructor": "Colson, Michael",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "12:45PM - 2:10PM",
+          "room": "E188",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "9156",
+      "instructor": "Colson, Michael",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "6018",
+      "instructor": "Staff, DVC",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "9:35AM - 11:00AM",
+          "room": "101",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "6010",
+      "instructor": "Agnost, Catherine",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "T",
+          "time": "9:35AM - 11:00AM",
+          "room": "NEED RM",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "5096",
+      "instructor": "Staff, DVC",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "5095",
+      "instructor": "Blackwell-Stratton, Marian",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "5092",
+      "instructor": "Bessie, Adam",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "5091",
+      "instructor": "Bessie, Adam",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "5088",
+      "instructor": "Baskind, Tamar",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "5087",
+      "instructor": "Stein, Joshua",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1242",
+      "instructor": "Morgan, Christian",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "9:35AM - 11:00AM",
+          "room": "NEED RM",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1241",
+      "instructor": "Cartwright, Richard",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "12:45PM - 2:10PM",
+          "room": "113",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1238",
+      "instructor": "Chiu, Jeannie",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "T",
+          "time": "12:45PM - 2:10PM",
+          "room": "113",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1237",
+      "instructor": "Chiu, Jeannie",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "T",
+          "time": "11:10AM - 12:35PM",
+          "room": "113",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1236",
+      "instructor": "Hobson, Ivan",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "M",
+          "time": "12:45PM - 2:10PM",
+          "room": "114",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1234",
+      "instructor": "Agnost, Catherine",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "W",
+          "time": "11:10AM - 12:35PM",
+          "room": "114",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1233",
+      "instructor": "Garcia, Marcos",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "12:45PM - 2:10PM",
+          "room": "118",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1231",
+      "instructor": "Jackl, Jason",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "9:35AM - 11:00AM",
+          "room": "115",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1230",
+      "instructor": "Garcia, Marcos",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "11:10AM - 12:35PM",
+          "room": "214",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1229",
+      "instructor": "Hughes, Jessika",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "12:45PM - 2:10PM",
+          "room": "110",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "Placement as determined by the college's multiple measures assessment process."
+}

@@ -1,0 +1,33 @@
+{
+  "course_code": "ENGIN-130",
+  "course_title": "Energy, Society, and the Environment",
+  "last_update": "2025-10-15T08:18:30",
+  "sections": [
+    {
+      "section_number": "5230",
+      "instructor": "Khandani, Seyyed",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "5223",
+      "instructor": "Khandani, Seyyed",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    }
+  ]
+}

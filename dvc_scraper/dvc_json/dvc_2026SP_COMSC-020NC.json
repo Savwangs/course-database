@@ -1,0 +1,33 @@
+{
+  "course_code": "COMSC-020NC",
+  "course_title": "IBM SkillsBuild Micro-Credential: Data Analytics II - Noncredit",
+  "last_update": "2025-10-15T08:13:55",
+  "sections": [
+    {
+      "section_number": "5522",
+      "instructor": "Lee, Kyu Woong",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "5060",
+      "instructor": "Jagpal, Rupinder",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "course_code": "BIOSC-119",
+  "course_title": "Fundamentals of Microbiology",
+  "last_update": "2025-10-15T08:08:39",
+  "sections": [
+    {
+      "section_number": "9377",
+      "instructor": "Das, Sumanjari",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "3:35PM - 5:00PM",
+          "room": "E240",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "5:30PM - 6:55PM",
+          "room": "W221",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "9348",
+      "instructor": "Das, Sumanjari",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "5:30PM - 6:55PM",
+          "room": "W221",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "7:25PM - 8:50PM",
+          "room": "E240",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "8013",
+      "instructor": "Staff, DVC",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "5:00PM - 6:25PM",
+          "room": "217",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "6:35PM - 8:00PM",
+          "room": "206",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1078",
+      "instructor": "Lal, Pallavi",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "9:35AM - 11:00AM",
+          "room": "217",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "11:10AM - 12:35PM",
+          "room": "206",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1077",
+      "instructor": "Fox, Kristi",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "8:00AM - 9:25AM",
+          "room": "217",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "9:35AM - 11:00AM",
+          "room": "206",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1076",
+      "instructor": "Gard, Karen",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "11:10AM - 12:35PM",
+          "room": "217",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "2:20PM - 3:45PM",
+          "room": "206",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1075",
+      "instructor": "Gard, Karen",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "11:10AM - 12:35PM",
+          "room": "217",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "12:45PM - 2:10PM",
+          "room": "206",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "CHEM-107 or 108 or 109 or 120 or equivalent. Advisory: ENGL-C1000 or equivalent and High school or college biology or equivalent."
+}

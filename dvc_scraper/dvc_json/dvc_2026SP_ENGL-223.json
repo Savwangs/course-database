@@ -1,0 +1,27 @@
+{
+  "course_code": "ENGL-223",
+  "course_title": "Fiction Writing",
+  "last_update": "2025-10-15T08:25:26",
+  "sections": [
+    {
+      "section_number": "1295",
+      "instructor": "Gonzales, Anthony",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "T",
+          "time": "12:45PM - 2:10PM",
+          "room": "103",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "ENGL-C1000 or equivalent"
+}

@@ -1,0 +1,103 @@
+{
+  "course_code": "BIOSC-131",
+  "course_title": "Principles of Organismal Biology, Evolution and Ecology",
+  "last_update": "2025-10-15T08:09:44",
+  "sections": [
+    {
+      "section_number": "9071",
+      "instructor": "Reyes, Brandon",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "11:10AM - 2:15PM",
+          "room": "E240",
+          "format": "in-person"
+        },
+        {
+          "days": "M W",
+          "time": "2:30PM - 3:55PM",
+          "room": "W220",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "8015",
+      "instructor": "McPheron, Linda",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "5:30PM - 6:55PM",
+          "room": "223",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "7:00PM - 10:05PM",
+          "room": "201",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1085",
+      "instructor": "Greene, Valerie",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "9:35AM - 11:00AM",
+          "room": "217",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "11:10AM - 2:15PM",
+          "room": "201",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1084",
+      "instructor": "Greene, Valerie",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "7:55AM - 11:00AM",
+          "room": "201",
+          "format": "in-person"
+        },
+        {
+          "days": "M W",
+          "time": "9:35AM - 11:00AM",
+          "room": "217",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1083",
+      "instructor": "Halbrook, Kandres",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "12:45PM - 2:10PM",
+          "room": "223",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "2:25PM - 5:30PM",
+          "room": "201",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "CHEM-120 (may be taken concurrently) or equivalent Advisory: ENGL-C1000 or equivalent. BIOSC-101 or 102 and BIOSC-130 or equivalents."
+}

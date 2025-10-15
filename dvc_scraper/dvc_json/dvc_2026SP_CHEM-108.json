@@ -1,0 +1,426 @@
+{
+  "course_code": "CHEM-108",
+  "course_title": "Introductory Chemistry",
+  "last_update": "2025-10-15T08:12:17",
+  "sections": [
+    {
+      "section_number": "9298",
+      "instructor": "Petersen, Anne",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "11:10AM - 12:35PM",
+          "room": "E230",
+          "format": "in-person"
+        },
+        {
+          "days": "W",
+          "time": "12:50PM - 4:00PM",
+          "room": "E237",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "9226",
+      "instructor": "Petersen, Anne",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "11:10AM - 12:35PM",
+          "room": "E230",
+          "format": "in-person"
+        },
+        {
+          "days": "M",
+          "time": "12:50PM - 4:00PM",
+          "room": "E237",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "9111",
+      "instructor": "Lawrence, Diane",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "12:45PM - 2:10PM",
+          "room": "E230",
+          "format": "in-person"
+        },
+        {
+          "days": "T",
+          "time": "2:45PM - 5:55PM",
+          "room": "E237",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "9107",
+      "instructor": "Tobwala, Shakila",
+      "meetings": [
+        {
+          "days": "F",
+          "time": "9:00AM - 12:10PM",
+          "room": "E237",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "9:35AM - 11:00AM",
+          "room": "W216",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "9090",
+      "instructor": "Hadei, Niloufar",
+      "meetings": [
+        {
+          "days": "T",
+          "time": "6:15PM - 9:25PM",
+          "room": "E237",
+          "format": "in-person"
+        },
+        {
+          "days": "Th",
+          "time": "6:15PM - 9:25PM",
+          "room": "E230",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "8008",
+      "instructor": "Bordbar, Abdolkhalegh",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "4:05PM - 5:30PM",
+          "room": "275",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "5:50PM - 7:15PM",
+          "room": "221",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "8007",
+      "instructor": "Vonguyen, Lien",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "5:30PM - 6:55PM",
+          "room": "267",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "7:05PM - 8:30PM",
+          "room": "217",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "8006",
+      "instructor": "Schick, Brian",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "5:30PM - 6:55PM",
+          "room": "277",
+          "format": "in-person"
+        },
+        {
+          "days": "M W",
+          "time": "7:05PM - 8:30PM",
+          "room": "217",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "8005",
+      "instructor": "Staff, DVC",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "2:30PM - 3:55PM",
+          "room": "277",
+          "format": "in-person"
+        },
+        {
+          "days": "W",
+          "time": "4:05PM - 7:15PM",
+          "room": "217",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1033",
+      "instructor": "Djamali, Essmaiil",
+      "meetings": [
+        {
+          "days": "W",
+          "time": "7:55AM - 11:00AM",
+          "room": "217",
+          "format": "in-person"
+        },
+        {
+          "days": "M W",
+          "time": "11:10AM - 12:35PM",
+          "room": "267",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1032",
+      "instructor": "Staff, DVC",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "2:30PM - 3:55PM",
+          "room": "275",
+          "format": "in-person"
+        },
+        {
+          "days": "T",
+          "time": "2:30PM - 5:40PM",
+          "room": "217",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1031",
+      "instructor": "Staff, DVC",
+      "meetings": [
+        {
+          "days": "T",
+          "time": "11:10AM - 2:20PM",
+          "room": "217",
+          "format": "in-person"
+        },
+        {
+          "days": "M W",
+          "time": "2:30PM - 3:55PM",
+          "room": "275",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1030",
+      "instructor": "Staff, DVC",
+      "meetings": [
+        {
+          "days": "Th",
+          "time": "11:10AM - 2:20PM",
+          "room": "217",
+          "format": "in-person"
+        },
+        {
+          "days": "M W",
+          "time": "12:45PM - 2:10PM",
+          "room": "275",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1029",
+      "instructor": "Arnaiz, Danny",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "9:35AM - 11:00AM",
+          "room": "267",
+          "format": "in-person"
+        },
+        {
+          "days": "M",
+          "time": "11:10AM - 2:20PM",
+          "room": "221",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1028",
+      "instructor": "Hickey, Joseph",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "11:10AM - 12:35PM",
+          "room": "277",
+          "format": "in-person"
+        },
+        {
+          "days": "T",
+          "time": "11:10AM - 2:20PM",
+          "room": "221",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1025",
+      "instructor": "Amtawong, Jaruwan",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "8:00AM - 9:25AM",
+          "room": "275",
+          "format": "in-person"
+        },
+        {
+          "days": "M W",
+          "time": "9:35AM - 11:00AM",
+          "room": "221",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1024",
+      "instructor": "Hickey, Joseph",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "8:00AM - 9:25AM",
+          "room": "110",
+          "format": "in-person"
+        },
+        {
+          "days": "Th",
+          "time": "11:10AM - 2:20PM",
+          "room": "221",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1023",
+      "instructor": "Hickey, Joseph",
+      "meetings": [
+        {
+          "days": "Th",
+          "time": "7:55AM - 11:00AM",
+          "room": "221",
+          "format": "in-person"
+        },
+        {
+          "days": "M W",
+          "time": "8:00AM - 9:25AM",
+          "room": "110",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1022",
+      "instructor": "Staff, DVC",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "9:35AM - 11:00AM",
+          "room": "275",
+          "format": "in-person"
+        },
+        {
+          "days": "W",
+          "time": "11:10AM - 2:20PM",
+          "room": "221",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1021",
+      "instructor": "Staff, DVC",
+      "meetings": [
+        {
+          "days": "M",
+          "time": "11:10AM - 2:20PM",
+          "room": "217",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "12:45PM - 2:10PM",
+          "room": "275",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1020",
+      "instructor": "Staff, DVC",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "12:45PM - 2:10PM",
+          "room": "275",
+          "format": "in-person"
+        },
+        {
+          "days": "M",
+          "time": "2:30PM - 5:40PM",
+          "room": "217",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1019",
+      "instructor": "Larson, Wayne",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "12:45PM - 2:10PM",
+          "room": "277",
+          "format": "in-person"
+        },
+        {
+          "days": "T",
+          "time": "2:30PM - 5:40PM",
+          "room": "221",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra."
+}

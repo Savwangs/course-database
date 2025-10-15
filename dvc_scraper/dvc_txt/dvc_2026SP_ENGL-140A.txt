@@ -1,0 +1,4 @@
+ENGL-140A sections (2025-10-15T08:21:47):
+Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
+2026SP;DVC;5186;ENGL-140A - Tutor Training: Working with Composition and Reading 2/16/2026 - 3/13/2026 OFF ONLINE;;;OFF;ONLINE;1.00;Iles, Monique;Iles, Monique;Note: 100% online course - no required online meetings. Instruction will be provided through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to begin.;Open;25
+;;OFF;ONLINE

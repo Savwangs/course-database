@@ -1,0 +1,79 @@
+{
+  "course_code": "COMSC-210",
+  "course_title": "Program Design and Data Structures",
+  "last_update": "2025-10-15T08:16:37",
+  "sections": [
+    {
+      "section_number": "5125",
+      "instructor": "Staff, DVC",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "5097",
+      "instructor": "Mortezaie, Faramarz",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "5068",
+      "instructor": "Dietrich, Mark",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "5003",
+      "instructor": "Amato, Nicholas",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "2948",
+      "instructor": "Tsai, Peikun",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "M",
+          "time": "11:10AM - 2:20PM",
+          "room": "113",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "COMSC-165 or equivalent Advisory: COMSC-200 or equivalent"
+}

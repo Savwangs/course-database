@@ -1,0 +1,5 @@
+COMSC-171 sections (2025-10-15T08:15:33):
+Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
+2026SP;DVC;8225;COMSC-171 - Introduction to UNIX and Linux 1/26/2026 - 5/22/2026 W 4:05PM - 6:00PM ST 115 W 6:00PM - 7:15PM ST 115;W;4:05PM - 6:00PM;ST;115;W;6:00PM - 7:15PM;ST;115;2.00;Fogg, Stuart;Fogg, Stuart;Note: Required meetings Wednesdays 4:05-7:15 on-campus lab/lecture, see room on schedule;Open;35
+W;4:05PM - 6:00PM;ST;115
+W;6:00PM - 7:15PM;ST;115

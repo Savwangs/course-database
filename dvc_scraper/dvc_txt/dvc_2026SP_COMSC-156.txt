@@ -1,0 +1,8 @@
+COMSC-156 sections (2025-10-15T08:15:01):
+Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
+2026SP;DVC;5663;COMSC-156 - Introduction to Data Science 1/26/2026 - 5/22/2026 OFF ONLINE;;;OFF;ONLINE;4.00;Lo, Lan;Lo, Lan;Advisory: COMSC-110 or COMSC-140 or equivalent and BUS-240 or STAT-C1000 or equivalent. Note: 100% online course. All instruction will be provided via the internet through the college learning management system CANVAS. Classes you are registered for will appear in Canvas on the first day of class unless published earlier by your instructor. There are no required class meetings. Go to www.dvc.edu/online for course access information.;Open;35
+;;OFF;ONLINE
+2026SP;DVC;5366;COMSC-156 - Introduction to Data Science 1/26/2026 - 5/22/2026 OFF ONLINE;;;OFF;ONLINE;4.00;Lo, Lan;Lo, Lan;Advisory: COMSC-110 or COMSC-140 or equivalent and BUS-240 or STAT-C1000 or equivalent. Note: 100% online course - no scheduled meetings. Instruction will be provided through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to begin.;Open;35
+;;OFF;ONLINE
+2026SP;DVC;5171;COMSC-156 - Introduction to Data Science 2/09/2026 - 5/22/2026 OFF ONLINE;;;OFF;ONLINE;4.00;Lo, Lan;Lo, Lan;Advisory: COMSC-110 or COMSC-140 or equivalent and BUS-240 or STAT-C1000 or equivalent. Note: 100% online course - no scheduled  meetings.   Instruction will be provided through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to begin.;Open;35
+;;OFF;ONLINE

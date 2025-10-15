@@ -1,0 +1,57 @@
+ENGL-123 sections (2025-10-15T08:20:59):
+Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
+2026SP;SRC;9295;ENGL-123 - Critical Thinking: Writing About Literature 1/26/2026 - 5/22/2026 M W 12:45PM - 2:10PM SRC E174;M W;12:45PM - 2:10PM;SRC;E174;3.00;Huang, Lynn;Huang, Lynn;Prerequisite: ENGL-C1000 or equivalent Note: Class meets at the scheduled times on the San Ramon Campus.;Open;25
+M W;12:45PM - 2:10PM;SRC;E174
+2026SP;SRC;9104;ENGL-123 - Critical Thinking: Writing About Literature 1/26/2026 - 5/22/2026 T Th 11:10AM - 12:35PM SRC E174;T Th;11:10AM - 12:35PM;SRC;E174;3.00;Huang, Lynn;Huang, Lynn;Prerequisite: ENGL-C1000 or equivalent Note: Class meets at the scheduled times on the San Ramon Campus.;Open;30
+T Th;11:10AM - 12:35PM;SRC;E174
+2026SP;DVC;6016;ENGL-123 - Critical Thinking: Writing About Literature 1/26/2026 - 5/22/2026 M W 9:35AM - 11:00AM LC 110;M W;9:35AM - 11:00AM;LC;110;3.00;Olmedo, Monica;Olmedo, Monica;Prerequisite: ENGL-C1000 or equivalent Note: This section is part of the Puente Learning Community. Students must also enroll in COUNS-130-6450 and LT-121-5416. For more information, email Brenda Gonzalez at bgonzalez@dvc.edu. Note: Class meets on-campus as scheduled.;Open;30
+M W;9:35AM - 11:00AM;LC;110
+2026SP;DVC;6015;ENGL-123 - Critical Thinking: Writing About Literature 1/26/2026 - 5/22/2026 M W 9:35AM - 11:00AM OFF NEED RM;M W;9:35AM - 11:00AM;OFF;NEED RM;3.00;Gonzales, Anthony;Gonzales, Anthony;Prerequisite: ENGL-C1000 or equivalent Note: This section is part of the Puente Learning Community. Students must also enroll in COUNS-130-6452 and LT-121-5418. For more information, email Brenda Gonzalez at bgonzalez@dvc.edu. Note: Class meets on-campus as scheduled.;Open;30
+M W;9:35AM - 11:00AM;OFF;NEED RM
+2026SP;DVC;6014;ENGL-123 - Critical Thinking: Writing About Literature 1/26/2026 - 5/22/2026 OFF ONLINE;;;OFF;ONLINE;3.00;DuLaney-Greger, Keri;DuLaney-Greger, Keri;Prerequisite: ENGL-C1000 or equivalent Note: This section is part of the PACE program. Students must be a PACE student to enroll. For program information, go to www.dvc.edu/pace. Note: 100% online course - no required online meetings. Instruction will be provided through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to begin.;Open;30
+;;OFF;ONLINE
+2026SP;DVC;6013;ENGL-123 - Critical Thinking: Writing About Literature 1/26/2026 - 5/22/2026 OFF PART-ONL T 11:10AM - 12:35PM LA 220;;;OFF;PART-ONL;T;11:10AM - 12:35PM;LA;220;3.00;Ang, Lisa;Ang, Lisa;Prerequisite: ENGL-C1000 or equivalent Note: This section is an optional part of DVC's Umoja Program. Students must be a current or former student in the Umoja program to enroll. For program and registration information, please visit www.dvc.edu/umoja. Note: Partially online course with required meetings Tuesdays, 11:10 AM-12:35 PM (on-campus, see room on schedule) with all other instruction provided online through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to locate course.;Open;8
+;;OFF;PART-ONL
+T;11:10AM - 12:35PM;LA;220
+2026SP;DVC;5128;ENGL-123 - Critical Thinking: Writing About Literature 1/26/2026 - 5/22/2026 OFF ONLINE;;;OFF;ONLINE;3.00;Haslam, Alan;Haslam, Alan;Prerequisite: ENGL-C1000 or equivalent Note: 100% online course - no required online meetings.   Instruction will be provided through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to begin.;Open;30
+;;OFF;ONLINE
+2026SP;DVC;5127;ENGL-123 - Critical Thinking: Writing About Literature 1/26/2026 - 5/22/2026 OFF ONLINE;;;OFF;ONLINE;3.00;Haslam, Alan;Haslam, Alan;Prerequisite: ENGL-C1000 or equivalent Note: 100% online course - no required online meetings.   Instruction will be provided through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to begin.;Open;30
+;;OFF;ONLINE
+2026SP;DVC;5126;ENGL-123 - Critical Thinking: Writing About Literature 1/26/2026 - 5/22/2026 OFF ONLINE;;;OFF;ONLINE;3.00;Vetter, Jacqlyn;Vetter, Jacqlyn;Prerequisite: ENGL-C1000 or equivalent Note: 100% online course - no required online meetings.   Instruction will be provided through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to begin.;Open;30
+;;OFF;ONLINE
+2026SP;DVC;5122;ENGL-123 - Critical Thinking: Writing About Literature 1/26/2026 - 5/22/2026 OFF ONLINE;;;OFF;ONLINE;3.00;Staff, DVC;Staff, DVC;Prerequisite: ENGL-C1000 or equivalent Note: 100% online course - no required online meetings.   Instruction will be provided through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to begin.;Open;30
+;;OFF;ONLINE
+2026SP;DVC;5121;ENGL-123 - Critical Thinking: Writing About Literature 1/26/2026 - 5/22/2026 OFF ONLINE;;;OFF;ONLINE;3.00;Toloui, Karen;Toloui, Karen;Prerequisite: ENGL-C1000 or equivalent Note: 100% online course - no required online meetings.   Instruction will be provided through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to begin.;Open;30
+;;OFF;ONLINE
+2026SP;DVC;5120;ENGL-123 - Critical Thinking: Writing About Literature 1/26/2026 - 5/22/2026 OFF ONLINE;;;OFF;ONLINE;3.00;Thomas-Bignami, Ian;Thomas-Bignami, Ian;Prerequisite: ENGL-C1000 or equivalent Note: 100% online course - no required online meetings.   Instruction will be provided through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to begin.;Open;30
+;;OFF;ONLINE
+2026SP;DVC;5118;ENGL-123 - Critical Thinking: Writing About Literature 1/26/2026 - 5/22/2026 OFF ONLINE;;;OFF;ONLINE;3.00;Thomas-Bignami, Ian;Thomas-Bignami, Ian;Prerequisite: ENGL-C1000 or equivalent Note: 100% online course - no required online meetings.   Instruction will be provided through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to begin.;Open;30
+;;OFF;ONLINE
+2026SP;DVC;5115;ENGL-123 - Critical Thinking: Writing About Literature 1/26/2026 - 5/22/2026 OFF ONLINE;;;OFF;ONLINE;3.00;Iles, Monique;Iles, Monique;Prerequisite: ENGL-C1000 or equivalent Note: 100% online course - no required online meetings.   Instruction will be provided through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to begin.;Open;30
+;;OFF;ONLINE
+2026SP;DVC;4875;ENGL-123 - Critical Thinking: Writing About Literature 1/26/2026 - 5/22/2026 M W 11:10AM - 12:35PM AQ 101;M W;11:10AM - 12:35PM;AQ;101;3.00;Hansen, Megan;Hansen, Megan;Prerequisite: ENGL-C1000 or equivalent Note: This section is a required part of the second semester of DVC's Academy for Student Athletes. Students must be a current student athlete to enroll. For registration information, please contact Ervin Anderson at eanderson@dvc.edu and Jimmy Collins at jcollins@dvc.edu. Note: Class meets on campus as scheduled.;Open;30
+M W;11:10AM - 12:35PM;AQ;101
+2026SP;DVC;1277;ENGL-123 - Critical Thinking: Writing About Literature 1/26/2026 - 5/22/2026 OFF PART-ONL T 11:10AM - 12:35PM LA 115;;;OFF;PART-ONL;T;11:10AM - 12:35PM;LA;115;3.00;Bessie, Adam;Bessie, Adam;Prerequisite: ENGL-C1000 or equivalent Note: Partially online course with required meetings Tuesdays, 11:10 AM-12:35 PM (on-campus, see room on schedule) with all other  instruction provided online through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to locate course.;Open;30
+;;OFF;PART-ONL
+T;11:10AM - 12:35PM;LA;115
+2026SP;DVC;1276;ENGL-123 - Critical Thinking: Writing About Literature 1/26/2026 - 5/22/2026 T Th 9:35AM - 11:00AM OFF NEED RM;T Th;9:35AM - 11:00AM;OFF;NEED RM;3.00;Forgette, Chalisse;Forgette, Chalisse;Prerequisite: ENGL-C1000 or equivalent Note: Class meets on campus as scheduled;Open;30
+T Th;9:35AM - 11:00AM;OFF;NEED RM
+2026SP;DVC;1275;ENGL-123 - Critical Thinking: Writing About Literature 1/26/2026 - 5/22/2026 M W 11:00AM - 12:25PM OFF NEED RM;M W;11:00AM - 12:25PM;OFF;NEED RM;3.00;Iles, Monique;Iles, Monique;Prerequisite: ENGL-C1000 or equivalent Note: Class meets on campus as scheduled;Open;30
+M W;11:00AM - 12:25PM;OFF;NEED RM
+2026SP;DVC;1273;ENGL-123 - Critical Thinking: Writing About Literature 1/26/2026 - 5/22/2026 OFF PART-ONL T 11:10AM - 12:35PM LA 220;;;OFF;PART-ONL;T;11:10AM - 12:35PM;LA;220;3.00;Ang, Lisa;Ang, Lisa;Prerequisite: ENGL-C1000 or equivalent Note: Partially online course with required meetings Tuesdays, 11:10AM-12:35 PM (on-campus, see room on schedule) with all other  instruction provided online through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to locate course.;Open;22
+;;OFF;PART-ONL
+T;11:10AM - 12:35PM;LA;220
+2026SP;DVC;1272;ENGL-123 - Critical Thinking: Writing About Literature 1/26/2026 - 5/22/2026 OFF PART-ONL W 12:45PM - 2:10PM LA 214;;;OFF;PART-ONL;W;12:45PM - 2:10PM;LA;214;3.00;Klieman, Michael;Klieman, Michael;Prerequisite: ENGL-C1000 or equivalent Note: Partially online course with required meetings Wednesdays 12:45-2:10 PM (on-campus, see room on schedule) with all other  instruction provided online through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to locate course.;Open;30
+;;OFF;PART-ONL
+W;12:45PM - 2:10PM;LA;214
+2026SP;DVC;1271;ENGL-123 - Critical Thinking: Writing About Literature 1/26/2026 - 5/22/2026 OFF PART-ONL M 9:35AM - 11:00AM LA 211;;;OFF;PART-ONL;M;9:35AM - 11:00AM;LA;211;3.00;Brown, Carol;Brown, Carol;Prerequisite: ENGL-C1000 or equivalent Note: Partially online course with required meetings Mondays, 9:35-11:00 AM (on-campus, see room on schedule) with all other  instruction provided online through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to locate course.;Open;30
+;;OFF;PART-ONL
+M;9:35AM - 11:00AM;LA;211
+2026SP;DVC;1270;ENGL-123 - Critical Thinking: Writing About Literature 1/26/2026 - 5/22/2026 T Th 9:35AM - 11:00AM LA 210;T Th;9:35AM - 11:00AM;LA;210;3.00;Vinson, Pauline;Vinson, Pauline;Prerequisite: ENGL-C1000 or equivalent Note: Class meets on-campus as scheduled.;Open;30
+T Th;9:35AM - 11:00AM;LA;210
+2026SP;DVC;1269;ENGL-123 - Critical Thinking: Writing About Literature 1/26/2026 - 5/22/2026 T Th 11:10AM - 12:35PM OFF NEED RM;T Th;11:10AM - 12:35PM;OFF;NEED RM;3.00;Olmedo, Monica;Olmedo, Monica;Prerequisite: ENGL-C1000 or equivalent Note: Class meets on-campus as scheduled.;Open;30
+T Th;11:10AM - 12:35PM;OFF;NEED RM
+2026SP;DVC;1268;ENGL-123 - Critical Thinking: Writing About Literature 1/26/2026 - 5/22/2026 T Th 9:35AM - 11:00AM LC 103;T Th;9:35AM - 11:00AM;LC;103;3.00;Carrick, Jason;Carrick, Jason;Prerequisite: ENGL-C1000 or equivalent Note: Class meets on-campus as scheduled.;Open;30
+T Th;9:35AM - 11:00AM;LC;103
+2026SP;DVC;1267;ENGL-123 - Critical Thinking: Writing About Literature 1/26/2026 - 5/22/2026 M W 11:10AM - 12:35PM LA 211;M W;11:10AM - 12:35PM;LA;211;3.00;Thomas, John;Thomas, John;Prerequisite: ENGL-C1000 or equivalent Note: Class meets on-campus as scheduled.;Open;30
+M W;11:10AM - 12:35PM;LA;211

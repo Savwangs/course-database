@@ -1,0 +1,78 @@
+{
+  "course_code": "COMSC-101",
+  "course_title": "Computer Literacy",
+  "last_update": "2025-10-15T08:14:12",
+  "sections": [
+    {
+      "section_number": "5654",
+      "instructor": "Houshiar, Bijan",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "5283",
+      "instructor": "Strait, Michael",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "8169",
+      "instructor": "Tajbakhsh, Shahin",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "M",
+          "time": "6:30PM - 9:40PM",
+          "room": "113",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "5525",
+      "instructor": "Jagpal, Rupinder",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "5677",
+      "instructor": "Blackburn, Daniella",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    }
+  ]
+}

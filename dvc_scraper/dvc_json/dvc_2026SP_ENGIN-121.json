@@ -1,0 +1,26 @@
+{
+  "course_code": "",
+  "course_title": "",
+  "last_update": "2025-10-15T08:18:14",
+  "sections": [
+    {
+      "section_number": "8001",
+      "instructor": "Razavian, Mathieu",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "5:40PM - 6:45PM",
+          "room": "125",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "6:45PM - 8:50PM",
+          "room": "103",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ]
+}

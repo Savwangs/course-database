@@ -1,0 +1,11 @@
+COMSC-200 sections (2025-10-15T08:16:21):
+Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
+2026SP;DVC;5577;COMSC-200 - Object Oriented Programming C++ 1/26/2026 - 5/22/2026 OFF ONLINE;;;OFF;ONLINE;4.00;Stalica, Henry;Stalica, Henry;Prerequisite: COMSC-165 or equivalent Note: 100% online course. All instruction will be provided via the internet through the college learning management system CANVAS. Classes you are registered for will appear in Canvas on the first day of class unless published earlier by your instructor. There are no required class meetings. Go to www.dvc.edu/online for course access information.;Open;35
+;;OFF;ONLINE
+2026SP;DVC;5119;COMSC-200 - Object Oriented Programming C++ 1/26/2026 - 5/22/2026 OFF ONLINE;;;OFF;ONLINE;4.00;Melvin, Ryan;Melvin, Ryan;Prerequisite: COMSC-165 or equivalent Note: 100% online course. All instruction will be provided via the internet through the college learning management system CANVAS. Classes you are registered for will appear in Canvas on the first day of class unless published earlier by your instructor. There are no required class meetings. Go to www.dvc.edu/online for course access information.;Open;35
+;;OFF;ONLINE
+2026SP;DVC;5104;COMSC-200 - Object Oriented Programming C++ 1/26/2026 - 5/22/2026 OFF ONLINE;;;OFF;ONLINE;4.00;Andreopoulos, William;Andreopoulos, William;Prerequisite: COMSC-165 or equivalent Note: 100% online course. All instruction will be online. Go to www.dvc.edu/online for course access information.;Open;35
+;;OFF;ONLINE
+2026SP;DVC;2521;COMSC-200 - Object Oriented Programming C++ 2/09/2026 - 5/22/2026 OFF PART-ONL W 11:10AM - 2:20PM ST 113;;;OFF;PART-ONL;W;11:10AM - 2:20PM;ST;113;4.00;Hrycewicz, Paul;Hrycewicz, Paul;Prerequisite: COMSC-165 or equivalent Note: Partially online course with required meetings Wednesdays from 11:10AM-2:20PM (on-campus, see room on schedule) with all other instruction provided online through the college learning management system Canvas.;Open;35
+;;OFF;PART-ONL
+W;11:10AM - 2:20PM;ST;113

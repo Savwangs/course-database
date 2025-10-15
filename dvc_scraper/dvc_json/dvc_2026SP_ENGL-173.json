@@ -1,0 +1,45 @@
+{
+  "course_code": "ENGL-173",
+  "course_title": "Queer Literature Across Cultures",
+  "last_update": "2025-10-15T08:23:52",
+  "sections": [
+    {
+      "section_number": "4877",
+      "instructor": "Wilson, James",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "W",
+          "time": "11:10AM - 12:35PM",
+          "room": "105",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1293",
+      "instructor": "Wilson, James",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "W",
+          "time": "11:10AM - 12:35PM",
+          "room": "105",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ]
+}

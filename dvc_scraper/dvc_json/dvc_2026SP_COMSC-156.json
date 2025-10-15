@@ -1,0 +1,46 @@
+{
+  "course_code": "COMSC-156",
+  "course_title": "Introduction to Data Science",
+  "last_update": "2025-10-15T08:15:01",
+  "sections": [
+    {
+      "section_number": "5663",
+      "instructor": "Lo, Lan",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "5366",
+      "instructor": "Lo, Lan",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "5171",
+      "instructor": "Lo, Lan",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    }
+  ]
+}

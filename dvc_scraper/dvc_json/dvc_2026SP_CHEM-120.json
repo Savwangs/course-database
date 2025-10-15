@@ -1,0 +1,229 @@
+{
+  "course_code": "CHEM-120",
+  "course_title": "General College Chemistry I",
+  "last_update": "2025-10-15T08:12:51",
+  "sections": [
+    {
+      "section_number": "9212",
+      "instructor": "Symmank, Beverly",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "2:30PM - 3:55PM",
+          "room": "E230",
+          "format": "in-person"
+        },
+        {
+          "days": "M W",
+          "time": "4:30PM - 7:35PM",
+          "room": "E237",
+          "format": "in-person"
+        }
+      ],
+      "status": "Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: Class?meets at the scheduled times on the San Ramon Campus"
+    },
+    {
+      "section_number": "9115",
+      "instructor": "Petersen, Anne",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "9:35AM - 11:00AM",
+          "room": "E230",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "11:20AM - 2:25PM",
+          "room": "E237",
+          "format": "in-person"
+        }
+      ],
+      "status": "Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: Class meets at the scheduled times on the San Ramon Campus. CHEM-120-9115 and BIOSC-131-9071 are scheduled to encourage enrollment and collaboration between students in both sections."
+    },
+    {
+      "section_number": "8010",
+      "instructor": "Staff, DVC",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "5:30PM - 6:55PM",
+          "room": "275",
+          "format": "in-person"
+        },
+        {
+          "days": "M W",
+          "time": "7:05PM - 10:10PM",
+          "room": "201",
+          "format": "in-person"
+        }
+      ],
+      "status": "Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: Face to face course.  This class will meet at the scheduled times on the Pleasant Hill campus."
+    },
+    {
+      "section_number": "8009",
+      "instructor": "Eskandari, Vahid",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "2:30PM - 3:55PM",
+          "room": "267",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "4:05PM - 7:10PM",
+          "room": "205",
+          "format": "in-person"
+        }
+      ],
+      "status": "Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note:?Face to face course.?This class will meet at the scheduled times on the Pleasant Hill Campus."
+    },
+    {
+      "section_number": "6001",
+      "instructor": "Wilson, Kathryn",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "9:35AM - 11:00AM",
+          "room": "267",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "11:10AM - 2:15PM",
+          "room": "205",
+          "format": "in-person"
+        }
+      ],
+      "status": "Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Section 6001 is part of the DVC MESA program. Students must be a current student in the MESA or friends of MESA program to enroll. For program and registration information please see http://www.dvc.edu/current/learning community/mesa/index.html or email Brandy Gibson at bgibson@dvc.edu. Note: Face to face course. This class will meet at the scheduled times on the Pleasant Hill Campus."
+    },
+    {
+      "section_number": "1043",
+      "instructor": "Wilson, Kathryn",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "9:35AM - 11:00AM",
+          "room": "267",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "11:10AM - 2:15PM",
+          "room": "205",
+          "format": "in-person"
+        }
+      ],
+      "status": "Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note:?Face to face course.?This class will meet at the scheduled times on the Pleasant Hill Campus."
+    },
+    {
+      "section_number": "1041",
+      "instructor": "Gerken, Craig",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "11:10AM - 2:15PM",
+          "room": "205",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "11:10AM - 12:35PM",
+          "room": "275",
+          "format": "in-person"
+        }
+      ],
+      "status": "Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note:?Face to face course.?This class will meet at the scheduled times on the Pleasant Hill Campus."
+    },
+    {
+      "section_number": "1040",
+      "instructor": "Gerken, Craig",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "11:10AM - 12:35PM",
+          "room": "275",
+          "format": "in-person"
+        },
+        {
+          "days": "M W",
+          "time": "2:30PM - 5:35PM",
+          "room": "205",
+          "format": "in-person"
+        }
+      ],
+      "status": "Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note:?Face to face course.?This class will meet at the scheduled times on the Pleasant Hill Campus."
+    },
+    {
+      "section_number": "1039",
+      "instructor": "Antonakos, Cory",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "T Th",
+          "time": "11:10AM - 2:15PM",
+          "room": "201",
+          "format": "in-person"
+        },
+        {
+          "days": "W",
+          "time": "11:10AM - 12:35PM",
+          "room": "110",
+          "format": "in-person"
+        }
+      ],
+      "status": "Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: Partially online course with required meetings Wednesdays 11:10AM-12:35PM and Tuesdays and Thursdays 11:10AM-2:15PM (on-campus, see room on schedule) with all other instruction provided online through the college learning management system Canvas. Class meets on-campus as scheduled."
+    },
+    {
+      "section_number": "1038",
+      "instructor": "Antonakos, Cory",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "W",
+          "time": "11:10AM - 12:35PM",
+          "room": "110",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "2:30PM - 5:35PM",
+          "room": "201",
+          "format": "in-person"
+        }
+      ],
+      "status": "Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: Partially online course with required meetings Wednesdays 11:10AM-12:35PM and Tuesdays and Thursdays 2:30-5:40PM (on-campus, see room on schedule) with all other instruction provided online through the college learning management system Canvas. Class meets on-campus as scheduled."
+    },
+    {
+      "section_number": "1037",
+      "instructor": "Kulp, Jamie",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "9:35AM - 11:00AM",
+          "room": "277",
+          "format": "in-person"
+        },
+        {
+          "days": "M W",
+          "time": "11:10AM - 2:15PM",
+          "room": "201",
+          "format": "in-person"
+        }
+      ],
+      "status": "Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note:?Face to face course.?This class will meet at the scheduled times on the Pleasant Hill Campus."
+    }
+  ],
+  "prerequisites": "Prerequisite: CHEM-108 or score of 3, 4, or 5 on AP Chemistry Test or appropriate chemistry skill level demonstrated through Chemistry Diagnostic Test or equivalent; Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra."
+}

@@ -1,0 +1,20 @@
+{
+  "course_code": "ENGL-170",
+  "course_title": "World Mythology",
+  "last_update": "2025-10-15T08:23:36",
+  "sections": [
+    {
+      "section_number": "1292",
+      "instructor": "Garcia, Marcos",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "9:35AM - 11:00AM",
+          "room": "105",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ]
+}

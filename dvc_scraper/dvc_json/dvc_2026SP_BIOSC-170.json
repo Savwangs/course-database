@@ -1,0 +1,59 @@
+{
+  "course_code": "BIOSC-170",
+  "course_title": "Environmental Science",
+  "last_update": "2025-10-15T08:11:07",
+  "sections": [
+    {
+      "section_number": "9105",
+      "instructor": "Levin, Anna",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1098",
+      "instructor": "Bird, Alicia",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "11:10AM - 12:35PM",
+          "room": "217",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "5042",
+      "instructor": "Taugher, Kimberly",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "5041",
+      "instructor": "Taugher, Kimberly",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    }
+  ]
+}

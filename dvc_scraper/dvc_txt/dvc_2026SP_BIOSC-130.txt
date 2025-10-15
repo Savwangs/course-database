@@ -1,0 +1,20 @@
+BIOSC-130 sections (2025-10-15T08:09:27):
+Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
+2026SP;SRC;9060;BIOSC-130 - Principles of Cellular and Molecular Biology 1/26/2026 - 5/22/2026 T Th 8:00AM - 9:25AM SRC W222 T Th 9:45AM - 12:50PM SRC E240;T Th;8:00AM - 9:25AM;SRC;W222;T Th;9:45AM - 12:50PM;SRC;E240;5.00;Cole Ekberg, Marci;Cole Ekberg, Marci;Prerequisite: CHEM-120 or equivalent Advisory: ENGL-C1000 or equivalent and BIOSC-101 or BIOSC-102 or equivalents Note: Class?meets at the scheduled times on the San Ramon Campus;Open;24
+T Th;8:00AM - 9:25AM;SRC;W222
+T Th;9:45AM - 12:50PM;SRC;E240
+2026SP;DVC;8150;BIOSC-130 - Principles of Cellular and Molecular Biology 1/26/2026 - 5/22/2026 M W 2:25PM - 5:30PM LS 201 M W 5:35PM - 7:00PM LS 115;M W;2:25PM - 5:30PM;LS;201;M W;5:35PM - 7:00PM;LS;115;5.00;Matern, Scott;Matern, Scott;Prerequisite: CHEM-120 or equivalent Advisory: ENGL-C1000 or equivalent and BIOSC-101 or BIOSC-102 or equivalents Note: Class meets on campus as scheduled.;Open;24
+M W;2:25PM - 5:30PM;LS;201
+M W;5:35PM - 7:00PM;LS;115
+2026SP;DVC;8014;BIOSC-130 - Principles of Cellular and Molecular Biology 1/26/2026 - 5/22/2026 M W 5:35PM - 7:00PM LS 115 M W 7:05PM - 10:10PM LS 201;M W;5:35PM - 7:00PM;LS;115;M W;7:05PM - 10:10PM;LS;201;5.00;Matern, Scott;Matern, Scott;Prerequisite: CHEM-120 or equivalent Advisory: ENGL-C1000 or equivalent and BIOSC-101 or BIOSC-102 or equivalents Note: Class meets on campus as scheduled.;Open;24
+M W;5:35PM - 7:00PM;LS;115
+M W;7:05PM - 10:10PM;LS;201
+2026SP;DVC;6004;BIOSC-130 - Principles of Cellular and Molecular Biology 1/26/2026 - 5/22/2026 M W 11:10AM - 2:15PM LS 201 M W 2:30PM - 3:55PM LS 223;M W;11:10AM - 2:15PM;LS;201;M W;2:30PM - 3:55PM;LS;223;5.00;Pandev, Nichole;Pandev, Nichole;Prerequisite: CHEM-120 or equivalent Advisory: ENGL-C1000 or equivalent and BIOSC-101 or BIOSC-102 or equivalents Note: Section 6004 is part of the DVC MESA program. Students must be a current student in the MESA or friends of MESA program to enroll. For program and registration information, please see  www.dvc.edu/current/learning-community/mesa/index.html. Note: Class meets on campus as scheduled.;Clsd;
+M W;11:10AM - 2:15PM;LS;201
+M W;2:30PM - 3:55PM;LS;223
+2026SP;DVC;1082;BIOSC-130 - Principles of Cellular and Molecular Biology 1/26/2026 - 5/22/2026 M W 11:10AM - 2:15PM LS 201 M W 2:30PM - 3:55PM LS 223;M W;11:10AM - 2:15PM;LS;201;M W;2:30PM - 3:55PM;LS;223;5.00;Pandev, Nichole;Pandev, Nichole;Prerequisite: CHEM-120 or equivalent Advisory: ENGL-C1000 or equivalent and BIOSC-101 or BIOSC-102 or equivalents Note: Class meets on campus as scheduled.;Open;24
+M W;11:10AM - 2:15PM;LS;201
+M W;2:30PM - 3:55PM;LS;223
+2026SP;DVC;1081;BIOSC-130 - Principles of Cellular and Molecular Biology 1/26/2026 - 5/22/2026 M W 7:55AM - 11:00AM LS 201 M W 11:10AM - 12:35PM LS 212;M W;7:55AM - 11:00AM;LS;201;M W;11:10AM - 12:35PM;LS;212;5.00;Vandervorst, Kacey;Vandervorst, Kacey;Prerequisite: CHEM-120 or equivalent Advisory: ENGL-C1000 or equivalent and BIOSC-101 or BIOSC-102 or equivalents Note: Class meets on campus as scheduled.;Open;24
+M W;7:55AM - 11:00AM;LS;201
+M W;11:10AM - 12:35PM;LS;212

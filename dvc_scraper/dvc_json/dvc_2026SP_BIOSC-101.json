@@ -1,0 +1,78 @@
+{
+  "course_code": "BIOSC-101",
+  "course_title": "Fundamentals of Biological Science",
+  "last_update": "2025-10-15T08:07:31",
+  "sections": [
+    {
+      "section_number": "5039",
+      "instructor": "Ensign, Caitlin",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "5037",
+      "instructor": "Ensign, Caitlin",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1061",
+      "instructor": "Staff, DVC",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "12:45PM - 2:10PM",
+          "room": "223",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1060",
+      "instructor": "Preble, Mackenzie",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "11:10AM - 12:35PM",
+          "room": "223",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "9103",
+      "instructor": "Rush, Andrew",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        },
+        {
+          "days": "M W",
+          "time": "12:45PM - 2:10PM",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    }
+  ]
+}

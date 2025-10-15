@@ -1,0 +1,4 @@
+ENGL-154 sections (2025-10-15T08:22:34):
+Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
+2026SP;DVC;1291;ENGL-154 - Shakespeare and His World 1/26/2026 - 5/22/2026 T Th 12:45PM - 2:10PM H 105;T Th;12:45PM - 2:10PM;H;105;3.00;Jule-Frost, Trevor;Jule-Frost, Trevor;Advisory: ENGL-C1000 or equivalent Note: Class meets on-campus as scheduled.;Open;45
+T Th;12:45PM - 2:10PM;H;105

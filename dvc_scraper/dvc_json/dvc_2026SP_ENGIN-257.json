@@ -1,0 +1,33 @@
+{
+  "course_code": "ENGIN-257",
+  "course_title": "Statics and Strength of Materials",
+  "last_update": "2025-10-15T08:20:22",
+  "sections": [
+    {
+      "section_number": "8164",
+      "instructor": "Panahandeh, Mohammad",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "Th",
+          "time": "4:00PM - 6:00PM",
+          "room": "122B",
+          "format": "in-person"
+        },
+        {
+          "days": "Th",
+          "time": "4:00PM - 6:00PM",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "PHYS-130 and MATH-193 or equivalents Advisory: MATH-194 or equivalent"
+}

@@ -1,0 +1,226 @@
+{
+  "course_code": "BUS-240",
+  "course_title": "Business Statistics",
+  "last_update": "2025-10-15T08:11:42",
+  "sections": [
+    {
+      "section_number": "9113",
+      "instructor": "Uwagie Ero, Francis",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "6207",
+      "instructor": "Lacayo, Allan",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "12:45PM - 2:10PM",
+          "room": "102",
+          "format": "in-person"
+        },
+        {
+          "days": "W",
+          "time": "2:20PM - 3:10PM",
+          "room": "102",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "6158",
+      "instructor": "Lacayo, Allan",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "5248",
+      "instructor": "Danko, Christopher",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "5169",
+      "instructor": "Lacayo, Allan",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "5098",
+      "instructor": "Lacayo, Allan",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "2927",
+      "instructor": "Lacayo, Allan",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "12:45PM - 2:10PM",
+          "room": "102",
+          "format": "in-person"
+        },
+        {
+          "days": "W",
+          "time": "2:20PM - 3:10PM",
+          "room": "102",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "2330",
+      "instructor": "Lacayo, Allan",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "11:10AM - 12:35PM",
+          "room": "102",
+          "format": "in-person"
+        },
+        {
+          "days": "M",
+          "time": "2:20PM - 3:10PM",
+          "room": "102",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "2238",
+      "instructor": "Lacayo, Allan",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "11:10AM - 12:35PM",
+          "room": "102",
+          "format": "in-person"
+        },
+        {
+          "days": "Th",
+          "time": "2:20PM - 3:10PM",
+          "room": "102",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "2236",
+      "instructor": "Lacayo, Allan",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "12:45PM - 2:10PM",
+          "room": "102",
+          "format": "in-person"
+        },
+        {
+          "days": "T",
+          "time": "2:20PM - 3:10PM",
+          "room": "102",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "8429",
+      "instructor": "Buckley, Ryan",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "Th",
+          "time": "6:00PM - 8:00PM",
+          "room": "105",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "5147",
+      "instructor": "Buckley, Ryan",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "5146",
+      "instructor": "Danko, Christopher",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "5099",
+      "instructor": "Olmos, Benjamin",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra."
+}

@@ -1,0 +1,65 @@
+{
+  "course_code": "ENGIN-230",
+  "course_title": "Introduction to Circuits and Devices",
+  "last_update": "2025-10-15T08:19:49",
+  "sections": [
+    {
+      "section_number": "8162",
+      "instructor": "Erickson, Ashley",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "M",
+          "time": "6:30PM - 8:00PM",
+          "room": "125",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "3801",
+      "instructor": "Bani-Hashemi, Ali",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "9:35AM - 11:00AM",
+          "room": "125",
+          "format": "in-person"
+        },
+        {
+          "days": "M",
+          "time": "2:30PM - 5:40PM",
+          "room": "105",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "2597",
+      "instructor": "Erickson, Ashley",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "Th",
+          "time": "8:00AM - 11:05AM",
+          "room": "105",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "PHYS-230 or equivalent. Corequisite: MATH-294 or equivalent."
+}

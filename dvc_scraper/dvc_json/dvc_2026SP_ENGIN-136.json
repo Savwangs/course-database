@@ -1,0 +1,46 @@
+{
+  "course_code": "ENGIN-136",
+  "course_title": "Computer Programming for Engineers Using MATLAB",
+  "last_update": "2025-10-15T08:19:17",
+  "sections": [
+    {
+      "section_number": "3240",
+      "instructor": "Khandani, Seyyed",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "T Th",
+          "time": "9:35AM - 11:00AM",
+          "room": "103",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "3226",
+      "instructor": "Khandani, Seyyed",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "T Th",
+          "time": "11:10AM - 12:35PM",
+          "room": "103",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "MATH-192 or equivalent Advisory: MATH-193 (may be taken concurrently) or equivalent"
+}

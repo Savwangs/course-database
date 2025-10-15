@@ -1,0 +1,26 @@
+{
+  "course_code": "COMSC-171",
+  "course_title": "Introduction to UNIX and Linux",
+  "last_update": "2025-10-15T08:15:33",
+  "sections": [
+    {
+      "section_number": "8225",
+      "instructor": "Fogg, Stuart",
+      "meetings": [
+        {
+          "days": "W",
+          "time": "4:05PM - 6:00PM",
+          "room": "115",
+          "format": "in-person"
+        },
+        {
+          "days": "W",
+          "time": "6:00PM - 7:15PM",
+          "room": "115",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ]
+}

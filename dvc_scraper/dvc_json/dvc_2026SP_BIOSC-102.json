@@ -1,0 +1,235 @@
+{
+  "course_code": "BIOSC-102",
+  "course_title": "Fundamentals of Biological Science With Laboratory",
+  "last_update": "2025-10-15T08:07:50",
+  "sections": [
+    {
+      "section_number": "9378",
+      "instructor": "Levin, Anna",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "W",
+          "time": "11:10AM - 2:20PM",
+          "room": "E235",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "9207",
+      "instructor": "Levin, Anna Polos, John Leonard",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "W",
+          "time": "5:30PM - 8:40PM",
+          "room": "E235",
+          "format": "in-person"
+        }
+      ],
+      "status": "Advisory: ENGL-C1000 or equivalent Note: Students who have successfully completed BIOSC-101 should not enroll in BIOSC-102. Students who have successfully completed BIOSC-101 will not receive credit for BIOSC-102. Note: Partially online course with required meetings Wednesday 5:30pm-8:40pm (on-campus lab, see room on schedule) with all other instruction provided online through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to locate course."
+    },
+    {
+      "section_number": "9012",
+      "instructor": "Rush, Andrew",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "2:30PM - 3:55PM",
+          "room": "E226",
+          "format": "in-person"
+        },
+        {
+          "days": "Th",
+          "time": "4:20PM - 7:30PM",
+          "room": "E235",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "8012",
+      "instructor": "McPheron, Linda",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "W",
+          "time": "6:00PM - 9:10PM",
+          "room": "208",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "5040",
+      "instructor": "Staff, DVC",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "12:45PM - 2:10PM",
+          "room": "115",
+          "format": "in-person"
+        },
+        {
+          "days": "T",
+          "time": "2:30PM - 5:40PM",
+          "room": "208",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1069",
+      "instructor": "Parkinson, Susan",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "9:35AM - 11:00AM",
+          "room": "112",
+          "format": "in-person"
+        },
+        {
+          "days": "W",
+          "time": "11:10AM - 2:20PM",
+          "room": "208",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1068",
+      "instructor": "Michaud, Brianna",
+      "meetings": [
+        {
+          "days": "T",
+          "time": "11:10AM - 2:20PM",
+          "room": "208",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "2:30PM - 3:55PM",
+          "room": "223",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1067",
+      "instructor": "Preble, Mackenzie",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "12:45PM - 2:10PM",
+          "room": "112",
+          "format": "in-person"
+        },
+        {
+          "days": "W",
+          "time": "2:30PM - 5:40PM",
+          "room": "208",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1065",
+      "instructor": "Bird, Alicia",
+      "meetings": [
+        {
+          "days": "Th",
+          "time": "7:50AM - 11:00AM",
+          "room": "208",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "11:10AM - 12:35PM",
+          "room": "112",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1064",
+      "instructor": "Parkinson, Susan",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "9:35AM - 11:00AM",
+          "room": "112",
+          "format": "in-person"
+        },
+        {
+          "days": "M",
+          "time": "11:10AM - 2:20PM",
+          "room": "208",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1063",
+      "instructor": "Preble, Mackenzie",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "12:45PM - 2:10PM",
+          "room": "112",
+          "format": "in-person"
+        },
+        {
+          "days": "M",
+          "time": "2:30PM - 5:40PM",
+          "room": "208",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1062",
+      "instructor": "Poague, Jason",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "9:35AM - 11:00AM",
+          "room": "223",
+          "format": "in-person"
+        },
+        {
+          "days": "Th",
+          "time": "11:10AM - 2:20PM",
+          "room": "208",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ]
+}

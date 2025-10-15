@@ -1,0 +1,4 @@
+ENGL-153 sections (2025-10-15T08:22:18):
+Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
+2026SP;DVC;5143;ENGL-153 - Contemporary Poetry 1/26/2026 - 5/22/2026 OFF ONLINE;;;OFF;ONLINE;3.00;Haslam, Alan;Haslam, Alan;Advisory: ENGL-C1000 or equivalent Note: 100% online course - no required online meetings.   Instruction will be provided through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to begin.;Open;45
+;;OFF;ONLINE

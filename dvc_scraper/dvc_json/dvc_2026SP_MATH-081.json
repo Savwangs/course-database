@@ -1,0 +1,33 @@
+{
+  "course_code": "MATH-081",
+  "course_title": "Support for Success in Math-181 Finite Math",
+  "last_update": "2025-10-15T08:28:07",
+  "sections": [
+    {
+      "section_number": "8154",
+      "instructor": "Murai, Lauren",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "7:25PM - 8:05PM",
+          "room": "103",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "6035",
+      "instructor": "Murai, Lauren",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "7:25PM - 8:05PM",
+          "room": "103",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ]
+}

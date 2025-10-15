@@ -1,0 +1,20 @@
+{
+  "course_code": "ENGL-124",
+  "course_title": "The Nature of Language: An Introduction to Linguistics",
+  "last_update": "2025-10-15T08:21:15",
+  "sections": [
+    {
+      "section_number": "0722",
+      "instructor": "Carrick, Jason",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "12:45PM - 2:10PM",
+          "room": "118",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ]
+}

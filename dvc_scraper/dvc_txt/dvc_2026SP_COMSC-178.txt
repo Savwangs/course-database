@@ -1,0 +1,4 @@
+COMSC-178 sections (2025-10-15T08:16:05):
+Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
+2026SP;DVC;5632;COMSC-178 - Cloud Machine Learning 3/30/2026 - 5/22/2026 OFF ONLINE;;;OFF;ONLINE;4.00;Amato, Nicholas;Amato, Nicholas;Advisory: COMSC-140 and COMSC-175 or equivalents Note: 100% online course. All instruction will be provided via the internet through the college learning management system CANVAS. Classes you are registered for will appear in Canvas on the first day of class unless published earlier by your instructor. There are no required class meetings. Go to www.dvc.edu/online for course access information.;Open;35
+;;OFF;ONLINE

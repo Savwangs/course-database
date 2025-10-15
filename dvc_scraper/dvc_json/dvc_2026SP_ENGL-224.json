@@ -1,0 +1,21 @@
+{
+  "course_code": "ENGL-224",
+  "course_title": "Poetry Writing",
+  "last_update": "2025-10-15T08:25:41",
+  "sections": [
+    {
+      "section_number": "5310",
+      "instructor": "Ang, Lisa",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "ENGL-C1000 or equivalent"
+}

@@ -1,0 +1,68 @@
+CHEM-108 sections (2025-10-15T08:12:17):
+Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
+2026SP;SRC;9298;CHEM-108 - Introductory Chemistry 1/26/2026 - 5/22/2026 M W 11:10AM - 12:35PM SRC E230 W 12:50PM - 4:00PM SRC E237;M W;11:10AM - 12:35PM;SRC;E230;W;12:50PM - 4:00PM;SRC;E237;4.00;Petersen, Anne;Petersen, Anne;Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: Class?meets at the scheduled times on the San Ramon Campus;Open;28
+M W;11:10AM - 12:35PM;SRC;E230
+W;12:50PM - 4:00PM;SRC;E237
+2026SP;SRC;9226;CHEM-108 - Introductory Chemistry 1/26/2026 - 5/22/2026 M W 11:10AM - 12:35PM SRC E230 M 12:50PM - 4:00PM SRC E237;M W;11:10AM - 12:35PM;SRC;E230;M;12:50PM - 4:00PM;SRC;E237;4.00;Petersen, Anne;Petersen, Anne;Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: Class?meets at the scheduled times on the San Ramon Campus;Open;28
+M W;11:10AM - 12:35PM;SRC;E230
+M;12:50PM - 4:00PM;SRC;E237
+2026SP;SRC;9111;CHEM-108 - Introductory Chemistry 1/26/2026 - 5/22/2026 T Th 12:45PM - 2:10PM SRC E230 T 2:45PM - 5:55PM SRC E237;T Th;12:45PM - 2:10PM;SRC;E230;T;2:45PM - 5:55PM;SRC;E237;4.00;Lawrence, Diane;Lawrence, Diane;Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: Class meets at the scheduled times on the San Ramon Campus. CHEM-108-9111 and BIOSC-139-9065 are scheduled to encourage enrollment and collaboration between students in both sections.;Open;28
+T Th;12:45PM - 2:10PM;SRC;E230
+T;2:45PM - 5:55PM;SRC;E237
+2026SP;SRC;9107;CHEM-108 - Introductory Chemistry 1/26/2026 - 5/22/2026 F 9:00AM - 12:10PM SRC E237 T Th 9:35AM - 11:00AM SRC W216;F;9:00AM - 12:10PM;SRC;E237;T Th;9:35AM - 11:00AM;SRC;W216;4.00;Tobwala, Shakila;Tobwala, Shakila;Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: Class?meets at the scheduled times on the San Ramon Campus;Open;28
+F;9:00AM - 12:10PM;SRC;E237
+T Th;9:35AM - 11:00AM;SRC;W216
+2026SP;SRC;9090;CHEM-108 - Introductory Chemistry 1/26/2026 - 5/22/2026 T 6:15PM - 9:25PM SRC E237 Th 6:15PM - 9:25PM SRC E230;T;6:15PM - 9:25PM;SRC;E237;Th;6:15PM - 9:25PM;SRC;E230;4.00;Hadei, Niloufar;Hadei, Niloufar;Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: Class?meets at the scheduled times on the San Ramon Campus;Open;28
+T;6:15PM - 9:25PM;SRC;E237
+Th;6:15PM - 9:25PM;SRC;E230
+2026SP;DVC;8008;CHEM-108 - Introductory Chemistry 1/26/2026 - 5/22/2026 T Th 4:05PM - 5:30PM PS 275 T Th 5:50PM - 7:15PM PS 221;T Th;4:05PM - 5:30PM;PS;275;T Th;5:50PM - 7:15PM;PS;221;4.00;Bordbar, Abdolkhalegh;Bordbar, Abdolkhalegh;Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note:?Face to face course.?This class will meet at the scheduled times on the Pleasant Hill Campus.;Open;28
+T Th;4:05PM - 5:30PM;PS;275
+T Th;5:50PM - 7:15PM;PS;221
+2026SP;DVC;8007;CHEM-108 - Introductory Chemistry 1/26/2026 - 5/22/2026 T Th 5:30PM - 6:55PM PS 267 T Th 7:05PM - 8:30PM PS 217;T Th;5:30PM - 6:55PM;PS;267;T Th;7:05PM - 8:30PM;PS;217;4.00;Vonguyen, Lien;Vonguyen, Lien;Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note:?Face to face course.?This class will meet at the scheduled times on the Pleasant Hill Campus.;Open;28
+T Th;5:30PM - 6:55PM;PS;267
+T Th;7:05PM - 8:30PM;PS;217
+2026SP;DVC;8006;CHEM-108 - Introductory Chemistry 1/26/2026 - 5/22/2026 M W 5:30PM - 6:55PM PS 277 M W 7:05PM - 8:30PM PS 217;M W;5:30PM - 6:55PM;PS;277;M W;7:05PM - 8:30PM;PS;217;4.00;Schick, Brian;Schick, Brian;Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note:?Face to face course.?This class will meet at the scheduled times on the Pleasant Hill Campus.;Open;28
+M W;5:30PM - 6:55PM;PS;277
+M W;7:05PM - 8:30PM;PS;217
+2026SP;DVC;8005;CHEM-108 - Introductory Chemistry 1/26/2026 - 5/22/2026 M W 2:30PM - 3:55PM PS 277 W 4:05PM - 7:15PM PS 217;M W;2:30PM - 3:55PM;PS;277;W;4:05PM - 7:15PM;PS;217;4.00;Staff, DVC;Staff, DVC;Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note:?Face to face course.?This class will meet at the scheduled times on the Pleasant Hill Campus.;Open;28
+M W;2:30PM - 3:55PM;PS;277
+W;4:05PM - 7:15PM;PS;217
+2026SP;DVC;1033;CHEM-108 - Introductory Chemistry 1/26/2026 - 5/22/2026 W 7:55AM - 11:00AM PS 217 M W 11:10AM - 12:35PM PS 267;W;7:55AM - 11:00AM;PS;217;M W;11:10AM - 12:35PM;PS;267;4.00;Djamali, Essmaiil;Djamali, Essmaiil;Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note:?Face to face course.?This class will meet at the scheduled times on the Pleasant Hill Campus.;Open;28
+W;7:55AM - 11:00AM;PS;217
+M W;11:10AM - 12:35PM;PS;267
+2026SP;DVC;1032;CHEM-108 - Introductory Chemistry 1/26/2026 - 5/22/2026 M W 2:30PM - 3:55PM PS 275 T 2:30PM - 5:40PM PS 217;M W;2:30PM - 3:55PM;PS;275;T;2:30PM - 5:40PM;PS;217;4.00;Staff, DVC;Staff, DVC;Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: Face to face course. This class will meet at the scheduled times on the Pleasant Hill Campus.;Open;28
+M W;2:30PM - 3:55PM;PS;275
+T;2:30PM - 5:40PM;PS;217
+2026SP;DVC;1031;CHEM-108 - Introductory Chemistry 1/26/2026 - 5/22/2026 T 11:10AM - 2:20PM PS 217 M W 2:30PM - 3:55PM PS 275;T;11:10AM - 2:20PM;PS;217;M W;2:30PM - 3:55PM;PS;275;4.00;Staff, DVC;Staff, DVC;Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note:?Face to face course.?This class will meet at the scheduled times on the Pleasant Hill Campus.;Open;28
+T;11:10AM - 2:20PM;PS;217
+M W;2:30PM - 3:55PM;PS;275
+2026SP;DVC;1030;CHEM-108 - Introductory Chemistry 1/26/2026 - 5/22/2026 Th 11:10AM - 2:20PM PS 217 M W 12:45PM - 2:10PM PS 275;Th;11:10AM - 2:20PM;PS;217;M W;12:45PM - 2:10PM;PS;275;4.00;Staff, DVC;Staff, DVC;Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note:?Face to face course.?This class will meet at the scheduled times on the Pleasant Hill Campus.;Open;28
+Th;11:10AM - 2:20PM;PS;217
+M W;12:45PM - 2:10PM;PS;275
+2026SP;DVC;1029;CHEM-108 - Introductory Chemistry 1/26/2026 - 5/22/2026 M W 9:35AM - 11:00AM PS 267 M 11:10AM - 2:20PM PS 221;M W;9:35AM - 11:00AM;PS;267;M;11:10AM - 2:20PM;PS;221;4.00;Arnaiz, Danny;Arnaiz, Danny;Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note:?Face to face course.?This class will meet at the scheduled times on the Pleasant Hill Campus.;Open;28
+M W;9:35AM - 11:00AM;PS;267
+M;11:10AM - 2:20PM;PS;221
+2026SP;DVC;1028;CHEM-108 - Introductory Chemistry 1/26/2026 - 5/22/2026 M W 11:10AM - 12:35PM PS 277 T 11:10AM - 2:20PM PS 221;M W;11:10AM - 12:35PM;PS;277;T;11:10AM - 2:20PM;PS;221;4.00;Hickey, Joseph;Hickey, Joseph;Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note:?Face to face course.?This class will meet at the scheduled times on the Pleasant Hill Campus.;Open;28
+M W;11:10AM - 12:35PM;PS;277
+T;11:10AM - 2:20PM;PS;221
+2026SP;DVC;1025;CHEM-108 - Introductory Chemistry 1/26/2026 - 5/22/2026 M W 8:00AM - 9:25AM PS 275 M W 9:35AM - 11:00AM PS 221;M W;8:00AM - 9:25AM;PS;275;M W;9:35AM - 11:00AM;PS;221;4.00;Amtawong, Jaruwan;Amtawong, Jaruwan;Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note:?Face to face course.?This class will meet at the scheduled times on the Pleasant Hill Campus.;Open;28
+M W;8:00AM - 9:25AM;PS;275
+M W;9:35AM - 11:00AM;PS;221
+2026SP;DVC;1024;CHEM-108 - Introductory Chemistry 1/26/2026 - 5/22/2026 M W 8:00AM - 9:25AM PS 110 Th 11:10AM - 2:20PM PS 221;M W;8:00AM - 9:25AM;PS;110;Th;11:10AM - 2:20PM;PS;221;4.00;Hickey, Joseph;Hickey, Joseph;Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note:?Face to face course.?This class will meet at the scheduled times on the Pleasant Hill Campus.;Open;28
+M W;8:00AM - 9:25AM;PS;110
+Th;11:10AM - 2:20PM;PS;221
+2026SP;DVC;1023;CHEM-108 - Introductory Chemistry 1/26/2026 - 5/22/2026 Th 7:55AM - 11:00AM PS 221 M W 8:00AM - 9:25AM PS 110;Th;7:55AM - 11:00AM;PS;221;M W;8:00AM - 9:25AM;PS;110;4.00;Hickey, Joseph;Hickey, Joseph;Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note:?Face to face course.?This class will meet at the scheduled times on the Pleasant Hill Campus.;Open;28
+Th;7:55AM - 11:00AM;PS;221
+M W;8:00AM - 9:25AM;PS;110
+2026SP;DVC;1022;CHEM-108 - Introductory Chemistry 1/26/2026 - 5/22/2026 T Th 9:35AM - 11:00AM PS 275 W 11:10AM - 2:20PM PS 221;T Th;9:35AM - 11:00AM;PS;275;W;11:10AM - 2:20PM;PS;221;4.00;Staff, DVC;Staff, DVC;Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note:?Face to face course.?This class will meet at the scheduled times on the Pleasant Hill Campus.;Open;28
+T Th;9:35AM - 11:00AM;PS;275
+W;11:10AM - 2:20PM;PS;221
+2026SP;DVC;1021;CHEM-108 - Introductory Chemistry 1/26/2026 - 5/22/2026 M 11:10AM - 2:20PM PS 217 T Th 12:45PM - 2:10PM PS 275;M;11:10AM - 2:20PM;PS;217;T Th;12:45PM - 2:10PM;PS;275;4.00;Staff, DVC;Staff, DVC;Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note:?Face to face course.?This class will meet at the scheduled times on the Pleasant Hill Campus.;Open;28
+M;11:10AM - 2:20PM;PS;217
+T Th;12:45PM - 2:10PM;PS;275
+2026SP;DVC;1020;CHEM-108 - Introductory Chemistry 1/26/2026 - 5/22/2026 T Th 12:45PM - 2:10PM PS 275 M 2:30PM - 5:40PM PS 217;T Th;12:45PM - 2:10PM;PS;275;M;2:30PM - 5:40PM;PS;217;4.00;Staff, DVC;Staff, DVC;Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note:?Face to face course.?This class will meet at the scheduled times on the Pleasant Hill Campus.;Open;28
+T Th;12:45PM - 2:10PM;PS;275
+M;2:30PM - 5:40PM;PS;217
+2026SP;DVC;1019;CHEM-108 - Introductory Chemistry 1/26/2026 - 5/22/2026 T Th 12:45PM - 2:10PM PS 277 T 2:30PM - 5:40PM PS 221;T Th;12:45PM - 2:10PM;PS;277;T;2:30PM - 5:40PM;PS;221;4.00;Larson, Wayne;Larson, Wayne;Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note:?Face to face course.?This class will meet at the scheduled times on the Pleasant Hill Campus.;Open;28
+T Th;12:45PM - 2:10PM;PS;277
+T;2:30PM - 5:40PM;PS;221

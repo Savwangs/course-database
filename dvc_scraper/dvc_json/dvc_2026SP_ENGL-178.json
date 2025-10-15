@@ -1,0 +1,20 @@
+{
+  "course_code": "ENGL-178",
+  "course_title": "Young Adult Literature",
+  "last_update": "2025-10-15T08:24:39",
+  "sections": [
+    {
+      "section_number": "5151",
+      "instructor": "Toloui, Karen",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    }
+  ]
+}

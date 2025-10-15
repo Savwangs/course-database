@@ -1,0 +1,200 @@
+{
+  "course_code": "ENGL-C1000E",
+  "course_title": "Academic Reading and Writing",
+  "last_update": "2025-10-15T08:27:15",
+  "sections": [
+    {
+      "section_number": "9199",
+      "instructor": "Katko, Clarissa",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "11:10AM - 1:40PM",
+          "room": "E176",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "8059",
+      "instructor": "Fitzgerald, Cathy",
+      "meetings": [
+        {
+          "days": "M",
+          "time": "6:00PM - 8:30PM",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "6012",
+      "instructor": "Fitzgerald, Cathy",
+      "meetings": [
+        {
+          "days": "M",
+          "time": "6:00PM - 8:30PM",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "6011",
+      "instructor": "Goen-Salter, Heidi",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "T",
+          "time": "9:35AM - 12:05PM",
+          "room": "213",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "5113",
+      "instructor": "Staff, DVC",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1254",
+      "instructor": "Gonzales, Anthony",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "9:35AM - 12:05PM",
+          "room": "118",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1253",
+      "instructor": "Iles, Monique",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "W",
+          "time": "11:10AM - 1:40PM",
+          "room": "",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1252",
+      "instructor": "Goen-Salter, Heidi",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "T",
+          "time": "9:35AM - 12:05PM",
+          "room": "213",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1251",
+      "instructor": "Ikeda, Ryan",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "9:35AM - 12:05PM",
+          "room": "110",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1247",
+      "instructor": "Hansen, Megan",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "T",
+          "time": "11:10AM - 1:40PM",
+          "room": "109",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1249",
+      "instructor": "Thomas-Bignami, Ian",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "M W",
+          "time": "9:35AM - 12:05PM",
+          "room": "NEED RM",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1248",
+      "instructor": "Bowman, Graham",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "M W",
+          "time": "9:35AM - 12:05PM",
+          "room": "103",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "Placement as determined by the college's multiple measures assessment process."
+}

@@ -1,0 +1,236 @@
+{
+  "course_code": "BIOSC-140",
+  "course_title": "Human Physiology",
+  "last_update": "2025-10-15T08:10:19",
+  "sections": [
+    {
+      "section_number": "9276",
+      "instructor": "Hedayat, Nick",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "5:15PM - 6:40PM",
+          "room": "E227",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "6:55PM - 10:00PM",
+          "room": "E238",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "9139",
+      "instructor": "Glaves, Richard",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "11:20AM - 12:45PM",
+          "room": "E230",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "1:20PM - 4:25PM",
+          "room": "E238",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "9081",
+      "instructor": "Fein, Matthew",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "8:00AM - 9:25AM",
+          "room": "E227",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "9:35AM - 12:40PM",
+          "room": "E238",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "9072",
+      "instructor": "Polos, John Leonard",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "8:00AM - 9:25AM",
+          "room": "E227",
+          "format": "in-person"
+        },
+        {
+          "days": "M W",
+          "time": "9:35AM - 12:40PM",
+          "room": "E238",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "8023",
+      "instructor": "Staff, DVC",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "5:00PM - 6:25PM",
+          "room": "115",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "6:35PM - 9:40PM",
+          "room": "215",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "8022",
+      "instructor": "Hoffmann, James",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "5:30PM - 6:55PM",
+          "room": "217",
+          "format": "in-person"
+        },
+        {
+          "days": "M W",
+          "time": "7:05PM - 10:10PM",
+          "room": "215",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "8020",
+      "instructor": "Staff, DVC",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "2:30PM - 3:55PM",
+          "room": "217",
+          "format": "in-person"
+        },
+        {
+          "days": "M W",
+          "time": "3:55PM - 7:00PM",
+          "room": "215",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1094",
+      "instructor": "Daly, Kevin",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "12:45PM - 2:10PM",
+          "room": "112",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "2:20PM - 5:25PM",
+          "room": "215",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1093",
+      "instructor": "Clarkson, Bryan",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "T Th",
+          "time": "11:10AM - 2:15PM",
+          "room": "215",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1092",
+      "instructor": "Clarkson, Bryan",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "M W",
+          "time": "12:45PM - 3:50PM",
+          "room": "215",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1091",
+      "instructor": "Hoffmann, James",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "7:55AM - 11:00AM",
+          "room": "215",
+          "format": "in-person"
+        },
+        {
+          "days": "M W",
+          "time": "8:00AM - 9:25AM",
+          "room": "217",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1090",
+      "instructor": "Hoffmann, James",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "8:00AM - 9:25AM",
+          "room": "217",
+          "format": "in-person"
+        },
+        {
+          "days": "M W",
+          "time": "9:35AM - 12:40PM",
+          "room": "215",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "BIOSC-120 or BIOSC-139 or Equivalents and CHEM-107, CHEM-108, CHEM-109, or CHEM-120 or one year of high school chemistry or equivalents Advisory: BIOSC-102 or equivalent or Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra or ENGL-C1000 or equivalent"
+}

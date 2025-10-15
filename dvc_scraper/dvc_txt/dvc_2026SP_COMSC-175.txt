@@ -1,0 +1,4 @@
+COMSC-175 sections (2025-10-15T08:15:49):
+Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
+2026SP;DVC;5630;COMSC-175 - Introduction to Cloud Computing 1/26/2026 - 3/20/2026 OFF ONLINE;;;OFF;ONLINE;4.00;Amato, Nicholas;Amato, Nicholas;Advisory: CNT-104 or equivalent Note: 100% online course. All instruction will be provided via the internet through the college learning management system CANVAS. Classes you are registered for will appear in Canvas on the first day of class unless published earlier by your instructor. There are no required class meetings. Go to www.dvc.edu/online for course access information.;Open;35
+;;OFF;ONLINE

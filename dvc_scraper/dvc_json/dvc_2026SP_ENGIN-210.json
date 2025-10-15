@@ -1,0 +1,27 @@
+{
+  "course_code": "ENGIN-210",
+  "course_title": "Thermodynamics",
+  "last_update": "2025-10-15T08:19:33",
+  "sections": [
+    {
+      "section_number": "2922",
+      "instructor": "Khandani, Seyyed",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "T",
+          "time": "2:30PM - 3:55PM",
+          "room": "122B",
+          "format": "in-person"
+        }
+      ],
+      "status": "labs are problem solving sessions only. In addition, this class has three mandatory in-person meetings at 2:30-3:55pm on Tuesdays 2/24, 4/7, and 5/19 for exams. All other instructions are provided online through the college learning management system Canvas and Zoom. Access to a computer with a webcam and a microphone is required. Go to www.dvc.edu/online for course access information."
+    }
+  ],
+  "prerequisites": "CHEM-120 and PHYS-230 or equivalents"
+}

@@ -1,0 +1,20 @@
+{
+  "course_code": "ENGL-166",
+  "course_title": "African American Literature",
+  "last_update": "2025-10-15T08:23:05",
+  "sections": [
+    {
+      "section_number": "5145",
+      "instructor": "Ang, Lisa",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+ENGL-151 sections (2025-10-15T08:22:02):
+Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
+2026SP;SRC;9284;ENGL-151 - The Short Story 1/26/2026 - 5/22/2026 OFF ONLINE;;;OFF;ONLINE;3.00;Colson, Michael;Colson, Michael;Advisory: ENGL-C1000 or equivalent Note: 100% online course - no scheduled meetings. Instruction will be provided through the college learning management system CANVAS. On the course start date, log into Canvas, www.dvc.edu/online to begin.;Open;45
+;;OFF;ONLINE

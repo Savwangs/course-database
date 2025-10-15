@@ -1,0 +1,20 @@
+{
+  "course_code": "ENGL-151",
+  "course_title": "The Short Story",
+  "last_update": "2025-10-15T08:22:02",
+  "sections": [
+    {
+      "section_number": "9284",
+      "instructor": "Colson, Michael",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    }
+  ]
+}

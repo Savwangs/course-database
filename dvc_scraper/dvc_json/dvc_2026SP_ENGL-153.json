@@ -1,0 +1,20 @@
+{
+  "course_code": "ENGL-153",
+  "course_title": "Contemporary Poetry",
+  "last_update": "2025-10-15T08:22:18",
+  "sections": [
+    {
+      "section_number": "5143",
+      "instructor": "Haslam, Alan",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    }
+  ]
+}

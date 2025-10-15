@@ -1,0 +1,45 @@
+{
+  "course_code": "BIOSC-116",
+  "course_title": "Human Biology",
+  "last_update": "2025-10-15T08:08:06",
+  "sections": [
+    {
+      "section_number": "9151",
+      "instructor": "Staff, DVC",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        },
+        {
+          "days": "M W",
+          "time": "6:00PM - 7:00PM",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "W",
+          "time": "6:00PM - 7:00PM",
+          "room": "E227",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1071",
+      "instructor": "Rooker, Carol",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "9:35AM - 11:00AM",
+          "room": "115",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ]
+}

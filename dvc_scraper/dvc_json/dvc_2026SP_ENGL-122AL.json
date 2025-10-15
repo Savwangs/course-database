@@ -1,0 +1,98 @@
+{
+  "course_code": "ENGL-122AL",
+  "course_title": "Academic Reading and Writing for Multilingual Students",
+  "last_update": "2025-10-15T08:20:38",
+  "sections": [
+    {
+      "section_number": "5108",
+      "instructor": "DuLaney-Greger, Keri",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "5107",
+      "instructor": "DuLaney-Greger, Keri",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1246",
+      "instructor": "Khabiri, Mona",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "W",
+          "time": "9:35AM - 12:05PM",
+          "room": "117",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1245",
+      "instructor": "Rossini, Sara",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "M",
+          "time": "9:35AM - 12:05PM",
+          "room": "116",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1243",
+      "instructor": "Rogers, Jill",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "11:10AM - 1:40PM",
+          "room": "116",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "5111",
+      "instructor": "Fischer-Mikolavich, Ema",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "Placement as determined by the college's multiple measures assessment process"
+}

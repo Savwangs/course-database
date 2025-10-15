@@ -1,0 +1,64 @@
+{
+  "course_code": "BIOSC-117",
+  "course_title": "Human Biology with Laboratory",
+  "last_update": "2025-10-15T08:08:22",
+  "sections": [
+    {
+      "section_number": "1074",
+      "instructor": "Daly, Kevin",
+      "meetings": [
+        {
+          "days": "M",
+          "time": "2:30PM - 5:40PM",
+          "room": "112",
+          "format": "in-person"
+        },
+        {
+          "days": "W",
+          "time": "2:30PM - 5:40PM",
+          "room": "202",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1073",
+      "instructor": "Fox, Kristi",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "9:35AM - 11:00AM",
+          "room": "210",
+          "format": "in-person"
+        },
+        {
+          "days": "W",
+          "time": "11:10AM - 2:20PM",
+          "room": "202",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1072",
+      "instructor": "Rooker, Carol",
+      "meetings": [
+        {
+          "days": "M",
+          "time": "11:10AM - 2:20PM",
+          "room": "202",
+          "format": "in-person"
+        },
+        {
+          "days": "M W",
+          "time": "2:30PM - 3:55PM",
+          "room": "115",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ]
+}

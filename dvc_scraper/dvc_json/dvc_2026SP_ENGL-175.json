@@ -1,0 +1,20 @@
+{
+  "course_code": "ENGL-175",
+  "course_title": "Science Fiction and Fantasy Literature",
+  "last_update": "2025-10-15T08:24:08",
+  "sections": [
+    {
+      "section_number": "5150",
+      "instructor": "Garcia, Marcos",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    }
+  ]
+}

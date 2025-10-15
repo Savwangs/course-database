@@ -1,0 +1,27 @@
+{
+  "course_code": "ENGIN-240",
+  "course_title": "Properties of Engineering Materials",
+  "last_update": "2025-10-15T08:20:05",
+  "sections": [
+    {
+      "section_number": "2971",
+      "instructor": "Panahandeh, Mohammad",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "W",
+          "time": "2:30PM - 6:30PM",
+          "room": "120A",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "CHEM-120 and PHYS-130 or equivalents"
+}

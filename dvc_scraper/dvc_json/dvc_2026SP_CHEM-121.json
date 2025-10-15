@@ -1,0 +1,141 @@
+{
+  "course_code": "CHEM-121",
+  "course_title": "General College Chemistry II",
+  "last_update": "2025-10-15T08:13:07",
+  "sections": [
+    {
+      "section_number": "8011",
+      "instructor": "Fraund, Matthew",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "5:30PM - 6:55PM",
+          "room": "267",
+          "format": "in-person"
+        },
+        {
+          "days": "M W",
+          "time": "7:05PM - 10:10PM",
+          "room": "213",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "6002",
+      "instructor": "Burns, Laura",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "11:10AM - 12:35PM",
+          "room": "275",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "11:10AM - 2:15PM",
+          "room": "213",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1048",
+      "instructor": "Fell, Jason",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "4:05PM - 5:30PM",
+          "room": "277",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "5:45PM - 8:50PM",
+          "room": "213",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1047",
+      "instructor": "Ruehl, Jean",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "9:35AM - 11:00AM",
+          "room": "110",
+          "format": "in-person"
+        },
+        {
+          "days": "M W",
+          "time": "11:10AM - 2:15PM",
+          "room": "213",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1046",
+      "instructor": "Burns, Laura",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "7:55AM - 11:00AM",
+          "room": "213",
+          "format": "in-person"
+        },
+        {
+          "days": "M W",
+          "time": "11:10AM - 12:35PM",
+          "room": "275",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1045",
+      "instructor": "Burns, Laura",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "11:10AM - 12:35PM",
+          "room": "275",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "11:10AM - 2:15PM",
+          "room": "213",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1044",
+      "instructor": "Ruehl, Jean",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "9:35AM - 11:00AM",
+          "room": "110",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "2:30PM - 5:35PM",
+          "room": "213",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "CHEM-120 or equivalent Advisory: MATH-191 or equivalent"
+}

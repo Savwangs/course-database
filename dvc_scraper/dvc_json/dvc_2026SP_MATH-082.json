@@ -1,0 +1,107 @@
+{
+  "course_code": "MATH-082",
+  "course_title": "Support for Calculus for Management, Life Science, and Social Science I",
+  "last_update": "2025-10-15T08:28:23",
+  "sections": [
+    {
+      "section_number": "8142",
+      "instructor": "Asghary, Zahra",
+      "meetings": [
+        {
+          "days": "M T W Th",
+          "time": "7:20PM - 7:45PM",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "Th",
+          "time": "7:20PM - 7:45PM",
+          "room": "103",
+          "format": "in-person"
+        },
+        {
+          "days": "M T W Th",
+          "time": "7:45PM - 8:35PM",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "Th",
+          "time": "7:45PM - 8:35PM",
+          "room": "103",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "6301",
+      "instructor": "Asghary, Zahra",
+      "meetings": [
+        {
+          "days": "M T W Th",
+          "time": "7:20PM - 7:45PM",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "Th",
+          "time": "7:20PM - 7:45PM",
+          "room": "103",
+          "format": "in-person"
+        },
+        {
+          "days": "M T W Th",
+          "time": "7:45PM - 8:35PM",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "Th",
+          "time": "7:45PM - 8:35PM",
+          "room": "103",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "2569",
+      "instructor": "Huynh, My",
+      "meetings": [
+        {
+          "days": "M T W Th",
+          "time": "9:45AM - 10:10AM",
+          "room": "105",
+          "format": "in-person"
+        },
+        {
+          "days": "M T W Th",
+          "time": "10:10AM - 11:00AM",
+          "room": "105",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "2452",
+      "instructor": "Chan, Kwai-Ching",
+      "meetings": [
+        {
+          "days": "M T W Th",
+          "time": "2:15PM - 2:40PM",
+          "room": "107",
+          "format": "in-person"
+        },
+        {
+          "days": "M T W Th",
+          "time": "2:40PM - 3:30PM",
+          "room": "107",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+ENGIN-110 sections (2025-10-15T08:17:42):
+Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
+2026SP;DVC;5229;ENGIN-110 - Introduction to Engineering 1/26/2026 - 5/22/2026 OFF ONLINE M W 9:00AM - 11:00AM OFF ONLINE;;;OFF;ONLINE;M W;9:00AM - 11:00AM;OFF;ONLINE;3.00;Panahandeh, Mohammad;Panahandeh, Mohammad;Note: Credit for prior learning available: Credit by examination. Note: 100% online course. All instruction will be provided via the internet through the college learning management system CANVAS and Zoom software. This course may use online exam proctoring software to administer exams. Access to a computer with audio and video capability is required. Go to www.dvc.edu/online for course access information.;Open;30
+;;OFF;ONLINE
+M W;9:00AM - 11:00AM;OFF;ONLINE
+2026SP;DVC;5228;ENGIN-110 - Introduction to Engineering 1/26/2026 - 5/22/2026 OFF ONLINE;;;OFF;ONLINE;3.00;Erickson, Ashley;Erickson, Ashley;Note: Credit for prior learning available: Credit by examination. Note: 100% online course. All instruction will be provided via the internet through the college learning management system CANVAS and Zoom software. This course may use online exam proctoring software to administer exams. Access to a computer with audio and video capability is required. Go to www.dvc.edu/online for course access information.;Open;30
+;;OFF;ONLINE
+2026SP;DVC;1901;ENGIN-110 - Introduction to Engineering 1/26/2026 - 5/22/2026 T Th 7:55AM - 9:00AM ET 124 T Th 9:00AM - 11:00AM ET 124;T Th;7:55AM - 9:00AM;ET;124;T Th;9:00AM - 11:00AM;ET;124;3.00;Razavian, Mathieu;Razavian, Mathieu;Note: Credit for prior learning available: Credit by examination.;Open;30
+T Th;7:55AM - 9:00AM;ET;124
+T Th;9:00AM - 11:00AM;ET;124

@@ -1,0 +1,58 @@
+{
+  "course_code": "ENGIN-110",
+  "course_title": "Introduction to Engineering",
+  "last_update": "2025-10-15T08:17:42",
+  "sections": [
+    {
+      "section_number": "5229",
+      "instructor": "Panahandeh, Mohammad",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        },
+        {
+          "days": "M W",
+          "time": "9:00AM - 11:00AM",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "5228",
+      "instructor": "Erickson, Ashley",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1901",
+      "instructor": "Razavian, Mathieu",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "7:55AM - 9:00AM",
+          "room": "124",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "9:00AM - 11:00AM",
+          "room": "124",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ]
+}

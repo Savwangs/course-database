@@ -1,0 +1,21 @@
+{
+  "course_code": "ENGL-126A",
+  "course_title": "Critical Thinking and Writing for Multilingual Students",
+  "last_update": "2025-10-15T08:21:31",
+  "sections": [
+    {
+      "section_number": "5307",
+      "instructor": "Crossen, James",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "ENGL-C1000 or equivalent"
+}

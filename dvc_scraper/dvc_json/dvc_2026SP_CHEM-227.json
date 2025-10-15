@@ -1,0 +1,108 @@
+{
+  "course_code": "CHEM-227",
+  "course_title": "Organic Chemistry II",
+  "last_update": "2025-10-15T08:13:24",
+  "sections": [
+    {
+      "section_number": "1052",
+      "instructor": "Lipson, Joseph",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "M W",
+          "time": "9:35AM - 11:00AM",
+          "room": "275",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "2:30PM - 5:20PM",
+          "room": "209",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1051",
+      "instructor": "Lipson, Joseph",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "M W",
+          "time": "9:35AM - 11:00AM",
+          "room": "275",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "11:10AM - 2:00PM",
+          "room": "209",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1050",
+      "instructor": "Orac-Sayre, Crina",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "M W",
+          "time": "11:10AM - 2:00PM",
+          "room": "209",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "11:10AM - 12:35PM",
+          "room": "277",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1049",
+      "instructor": "Orac-Sayre, Crina",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "M W",
+          "time": "8:00AM - 2:00PM",
+          "room": "209",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "11:10AM - 12:35PM",
+          "room": "277",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "CHEM-121 and CHEM-226 or equivalents"
+}

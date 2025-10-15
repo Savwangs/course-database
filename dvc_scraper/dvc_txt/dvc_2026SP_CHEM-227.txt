@@ -1,0 +1,18 @@
+CHEM-227 sections (2025-10-15T08:13:24):
+Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
+2026SP;DVC;1052;CHEM-227 - Organic Chemistry II 1/26/2026 - 5/22/2026 OFF PART-ONL M W 9:35AM - 11:00AM PS 275 T Th 2:30PM - 5:20PM PS 209;;;OFF;PART-ONL;M W;9:35AM - 11:00AM;PS;275;T Th;2:30PM - 5:20PM;PS;209;5.00;Lipson, Joseph;Lipson, Joseph;Prerequisite: CHEM-121 and CHEM-226 or equivalents Note: Partially online course with required meetings Mondays and Wednesdays 9:35AM-11:00AM  (on-campus, see room on schedule) and Tuesdays and Thursdays  2:30-5:20 PM (on-campus, see room on schedule) with all other instruction provided online through the college learning management system Canvas.;Open;18
+;;OFF;PART-ONL
+M W;9:35AM - 11:00AM;PS;275
+T Th;2:30PM - 5:20PM;PS;209
+2026SP;DVC;1051;CHEM-227 - Organic Chemistry II 1/26/2026 - 5/22/2026 OFF PART-ONL M W 9:35AM - 11:00AM PS 275 T Th 11:10AM - 2:00PM PS 209;;;OFF;PART-ONL;M W;9:35AM - 11:00AM;PS;275;T Th;11:10AM - 2:00PM;PS;209;5.00;Lipson, Joseph;Lipson, Joseph;Prerequisite: CHEM-121 and CHEM-226 or equivalents Note: Partially online course with required meetings Mondays and Wednesdays 9:35AM-11:00AM (on-campus, see room on schedule) and Tuesdays and Thursdays 11:10 AM - 2:00 PM (on-campus, see room on schedule) with all other instruction provided online through the college learning management system Canvas.;Open;18
+;;OFF;PART-ONL
+M W;9:35AM - 11:00AM;PS;275
+T Th;11:10AM - 2:00PM;PS;209
+2026SP;DVC;1050;CHEM-227 - Organic Chemistry II 1/26/2026 - 5/22/2026 OFF PART-ONL M W 11:10AM - 2:00PM PS 209 T Th 11:10AM - 12:35PM PS 277;;;OFF;PART-ONL;M W;11:10AM - 2:00PM;PS;209;T Th;11:10AM - 12:35PM;PS;277;5.00;Orac-Sayre, Crina;Orac-Sayre, Crina;Prerequisite: CHEM-121 and CHEM-226 or equivalents Note: Partially online course with required meetings Mondays and Wednesdays 11:10AM-2:00PM and Tuesdays and Thursdays 11:10AM-12:35PM (on-campus, see room on schedule) with all other instruction provided online through the college learning management system Canvas.;Open;18
+;;OFF;PART-ONL
+M W;11:10AM - 2:00PM;PS;209
+T Th;11:10AM - 12:35PM;PS;277
+2026SP;DVC;1049;CHEM-227 - Organic Chemistry II 1/26/2026 - 5/22/2026 OFF PART-ONL M W 8:00AM - 2:00PM PS 209 T Th 11:10AM - 12:35PM PS 277;;;OFF;PART-ONL;M W;8:00AM - 2:00PM;PS;209;T Th;11:10AM - 12:35PM;PS;277;5.00;Orac-Sayre, Crina;Orac-Sayre, Crina;Prerequisite: CHEM-121 and CHEM-226 or equivalents Note: Partially online course with required meetings Mondays and Wednesdays 8:00AM-10:50AM (on-campus, see room on schedule) and Tuesdays and Thursdays 11:10 AM - 12:35 PM (on-campus, see room on schedule) with all other instruction provided online through the college learning management system Canvas.;Open;18
+;;OFF;PART-ONL
+M W;8:00AM - 2:00PM;PS;209
+T Th;11:10AM - 12:35PM;PS;277

@@ -1,0 +1,33 @@
+{
+  "course_code": "MATH-002",
+  "course_title": "Support for Math-192 Analytic Geometry And Calculus I",
+  "last_update": "2025-10-15T08:27:49",
+  "sections": [
+    {
+      "section_number": "2974",
+      "instructor": "Mircheva, Diana",
+      "meetings": [
+        {
+          "days": "M T W Th",
+          "time": "11:10AM - 11:30AM",
+          "room": "107",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "2950",
+      "instructor": "Sohi, Anna",
+      "meetings": [
+        {
+          "days": "M T W Th",
+          "time": "9:00AM - 9:20AM",
+          "room": "NEED RM",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "course_code": "COMSC-255",
+  "course_title": "Programming With Java",
+  "last_update": "2025-10-15T08:16:53",
+  "sections": [
+    {
+      "section_number": "5459",
+      "instructor": "Khaja, Gene",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "5135",
+      "instructor": "Khaja, Gene",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    }
+  ]
+}

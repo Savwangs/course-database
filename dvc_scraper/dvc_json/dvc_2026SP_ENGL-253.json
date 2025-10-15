@@ -1,0 +1,21 @@
+{
+  "course_code": "ENGL-253",
+  "course_title": "Survey of Late English Literature",
+  "last_update": "2025-10-15T08:26:18",
+  "sections": [
+    {
+      "section_number": "1296",
+      "instructor": "Morgan, Christian",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "9:35AM - 11:00AM",
+          "room": "105",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "ENGL-C1000 or equivalent"
+}

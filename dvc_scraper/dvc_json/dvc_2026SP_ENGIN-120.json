@@ -1,0 +1,39 @@
+{
+  "course_code": "ENGIN-120",
+  "course_title": "Engineering Drawing",
+  "last_update": "2025-10-15T08:17:58",
+  "sections": [
+    {
+      "section_number": "8952",
+      "instructor": "Parco, Erwin",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "5:40PM - 6:45PM",
+          "room": "117",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "6:45PM - 8:50PM",
+          "room": "116",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "5180",
+      "instructor": "Panahandeh, Mohammad",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    }
+  ]
+}

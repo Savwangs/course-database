@@ -1,0 +1,20 @@
+{
+  "course_code": "ENGL-140A",
+  "course_title": "Tutor Training: Working with Composition and Reading",
+  "last_update": "2025-10-15T08:21:47",
+  "sections": [
+    {
+      "section_number": "5186",
+      "instructor": "Iles, Monique",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "course_code": "BIOSC-126",
+  "course_title": "Ecology and Field Biology",
+  "last_update": "2025-10-15T08:09:11",
+  "sections": [
+    {
+      "section_number": "1080",
+      "instructor": "Levin, Anna",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "11:10AM - 12:35PM",
+          "room": "115",
+          "format": "in-person"
+        },
+        {
+          "days": "Th",
+          "time": "12:55PM - 4:05PM",
+          "room": "202",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ]
+}

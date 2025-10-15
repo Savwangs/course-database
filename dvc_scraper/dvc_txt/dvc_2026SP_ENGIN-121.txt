@@ -1,0 +1,5 @@
+ENGIN-121 sections (2025-10-15T08:18:14):
+Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
+2026SP;DVC;8001;ENGIN-121 - Engineering Drawing/Descriptive Geometry 1/26/2026 - 5/22/2026 T Th 5:40PM - 6:45PM ET 125 T Th 6:45PM - 8:50PM ET 103;T Th;5:40PM - 6:45PM;ET;125;T Th;6:45PM - 8:50PM;ET;103;3.00;Razavian, Mathieu;Razavian, Mathieu;Advisory: ENGIN-120 or equivalent and MATH-121 or equivalent (may be taken concurrently);Open;30
+T Th;5:40PM - 6:45PM;ET;125
+T Th;6:45PM - 8:50PM;ET;103

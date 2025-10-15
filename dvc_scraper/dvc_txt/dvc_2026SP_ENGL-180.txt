@@ -1,0 +1,5 @@
+ENGL-180 sections (2025-10-15T08:24:54):
+Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
+2026SP;DVC;2789;ENGL-180 - Drama and Performance As Literature 1/26/2026 - 5/22/2026 OFF PART-ONL M 11:10AM - 12:35PM OFF NEED RM;;;OFF;PART-ONL;M;11:10AM - 12:35PM;OFF;NEED RM;3.00;Wilson, James;Wilson, James;Advisory: ENGL-C1000 or equivalent Note: Attendance at one or more live performances is required. Note: Partially online course with required meetings Mondays, 11:10 AM-12:35 PM (on-campus, see room on schedule) with all other  instruction provided online through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to locate course.;Open;45
+;;OFF;PART-ONL
+M;11:10AM - 12:35PM;OFF;NEED RM

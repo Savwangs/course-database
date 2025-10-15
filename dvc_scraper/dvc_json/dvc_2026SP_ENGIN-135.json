@@ -1,0 +1,27 @@
+{
+  "course_code": "ENGIN-135",
+  "course_title": "Programming for Scientists and Engineers",
+  "last_update": "2025-10-15T08:19:01",
+  "sections": [
+    {
+      "section_number": "5461",
+      "instructor": "Erickson, Ashley",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        },
+        {
+          "days": "W",
+          "time": "7:00PM - 8:30PM",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "Math-192 (may be taken concurrently) or equivalent"
+}

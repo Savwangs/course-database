@@ -1,0 +1,11 @@
+BIOSC-117 sections (2025-10-15T08:08:22):
+Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
+2026SP;DVC;1074;BIOSC-117 - Human Biology with Laboratory 1/26/2026 - 5/22/2026 M 2:30PM - 5:40PM ST 112 W 2:30PM - 5:40PM LS 202;M;2:30PM - 5:40PM;ST;112;W;2:30PM - 5:40PM;LS;202;4.00;Daly, Kevin;Daly, Kevin;Advisory: ENGL-C1000 or equivalent Note: Students who have successfully completed BIOSC-116 should not enroll in BIOSC-117. Students who have successfully completed BIOSC-116 will not receive credit for BIOSC-117. Note: Class meets on campus as scheduled.;Open;26
+M;2:30PM - 5:40PM;ST;112
+W;2:30PM - 5:40PM;LS;202
+2026SP;DVC;1073;BIOSC-117 - Human Biology with Laboratory 1/26/2026 - 5/22/2026 M W 9:35AM - 11:00AM LS 210 W 11:10AM - 2:20PM LS 202;M W;9:35AM - 11:00AM;LS;210;W;11:10AM - 2:20PM;LS;202;4.00;Fox, Kristi;Fox, Kristi;Advisory: ENGL-C1000 or equivalent Note: Students who have successfully completed BIOSC-116 should not enroll in BIOSC-117. Students who have successfully completed BIOSC-116 will not receive credit for BIOSC-117. Note: Class meets on campus as scheduled.;Open;26
+M W;9:35AM - 11:00AM;LS;210
+W;11:10AM - 2:20PM;LS;202
+2026SP;DVC;1072;BIOSC-117 - Human Biology with Laboratory 1/26/2026 - 5/22/2026 M 11:10AM - 2:20PM LS 202 M W 2:30PM - 3:55PM LS 115;M;11:10AM - 2:20PM;LS;202;M W;2:30PM - 3:55PM;LS;115;4.00;Rooker, Carol;Rooker, Carol;Advisory: ENGL-C1000 or equivalent Note: Students who have successfully completed BIOSC-116 should not enroll in BIOSC-117. Students who have successfully completed BIOSC-116 will not receive credit for BIOSC-117. Note: Class meets on campus as scheduled.;Open;26
+M;11:10AM - 2:20PM;LS;202
+M W;2:30PM - 3:55PM;LS;115

@@ -1,0 +1,5 @@
+BIOSC-120 sections (2025-10-15T08:08:55):
+Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
+2026SP;DVC;1079;BIOSC-120 - Introduction to Human Anatomy and Physiology 1/26/2026 - 5/22/2026 T Th 12:45PM - 2:10PM LS 217 T Th 2:25PM - 5:30PM LS 203;T Th;12:45PM - 2:10PM;LS;217;T Th;2:25PM - 5:30PM;LS;203;5.00;Gamal, Arif;Gamal, Arif;Advisory: ENGL-C1000 or equivalent. High school or college biology or chemistry or equivalents. Note: Class meets  on campus as scheduled. This class includes dissection and study of human cadavers.;Open;26
+T Th;12:45PM - 2:10PM;LS;217
+T Th;2:25PM - 5:30PM;LS;203

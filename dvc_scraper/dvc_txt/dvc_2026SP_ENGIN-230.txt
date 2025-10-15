@@ -1,0 +1,11 @@
+ENGIN-230 sections (2025-10-15T08:19:49):
+Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
+2026SP;DVC;8162;ENGIN-230 - Introduction to Circuits and Devices 1/26/2026 - 5/22/2026 OFF PART-ONL M 6:30PM - 8:00PM ET 125;;;OFF;PART-ONL;M;6:30PM - 8:00PM;ET;125;4.00;Erickson, Ashley;Erickson, Ashley;Prerequisite: PHYS-230 or equivalent. Corequisite: MATH-294 or equivalent. Note: Partially online course. In addition to online instruction, this class has mandatory in-person meetings 6:30-8:00pm on the following Mondays: 1/26 (orientation), 3/09, 4/20, 5/11, (exams) and 5/18  (final exam). All other instruction provided online through the college learning management system Canvas. This section of ENGIN-230 has online asynchronous labs. Students are advised to check with an advisor regarding articulation of online ENGIN-230 labs at transfer programs of interest. Access to a computer with a webcam and a microphone is required. Go to www.dvc.edu/online for course access information.;Open;30
+;;OFF;PART-ONL
+M;6:30PM - 8:00PM;ET;125
+2026SP;DVC;3801;ENGIN-230 - Introduction to Circuits and Devices 1/26/2026 - 5/22/2026 M W 9:35AM - 11:00AM ET 125 M 2:30PM - 5:40PM ET 105;M W;9:35AM - 11:00AM;ET;125;M;2:30PM - 5:40PM;ET;105;4.00;Bani-Hashemi, Ali;Bani-Hashemi, Ali;Prerequisite: PHYS-230 or equivalent. Corequisite: MATH-294 or equivalent. Note: Lectures will be held on campus on Mondays and Wednesdays from 9:35-11:00am. This class has required on-campus meetings on Mondays from 2:30-5:40pm for labs.;Open;30
+M W;9:35AM - 11:00AM;ET;125
+M;2:30PM - 5:40PM;ET;105
+2026SP;DVC;2597;ENGIN-230 - Introduction to Circuits and Devices 1/26/2026 - 5/22/2026 OFF PART-ONL Th 8:00AM - 11:05AM ET 105;;;OFF;PART-ONL;Th;8:00AM - 11:05AM;ET;105;4.00;Erickson, Ashley;Erickson, Ashley;Prerequisite: PHYS-230 or equivalent. Corequisite: MATH-294 or equivalent. Note: Partially online course. In addition to online asynchronous instruction, this class has mandatory in-person meetings for labs on Thursdays 1/26 through 5/22, 8:00-11:05am. All other instruction will be provided online through the college learning management system Canvas. Go to www.dvc.edu/online for course access information.;Open;30
+;;OFF;PART-ONL
+Th;8:00AM - 11:05AM;ET;105

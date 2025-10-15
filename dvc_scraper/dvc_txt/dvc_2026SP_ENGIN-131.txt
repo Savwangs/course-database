@@ -1,0 +1,6 @@
+ENGIN-131 sections (2025-10-15T08:18:46):
+Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
+2026SP;DVC;6258;ENGIN-131 - Technology and Society 1/26/2026 - 5/22/2026 T Th 4:15PM - 5:40PM OFF MDHS;T Th;4:15PM - 5:40PM;OFF;MDHS;3.00;Navayazdan, Afarin;Navayazdan, Afarin;Note: This section is intended primarily for high school students in the MDUSD dual enrollment program. Please contact Sarah Peterson at sapeterson@dvc.edu for more information.;Open;35
+T Th;4:15PM - 5:40PM;OFF;MDHS
+2026SP;DVC;5224;ENGIN-131 - Technology and Society 1/26/2026 - 5/22/2026 OFF ONLINE;;;OFF;ONLINE;3.00;Panahandeh, Mohammad;Panahandeh, Mohammad;Note: 100% online course. All instruction will be provided via the internet through the college learning management system CANVAS. Classes you are registered for will appear in Canvas on the first day of class unless published earlier by your instructor. There are no required class meetings. Go to www.dvc.edu/online for course access information. This course may use online exam proctoring software to administer exams.;Open;35
+;;OFF;ONLINE

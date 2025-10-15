@@ -1,0 +1,103 @@
+{
+  "course_code": "BIOSC-146",
+  "course_title": "Principles of Microbiology",
+  "last_update": "2025-10-15T08:10:36",
+  "sections": [
+    {
+      "section_number": "9029",
+      "instructor": "Fein, Matthew",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "1:40PM - 3:05PM",
+          "room": "W222",
+          "format": "in-person"
+        },
+        {
+          "days": "M W",
+          "time": "3:30PM - 6:35PM",
+          "room": "E240",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "8025",
+      "instructor": "Staff, DVC",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "5:30PM - 6:55PM",
+          "room": "223",
+          "format": "in-person"
+        },
+        {
+          "days": "M W",
+          "time": "7:05PM - 10:10PM",
+          "room": "206",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "8024",
+      "instructor": "Bloom, Karen",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "M W",
+          "time": "4:05PM - 7:10PM",
+          "room": "206",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1096",
+      "instructor": "Pierroz, Grady",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "12:50PM - 3:55PM",
+          "room": "206",
+          "format": "in-person"
+        },
+        {
+          "days": "M W",
+          "time": "4:05PM - 5:30PM",
+          "room": "223",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1095",
+      "instructor": "Staff, DVC",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "9:35AM - 12:40PM",
+          "room": "206",
+          "format": "in-person"
+        },
+        {
+          "days": "M W",
+          "time": "12:45PM - 2:10PM",
+          "room": "115",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "CHEM-107 or CHEM-108 or CHEM-109 or CHEM-120 or equivalent. Advisory: ENGL-C1000 or equivalent and High school or college biology or equivalent."
+}

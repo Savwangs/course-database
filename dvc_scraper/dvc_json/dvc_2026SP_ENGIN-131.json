@@ -1,0 +1,33 @@
+{
+  "course_code": "ENGIN-131",
+  "course_title": "Technology and Society",
+  "last_update": "2025-10-15T08:18:46",
+  "sections": [
+    {
+      "section_number": "6258",
+      "instructor": "Navayazdan, Afarin",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "4:15PM - 5:40PM",
+          "room": "MDHS",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "5224",
+      "instructor": "Panahandeh, Mohammad",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "course_code": "CHEM-109",
+  "course_title": "Introduction to Organic and Biochemistry",
+  "last_update": "2025-10-15T08:12:33",
+  "sections": [
+    {
+      "section_number": "1036",
+      "instructor": "Larson, Wayne",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "12:45PM - 2:10PM",
+          "room": "277",
+          "format": "in-person"
+        },
+        {
+          "days": "M",
+          "time": "2:30PM - 5:40PM",
+          "room": "221",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1035",
+      "instructor": "Larson, Wayne",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "12:45PM - 2:10PM",
+          "room": "277",
+          "format": "in-person"
+        },
+        {
+          "days": "W",
+          "time": "2:30PM - 5:40PM",
+          "room": "221",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "CHEM-107 or CHEM-108 or CHEM-120 or equivalent"
+}

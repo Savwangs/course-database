@@ -1,0 +1,20 @@
+{
+  "course_code": "COMSC-178",
+  "course_title": "Cloud Machine Learning",
+  "last_update": "2025-10-15T08:16:05",
+  "sections": [
+    {
+      "section_number": "5632",
+      "instructor": "Amato, Nicholas",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    }
+  ]
+}

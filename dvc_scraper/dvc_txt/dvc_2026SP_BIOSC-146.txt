@@ -1,0 +1,17 @@
+BIOSC-146 sections (2025-10-15T08:10:36):
+Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
+2026SP;SRC;9029;BIOSC-146 - Principles of Microbiology 1/26/2026 - 5/22/2026 M W 1:40PM - 3:05PM SRC W222 M W 3:30PM - 6:35PM SRC E240;M W;1:40PM - 3:05PM;SRC;W222;M W;3:30PM - 6:35PM;SRC;E240;5.00;Fein, Matthew;Fein, Matthew;Prerequisite:CHEM-107 or CHEM-108 or CHEM-109 or CHEM-120 or equivalent. Advisory: ENGL-C1000 or equivalent and High school or college biology or equivalent. Note: Class?meets at the scheduled times on the San Ramon Campus;Open;26
+M W;1:40PM - 3:05PM;SRC;W222
+M W;3:30PM - 6:35PM;SRC;E240
+2026SP;DVC;8025;BIOSC-146 - Principles of Microbiology 1/26/2026 - 5/22/2026 M W 5:30PM - 6:55PM LS 223 M W 7:05PM - 10:10PM LS 206;M W;5:30PM - 6:55PM;LS;223;M W;7:05PM - 10:10PM;LS;206;5.00;Staff, DVC;Staff, DVC;Prerequisite:CHEM-107 or CHEM-108 or CHEM-109 or CHEM-120 or equivalent. Advisory: ENGL-C1000 or equivalent and High school or college biology or equivalent. Note: Class meets on campus as scheduled.;Open;26
+M W;5:30PM - 6:55PM;LS;223
+M W;7:05PM - 10:10PM;LS;206
+2026SP;DVC;8024;BIOSC-146 - Principles of Microbiology 1/26/2026 - 5/22/2026 OFF PART-ONL M W 4:05PM - 7:10PM LS 206;;;OFF;PART-ONL;M W;4:05PM - 7:10PM;LS;206;5.00;Bloom, Karen;Bloom, Karen;Prerequisite:CHEM-107 or CHEM-108 or CHEM-109 or CHEM-120 or equivalent. Advisory: ENGL-C1000 or equivalent and High school or college biology or equivalent. Note: Partially online course with required on-campus meetings for lab, Mondays and Wednesdays 4:05PM -7:10PM and Lecture Exams on 2/18, 3/18, 4/22 and 5/20  from 2:30PM-3:55PM (see room on schedule). All other instruction provided online through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to locate course.;Open;26
+;;OFF;PART-ONL
+M W;4:05PM - 7:10PM;LS;206
+2026SP;DVC;1096;BIOSC-146 - Principles of Microbiology 1/26/2026 - 5/22/2026 M W 12:50PM - 3:55PM LS 206 M W 4:05PM - 5:30PM LS 223;M W;12:50PM - 3:55PM;LS;206;M W;4:05PM - 5:30PM;LS;223;5.00;Pierroz, Grady;Pierroz, Grady;Prerequisite:CHEM-107 or CHEM-108 or CHEM-109 or CHEM-120 or equivalent. Advisory: ENGL-C1000 or equivalent and High school or college biology or equivalent. Note: Class meets on campus as scheduled.;Open;26
+M W;12:50PM - 3:55PM;LS;206
+M W;4:05PM - 5:30PM;LS;223
+2026SP;DVC;1095;BIOSC-146 - Principles of Microbiology 1/26/2026 - 5/22/2026 M W 9:35AM - 12:40PM LS 206 M W 12:45PM - 2:10PM LS 115;M W;9:35AM - 12:40PM;LS;206;M W;12:45PM - 2:10PM;LS;115;5.00;Staff, DVC;Staff, DVC;Prerequisite:CHEM-107 or CHEM-108 or CHEM-109 or CHEM-120 or equivalent. Advisory: ENGL-C1000 or equivalent and High school or college biology or equivalent.;Open;26
+M W;9:35AM - 12:40PM;LS;206
+M W;12:45PM - 2:10PM;LS;115

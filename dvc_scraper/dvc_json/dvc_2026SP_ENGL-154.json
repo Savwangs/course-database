@@ -1,0 +1,20 @@
+{
+  "course_code": "ENGL-154",
+  "course_title": "Shakespeare and His World",
+  "last_update": "2025-10-15T08:22:34",
+  "sections": [
+    {
+      "section_number": "1291",
+      "instructor": "Jule-Frost, Trevor",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "12:45PM - 2:10PM",
+          "room": "105",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ]
+}

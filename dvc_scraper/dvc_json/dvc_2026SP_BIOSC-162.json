@@ -1,0 +1,26 @@
+{
+  "course_code": "BIOSC-162",
+  "course_title": "Fundamentals of Marine Biology with Laboratory",
+  "last_update": "2025-10-15T08:10:51",
+  "sections": [
+    {
+      "section_number": "1097",
+      "instructor": "Freytag, John",
+      "meetings": [
+        {
+          "days": "M",
+          "time": "11:10AM - 2:20PM",
+          "room": "110",
+          "format": "in-person"
+        },
+        {
+          "days": "W",
+          "time": "11:10AM - 2:20PM",
+          "room": "117",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ]
+}

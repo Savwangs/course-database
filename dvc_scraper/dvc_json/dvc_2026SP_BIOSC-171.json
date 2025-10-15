@@ -1,0 +1,83 @@
+{
+  "course_code": "BIOSC-171",
+  "course_title": "Environmental Science with Laboratory",
+  "last_update": "2025-10-15T08:11:23",
+  "sections": [
+    {
+      "section_number": "9145",
+      "instructor": "Cole Ekberg, Marci",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "M",
+          "time": "9:35AM - 12:40PM",
+          "room": "E235",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1101",
+      "instructor": "Staff, DVC",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "11:10AM - 12:35PM",
+          "room": "223",
+          "format": "in-person"
+        },
+        {
+          "days": "T",
+          "time": "12:55PM - 4:05PM",
+          "room": "202",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1100",
+      "instructor": "Taugher, Kimberly",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "Th",
+          "time": "9:30AM - 12:40PM",
+          "room": "202",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1099",
+      "instructor": "Taugher, Kimberly",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "T",
+          "time": "9:30AM - 12:40PM",
+          "room": "202",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ]
+}
