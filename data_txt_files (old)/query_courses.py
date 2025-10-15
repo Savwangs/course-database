@@ -1,7 +1,7 @@
 import json
 import os
 
-def load_data(filepath="../dvc_scraper/dvc_json/Full_STEM_DataBase.json"):
+def load_data(filepath="../dvc_scraper/Full_STEM_DataBase.json"):
     """
     Load the full STEM course database from a single JSON file.
     """
@@ -130,8 +130,13 @@ if __name__ == "__main__":
     print("\n" + "="*80)
     print("6️⃣  Find equivalent courses for ENGL-C1000 that also satisfy CS transfer requirements.")
     print("="*80)
-    print("ℹ️  Note: This requires Assist.org mapping — placeholder for now.")
-    print("Equivalent course data may be added later into the JSON (e.g., ENGL-122).")
+    equivalents = data.get("equivalent_courses_for_ENGL-C1000", [])
+    print("\n6. Equivalent courses for ENGL-C1000:\n")
+    if equivalents:
+        for eq in equivalents:
+            print(f"• {eq['course_code']} - {eq.get('course_title', '')}")
+    else:
+        print("No equivalent courses found.")
 
     print("\n" + "="*80)
     print("7️⃣  Which STAT-244 sections are still open for Spring 2026?")
