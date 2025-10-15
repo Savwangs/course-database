@@ -1,0 +1,22 @@
+PHYS-120 sections (2025-10-15T10:21:26):
+Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
+2026SP;DVC;8055;PHYS-120 - General College Physics I 1/26/2026 - 5/22/2026 T Th 12:45PM - 2:10PM PS 175 M 2:30PM - 5:20PM PS 113 Th 4:05PM - 5:20PM PS 110;T Th;12:45PM - 2:10PM;PS;175;M;2:30PM - 5:20PM;PS;113;Th;4:05PM - 5:20PM;PS;110;4.00;Kisseleva-Eggleton, Ludmila;Kisseleva-Eggleton, Ludmila;Prerequisite: MATH-121 or equivalent Note: Class meets weekly as scheduled.;Open;25
+T Th;12:45PM - 2:10PM;PS;175
+M;2:30PM - 5:20PM;PS;113
+Th;4:05PM - 5:20PM;PS;110
+2026SP;DVC;8054;PHYS-120 - General College Physics I 1/26/2026 - 5/22/2026 W 12:45PM - 2:00PM PS 110 T 2:30PM - 5:20PM PS 121 M W 4:05PM - 5:20PM PS 177;W;12:45PM - 2:00PM;PS;110;T;2:30PM - 5:20PM;PS;121;M W;4:05PM - 5:20PM;PS;177;4.00;Goldenberg, Steven;Goldenberg, Steven;Prerequisite: MATH-121 or equivalent Note: Class meets weekly as scheduled.;Open;25
+W;12:45PM - 2:00PM;PS;110
+T;2:30PM - 5:20PM;PS;121
+M W;4:05PM - 5:20PM;PS;177
+2026SP;DVC;1183;PHYS-120 - General College Physics I 1/26/2026 - 5/22/2026 T Th 8:00AM - 9:25AM PS 177 M 11:10AM - 2:00PM PS 117 W 11:10AM - 12:25PM PS 117;T Th;8:00AM - 9:25AM;PS;177;M;11:10AM - 2:00PM;PS;117;W;11:10AM - 12:25PM;PS;117;4.00;Martin, Shuleen;Martin, Shuleen;Prerequisite: MATH-121 or equivalent Note: Class meets weekly as scheduled.;Open;25
+T Th;8:00AM - 9:25AM;PS;177
+M;11:10AM - 2:00PM;PS;117
+W;11:10AM - 12:25PM;PS;117
+2026SP;DVC;1181;PHYS-120 - General College Physics I 1/26/2026 - 5/22/2026 M 8:00AM - 10:50AM PS 117 T Th 8:00AM - 9:25AM PS 177 W 9:35AM - 10:50AM PS 117;M;8:00AM - 10:50AM;PS;117;T Th;8:00AM - 9:25AM;PS;177;W;9:35AM - 10:50AM;PS;117;4.00;Martin, Shuleen;Martin, Shuleen;Prerequisite: MATH-121 or equivalent Note: Class meets weekly as scheduled.;Open;25
+M;8:00AM - 10:50AM;PS;117
+T Th;8:00AM - 9:25AM;PS;177
+W;9:35AM - 10:50AM;PS;117
+2026SP;DVC;1180;PHYS-120 - General College Physics I 1/26/2026 - 5/22/2026 M 11:10AM - 2:00PM PS 117 W F 11:10AM - 12:35PM PS 175 F 1:05PM - 2:20PM PS 175;M;11:10AM - 2:00PM;PS;117;W F;11:10AM - 12:35PM;PS;175;F;1:05PM - 2:20PM;PS;175;4.00;Walker, Ted;Walker, Ted;Prerequisite: MATH-121 or equivalent Note: Class meets weekly as scheduled.;Open;25
+M;11:10AM - 2:00PM;PS;117
+W F;11:10AM - 12:35PM;PS;175
+F;1:05PM - 2:20PM;PS;175

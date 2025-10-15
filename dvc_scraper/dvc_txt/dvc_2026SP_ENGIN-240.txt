@@ -1,4 +1,4 @@
-ENGIN-240 sections (2025-10-15T08:20:05):
+ENGIN-240 sections (2025-10-15T10:07:22):
 Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
 2026SP;DVC;2971;ENGIN-240 - Properties of Engineering Materials 1/26/2026 - 5/22/2026 OFF PART-ONL W 2:30PM - 6:30PM ET 120A;;;OFF;PART-ONL;W;2:30PM - 6:30PM;ET;120A;4.00;Panahandeh, Mohammad;Panahandeh, Mohammad;Prerequisite: CHEM-120 and PHYS-130 or equivalents Note: Partially online course. In addition to online instruction, this class has required on ground weekly meetings on Wednesday from 2:30-6:30PM for labs and exams. Lecture and other activities will be provided via the internet through the college learning management system CANVAS and Zoom software. Access to a computer with a webcam and a microphone is required. Go to www.dvc.edu/online for course access information. This course may use online exam proctoring software to administer exams.;Open;25
 ;;OFF;PART-ONL

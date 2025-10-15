@@ -1,0 +1,47 @@
+{
+  "course_code": "MATH-183",
+  "course_title": "Calculus for Management, Life Science, and Social Science II",
+  "last_update": "2025-10-15T10:18:07",
+  "sections": [
+    {
+      "section_number": "9066",
+      "instructor": "Staff, SRC",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "12:45PM - 2:50PM",
+          "room": "W217",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "2942",
+      "instructor": "Smith, Dan",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "12:45PM - 2:50PM",
+          "room": "143",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1340",
+      "instructor": "Walters, Julie",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "11:10AM - 1:15PM",
+          "room": "240",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "MATH-182 or equivalent  Advisory: MATH-121 or equivalent"
+}

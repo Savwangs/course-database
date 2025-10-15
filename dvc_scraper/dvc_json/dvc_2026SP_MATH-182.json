@@ -1,0 +1,143 @@
+{
+  "course_code": "MATH-182",
+  "course_title": "Calculus for Management, Life Science, and Social Science I",
+  "last_update": "2025-10-15T10:17:51",
+  "sections": [
+    {
+      "section_number": "9061",
+      "instructor": "Staff, SRC",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "12:45PM - 2:50PM",
+          "room": "W217",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "8143",
+      "instructor": "Asghary, Zahra",
+      "meetings": [
+        {
+          "days": "M T W Th",
+          "time": "6:30PM - 7:20PM",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "Th",
+          "time": "6:30PM - 7:20PM",
+          "room": "103",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "6333",
+      "instructor": "Asghary, Zahra",
+      "meetings": [
+        {
+          "days": "M T W Th",
+          "time": "6:30PM - 7:20PM",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "Th",
+          "time": "6:30PM - 7:20PM",
+          "room": "103",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "2593",
+      "instructor": "Chan, Kwai-Ching",
+      "meetings": [
+        {
+          "days": "M T W Th",
+          "time": "1:25PM - 2:15PM",
+          "room": "107",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "2591",
+      "instructor": "Huynh, My",
+      "meetings": [
+        {
+          "days": "M T W Th",
+          "time": "8:55AM - 9:45AM",
+          "room": "105",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1603",
+      "instructor": "Knight, Lynn Knight",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "11:10AM - 1:15PM",
+          "room": "241",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1601",
+      "instructor": "Sohi, Anna",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "F",
+          "time": "11:00AM - 1:00PM",
+          "room": "240",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1599",
+      "instructor": "Serrano Bautista, Ramona",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "10:30AM - 12:35PM",
+          "room": "251",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1598",
+      "instructor": "Walters, Julie",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "8:55AM - 11:00AM",
+          "room": "241",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra."
+}

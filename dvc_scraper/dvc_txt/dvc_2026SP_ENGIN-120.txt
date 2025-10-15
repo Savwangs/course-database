@@ -1,4 +1,4 @@
-ENGIN-120 sections (2025-10-15T08:17:58):
+ENGIN-120 sections (2025-10-15T10:05:16):
 Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
 2026SP;DVC;8952;ENGIN-120 - Engineering Drawing 1/26/2026 - 5/22/2026 T Th 5:40PM - 6:45PM ET 117 T Th 6:45PM - 8:50PM ET 116;T Th;5:40PM - 6:45PM;ET;117;T Th;6:45PM - 8:50PM;ET;116;3.00;Parco, Erwin;Parco, Erwin;Advisory: ENGTC-119 or equivalent and MATH-121 or MATH-121L or equivalent;Open;30
 T Th;5:40PM - 6:45PM;ET;117

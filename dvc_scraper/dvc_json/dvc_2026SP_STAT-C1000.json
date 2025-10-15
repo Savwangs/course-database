@@ -1,0 +1,251 @@
+{
+  "course_code": "STAT-C1000",
+  "course_title": "Introduction to Statistics",
+  "last_update": "2025-10-15T10:23:39",
+  "sections": [
+    {
+      "section_number": "9424",
+      "instructor": "Staff, SRC",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "W",
+          "time": "4:05PM - 6:10PM",
+          "room": "W220",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "9396",
+      "instructor": "Staff, SRC",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "4:05PM - 6:10PM",
+          "room": "E164",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "9356",
+      "instructor": "Staff, SRC",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "T Th",
+          "time": "7:00PM - 8:15PM",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "Th",
+          "time": "7:00PM - 9:00PM",
+          "room": "W219",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "9269",
+      "instructor": "Staff, SRC",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "W",
+          "time": "9:35AM - 11:40AM",
+          "room": "W217",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "9136",
+      "instructor": "Staff, SRC",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "T",
+          "time": "4:05PM - 6:10PM",
+          "room": "W219",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "8266",
+      "instructor": "McNeill, Amber",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "5:00PM - 7:05PM",
+          "room": "103",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "6202",
+      "instructor": "McCarter, Sarah",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "8:55AM - 11:00AM",
+          "room": "101",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "3700",
+      "instructor": "Willett, Peter",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "W",
+          "time": "11:30AM - 1:30PM",
+          "room": "149",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "3699",
+      "instructor": "Willett, Peter",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "11:10AM - 1:15PM",
+          "room": "209",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "2946",
+      "instructor": "Lang, Lindsey",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "F",
+          "time": "10:30AM - 12:30PM",
+          "room": "148",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "2921",
+      "instructor": "Willett, Peter",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "1:25PM - 3:30PM",
+          "room": "209",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "2594",
+      "instructor": "McCarter, Sarah",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "12:45PM - 2:50PM",
+          "room": "142",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1990",
+      "instructor": "Keating, Katrina",
+      "meetings": [
+        {
+          "days": "T",
+          "time": "9:35AM - 11:40AM",
+          "room": "148",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "9:35AM - 11:40AM",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1606",
+      "instructor": "Sohi, Anna",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "12:45PM - 2:50PM",
+          "room": "209",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1192",
+      "instructor": "Lantzy, Henry",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "8:55AM - 11:00AM",
+          "room": "104",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra."
+}

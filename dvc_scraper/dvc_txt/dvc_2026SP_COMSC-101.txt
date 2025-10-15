@@ -1,4 +1,4 @@
-COMSC-101 sections (2025-10-15T08:14:12):
+COMSC-101 sections (2025-10-15T10:01:31):
 Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
 2026SP;DVC;5654;COMSC-101 - Computer Literacy 1/26/2026 - 5/22/2026 OFF ONLINE;;;OFF;ONLINE;4.00;Houshiar, Bijan;Houshiar, Bijan;Note: Credit for prior learning available: Credit by examination. Note: 100% online course. All instruction will be provided via the internet through the college learning management system CANVAS. Classes you are registered for will appear in Canvas on the first day of class unless published earlier by your instructor. There are no required class meetings. Go to www.dvc.edu/online for course access information.;Open;40
 ;;OFF;ONLINE

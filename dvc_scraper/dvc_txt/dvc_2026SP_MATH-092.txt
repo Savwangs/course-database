@@ -1,4 +1,4 @@
-MATH-092 sections (2025-10-15T08:28:39):
+MATH-092 sections (2025-10-15T10:15:42):
 Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
 2026SP;DVC;1145;MATH-092 - Math for Trade Pre-Apprentices 1/26/2026 - 5/22/2026 M W 12:15PM - 2:20PM MA 245;M W;12:15PM - 2:20PM;MA;245;4.00;Sohi, Anna;Sohi, Anna;Note: This course is part of the Pre-Apprenticeship program. Note: This class is a requirement for the pre-apprenticeship certificate program. Note: Class meets on-campus as scheduled.;Open;36
 M W;12:15PM - 2:20PM;MA;245

@@ -1,0 +1,79 @@
+{
+  "course_code": "MATH-294",
+  "course_title": "Differential Equations",
+  "last_update": "2025-10-15T10:20:38",
+  "sections": [
+    {
+      "section_number": "9146",
+      "instructor": "Staff, SRC",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "1:00PM - 3:30PM",
+          "room": "E164",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "8168",
+      "instructor": "Tardivel, Dominic",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "Th",
+          "time": "5:30PM - 8:00PM",
+          "room": "107",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "2701",
+      "instructor": "Newton, Kit",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "2:30PM - 5:00PM",
+          "room": "104",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1342",
+      "instructor": "Tardivel, Dominic",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "12:45PM - 3:15PM",
+          "room": "240",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1328",
+      "instructor": "Mohan, Adhitya",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "8:30AM - 11:00AM",
+          "room": "249",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "MATH-292 or equivalent Advisory: MATH-194 or equivalent (may be taken concurrently)"
+}

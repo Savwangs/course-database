@@ -1,0 +1,47 @@
+{
+  "course_code": "PHYS-110",
+  "course_title": "Elementary Physics",
+  "last_update": "2025-10-15T10:20:54",
+  "sections": [
+    {
+      "section_number": "9222",
+      "instructor": "Katdare, Sonia",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "5:30PM - 6:55PM",
+          "room": "E227",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "5086",
+      "instructor": "Gheith, Muhammed",
+      "meetings": [
+        {
+          "days": "W",
+          "time": "11:10AM - 12:35PM",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1179",
+      "instructor": "Lamichhane, Krishna",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "2:30PM - 3:55PM",
+          "room": "177",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Advisory: Concurrent enrollment in PHYS-111 or equivalent"
+}

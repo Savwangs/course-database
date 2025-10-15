@@ -1,4 +1,4 @@
-BIOSC-139 sections (2025-10-15T08:10:01):
+BIOSC-139 sections (2025-10-15T09:57:20):
 Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
 2026SP;SRC;9333;BIOSC-139 - Human Anatomy 1/26/2026 - 5/22/2026 M W 5:15PM - 6:40PM SRC E226 M W 6:55PM - 10:00PM SRC E229;M W;5:15PM - 6:40PM;SRC;E226;M W;6:55PM - 10:00PM;SRC;E229;5.00;Zermeno, Joe;Zermeno, Joe;Advisory: ENGL-C1000 or equivalent and BIOSC-102 or equivalent. Note: This course is primarily intended for allied health and medical professions including nursing, dental hygiene, kinesiology, physical therapy, occupational therapy, respiratory therapy, physician assistant, pharmacy and other health related majors. Note: Class?meets at the scheduled times on the San Ramon Campus;Open;26
 M W;5:15PM - 6:40PM;SRC;E226

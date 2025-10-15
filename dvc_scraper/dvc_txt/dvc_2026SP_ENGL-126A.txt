@@ -1,4 +1,4 @@
-ENGL-126A sections (2025-10-15T08:21:31):
+ENGL-126A sections (2025-10-15T10:08:46):
 Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
 2026SP;DVC;5307;ENGL-126A - Critical Thinking and Writing for Multilingual Students 1/26/2026 - 5/22/2026 OFF ONLINE;;;OFF;ONLINE;4.00;Crossen, James;Crossen, James;Prerequisite: ENGL-C1000 or equivalent Note: 100% online course - no scheduled  meetings.   Instruction will be provided through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to begin.;Open;30
 ;;OFF;ONLINE

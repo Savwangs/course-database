@@ -1,4 +1,4 @@
-ENGL-124 sections (2025-10-15T08:21:15):
+ENGL-124 sections (2025-10-15T10:08:30):
 Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
 2026SP;DVC;0722;ENGL-124 - The Nature of Language: An Introduction to Linguistics 1/26/2026 - 5/22/2026 M W 12:45PM - 2:10PM LA 118;M W;12:45PM - 2:10PM;LA;118;3.00;Carrick, Jason;Carrick, Jason;Advisory: ENGL-C1000 or equivalent Note: Class meets on-campus as scheduled.;Open;30
 M W;12:45PM - 2:10PM;LA;118

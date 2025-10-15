@@ -1,0 +1,183 @@
+{
+  "course_code": "PHYS-130",
+  "course_title": "Physics for Engineers and Scientists A: Mechanics and Wave Motion",
+  "last_update": "2025-10-15T10:22:47",
+  "sections": [
+    {
+      "section_number": "6585",
+      "instructor": "Katdare, Sonia",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "11:10AM - 12:35PM",
+          "room": "177",
+          "format": "in-person"
+        },
+        {
+          "days": "W",
+          "time": "11:10AM - 2:00PM",
+          "room": "113",
+          "format": "in-person"
+        },
+        {
+          "days": "T",
+          "time": "12:45PM - 2:00PM",
+          "room": "121",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1197",
+      "instructor": "Christianson, Kent",
+      "meetings": [
+        {
+          "days": "M",
+          "time": "11:10AM - 2:00PM",
+          "room": "113",
+          "format": "in-person"
+        },
+        {
+          "days": "W",
+          "time": "12:45PM - 2:00PM",
+          "room": "1",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "2:30PM - 3:55PM",
+          "room": "175",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1196",
+      "instructor": "Katdare, Sonia",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "11:10AM - 12:35PM",
+          "room": "177",
+          "format": "in-person"
+        },
+        {
+          "days": "W",
+          "time": "11:10AM - 2:00PM",
+          "room": "113",
+          "format": "in-person"
+        },
+        {
+          "days": "T",
+          "time": "12:45PM - 2:00PM",
+          "room": "121",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1195",
+      "instructor": "Speliotopoulos, Achilles",
+      "meetings": [
+        {
+          "days": "M",
+          "time": "9:35AM - 10:50AM",
+          "room": "113",
+          "format": "in-person"
+        },
+        {
+          "days": "M W",
+          "time": "12:45PM - 2:10PM",
+          "room": "177",
+          "format": "in-person"
+        },
+        {
+          "days": "F",
+          "time": "2:30PM - 5:20PM",
+          "room": "113",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1194",
+      "instructor": "Speliotopoulos, Achilles",
+      "meetings": [
+        {
+          "days": "M",
+          "time": "8:00AM - 9:15AM",
+          "room": "113",
+          "format": "in-person"
+        },
+        {
+          "days": "F",
+          "time": "11:10AM - 2:00PM",
+          "room": "113",
+          "format": "in-person"
+        },
+        {
+          "days": "M W",
+          "time": "12:45PM - 2:10PM",
+          "room": "177",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1193",
+      "instructor": "Large, Evan",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "9:35AM - 11:00AM",
+          "room": "177",
+          "format": "in-person"
+        },
+        {
+          "days": "T",
+          "time": "11:10AM - 12:25PM",
+          "room": "113",
+          "format": "in-person"
+        },
+        {
+          "days": "Th",
+          "time": "11:10AM - 2:00PM",
+          "room": "113",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1191",
+      "instructor": "Large, Evan",
+      "meetings": [
+        {
+          "days": "T",
+          "time": "8:00AM - 10:50AM",
+          "room": "113",
+          "format": "in-person"
+        },
+        {
+          "days": "M W",
+          "time": "9:35AM - 11:00AM",
+          "room": "177",
+          "format": "in-person"
+        },
+        {
+          "days": "Th",
+          "time": "9:35AM - 10:50AM",
+          "room": "113",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "PHYS-110 and PHYS-111 combined or PHYS-112 or PHYS-120 or PHYS-129 or one year high school physics or equivalent Co-requisite: MATH-193 (may be taken previously) or equivalent"
+}

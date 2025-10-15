@@ -1,4 +1,4 @@
-COMSC-165 sections (2025-10-15T08:15:18):
+COMSC-165 sections (2025-10-15T10:02:37):
 Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
 2026SP;DVC;5460;COMSC-165 - Advanced Programming with C and C++ 1/26/2026 - 5/22/2026 OFF ONLINE;;;OFF;ONLINE;4.00;Pentcheva, Caterina;Pentcheva, Caterina;Prerequisite: COMSC-110 or ENGIN-135 or equivalent Note: 100% online course. All instruction will be online. Go to www.dvc.edu/online for course access information.;Open;35
 ;;OFF;ONLINE

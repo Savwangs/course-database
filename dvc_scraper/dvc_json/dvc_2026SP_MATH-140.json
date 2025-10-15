@@ -1,0 +1,26 @@
+{
+  "course_code": "MATH-140",
+  "course_title": "Tutor Training",
+  "last_update": "2025-10-15T10:17:18",
+  "sections": [
+    {
+      "section_number": "1186",
+      "instructor": "Pineda-Carranza, Servando",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "F",
+          "time": "10:00AM - 12:00PM",
+          "room": "202",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ]
+}

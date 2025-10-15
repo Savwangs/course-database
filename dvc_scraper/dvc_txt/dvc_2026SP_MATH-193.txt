@@ -1,0 +1,32 @@
+MATH-193 sections (2025-10-15T10:19:17):
+Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
+2026SP;SRC;9292;MATH-193 - Analytic Geometry and Calculus II 1/26/2026 - 5/22/2026 T Th 4:05PM - 6:35PM SRC W219;T Th;4:05PM - 6:35PM;SRC;W219;5.00;Staff, SRC;Staff, SRC;Prerequisite: MATH-192 or equivalent Note: Class meets weekly as scheduled on the San Ramon Campus.;Open;36
+T Th;4:05PM - 6:35PM;SRC;W219
+2026SP;DVC;8085;MATH-193 - Analytic Geometry and Calculus II 1/26/2026 - 5/22/2026 M W 5:00PM - 7:30PM MA 108;M W;5:00PM - 7:30PM;MA;108;5.00;Shah, Meetal;Shah, Meetal;Prerequisite: MATH-192 or equivalent Note: Class meets on-campus as scheduled.;Open;36
+M W;5:00PM - 7:30PM;MA;108
+2026SP;DVC;8084;MATH-193 - Analytic Geometry and Calculus II 1/26/2026 - 5/22/2026 OFF PART-ONL T 5:00PM - 7:30PM MA 240;;;OFF;PART-ONL;T;5:00PM - 7:30PM;MA;240;5.00;Matlock, Elizabeth;Matlock, Elizabeth;Prerequisite: MATH-192 or equivalent Note: Partially online course. In addition to online instruction, this class has mandatory in-person meetings 5:00-7:30pm on Tuesdays 1/28 (orientation) and 2/18, 3/18, 4/22 (exams) and 5/20 (final exam). All other instruction provided online through the college learning management system Canvas.  On the course start date, log into Canvas, www.dvc.edu/online to locate course.;Open;36
+;;OFF;PART-ONL
+T;5:00PM - 7:30PM;MA;240
+2026SP;DVC;6134;MATH-193 - Analytic Geometry and Calculus II 1/26/2026 - 5/22/2026 M W 8:30AM - 11:00AM L 209;M W;8:30AM - 11:00AM;L;209;5.00;Willett, Peter;Willett, Peter;Prerequisite: MATH-192 or equivalent Note: Section 6134 is part of the DVC MESA program. Students must be a current student in the MESA or friends of MESA program to enroll. For program and registration information please see http://www.dvc.edu/current/learning community/mesa/index.html or email Brandy Gibson at bgibson@dvc.edu. Note: Face to face course. This class will meet at the scheduled times on the Pleasant Hill Campus.;Open;15
+M W;8:30AM - 11:00AM;L;209
+2026SP;DVC;3625;MATH-193 - Analytic Geometry and Calculus II 1/26/2026 - 5/22/2026 T 1:25PM - 3:55PM L 143 T Th 1:25PM - 3:55PM OFF PART-ONL;T;1:25PM - 3:55PM;L;143;T Th;1:25PM - 3:55PM;OFF;PART-ONL;5.00;Wylie, Lindsay;Wylie, Lindsay;Prerequisite: MATH-192 or equivalent Note: Partially online course with required on-campus meetings 1:25-3:55pm on Tuesdays 2/24, 3/31, 4/28 (exams) and 5/19 (final exam) and online meetings, Mondays and Wednesdays 1:25-3:55pm, through Zoom. Online instruction will be provided through the college learning management system Canvas and Zoom software. Access to a computer with audio and video capability is required. On the course start date, log into Canvas, www.dvc.edu/online to locate course.;Open;36
+T;1:25PM - 3:55PM;L;143
+T Th;1:25PM - 3:55PM;OFF;PART-ONL
+2026SP;DVC;2975;MATH-193 - Analytic Geometry and Calculus II 1/26/2026 - 5/22/2026 T Th 11:10AM - 1:40PM OFF NEED RM;T Th;11:10AM - 1:40PM;OFF;NEED RM;5.00;Newton, Kit;Newton, Kit;Prerequisite: MATH-192 or equivalent Note:  Class meets on-campus as scheduled.;Open;36
+T Th;11:10AM - 1:40PM;OFF;NEED RM
+2026SP;DVC;2666;MATH-193 - Analytic Geometry and Calculus II 1/26/2026 - 5/22/2026 M W 2:30PM - 5:00PM MA 245;M W;2:30PM - 5:00PM;MA;245;5.00;Riazati, Farzan;Riazati, Farzan;Prerequisite: MATH-192 or equivalent Note: Class meets on-campus as scheduled.;Open;36
+M W;2:30PM - 5:00PM;MA;245
+2026SP;DVC;2283;MATH-193 - Analytic Geometry and Calculus II 1/26/2026 - 5/22/2026 T Th 11:10AM - 1:40PM MA 109;T Th;11:10AM - 1:40PM;MA;109;5.00;Mohan, Adhitya;Mohan, Adhitya;Prerequisite: MATH-192 or equivalent Note: Class meets on-campus as scheduled.;Open;36
+T Th;11:10AM - 1:40PM;MA;109
+2026SP;DVC;1562;MATH-193 - Analytic Geometry and Calculus II 1/26/2026 - 5/22/2026 T Th 1:25PM - 3:55PM MA 241;T Th;1:25PM - 3:55PM;MA;241;5.00;Gomez, Concha;Gomez, Concha;Prerequisite: MATH-192 or equivalent Note: Class meets on-campus as scheduled.;Open;36
+T Th;1:25PM - 3:55PM;MA;241
+2026SP;DVC;1341;MATH-193 - Analytic Geometry and Calculus II 1/26/2026 - 5/22/2026 M W 8:30AM - 11:00AM LA 209;M W;8:30AM - 11:00AM;LA;209;5.00;Willett, Peter;Willett, Peter;Prerequisite: MATH-192 or equivalent Note: Class meets on-campus as scheduled.;Open;21
+M W;8:30AM - 11:00AM;LA;209
+2026SP;DVC;1294;MATH-193 - Analytic Geometry and Calculus II 1/26/2026 - 5/22/2026 M W 12:45PM - 3:15PM MA 109;M W;12:45PM - 3:15PM;MA;109;5.00;Lum, Munlok;Lum, Munlok;Prerequisite: MATH-192 or equivalent Note: Class meets on-campus as scheduled.;Open;36
+M W;12:45PM - 3:15PM;MA;109
+2026SP;DVC;1285;MATH-193 - Analytic Geometry and Calculus II 1/26/2026 - 5/22/2026 T Th 12:45PM - 3:15PM MA 108;T Th;12:45PM - 3:15PM;MA;108;5.00;Pineda-Carranza, Servando;Pineda-Carranza, Servando;Prerequisite: MATH-192 or equivalent Note: Class meets on-campus as scheduled.;Open;36
+T Th;12:45PM - 3:15PM;MA;108
+2026SP;DVC;1250;MATH-193 - Analytic Geometry and Calculus II 1/26/2026 - 5/22/2026 T Th 9:35AM - 12:05PM MA 240;T Th;9:35AM - 12:05PM;MA;240;5.00;Leon-Bravo, Paula;Leon-Bravo, Paula;Prerequisite: MATH-192 or equivalent Note: Class meets on-campus as scheduled.;Open;36
+T Th;9:35AM - 12:05PM;MA;240
+2026SP;DVC;1240;MATH-193 - Analytic Geometry and Calculus II 1/26/2026 - 5/22/2026 M W 9:35AM - 12:05PM MA 109;M W;9:35AM - 12:05PM;MA;109;5.00;Raymond, Brian;Raymond, Brian;Prerequisite: MATH-192 or equivalent Note: Class meets on-campus as scheduled.;Open;36
+M W;9:35AM - 12:05PM;MA;109

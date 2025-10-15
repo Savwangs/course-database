@@ -1,4 +1,4 @@
-BIOSC-131 sections (2025-10-15T08:09:44):
+BIOSC-131 sections (2025-10-15T09:57:03):
 Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
 2026SP;SRC;9071;BIOSC-131 - Principles of Organismal Biology, Evolution and Ecology 1/26/2026 - 5/22/2026 M W 11:10AM - 2:15PM SRC E240 M W 2:30PM - 3:55PM SRC W220;M W;11:10AM - 2:15PM;SRC;E240;M W;2:30PM - 3:55PM;SRC;W220;5.00;Reyes, Brandon;Reyes, Brandon;Prerequisite: CHEM-120 (may be taken concurrently) or equivalent Advisory: ENGL-C1000 or equivalent. BIOSC-101 or 102 and BIOSC-130 or equivalents. Note: Class meets at the scheduled times on the San Ramon Campus. CHEM-120-9115 and BIOSC-131-9071 are scheduled to encourage enrollment and collaboration between students in both sections.;Open;26
 M W;11:10AM - 2:15PM;SRC;E240

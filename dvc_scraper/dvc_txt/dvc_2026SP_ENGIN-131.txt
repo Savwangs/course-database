@@ -1,4 +1,4 @@
-ENGIN-131 sections (2025-10-15T08:18:46):
+ENGIN-131 sections (2025-10-15T10:06:04):
 Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
 2026SP;DVC;6258;ENGIN-131 - Technology and Society 1/26/2026 - 5/22/2026 T Th 4:15PM - 5:40PM OFF MDHS;T Th;4:15PM - 5:40PM;OFF;MDHS;3.00;Navayazdan, Afarin;Navayazdan, Afarin;Note: This section is intended primarily for high school students in the MDUSD dual enrollment program. Please contact Sarah Peterson at sapeterson@dvc.edu for more information.;Open;35
 T Th;4:15PM - 5:40PM;OFF;MDHS

@@ -1,0 +1,183 @@
+{
+  "course_code": "PHYS-230",
+  "course_title": "Physics for Engineers and Scientists B: Heat and Electro-Magnetism",
+  "last_update": "2025-10-15T10:23:04",
+  "sections": [
+    {
+      "section_number": "9183",
+      "instructor": "Chiang, Chien-I",
+      "meetings": [
+        {
+          "days": "M",
+          "time": "1:05PM - 3:55PM",
+          "room": "E181",
+          "format": "in-person"
+        },
+        {
+          "days": "W",
+          "time": "2:40PM - 3:55PM",
+          "room": "E225",
+          "format": "in-person"
+        },
+        {
+          "days": "M W",
+          "time": "4:05PM - 5:30PM",
+          "room": "E230",
+          "format": "in-person"
+        }
+      ],
+      "status": "MATH-292 (may be taken concurrently) or equivalent. Note: Class?meets at the scheduled times on the San Ramon Campus"
+    },
+    {
+      "section_number": "9031",
+      "instructor": "Chiang, Chien-I",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "4:05PM - 5:30PM",
+          "room": "E230",
+          "format": "in-person"
+        },
+        {
+          "days": "M",
+          "time": "5:40PM - 8:30PM",
+          "room": "E181",
+          "format": "in-person"
+        },
+        {
+          "days": "M",
+          "time": "8:40PM - 9:55PM",
+          "room": "E181",
+          "format": "in-person"
+        }
+      ],
+      "status": "MATH-292 (may be taken concurrently) or equivalent. Note: Class?meets at the scheduled times on the San Ramon Campus"
+    },
+    {
+      "section_number": "6008",
+      "instructor": "Hamida, Youcef",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "11:10AM - 12:35PM",
+          "room": "177",
+          "format": "in-person"
+        },
+        {
+          "days": "T",
+          "time": "11:10AM - 2:00PM",
+          "room": "117",
+          "format": "in-person"
+        },
+        {
+          "days": "Th",
+          "time": "12:45PM - 2:00PM",
+          "room": "110",
+          "format": "in-person"
+        }
+      ],
+      "status": "MATH-292 (may be taken concurrently) or equivalent. Note: Section 6008 is part of the DVC MESA program. Students must be a current student in the MESA or friends of MESA program to enroll. For program and registration information please see http://www.dvc.edu/current/learning community/mesa/index.html or email Brandy Gibson at bgibson@dvc.edu. Note: Face to face course. This class will meet at the scheduled times on the Pleasant Hill Campus."
+    },
+    {
+      "section_number": "1211",
+      "instructor": "Self, Matthew",
+      "meetings": [
+        {
+          "days": "M",
+          "time": "2:30PM - 3:45PM",
+          "room": "110",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "2:30PM - 3:55PM",
+          "room": "177",
+          "format": "in-person"
+        },
+        {
+          "days": "W",
+          "time": "2:30PM - 5:20PM",
+          "room": "113",
+          "format": "in-person"
+        }
+      ],
+      "status": "MATH-292 (may be taken concurrently) or equivalent. Note: Class meets on-campus as scheduled."
+    },
+    {
+      "section_number": "1201",
+      "instructor": "Hamida, Youcef",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "11:10AM - 12:35PM",
+          "room": "177",
+          "format": "in-person"
+        },
+        {
+          "days": "T",
+          "time": "11:10AM - 2:00PM",
+          "room": "117",
+          "format": "in-person"
+        },
+        {
+          "days": "Th",
+          "time": "12:45PM - 2:00PM",
+          "room": "110",
+          "format": "in-person"
+        }
+      ],
+      "status": "MATH-292 (may be taken concurrently) or equivalent. Note: Class meets weekly as scheduled."
+    },
+    {
+      "section_number": "1200",
+      "instructor": "Hamida, Youcef",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "11:10AM - 12:35PM",
+          "room": "177",
+          "format": "in-person"
+        },
+        {
+          "days": "T",
+          "time": "2:30PM - 5:20PM",
+          "room": "117",
+          "format": "in-person"
+        },
+        {
+          "days": "Th",
+          "time": "2:30PM - 3:45PM",
+          "room": "110",
+          "format": "in-person"
+        }
+      ],
+      "status": "MATH-292 (may be taken concurrently) or equivalent. Note: Class meets on-campus as scheduled."
+    },
+    {
+      "section_number": "1199",
+      "instructor": "Hamida, Youcef",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "11:10AM - 12:35PM",
+          "room": "177",
+          "format": "in-person"
+        },
+        {
+          "days": "T",
+          "time": "11:10AM - 2:00PM",
+          "room": "117",
+          "format": "in-person"
+        },
+        {
+          "days": "Th",
+          "time": "12:45PM - 2:00PM",
+          "room": "110",
+          "format": "in-person"
+        }
+      ],
+      "status": "MATH-292 (may be taken concurrently) or equivalent. Note: Class meets on-campus as scheduled."
+    }
+  ],
+  "prerequisites": "PHYS-130 or equivalent; MATH-292 (may be taken concurrently) or equivalent."
+}

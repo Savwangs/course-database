@@ -1,4 +1,4 @@
-CHEM-121 sections (2025-10-15T08:13:07):
+CHEM-121 sections (2025-10-15T10:00:27):
 Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
 2026SP;DVC;8011;CHEM-121 - General College Chemistry II 1/26/2026 - 5/22/2026 M W 5:30PM - 6:55PM PS 267 M W 7:05PM - 10:10PM PS 213;M W;5:30PM - 6:55PM;PS;267;M W;7:05PM - 10:10PM;PS;213;5.00;Fraund, Matthew;Fraund, Matthew;Prerequisite: CHEM-120 or equivalent Advisory: MATH-191 or equivalent Note:?Face to face course.?This class will meet at the scheduled times on the Pleasant Hill Campus.;Open;26
 M W;5:30PM - 6:55PM;PS;267

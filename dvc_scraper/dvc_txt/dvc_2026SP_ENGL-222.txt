@@ -1,4 +1,4 @@
-ENGL-222 sections (2025-10-15T08:25:10):
+ENGL-222 sections (2025-10-15T10:12:24):
 Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
 2026SP;SRC;9366;ENGL-222 - Multi-Genre Creative Writing 1/26/2026 - 5/22/2026 OFF ONLINE;;;OFF;ONLINE;3.00;Zeigler, Katie;Zeigler, Katie;Prerequisite: ENGL-C1000 or equivalent Note: 100% online course - no scheduled meetings. Instruction will be provided through the college learning management system CANVAS. On the course start date, log into Canvas, www.dvc.edu/online to begin.;Open;20
 ;;OFF;ONLINE

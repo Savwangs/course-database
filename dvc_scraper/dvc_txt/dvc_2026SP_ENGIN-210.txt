@@ -1,4 +1,4 @@
-ENGIN-210 sections (2025-10-15T08:19:33):
+ENGIN-210 sections (2025-10-15T10:06:51):
 Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
 2026SP;DVC;2922;ENGIN-210 - Thermodynamics 1/26/2026 - 5/22/2026 OFF PART-ONL T 2:30PM - 3:55PM ET 122B;;;OFF;PART-ONL;T;2:30PM - 3:55PM;ET;122B;3.00;Khandani, Seyyed;Khandani, Seyyed;Prerequisite: CHEM-120 and PHYS-230 or equivalents Note: This is an online course for lectures and labs; labs are problem solving sessions only. In addition, this class has three mandatory in-person meetings at 2:30-3:55pm on Tuesdays 2/24, 4/7, and 5/19 for exams. All other instructions are provided online through the college learning management system Canvas and Zoom. Access to a computer with a webcam and a microphone is required. Go to www.dvc.edu/online for course access information.;Open;35
 ;;OFF;PART-ONL

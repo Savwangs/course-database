@@ -1,4 +1,4 @@
-BIOSC-146 sections (2025-10-15T08:10:36):
+BIOSC-146 sections (2025-10-15T09:57:54):
 Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
 2026SP;SRC;9029;BIOSC-146 - Principles of Microbiology 1/26/2026 - 5/22/2026 M W 1:40PM - 3:05PM SRC W222 M W 3:30PM - 6:35PM SRC E240;M W;1:40PM - 3:05PM;SRC;W222;M W;3:30PM - 6:35PM;SRC;E240;5.00;Fein, Matthew;Fein, Matthew;Prerequisite:CHEM-107 or CHEM-108 or CHEM-109 or CHEM-120 or equivalent. Advisory: ENGL-C1000 or equivalent and High school or college biology or equivalent. Note: Class?meets at the scheduled times on the San Ramon Campus;Open;26
 M W;1:40PM - 3:05PM;SRC;W222

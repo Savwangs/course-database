@@ -1,4 +1,4 @@
-ENGIN-130 sections (2025-10-15T08:18:30):
+ENGIN-130 sections (2025-10-15T10:05:48):
 Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
 2026SP;DVC;5230;ENGIN-130 - Energy, Society, and the Environment 1/26/2026 - 5/22/2026 OFF ONLINE;;;OFF;ONLINE;3.00;Khandani, Seyyed;Khandani, Seyyed;Note: 100% online course. All instruction will be provided via the internet through the college learning management system CANVAS. Classes you are registered for will appear in Canvas on the first day of class unless published earlier by your instructor. There are no required class meetings. Go to www.dvc.edu/online for course access information. This course may use online exam proctoring software to administer exams.;Open;30
 ;;OFF;ONLINE

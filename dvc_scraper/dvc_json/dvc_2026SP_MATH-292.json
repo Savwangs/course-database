@@ -1,0 +1,105 @@
+{
+  "course_code": "MATH-292",
+  "course_title": "Analytic Geometry and Calculus III",
+  "last_update": "2025-10-15T10:20:22",
+  "sections": [
+    {
+      "section_number": "9098",
+      "instructor": "Staff, SRC",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "9:35AM - 12:05PM",
+          "room": "E164",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "6153",
+      "instructor": "Walters, Julie",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "9:35AM - 12:05PM",
+          "room": "240",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "2936",
+      "instructor": "Carter, Jamylle",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "F",
+          "time": "11:30AM - 2:00PM",
+          "room": "241",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "2926",
+      "instructor": "Freidenreich, Jenny",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "1:25PM - 3:55PM",
+          "room": "240",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "2042",
+      "instructor": "Lam, Quan",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "8:30AM - 11:00AM",
+          "room": "142",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1274",
+      "instructor": "Newton, Kit",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "12:45PM - 3:15PM",
+          "room": "104",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "0242",
+      "instructor": "Walters, Julie",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "9:35AM - 12:05PM",
+          "room": "240",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "MATH-193 or equivalent"
+}

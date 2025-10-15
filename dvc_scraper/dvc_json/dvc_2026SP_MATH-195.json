@@ -1,0 +1,66 @@
+{
+  "course_code": "MATH-195",
+  "course_title": "Discrete Mathematics",
+  "last_update": "2025-10-15T10:19:49",
+  "sections": [
+    {
+      "section_number": "9294",
+      "instructor": "Staff, SRC",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "12:45PM - 2:50PM",
+          "room": "E164",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "8213",
+      "instructor": "Needham, Sam",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "T",
+          "time": "4:30PM - 6:35PM",
+          "room": "241",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "3790",
+      "instructor": "Needham, Sam",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "9:35AM - 11:40AM",
+          "room": "245",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1686",
+      "instructor": "McNeill, Amber",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "8:55AM - 11:00AM",
+          "room": "143",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "MATH-193 or equivalent may be taken either as a prerequisite or concurrently"
+}

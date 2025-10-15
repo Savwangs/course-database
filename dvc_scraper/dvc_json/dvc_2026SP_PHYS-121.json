@@ -1,0 +1,133 @@
+{
+  "course_code": "PHYS-121",
+  "course_title": "General College Physics II",
+  "last_update": "2025-10-15T10:21:43",
+  "sections": [
+    {
+      "section_number": "9312",
+      "instructor": "Lee, Kyung-Min",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "5:30PM - 6:55PM",
+          "room": "E225",
+          "format": "in-person"
+        },
+        {
+          "days": "T",
+          "time": "7:05PM - 9:55PM",
+          "room": "E181",
+          "format": "in-person"
+        },
+        {
+          "days": "Th",
+          "time": "7:05PM - 8:20PM",
+          "room": "E225",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "9258",
+      "instructor": "Chiang, Chien-I Lee, Kyung-Min",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "W",
+          "time": "5:40PM - 6:55PM",
+          "room": "E181",
+          "format": "in-person"
+        },
+        {
+          "days": "W",
+          "time": "7:05PM - 9:55PM",
+          "room": "E181",
+          "format": "in-person"
+        }
+      ],
+      "status": "Prerequisite: PHYS-120 or equivalent Note: Partially online course with required meetings Wednesdays 5:40-6:55PM and 7:05-9:55PM (on-campus discussion/lab, see room on schedule) with all other instruction provided online through the college learning management system CANVAS."
+    },
+    {
+      "section_number": "8057",
+      "instructor": "Hansen, Erin",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "2:30PM - 3:55PM",
+          "room": "175",
+          "format": "in-person"
+        },
+        {
+          "days": "Th",
+          "time": "2:30PM - 5:20PM",
+          "room": "113",
+          "format": "in-person"
+        },
+        {
+          "days": "W",
+          "time": "4:05PM - 5:20PM",
+          "room": "113",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "8056",
+      "instructor": "Hansen, Erin",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "2:30PM - 3:55PM",
+          "room": "175",
+          "format": "in-person"
+        },
+        {
+          "days": "T",
+          "time": "2:30PM - 5:20PM",
+          "room": "113",
+          "format": "in-person"
+        },
+        {
+          "days": "M",
+          "time": "4:05PM - 5:20PM",
+          "room": "110",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1184",
+      "instructor": "Lamichhane, Krishna",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "8:00AM - 9:25AM",
+          "room": "177",
+          "format": "in-person"
+        },
+        {
+          "days": "T",
+          "time": "8:00AM - 10:50AM",
+          "room": "121",
+          "format": "in-person"
+        },
+        {
+          "days": "Th",
+          "time": "8:00AM - 9:15AM",
+          "room": "105",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "PHYS-120 or equivalent"
+}

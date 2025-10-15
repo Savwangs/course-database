@@ -1,0 +1,8 @@
+MATH-183 sections (2025-10-15T10:18:07):
+Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
+2026SP;SRC;9066;MATH-183 - Calculus for Management, Life Science, and Social Science II 1/26/2026 - 5/22/2026 T Th 12:45PM - 2:50PM SRC W217;T Th;12:45PM - 2:50PM;SRC;W217;4.00;Staff, SRC;Staff, SRC;Prerequisite: MATH-182 or equivalent  Advisory: MATH-121 or equivalent Note: Class meets weekly as scheduled on the San Ramon Campus.;Open;36
+T Th;12:45PM - 2:50PM;SRC;W217
+2026SP;DVC;2942;MATH-183 - Calculus for Management, Life Science, and Social Science II 1/26/2026 - 5/22/2026 M W 12:45PM - 2:50PM L 143;M W;12:45PM - 2:50PM;L;143;4.00;Smith, Dan;Smith, Dan;Prerequisite: MATH-182 or equivalent  Advisory: MATH-121 or equivalent Note: Class meets on-campus as scheduled.;Open;36
+M W;12:45PM - 2:50PM;L;143
+2026SP;DVC;1340;MATH-183 - Calculus for Management, Life Science, and Social Science II 1/26/2026 - 5/22/2026 T Th 11:10AM - 1:15PM MA 240;T Th;11:10AM - 1:15PM;MA;240;4.00;Walters, Julie;Walters, Julie;Prerequisite: MATH-182 or equivalent  Advisory: MATH-121 or equivalent Note: Class meets on-campus as scheduled.;Open;36
+T Th;11:10AM - 1:15PM;MA;240

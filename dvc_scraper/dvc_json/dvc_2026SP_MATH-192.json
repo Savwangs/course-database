@@ -1,0 +1,235 @@
+{
+  "course_code": "MATH-192",
+  "course_title": "Analytic Geometry and Calculus I",
+  "last_update": "2025-10-15T10:18:59",
+  "sections": [
+    {
+      "section_number": "9300",
+      "instructor": "Staff, SRC",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "11:25AM - 1:55PM",
+          "room": "W220",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "9281",
+      "instructor": "Staff, SRC",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "4:05PM - 6:35PM",
+          "room": "E164",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "8212",
+      "instructor": "Leon-Bravo, Paula",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "T",
+          "time": "5:00PM - 7:30PM",
+          "room": "107",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "6133",
+      "instructor": "Vincent, Marcus",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "8:00AM - 10:30AM",
+          "room": "108",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "3689",
+      "instructor": "Knight, Lynn Knight",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "2:30PM - 5:00PM",
+          "room": "103",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "3379",
+      "instructor": "Lang, Lindsey",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "9:35AM - 12:05PM",
+          "room": "245",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "2972",
+      "instructor": "Mircheva, Diana",
+      "meetings": [
+        {
+          "days": "M T W Th",
+          "time": "11:30AM - 1:00PM",
+          "room": "107",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "2949",
+      "instructor": "Sohi, Anna",
+      "meetings": [
+        {
+          "days": "M T W Th",
+          "time": "9:20AM - 10:50AM",
+          "room": "NEED RM",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "2945",
+      "instructor": "Ahmadieh, Cyrous",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "1:25PM - 3:55PM",
+          "room": "241",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1835",
+      "instructor": "Leon-Bravo, Paula",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "12:45PM - 3:15PM",
+          "room": "251",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1244",
+      "instructor": "Matlock, Elizabeth",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "11:10AM - 1:40PM",
+          "room": "249",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1222",
+      "instructor": "Parks, Will",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "12:45PM - 3:15PM",
+          "room": "244",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1214",
+      "instructor": "Carter, Jamylle",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "9:35AM - 12:05PM",
+          "room": "250",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1212",
+      "instructor": "Jacob, Cooper",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "11:10AM - 1:40PM",
+          "room": "108",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1210",
+      "instructor": "Vincent, Marcus",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "8:00AM - 10:30AM",
+          "room": "108",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1209",
+      "instructor": "Wylie, Lindsay",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "8:30AM - 11:00AM",
+          "room": "209",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "4045",
+      "instructor": "Staff, DVC",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "9:35AM - 12:40PM",
+          "room": "207",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of pre-calculus."
+}

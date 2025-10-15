@@ -1,4 +1,4 @@
-ENGL-253 sections (2025-10-15T08:26:18):
+ENGL-253 sections (2025-10-15T10:13:27):
 Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
 2026SP;DVC;1296;ENGL-253 - Survey of Late English Literature 1/26/2026 - 5/22/2026 M W 9:35AM - 11:00AM H 105;M W;9:35AM - 11:00AM;H;105;3.00;Morgan, Christian;Morgan, Christian;Prerequisite: ENGL-C1000 or equivalent Note: Class meets on-campus as scheduled.;Open;45
 M W;9:35AM - 11:00AM;H;105

@@ -1,0 +1,118 @@
+{
+  "course_code": "MATH-191",
+  "course_title": "Pre-Calculus",
+  "last_update": "2025-10-15T10:18:24",
+  "sections": [
+    {
+      "section_number": "8200",
+      "instructor": "Pineda-Carranza, Servando",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "Th",
+          "time": "4:00PM - 6:30PM",
+          "room": "241",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "6522",
+      "instructor": "Murai, Lauren",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "9:35AM - 12:05PM",
+          "room": "244",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "3701",
+      "instructor": "Vincent, Marcus",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "9:35AM - 12:05PM",
+          "room": "244",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "3613",
+      "instructor": "Lam, Quan",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "11:10AM - 1:40PM",
+          "room": "142",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "2944",
+      "instructor": "Tardivel, Dominic",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "8:30AM - 11:00AM",
+          "room": "241",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1235",
+      "instructor": "Rinker, Mark",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "2:30PM - 5:00PM",
+          "room": "107",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1232",
+      "instructor": "Serrano Bautista, Ramona",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "9:35AM - 12:05PM",
+          "room": "244",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1228",
+      "instructor": "Vincent, Marcus",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "12:45PM - 3:15PM",
+          "room": "103",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra."
+}

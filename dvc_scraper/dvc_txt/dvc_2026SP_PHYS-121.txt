@@ -1,0 +1,22 @@
+PHYS-121 sections (2025-10-15T10:21:43):
+Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
+2026SP;SRC;9312;PHYS-121 - General College Physics II 1/26/2026 - 5/22/2026 T Th 5:30PM - 6:55PM SRC E225 T 7:05PM - 9:55PM SRC E181 Th 7:05PM - 8:20PM SRC E225;T Th;5:30PM - 6:55PM;SRC;E225;T;7:05PM - 9:55PM;SRC;E181;Th;7:05PM - 8:20PM;SRC;E225;4.00;Lee, Kyung-Min;Lee, Kyung-Min;Prerequisite: PHYS-120 or equivalent Note: Class?meets at the scheduled times on the San Ramon Campus;Open;25
+T Th;5:30PM - 6:55PM;SRC;E225
+T;7:05PM - 9:55PM;SRC;E181
+Th;7:05PM - 8:20PM;SRC;E225
+2026SP;SRC;9258;PHYS-121 - General College Physics II 1/26/2026 - 5/22/2026 OFF PART-ONL W 5:40PM - 6:55PM SRC E181 W 7:05PM - 9:55PM SRC E181;;;OFF;PART-ONL;W;5:40PM - 6:55PM;SRC;E181;W;7:05PM - 9:55PM;SRC;E181;4.00;Chiang, Chien-I Lee, Kyung-Min;Chiang, Chien-I;Lee, Kyung-Min;Prerequisite: PHYS-120 or equivalent Note: Partially online course with required meetings Wednesdays 5:40-6:55PM and 7:05-9:55PM (on-campus discussion/lab, see room on schedule) with all other instruction provided online through the college learning management system CANVAS.;Open;25
+;;OFF;PART-ONL
+W;5:40PM - 6:55PM;SRC;E181
+W;7:05PM - 9:55PM;SRC;E181
+2026SP;DVC;8057;PHYS-121 - General College Physics II 1/26/2026 - 5/22/2026 M W 2:30PM - 3:55PM PS 175 Th 2:30PM - 5:20PM PS 113 W 4:05PM - 5:20PM PS 113;M W;2:30PM - 3:55PM;PS;175;Th;2:30PM - 5:20PM;PS;113;W;4:05PM - 5:20PM;PS;113;4.00;Hansen, Erin;Hansen, Erin;Prerequisite: PHYS-120 or equivalent Note: Class meets weekly as scheduled.;Open;25
+M W;2:30PM - 3:55PM;PS;175
+Th;2:30PM - 5:20PM;PS;113
+W;4:05PM - 5:20PM;PS;113
+2026SP;DVC;8056;PHYS-121 - General College Physics II 1/26/2026 - 5/22/2026 M W 2:30PM - 3:55PM PS 175 T 2:30PM - 5:20PM PS 113 M 4:05PM - 5:20PM PS 110;M W;2:30PM - 3:55PM;PS;175;T;2:30PM - 5:20PM;PS;113;M;4:05PM - 5:20PM;PS;110;4.00;Hansen, Erin;Hansen, Erin;Prerequisite: PHYS-120 or equivalent Note: Class meets weekly as scheduled.;Open;25
+M W;2:30PM - 3:55PM;PS;175
+T;2:30PM - 5:20PM;PS;113
+M;4:05PM - 5:20PM;PS;110
+2026SP;DVC;1184;PHYS-121 - General College Physics II 1/26/2026 - 5/22/2026 M W 8:00AM - 9:25AM PS 177 T 8:00AM - 10:50AM PS 121 Th 8:00AM - 9:15AM PS 105;M W;8:00AM - 9:25AM;PS;177;T;8:00AM - 10:50AM;PS;121;Th;8:00AM - 9:15AM;PS;105;4.00;Lamichhane, Krishna;Lamichhane, Krishna;Prerequisite: PHYS-120 or equivalent Note: Class meets weekly as scheduled.;Open;25
+M W;8:00AM - 9:25AM;PS;177
+T;8:00AM - 10:50AM;PS;121
+Th;8:00AM - 9:15AM;PS;105

@@ -1,0 +1,202 @@
+{
+  "course_code": "MATH-193",
+  "course_title": "Analytic Geometry and Calculus II",
+  "last_update": "2025-10-15T10:19:17",
+  "sections": [
+    {
+      "section_number": "9292",
+      "instructor": "Staff, SRC",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "4:05PM - 6:35PM",
+          "room": "W219",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "8085",
+      "instructor": "Shah, Meetal",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "5:00PM - 7:30PM",
+          "room": "108",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "8084",
+      "instructor": "Matlock, Elizabeth",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "T",
+          "time": "5:00PM - 7:30PM",
+          "room": "240",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "6134",
+      "instructor": "Willett, Peter",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "8:30AM - 11:00AM",
+          "room": "209",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "3625",
+      "instructor": "Wylie, Lindsay",
+      "meetings": [
+        {
+          "days": "T",
+          "time": "1:25PM - 3:55PM",
+          "room": "143",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "1:25PM - 3:55PM",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "2975",
+      "instructor": "Newton, Kit",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "11:10AM - 1:40PM",
+          "room": "NEED RM",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "2666",
+      "instructor": "Riazati, Farzan",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "2:30PM - 5:00PM",
+          "room": "245",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "2283",
+      "instructor": "Mohan, Adhitya",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "11:10AM - 1:40PM",
+          "room": "109",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1562",
+      "instructor": "Gomez, Concha",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "1:25PM - 3:55PM",
+          "room": "241",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1341",
+      "instructor": "Willett, Peter",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "8:30AM - 11:00AM",
+          "room": "209",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1294",
+      "instructor": "Lum, Munlok",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "12:45PM - 3:15PM",
+          "room": "109",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1285",
+      "instructor": "Pineda-Carranza, Servando",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "12:45PM - 3:15PM",
+          "room": "108",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1250",
+      "instructor": "Leon-Bravo, Paula",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "9:35AM - 12:05PM",
+          "room": "240",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1240",
+      "instructor": "Raymond, Brian",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "9:35AM - 12:05PM",
+          "room": "109",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "MATH-192 or equivalent"
+}

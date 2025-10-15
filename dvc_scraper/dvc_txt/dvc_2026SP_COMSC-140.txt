@@ -1,4 +1,4 @@
-COMSC-140 sections (2025-10-15T08:14:45):
+COMSC-140 sections (2025-10-15T10:02:04):
 Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
 2026SP;DVC;5372;COMSC-140 - Python Programming 1/26/2026 - 5/22/2026 OFF ONLINE;;;OFF;ONLINE;3.00;Lee, Kyu Woong;Lee, Kyu Woong;Note: See schedule of classes for programming language presented. Students may petition to repeat this course when software or hardware is changed. Only the first course completed will be applied toward a degree or certificate requirement. Units for both courses will apply towards the 60 units required for the degree. Note: 100% online course - no scheduled  meetings.   Instruction will be provided through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to begin.;Open;35
 ;;OFF;ONLINE

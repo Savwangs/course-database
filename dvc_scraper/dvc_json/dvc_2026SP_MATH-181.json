@@ -1,0 +1,34 @@
+{
+  "course_code": "MATH-181",
+  "course_title": "Finite Mathematics",
+  "last_update": "2025-10-15T10:17:34",
+  "sections": [
+    {
+      "section_number": "8239",
+      "instructor": "Murai, Lauren",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "6:00PM - 7:25PM",
+          "room": "103",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "6045",
+      "instructor": "Murai, Lauren",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "6:00PM - 7:25PM",
+          "room": "103",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra"
+}

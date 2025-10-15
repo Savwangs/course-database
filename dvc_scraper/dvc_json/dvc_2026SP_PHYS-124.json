@@ -1,0 +1,40 @@
+{
+  "course_code": "PHYS-124",
+  "course_title": "Calculus Supplement for Physics 120",
+  "last_update": "2025-10-15T10:21:58",
+  "sections": [
+    {
+      "section_number": "8305",
+      "instructor": "Self, Matthew",
+      "meetings": [
+        {
+          "days": "Online",
+          "time": "Asynchronous",
+          "room": "ONLINE",
+          "format": "online"
+        },
+        {
+          "days": "Th",
+          "time": "5:30PM - 7:00PM",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "8300",
+      "instructor": "Kisseleva-Eggleton, Ludmila",
+      "meetings": [
+        {
+          "days": "S",
+          "time": "2:45PM - 7:00PM",
+          "room": "113",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "PHYS-120 (may be taken concurrently) and MATH-182 or MATH-192 (may be taken concurrently) or equivalents"
+}

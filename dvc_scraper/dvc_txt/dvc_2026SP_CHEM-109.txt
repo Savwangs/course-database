@@ -1,4 +1,4 @@
-CHEM-109 sections (2025-10-15T08:12:33):
+CHEM-109 sections (2025-10-15T09:59:52):
 Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
 2026SP;DVC;1036;CHEM-109 - Introduction to Organic and Biochemistry 1/26/2026 - 5/22/2026 M W 12:45PM - 2:10PM PS 277 M 2:30PM - 5:40PM PS 221;M W;12:45PM - 2:10PM;PS;277;M;2:30PM - 5:40PM;PS;221;4.00;Larson, Wayne;Larson, Wayne;Prerequisite: CHEM-107 or CHEM-108 or CHEM-120 or equivalent Note: This is the second course of a two-semester sequence (with CHEM-108) that satisfies the requirements of allied health programs such as nursing and dental hygiene that require one year of chemistry. Note:?Face to face course.?This class will meet at the scheduled times on the Pleasant Hill Campus.;Open;28
 M W;12:45PM - 2:10PM;PS;277

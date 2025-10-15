@@ -1,4 +1,4 @@
-BIOSC-140 sections (2025-10-15T08:10:19):
+BIOSC-140 sections (2025-10-15T09:57:38):
 Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
 2026SP;SRC;9276;BIOSC-140 - Human Physiology 1/26/2026 - 5/22/2026 T Th 5:15PM - 6:40PM SRC E227 T Th 6:55PM - 10:00PM SRC E238;T Th;5:15PM - 6:40PM;SRC;E227;T Th;6:55PM - 10:00PM;SRC;E238;5.00;Hedayat, Nick;Hedayat, Nick;Prerequisite: BIOSC-120 or BIOSC-139 or Equivalents and CHEM-107, CHEM-108, CHEM-109, or CHEM-120 or one year of high school chemistry or equivalents Advisory: BIOSC-102 or equivalent or Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra or ENGL-C1000 or equivalent Note: This course is primarily intended for allied health and medical professions including nursing, dental hygiene, kinesiology, physical therapy, occupational therapy, respiratory therapy, physician assistant, pharmacy and other health related majors. Note: Class?meets at the scheduled times on the San Ramon Campus;Open;26
 T Th;5:15PM - 6:40PM;SRC;E227

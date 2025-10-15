@@ -1,0 +1,183 @@
+{
+  "course_code": "PHYS-231",
+  "course_title": "Physics for Engineers and Scientists C: Optics and Modern Physics",
+  "last_update": "2025-10-15T10:23:21",
+  "sections": [
+    {
+      "section_number": "9441",
+      "instructor": "Chiang, Chien-I",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "8:10AM - 9:35AM",
+          "room": "W216",
+          "format": "in-person"
+        },
+        {
+          "days": "T",
+          "time": "9:45AM - 11:00AM",
+          "room": "E181",
+          "format": "in-person"
+        },
+        {
+          "days": "Th",
+          "time": "9:45AM - 12:35PM",
+          "room": "E181",
+          "format": "in-person"
+        }
+      ],
+      "status": "MATH-294 or equivalent (may be taken concurrently) Note: Class?meets at the scheduled times on the San Ramon Campus"
+    },
+    {
+      "section_number": "6009",
+      "instructor": "Colwell, Kitran",
+      "meetings": [
+        {
+          "days": "F",
+          "time": "11:10AM - 2:00PM",
+          "room": "121",
+          "format": "in-person"
+        },
+        {
+          "days": "M W",
+          "time": "12:45PM - 2:10PM",
+          "room": "175",
+          "format": "in-person"
+        },
+        {
+          "days": "T",
+          "time": "12:45PM - 2:00PM",
+          "room": "110",
+          "format": "in-person"
+        }
+      ],
+      "status": "MATH-294 or equivalent (may be taken concurrently) Note: Section 6009 is part of the DVC MESA program. Students must be a current student in the MESA or friends of MESA program to enroll. For program and registration information please see http://www.dvc.edu/current/learning community/mesa/index.html or email Brandy Gibson at bgibson@dvc.edu. Note: Face to face course. This class will meet at the scheduled times on the Pleasant Hill Campus."
+    },
+    {
+      "section_number": "1206",
+      "instructor": "Speliotopoulos, Achilles",
+      "meetings": [
+        {
+          "days": "F",
+          "time": "8:00AM - 10:50AM",
+          "room": "121",
+          "format": "in-person"
+        },
+        {
+          "days": "W",
+          "time": "9:35AM - 10:50AM",
+          "room": "105",
+          "format": "in-person"
+        },
+        {
+          "days": "M W",
+          "time": "4:05PM - 5:30PM",
+          "room": "175",
+          "format": "in-person"
+        }
+      ],
+      "status": "MATH-294 or equivalent (may be taken concurrently) Note: Class meets weekly as scheduled."
+    },
+    {
+      "section_number": "1205",
+      "instructor": "Rodriguez, John",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "11:10AM - 12:35PM",
+          "room": "175",
+          "format": "in-person"
+        },
+        {
+          "days": "M",
+          "time": "2:30PM - 5:20PM",
+          "room": "121",
+          "format": "in-person"
+        },
+        {
+          "days": "W",
+          "time": "2:30PM - 3:45PM",
+          "room": "121",
+          "format": "in-person"
+        }
+      ],
+      "status": "MATH-294 or equivalent (may be taken concurrently) Note: Class meets on-campus as scheduled."
+    },
+    {
+      "section_number": "1204",
+      "instructor": "Rodriguez, John",
+      "meetings": [
+        {
+          "days": "M",
+          "time": "11:10AM - 12:25PM",
+          "room": "121",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "11:10AM - 12:35PM",
+          "room": "175",
+          "format": "in-person"
+        },
+        {
+          "days": "W",
+          "time": "11:10AM - 2:00PM",
+          "room": "121",
+          "format": "in-person"
+        }
+      ],
+      "status": "MATH-294 or equivalent (may be taken concurrently) Note: Class meets on-campus as scheduled."
+    },
+    {
+      "section_number": "1203",
+      "instructor": "Colwell, Kitran",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "12:45PM - 2:10PM",
+          "room": "175",
+          "format": "in-person"
+        },
+        {
+          "days": "F",
+          "time": "2:30PM - 5:20PM",
+          "room": "121",
+          "format": "in-person"
+        },
+        {
+          "days": "T",
+          "time": "2:30PM - 3:45PM",
+          "room": "110",
+          "format": "in-person"
+        }
+      ],
+      "status": "MATH-294 or equivalent (may be taken concurrently) Note: Class meets on-campus as scheduled."
+    },
+    {
+      "section_number": "1202",
+      "instructor": "Colwell, Kitran",
+      "meetings": [
+        {
+          "days": "F",
+          "time": "11:10AM - 2:00PM",
+          "room": "121",
+          "format": "in-person"
+        },
+        {
+          "days": "M W",
+          "time": "12:45PM - 2:10PM",
+          "room": "175",
+          "format": "in-person"
+        },
+        {
+          "days": "T",
+          "time": "12:45PM - 2:00PM",
+          "room": "110",
+          "format": "in-person"
+        }
+      ],
+      "status": "MATH-294 or equivalent (may be taken concurrently) Note: Class meets on-campus as scheduled."
+    }
+  ],
+  "prerequisites": "PHYS-230 or equivalent; MATH-294 or equivalent (may be taken concurrently)"
+}

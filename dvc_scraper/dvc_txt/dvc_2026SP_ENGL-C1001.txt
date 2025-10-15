@@ -1,4 +1,4 @@
-ENGL-C1001 sections (2025-10-15T08:27:34):
+ENGL-C1001 sections (2025-10-15T10:14:39):
 Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
 2026SP;SRC;9220;ENGL-C1001 - Critical Thinking and Writing 1/26/2026 - 5/22/2026 OFF ONLINE;;;OFF;ONLINE;3.00;Zeigler, Katie;Zeigler, Katie;Prerequisite: College-level composition (ENGL C1000/ ENGL C1000H/ ENGL C1000E/C-ID ENGL 100) or equivalent Note: 100% online course - no scheduled meetings.  Instruction will be provided through the college learning management system CANVAS.  On the course start date, log into Canvas, www.dvc.edu/online to begin.;Open;30
 ;;OFF;ONLINE

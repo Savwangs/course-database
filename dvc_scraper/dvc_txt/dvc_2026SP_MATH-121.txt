@@ -1,0 +1,7 @@
+MATH-121 sections (2025-10-15T10:15:58):
+Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
+2026SP;SRC;9182;MATH-121 - Plane Trigonometry 1/26/2026 - 5/22/2026 T Th 4:05PM - 5:30PM SRC W222;T Th;4:05PM - 5:30PM;SRC;W222;3.00;Staff, SRC;Staff, SRC;Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Advisory: High school geometry or equivalent Note: Class meets weekly as scheduled on the San Ramon Campus.;Open;36
+T Th;4:05PM - 5:30PM;SRC;W222
+2026SP;DVC;8067;MATH-121 - Plane Trigonometry 1/26/2026 - 5/22/2026 OFF PART-ONL Th 6:00PM - 8:00PM OFF NEED RM;;;OFF;PART-ONL;Th;6:00PM - 8:00PM;OFF;NEED RM;3.00;Knight, Lynn Knight;Knight, Lynn Knight;Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Advisory: High school geometry or equivalent Note: Partially online course. In addition to online instruction, this class has mandatory in-person meetings from 10:00-12:00pm on Saturdays 3/15, 4/26 (exams) and 5/17 (final exam.) All other instruction provided online through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to locate course.;Open;36
+;;OFF;PART-ONL
+Th;6:00PM - 8:00PM;OFF;NEED RM

@@ -1,0 +1,13 @@
+MATH-294 sections (2025-10-15T10:20:38):
+Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
+2026SP;SRC;9146;MATH-294 - Differential Equations 1/26/2026 - 5/22/2026 T Th 1:00PM - 3:30PM SRC E164;T Th;1:00PM - 3:30PM;SRC;E164;5.00;Staff, SRC;Staff, SRC;Prerequisite: MATH-292 or equivalent Advisory: MATH-194 or equivalent (may be taken concurrently) Note: TI-83 or TI-84 graphing calculator required. Note: Class meets weekly as scheduled on the San Ramon Campus.;Open;36
+T Th;1:00PM - 3:30PM;SRC;E164
+2026SP;DVC;8168;MATH-294 - Differential Equations 1/26/2026 - 5/22/2026 OFF PART-ONL Th 5:30PM - 8:00PM MA 107;;;OFF;PART-ONL;Th;5:30PM - 8:00PM;MA;107;5.00;Tardivel, Dominic;Tardivel, Dominic;Prerequisite: MATH-292 or equivalent Advisory: MATH-194 or equivalent (may be taken concurrently) Note: TI-83 or TI-84 graphing calculator required. Note: Partially online course. In addition to online instruction, this class has mandatory in-person meetings 5:30-8:00pm on Thursdays 2/26, 4/2, 4/30 (exams) and 5/21 (final exam). All other instruction provided online through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to locate course.;Open;36
+;;OFF;PART-ONL
+Th;5:30PM - 8:00PM;MA;107
+2026SP;DVC;2701;MATH-294 - Differential Equations 1/26/2026 - 5/22/2026 T Th 2:30PM - 5:00PM MA 104;T Th;2:30PM - 5:00PM;MA;104;5.00;Newton, Kit;Newton, Kit;Prerequisite: MATH-292 or equivalent Advisory: MATH-194 or equivalent (may be taken concurrently) Note: TI-83 or TI-84 graphing calculator required. Note: Class meets on-campus as scheduled.;Open;36
+T Th;2:30PM - 5:00PM;MA;104
+2026SP;DVC;1342;MATH-294 - Differential Equations 1/26/2026 - 5/22/2026 M W 12:45PM - 3:15PM MA 240;M W;12:45PM - 3:15PM;MA;240;5.00;Tardivel, Dominic;Tardivel, Dominic;Prerequisite: MATH-292 or equivalent Advisory: MATH-194 or equivalent (may be taken concurrently) Note: TI-83 or TI-84 graphing calculator required. Note: Class meets on-campus as scheduled.;Open;36
+M W;12:45PM - 3:15PM;MA;240
+2026SP;DVC;1328;MATH-294 - Differential Equations 1/26/2026 - 5/22/2026 M W 8:30AM - 11:00AM MA 249;M W;8:30AM - 11:00AM;MA;249;5.00;Mohan, Adhitya;Mohan, Adhitya;Prerequisite: MATH-292 or equivalent Advisory: MATH-194 or equivalent (may be taken concurrently) Note: TI-83 or TI-84 graphing calculator required. Note: Class meets on-campus as scheduled.;Open;36
+M W;8:30AM - 11:00AM;MA;249

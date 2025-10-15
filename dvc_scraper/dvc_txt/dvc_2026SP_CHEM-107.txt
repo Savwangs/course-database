@@ -1,4 +1,4 @@
-CHEM-107 sections (2025-10-15T08:11:58):
+CHEM-107 sections (2025-10-15T09:59:17):
 Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
 2026SP;SRC;9150;CHEM-107 - Integrated Inorganic, Organic, and Biological Chemistry 1/26/2026 - 5/22/2026 M W 8:25AM - 10:30AM SRC E230 M W 10:50AM - 12:15PM SRC E237;M W;8:25AM - 10:30AM;SRC;E230;M W;10:50AM - 12:15PM;SRC;E237;5.00;Lawrence, Diane;Lawrence, Diane;Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: This course does not fulfill the prerequisite to CHEM-120. Note: Class meets at the schedules times on the San Ramon Campus. CHEM-107-9150 and BIOSC-139-9067 are scheduled to encourage enrollment and collaboration between students in both sections.;Open;28
 M W;8:25AM - 10:30AM;SRC;E230

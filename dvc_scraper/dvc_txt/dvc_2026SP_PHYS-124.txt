@@ -1,0 +1,7 @@
+PHYS-124 sections (2025-10-15T10:21:58):
+Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
+2026SP;DVC;8305;PHYS-124 - Calculus Supplement for Physics 120 4/30/2026 - 5/14/2026 OFF ONLINE Th 5:30PM - 7:00PM OFF ONLINE;;;OFF;ONLINE;Th;5:30PM - 7:00PM;OFF;ONLINE;0.50;Self, Matthew;Self, Matthew;Prerequisite: PHYS-120 (may be taken concurrently) and MATH-182 or MATH-192 (may be taken concurrently) or equivalents Note: The calculus component may be required for certain transfer majors Note: 100% online course with both asynchronous work and required meetings Thursdays 4/30, 5/7, and 5/14, 5:30-7:00pm (online through Zoom). Instruction will be provided through the college learning management system Canvas and Zoom software. Access to a computer with audio and video capability is required. On the course start date, log into Canvas, www.dvc.edu/online to begin.;Open;24
+;;OFF;ONLINE
+Th;5:30PM - 7:00PM;OFF;ONLINE
+2026SP;DVC;8300;PHYS-124 - Calculus Supplement for Physics 120 5/02/2026 - 5/09/2026 S 2:45PM - 7:00PM PS 113;S;2:45PM - 7:00PM;PS;113;0.50;Kisseleva-Eggleton, Ludmila;Kisseleva-Eggleton, Ludmila;Prerequisite: PHYS-120 (may be taken concurrently) and MATH-182 or MATH-192 (may be taken concurrently) or equivalents Note: The calculus component may be required for certain transfer majors Note: Class meets weekly as scheduled.;Open;24
+S;2:45PM - 7:00PM;PS;113

@@ -1,4 +1,4 @@
-BIOSC-171 sections (2025-10-15T08:11:23):
+BIOSC-171 sections (2025-10-15T09:58:42):
 Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
 2026SP;SRC;9145;BIOSC-171 - Environmental Science with Laboratory 1/26/2026 - 5/22/2026 OFF PART-ONL M 9:35AM - 12:40PM SRC E235;;;OFF;PART-ONL;M;9:35AM - 12:40PM;SRC;E235;4.00;Cole Ekberg, Marci;Cole Ekberg, Marci;Advisory: ENGL-C1000 or equivalent. NOTE: Students who have successfully completed BIOSC-170 should not enroll in BIOSC-171. Students who have successfully completed BIOSC-170 will not receive credit for BIOSC-171. Class field trips will be organized to local sites related to course topics. Note: Partially online course with required lab meetings Wednesday 9:35AM- 12:35 PM (on-campus lab, see room on schedule) with all other instruction provided online through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to locate course.;Open;26
 ;;OFF;PART-ONL

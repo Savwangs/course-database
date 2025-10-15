@@ -1,4 +1,4 @@
-CHEM-227 sections (2025-10-15T08:13:24):
+CHEM-227 sections (2025-10-15T10:00:43):
 Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
 2026SP;DVC;1052;CHEM-227 - Organic Chemistry II 1/26/2026 - 5/22/2026 OFF PART-ONL M W 9:35AM - 11:00AM PS 275 T Th 2:30PM - 5:20PM PS 209;;;OFF;PART-ONL;M W;9:35AM - 11:00AM;PS;275;T Th;2:30PM - 5:20PM;PS;209;5.00;Lipson, Joseph;Lipson, Joseph;Prerequisite: CHEM-121 and CHEM-226 or equivalents Note: Partially online course with required meetings Mondays and Wednesdays 9:35AM-11:00AM  (on-campus, see room on schedule) and Tuesdays and Thursdays  2:30-5:20 PM (on-campus, see room on schedule) with all other instruction provided online through the college learning management system Canvas.;Open;18
 ;;OFF;PART-ONL

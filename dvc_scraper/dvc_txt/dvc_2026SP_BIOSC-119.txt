@@ -1,4 +1,4 @@
-BIOSC-119 sections (2025-10-15T08:08:39):
+BIOSC-119 sections (2025-10-15T09:55:59):
 Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
 2026SP;SRC;9377;BIOSC-119 - Fundamentals of Microbiology 1/26/2026 - 5/22/2026 T Th 3:35PM - 5:00PM SRC E240 T Th 5:30PM - 6:55PM SRC W221;T Th;3:35PM - 5:00PM;SRC;E240;T Th;5:30PM - 6:55PM;SRC;W221;4.00;Das, Sumanjari;Das, Sumanjari;Prerequisite: CHEM-107 or 108 or 109 or 120 or equivalent. Advisory: ENGL-C1000 or equivalent and High school or college biology or equivalent. Note: Students who have successfully completed BIOSC-146 should not enroll in BIOSC-119. Students who have successfully completed BIOSC-146 will not receive credit for BIOSC-119. Note: Class?meets at the scheduled times on the San Ramon Campus;Open;26
 T Th;3:35PM - 5:00PM;SRC;E240

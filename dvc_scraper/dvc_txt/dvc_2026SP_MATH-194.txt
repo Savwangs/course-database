@@ -1,0 +1,11 @@
+MATH-194 sections (2025-10-15T10:19:33):
+Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
+2026SP;DVC;8242;MATH-194 - Linear Algebra 1/26/2026 - 5/22/2026 OFF PART-ONL Th 5:30PM - 7:30PM MA 101;;;OFF;PART-ONL;Th;5:30PM - 7:30PM;MA;101;3.00;Gomez, Concha;Gomez, Concha;Prerequisite: MATH-193 or equivalent Note: Partially online course. In addition to online instruction, this class has mandatory in-person meetings 5:30-7:30pm on Thursdays 2/26, 3/19, 4/30 (exams) and 5/21 (final exam). All other instruction provided online through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to locate course.;Open;36
+;;OFF;PART-ONL
+Th;5:30PM - 7:30PM;MA;101
+2026SP;DVC;2788;MATH-194 - Linear Algebra 1/26/2026 - 5/22/2026 T Th 12:45PM - 2:10PM MA 245;T Th;12:45PM - 2:10PM;MA;245;3.00;Knight, Lynn Knight;Knight, Lynn Knight;Prerequisite: MATH-193 or equivalent Note: Class meets on-campus as scheduled.;Open;36
+T Th;12:45PM - 2:10PM;MA;245
+2026SP;DVC;2703;MATH-194 - Linear Algebra 1/26/2026 - 5/22/2026 M W 11:10AM - 12:35PM OFF NEED RM;M W;11:10AM - 12:35PM;OFF;NEED RM;3.00;Parks, Will;Parks, Will;Prerequisite: MATH-193 or equivalent Note: Class meets on-campus as scheduled.;Open;36
+M W;11:10AM - 12:35PM;OFF;NEED RM
+2026SP;DVC;1339;MATH-194 - Linear Algebra 1/26/2026 - 5/22/2026 T Th 9:35AM - 11:00AM L 143;T Th;9:35AM - 11:00AM;L;143;3.00;Moreno-Vasquez, Arcie;Moreno-Vasquez, Arcie;Prerequisite: MATH-193 or equivalent Note: Class meets on-campus as scheduled.;Open;36
+T Th;9:35AM - 11:00AM;L;143

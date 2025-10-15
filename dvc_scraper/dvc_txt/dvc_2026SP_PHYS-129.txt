@@ -1,0 +1,22 @@
+PHYS-129 sections (2025-10-15T10:22:31):
+Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
+2026SP;DVC;6336;PHYS-129 - Introductory Physics for Engineers 1/26/2026 - 5/22/2026 F 12:45PM - 2:00PM PS 110 T Th 12:45PM - 2:10PM PS 175 F 2:30PM - 5:20PM PS 117;F;12:45PM - 2:00PM;PS;110;T Th;12:45PM - 2:10PM;PS;175;F;2:30PM - 5:20PM;PS;117;4.00;Little, Justin;Little, Justin;Co-requisite: MATH-192 or equivalent (may be taken previously) Note: For those students who have not recently completed a full year of high school physics, the physics department strongly recommends completion of PHYS-129 before enrolling in PHYS-130. Note: This section is part of the DVC MESA program. Students must be a current student in the MESA or friends of MESA program to enroll. For program and registration information, please see http://www.dvc.edu/current/learningcommunity/mesa/index.html Note: Class meets on-campus as scheduled.;Open;20
+F;12:45PM - 2:00PM;PS;110
+T Th;12:45PM - 2:10PM;PS;175
+F;2:30PM - 5:20PM;PS;117
+2026SP;DVC;1190;PHYS-129 - Introductory Physics for Engineers 1/26/2026 - 5/22/2026 F 12:45PM - 2:00PM PS 110 T Th 12:45PM - 2:10PM PS 175 F 2:30PM - 5:20PM PS 117;F;12:45PM - 2:00PM;PS;110;T Th;12:45PM - 2:10PM;PS;175;F;2:30PM - 5:20PM;PS;117;4.00;Little, Justin;Little, Justin;Co-requisite: MATH-192 or equivalent (may be taken previously) Note: For those students who have not recently completed a full year of high school physics, the physics department strongly recommends completion of PHYS-129 before enrolling in PHYS-130. Note: Class meets on-campus as scheduled.;Open;4
+F;12:45PM - 2:00PM;PS;110
+T Th;12:45PM - 2:10PM;PS;175
+F;2:30PM - 5:20PM;PS;117
+2026SP;DVC;1189;PHYS-129 - Introductory Physics for Engineers 1/26/2026 - 5/22/2026 T Th 8:00AM - 9:25AM PS 175 W 8:00AM - 10:50AM PS 113 Th 9:35AM - 10:50AM PS 109;T Th;8:00AM - 9:25AM;PS;175;W;8:00AM - 10:50AM;PS;113;Th;9:35AM - 10:50AM;PS;109;4.00;Pevyhouse, Alice;Pevyhouse, Alice;Co-requisite: MATH-192 or equivalent (may be taken previously) Note: For those students who have not recently completed a full year of high school physics, the physics department strongly recommends completion of PHYS-129 before enrolling in PHYS-130. Note: Class meets on-campus as scheduled.;Open;24
+T Th;8:00AM - 9:25AM;PS;175
+W;8:00AM - 10:50AM;PS;113
+Th;9:35AM - 10:50AM;PS;109
+2026SP;DVC;1188;PHYS-129 - Introductory Physics for Engineers 1/26/2026 - 5/22/2026 F 8:00AM - 10:50AM PS 113 F 11:10AM - 12:25PM PS 177 T Th 4:05PM - 5:20PM PS 177;F;8:00AM - 10:50AM;PS;113;F;11:10AM - 12:25PM;PS;177;T Th;4:05PM - 5:20PM;PS;177;4.00;Staff, DVC;Staff, DVC;Co-requisite: MATH-192 or equivalent (may be taken previously) Note: For those students who have not recently completed a full year of high school physics, the physics department strongly recommends completion of PHYS-129 before enrolling in PHYS-130. Note: Class meets on-campus as scheduled.;Open;24
+F;8:00AM - 10:50AM;PS;113
+F;11:10AM - 12:25PM;PS;177
+T Th;4:05PM - 5:20PM;PS;177
+2026SP;DVC;1187;PHYS-129 - Introductory Physics for Engineers 1/26/2026 - 5/22/2026 M W 9:35AM - 11:00AM PS 175 M 11:10AM - 12:25PM PS 175 W 2:30PM - 5:20PM PS 117;M W;9:35AM - 11:00AM;PS;175;M;11:10AM - 12:25PM;PS;175;W;2:30PM - 5:20PM;PS;117;4.00;Gheith, Muhammed;Gheith, Muhammed;Co-requisite: MATH-192 or equivalent (may be taken previously) Note: For those students who have not recently completed a full year of high school physics, the physics department strongly recommends completion of PHYS-129 before enrolling in PHYS-130. Note: Class meets on-campus as scheduled.;Open;24
+M W;9:35AM - 11:00AM;PS;175
+M;11:10AM - 12:25PM;PS;175
+W;2:30PM - 5:20PM;PS;117

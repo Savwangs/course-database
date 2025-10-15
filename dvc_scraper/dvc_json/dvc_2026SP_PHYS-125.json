@@ -1,0 +1,40 @@
+{
+  "course_code": "PHYS-125",
+  "course_title": "Calculus Supplement for Physics 121",
+  "last_update": "2025-10-15T10:22:14",
+  "sections": [
+    {
+      "section_number": "9040",
+      "instructor": "Lee, Kyung-Min",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "Th",
+          "time": "8:30PM - 9:55PM",
+          "room": "E225",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "8316",
+      "instructor": "Westlander, Meghan",
+      "meetings": [
+        {
+          "days": "S",
+          "time": "2:45PM - 7:00PM",
+          "room": "ONLINE",
+          "format": "online"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "PHYS-121 and MATH-183 or 193 (all may be taken concurrently) or equivalents."
+}

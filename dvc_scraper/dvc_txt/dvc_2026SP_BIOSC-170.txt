@@ -1,4 +1,4 @@
-BIOSC-170 sections (2025-10-15T08:11:07):
+BIOSC-170 sections (2025-10-15T09:58:26):
 Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
 2026SP;SRC;9105;BIOSC-170 - Environmental Science 1/26/2026 - 5/22/2026 OFF ONLINE;;;OFF;ONLINE;3.00;Levin, Anna;Levin, Anna;Advisory: ENGL-C1000 or equivalent. Note: Students who have successfully completed BIOSC-171 should NOT enroll in BIOSC-170. Students who have successfully completed BIOSC-171 will NOT receive credit for BIOSC-170. Note: 100% online course - no required online meetings. Instruction will be provided through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to begin.;Open;45
 ;;OFF;ONLINE

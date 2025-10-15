@@ -1,4 +1,4 @@
-BIOSC-130 sections (2025-10-15T08:09:27):
+BIOSC-130 sections (2025-10-15T09:56:46):
 Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
 2026SP;SRC;9060;BIOSC-130 - Principles of Cellular and Molecular Biology 1/26/2026 - 5/22/2026 T Th 8:00AM - 9:25AM SRC W222 T Th 9:45AM - 12:50PM SRC E240;T Th;8:00AM - 9:25AM;SRC;W222;T Th;9:45AM - 12:50PM;SRC;E240;5.00;Cole Ekberg, Marci;Cole Ekberg, Marci;Prerequisite: CHEM-120 or equivalent Advisory: ENGL-C1000 or equivalent and BIOSC-101 or BIOSC-102 or equivalents Note: Class?meets at the scheduled times on the San Ramon Campus;Open;24
 T Th;8:00AM - 9:25AM;SRC;W222

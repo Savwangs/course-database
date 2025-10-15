@@ -1,0 +1,4 @@
+MATH-289 sections (2025-10-15T10:20:05):
+Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
+2026SP;DVC;2043;MATH-289 - Introduction to Upper Division Mathematics 1/26/2026 - 5/22/2026 T Th 8:55AM - 11:00AM MA 249;T Th;8:55AM - 11:00AM;MA;249;4.00;Mohan, Adhitya;Mohan, Adhitya;Prerequisite: MATH-193 or equivalent. Note: Class meets on-campus as scheduled.;Open;36
+T Th;8:55AM - 11:00AM;MA;249

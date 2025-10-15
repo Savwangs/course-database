@@ -1,0 +1,133 @@
+{
+  "course_code": "PHYS-120",
+  "course_title": "General College Physics I",
+  "last_update": "2025-10-15T10:21:26",
+  "sections": [
+    {
+      "section_number": "8055",
+      "instructor": "Kisseleva-Eggleton, Ludmila",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "12:45PM - 2:10PM",
+          "room": "175",
+          "format": "in-person"
+        },
+        {
+          "days": "M",
+          "time": "2:30PM - 5:20PM",
+          "room": "113",
+          "format": "in-person"
+        },
+        {
+          "days": "Th",
+          "time": "4:05PM - 5:20PM",
+          "room": "110",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "8054",
+      "instructor": "Goldenberg, Steven",
+      "meetings": [
+        {
+          "days": "W",
+          "time": "12:45PM - 2:00PM",
+          "room": "110",
+          "format": "in-person"
+        },
+        {
+          "days": "T",
+          "time": "2:30PM - 5:20PM",
+          "room": "121",
+          "format": "in-person"
+        },
+        {
+          "days": "M W",
+          "time": "4:05PM - 5:20PM",
+          "room": "177",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1183",
+      "instructor": "Martin, Shuleen",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "8:00AM - 9:25AM",
+          "room": "177",
+          "format": "in-person"
+        },
+        {
+          "days": "M",
+          "time": "11:10AM - 2:00PM",
+          "room": "117",
+          "format": "in-person"
+        },
+        {
+          "days": "W",
+          "time": "11:10AM - 12:25PM",
+          "room": "117",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1181",
+      "instructor": "Martin, Shuleen",
+      "meetings": [
+        {
+          "days": "M",
+          "time": "8:00AM - 10:50AM",
+          "room": "117",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "8:00AM - 9:25AM",
+          "room": "177",
+          "format": "in-person"
+        },
+        {
+          "days": "W",
+          "time": "9:35AM - 10:50AM",
+          "room": "117",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1180",
+      "instructor": "Walker, Ted",
+      "meetings": [
+        {
+          "days": "M",
+          "time": "11:10AM - 2:00PM",
+          "room": "117",
+          "format": "in-person"
+        },
+        {
+          "days": "W F",
+          "time": "11:10AM - 12:35PM",
+          "room": "175",
+          "format": "in-person"
+        },
+        {
+          "days": "F",
+          "time": "1:05PM - 2:20PM",
+          "room": "175",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "MATH-121 or equivalent"
+}

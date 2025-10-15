@@ -1,0 +1,13 @@
+MATH-124 sections (2025-10-15T10:16:30):
+Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
+2026SP;SRC;9025;MATH-124 - Mathematics for Liberal Arts 1/26/2026 - 5/22/2026 M W 11:10AM - 12:35PM SRC W222;M W;11:10AM - 12:35PM;SRC;W222;3.00;Staff, SRC;Staff, SRC;Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: Class meets weekly as scheduled on the San Ramon Campus.;Open;36
+M W;11:10AM - 12:35PM;SRC;W222
+2026SP;DVC;8122;MATH-124 - Mathematics for Liberal Arts 1/26/2026 - 5/22/2026 OFF PART-ONL Th 4:30PM - 6:30PM MA 240;;;OFF;PART-ONL;Th;4:30PM - 6:30PM;MA;240;3.00;Willett, Peter;Willett, Peter;Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: Partially online course. In addition to online instruction, this class has mandatory in-person meetings from 4:30-6:30pm on Thursdays 3/5, 4/23 (exams) and 5/21 (final exam). All other instruction provided online through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to locate course.;Open;36
+;;OFF;PART-ONL
+Th;4:30PM - 6:30PM;MA;240
+2026SP;DVC;2219;MATH-124 - Mathematics for Liberal Arts 1/26/2026 - 5/22/2026 T Th 9:35AM - 11:00AM MA 109;T Th;9:35AM - 11:00AM;MA;109;3.00;Raymond, Brian;Raymond, Brian;Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: Class meets on-campus as scheduled.;Open;36
+T Th;9:35AM - 11:00AM;MA;109
+2026SP;DVC;2008;MATH-124 - Mathematics for Liberal Arts 1/26/2026 - 5/22/2026 M W 9:35AM - 11:00AM L 142;M W;9:35AM - 11:00AM;L;142;3.00;Ahmadieh, Cyrous;Ahmadieh, Cyrous;Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: Class meets on-campus as scheduled.;Open;36
+M W;9:35AM - 11:00AM;L;142
+2026SP;DVC;1635;MATH-124 - Mathematics for Liberal Arts 1/26/2026 - 5/22/2026 T Th 11:10AM - 12:35PM LA 209;T Th;11:10AM - 12:35PM;LA;209;3.00;Ashraf, Farooq;Ashraf, Farooq;Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: Class meets on-campus as scheduled.;Open;36
+T Th;11:10AM - 12:35PM;LA;209

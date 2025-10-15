@@ -1,4 +1,4 @@
-BIOSC-117 sections (2025-10-15T08:08:22):
+BIOSC-117 sections (2025-10-15T09:55:42):
 Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
 2026SP;DVC;1074;BIOSC-117 - Human Biology with Laboratory 1/26/2026 - 5/22/2026 M 2:30PM - 5:40PM ST 112 W 2:30PM - 5:40PM LS 202;M;2:30PM - 5:40PM;ST;112;W;2:30PM - 5:40PM;LS;202;4.00;Daly, Kevin;Daly, Kevin;Advisory: ENGL-C1000 or equivalent Note: Students who have successfully completed BIOSC-116 should not enroll in BIOSC-117. Students who have successfully completed BIOSC-116 will not receive credit for BIOSC-117. Note: Class meets on campus as scheduled.;Open;26
 M;2:30PM - 5:40PM;ST;112

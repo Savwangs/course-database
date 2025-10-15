@@ -1,0 +1,11 @@
+MATH-195 sections (2025-10-15T10:19:49):
+Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
+2026SP;SRC;9294;MATH-195 - Discrete Mathematics 1/26/2026 - 5/22/2026 M W 12:45PM - 2:50PM SRC E164;M W;12:45PM - 2:50PM;SRC;E164;4.00;Staff, SRC;Staff, SRC;Prerequisite: MATH-193 or equivalent may be taken either as a prerequisite or concurrently Note: Class meets weekly as scheduled on the San Ramon Campus.;Open;36
+M W;12:45PM - 2:50PM;SRC;E164
+2026SP;DVC;8213;MATH-195 - Discrete Mathematics 1/26/2026 - 5/22/2026 OFF PART-ONL T 4:30PM - 6:35PM MA 241;;;OFF;PART-ONL;T;4:30PM - 6:35PM;MA;241;4.00;Needham, Sam;Needham, Sam;Prerequisite: MATH-193 or equivalent may be taken either as a prerequisite or concurrently Note: Partially online course. In addition to online instruction, this class has mandatory in-person meetings 4:30-6:35pm on Tuesdays 1/27 (orientation) and 2/24, 3/31, 4/28 (exams) and 5/19 (final exam). All other instruction provided online through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to locate course.;Open;36
+;;OFF;PART-ONL
+T;4:30PM - 6:35PM;MA;241
+2026SP;DVC;3790;MATH-195 - Discrete Mathematics 1/26/2026 - 5/22/2026 T Th 9:35AM - 11:40AM MA 245;T Th;9:35AM - 11:40AM;MA;245;4.00;Needham, Sam;Needham, Sam;Prerequisite: MATH-193 or equivalent may be taken either as a prerequisite or concurrently Note: Class meets on-campus as scheduled.;Open;36
+T Th;9:35AM - 11:40AM;MA;245
+2026SP;DVC;1686;MATH-195 - Discrete Mathematics 1/26/2026 - 5/22/2026 M W 8:55AM - 11:00AM L 143;M W;8:55AM - 11:00AM;L;143;4.00;McNeill, Amber;McNeill, Amber;Prerequisite: MATH-193 or equivalent may be taken either as a prerequisite or concurrently Note: Class meets on-campus as scheduled.;Open;36
+M W;8:55AM - 11:00AM;L;143

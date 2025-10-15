@@ -1,4 +1,4 @@
-BIOSC-126 sections (2025-10-15T08:09:11):
+BIOSC-126 sections (2025-10-15T09:56:30):
 Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
 2026SP;DVC;1080;BIOSC-126 - Ecology and Field Biology 1/26/2026 - 5/22/2026 T Th 11:10AM - 12:35PM LS 115 Th 12:55PM - 4:05PM LS 202;T Th;11:10AM - 12:35PM;LS;115;Th;12:55PM - 4:05PM;LS;202;4.00;Levin, Anna;Levin, Anna;Advisory: ENGL-C1000 or equivalent Note: Class meets on campus as scheduled. Labs will meet Thursdays 12:55PM - 4:05PM either outdoors at regional parks to study local ecosystems or in our lab room at the Pleasant Hill Campus. This class includes field trips to: Ano Nuevo, the Marine Mammal Center, Pillar Point Tidepools and local regional parks.;Open;26
 T Th;11:10AM - 12:35PM;LS;115

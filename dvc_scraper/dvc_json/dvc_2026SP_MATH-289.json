@@ -1,0 +1,21 @@
+{
+  "course_code": "MATH-289",
+  "course_title": "Introduction to Upper Division Mathematics",
+  "last_update": "2025-10-15T10:20:05",
+  "sections": [
+    {
+      "section_number": "2043",
+      "instructor": "Mohan, Adhitya",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "8:55AM - 11:00AM",
+          "room": "249",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "MATH-193 or equivalent."
+}

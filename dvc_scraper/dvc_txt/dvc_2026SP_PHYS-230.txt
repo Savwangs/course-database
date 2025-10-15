@@ -1,0 +1,30 @@
+PHYS-230 sections (2025-10-15T10:23:04):
+Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
+2026SP;SRC;9183;PHYS-230 - Physics for Engineers and Scientists B: Heat and Electro-Magnetism 1/26/2026 - 5/22/2026 M 1:05PM - 3:55PM SRC E181 W 2:40PM - 3:55PM SRC E225 M W 4:05PM - 5:30PM SRC E230;M;1:05PM - 3:55PM;SRC;E181;W;2:40PM - 3:55PM;SRC;E225;M W;4:05PM - 5:30PM;SRC;E230;4.00;Chiang, Chien-I;Chiang, Chien-I;Prerequisite: PHYS-130 or equivalent; MATH-292 (may be taken concurrently) or equivalent. Note: Class?meets at the scheduled times on the San Ramon Campus;Open;25
+M;1:05PM - 3:55PM;SRC;E181
+W;2:40PM - 3:55PM;SRC;E225
+M W;4:05PM - 5:30PM;SRC;E230
+2026SP;SRC;9031;PHYS-230 - Physics for Engineers and Scientists B: Heat and Electro-Magnetism 1/26/2026 - 5/22/2026 M W 4:05PM - 5:30PM SRC E230 M 5:40PM - 8:30PM SRC E181 M 8:40PM - 9:55PM SRC E181;M W;4:05PM - 5:30PM;SRC;E230;M;5:40PM - 8:30PM;SRC;E181;M;8:40PM - 9:55PM;SRC;E181;4.00;Chiang, Chien-I;Chiang, Chien-I;Prerequisite: PHYS-130 or equivalent; MATH-292 (may be taken concurrently) or equivalent. Note: Class?meets at the scheduled times on the San Ramon Campus;Open;25
+M W;4:05PM - 5:30PM;SRC;E230
+M;5:40PM - 8:30PM;SRC;E181
+M;8:40PM - 9:55PM;SRC;E181
+2026SP;DVC;6008;PHYS-230 - Physics for Engineers and Scientists B: Heat and Electro-Magnetism 1/26/2026 - 5/22/2026 M W 11:10AM - 12:35PM PS 177 T 11:10AM - 2:00PM PS 117 Th 12:45PM - 2:00PM PS 110;M W;11:10AM - 12:35PM;PS;177;T;11:10AM - 2:00PM;PS;117;Th;12:45PM - 2:00PM;PS;110;4.00;Hamida, Youcef;Hamida, Youcef;Prerequisite: PHYS-130 or equivalent; MATH-292 (may be taken concurrently) or equivalent. Note: Section 6008 is part of the DVC MESA program. Students must be a current student in the MESA or friends of MESA program to enroll. For program and registration information please see http://www.dvc.edu/current/learning community/mesa/index.html or email Brandy Gibson at bgibson@dvc.edu. Note: Face to face course. This class will meet at the scheduled times on the Pleasant Hill Campus.;Open;8
+M W;11:10AM - 12:35PM;PS;177
+T;11:10AM - 2:00PM;PS;117
+Th;12:45PM - 2:00PM;PS;110
+2026SP;DVC;1211;PHYS-230 - Physics for Engineers and Scientists B: Heat and Electro-Magnetism 1/26/2026 - 5/22/2026 M 2:30PM - 3:45PM PS 110 T Th 2:30PM - 3:55PM PS 177 W 2:30PM - 5:20PM PS 113;M;2:30PM - 3:45PM;PS;110;T Th;2:30PM - 3:55PM;PS;177;W;2:30PM - 5:20PM;PS;113;4.00;Self, Matthew;Self, Matthew;Prerequisite: PHYS-130 or equivalent; MATH-292 (may be taken concurrently) or equivalent. Note: Class meets on-campus as scheduled.;Open;25
+M;2:30PM - 3:45PM;PS;110
+T Th;2:30PM - 3:55PM;PS;177
+W;2:30PM - 5:20PM;PS;113
+2026SP;DVC;1201;PHYS-230 - Physics for Engineers and Scientists B: Heat and Electro-Magnetism 1/26/2026 - 5/22/2026 M W 11:10AM - 12:35PM PS 177 T 11:10AM - 2:00PM PS 117 Th 12:45PM - 2:00PM PS 110;M W;11:10AM - 12:35PM;PS;177;T;11:10AM - 2:00PM;PS;117;Th;12:45PM - 2:00PM;PS;110;4.00;Hamida, Youcef;Hamida, Youcef;Prerequisite: PHYS-130 or equivalent; MATH-292 (may be taken concurrently) or equivalent. Note: Class meets weekly as scheduled.;Open;17
+M W;11:10AM - 12:35PM;PS;177
+T;11:10AM - 2:00PM;PS;117
+Th;12:45PM - 2:00PM;PS;110
+2026SP;DVC;1200;PHYS-230 - Physics for Engineers and Scientists B: Heat and Electro-Magnetism 1/26/2026 - 5/22/2026 M W 11:10AM - 12:35PM PS 177 T 2:30PM - 5:20PM PS 117 Th 2:30PM - 3:45PM PS 110;M W;11:10AM - 12:35PM;PS;177;T;2:30PM - 5:20PM;PS;117;Th;2:30PM - 3:45PM;PS;110;4.00;Hamida, Youcef;Hamida, Youcef;Prerequisite: PHYS-130 or equivalent; MATH-292 (may be taken concurrently) or equivalent. Note: Class meets on-campus as scheduled.;Open;25
+M W;11:10AM - 12:35PM;PS;177
+T;2:30PM - 5:20PM;PS;117
+Th;2:30PM - 3:45PM;PS;110
+2026SP;DVC;1199;PHYS-230 - Physics for Engineers and Scientists B: Heat and Electro-Magnetism 1/26/2026 - 5/22/2026 M W 11:10AM - 12:35PM PS 177 T 11:10AM - 2:00PM PS 117 Th 12:45PM - 2:00PM PS 110;M W;11:10AM - 12:35PM;PS;177;T;11:10AM - 2:00PM;PS;117;Th;12:45PM - 2:00PM;PS;110;4.00;Hamida, Youcef;Hamida, Youcef;Prerequisite: PHYS-130 or equivalent; MATH-292 (may be taken concurrently) or equivalent. Note: Class meets on-campus as scheduled.;Open;25
+M W;11:10AM - 12:35PM;PS;177
+T;11:10AM - 2:00PM;PS;117
+Th;12:45PM - 2:00PM;PS;110

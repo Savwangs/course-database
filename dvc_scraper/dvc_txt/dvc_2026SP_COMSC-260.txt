@@ -1,4 +1,4 @@
-COMSC-260 sections (2025-10-15T08:17:10):
+COMSC-260 sections (2025-10-15T10:04:29):
 Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
 2026SP;DVC;8204;COMSC-260 - Assembly Language Programming/Computer Organization 1/26/2026 - 5/22/2026 OFF PART-ONL T 7:25PM - 9:30PM ST 114;;;OFF;PART-ONL;T;7:25PM - 9:30PM;ST;114;4.00;Staff, DVC;Staff, DVC;Prerequisite: COMSC-165 or equivalent Note: Partially online course with required meetings Tuesdays from 7:25-9:30PM (on-campus, see room on schedule) with all other instruction provided online through the college learning management system Canvas.;Open;35
 ;;OFF;PART-ONL

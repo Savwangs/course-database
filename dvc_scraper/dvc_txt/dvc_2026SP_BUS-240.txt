@@ -1,4 +1,4 @@
-BUS-240 sections (2025-10-15T08:11:42):
+BUS-240 sections (2025-10-15T09:59:00):
 Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
 2026SP;SRC;9113;BUS-240 - Business Statistics 1/26/2026 - 5/22/2026 OFF ONLINE;;;OFF;ONLINE;3.00;Uwagie Ero, Francis;Uwagie Ero, Francis;Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: 100% online course - no scheduled meetings. Instruction will be provided through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to begin.;Open;34
 ;;OFF;ONLINE

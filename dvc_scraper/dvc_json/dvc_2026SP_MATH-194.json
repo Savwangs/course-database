@@ -1,0 +1,66 @@
+{
+  "course_code": "MATH-194",
+  "course_title": "Linear Algebra",
+  "last_update": "2025-10-15T10:19:33",
+  "sections": [
+    {
+      "section_number": "8242",
+      "instructor": "Gomez, Concha",
+      "meetings": [
+        {
+          "days": "",
+          "time": "",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "Th",
+          "time": "5:30PM - 7:30PM",
+          "room": "101",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "2788",
+      "instructor": "Knight, Lynn Knight",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "12:45PM - 2:10PM",
+          "room": "245",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "2703",
+      "instructor": "Parks, Will",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "11:10AM - 12:35PM",
+          "room": "NEED RM",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "1339",
+      "instructor": "Moreno-Vasquez, Arcie",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "9:35AM - 11:00AM",
+          "room": "143",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "MATH-193 or equivalent"
+}

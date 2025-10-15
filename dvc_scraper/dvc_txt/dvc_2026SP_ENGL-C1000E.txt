@@ -1,4 +1,4 @@
-ENGL-C1000E sections (2025-10-15T08:27:15):
+ENGL-C1000E sections (2025-10-15T10:14:20):
 Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
 2026SP;SRC;9199;ENGL-C1000E - Academic Reading and Writing 1/26/2026 - 5/22/2026 T Th 11:10AM - 1:40PM SRC E176;T Th;11:10AM - 1:40PM;SRC;E176;5.00;Katko, Clarissa;Katko, Clarissa;Prerequisite: Placement as determined by the college's multiple measures assessment process. Note: ENGL-C1000E is limited to 3 units for UC transfer. Note: Class meets at the scheduled times on the San Ramon Campus.;Open;26
 T Th;11:10AM - 1:40PM;SRC;E176

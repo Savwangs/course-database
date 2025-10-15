@@ -1,4 +1,4 @@
-ENGIN-230 sections (2025-10-15T08:19:49):
+ENGIN-230 sections (2025-10-15T10:07:07):
 Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
 2026SP;DVC;8162;ENGIN-230 - Introduction to Circuits and Devices 1/26/2026 - 5/22/2026 OFF PART-ONL M 6:30PM - 8:00PM ET 125;;;OFF;PART-ONL;M;6:30PM - 8:00PM;ET;125;4.00;Erickson, Ashley;Erickson, Ashley;Prerequisite: PHYS-230 or equivalent. Corequisite: MATH-294 or equivalent. Note: Partially online course. In addition to online instruction, this class has mandatory in-person meetings 6:30-8:00pm on the following Mondays: 1/26 (orientation), 3/09, 4/20, 5/11, (exams) and 5/18  (final exam). All other instruction provided online through the college learning management system Canvas. This section of ENGIN-230 has online asynchronous labs. Students are advised to check with an advisor regarding articulation of online ENGIN-230 labs at transfer programs of interest. Access to a computer with a webcam and a microphone is required. Go to www.dvc.edu/online for course access information.;Open;30
 ;;OFF;PART-ONL

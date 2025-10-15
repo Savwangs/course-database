@@ -1,0 +1,5 @@
+MATH-140 sections (2025-10-15T10:17:18):
+Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
+2026SP;DVC;1186;MATH-140 - Tutor Training 2/06/2026 - 5/22/2026 OFF PART-ONL F 10:00AM - 12:00PM LC 202;;;OFF;PART-ONL;F;10:00AM - 12:00PM;LC;202;1.00;Pineda-Carranza, Servando;Pineda-Carranza, Servando;Note: Hours by Arr. Note: This class has required meetings on Fridays 2/6, 2/20, 3/13, 4/3, 4/17 from 10:00am-12:00pm. Students can meet their required instructional Hours by Arrangement on Mondays 9-10 or 2:30 - 3:30, Tuesdays  9 -11:30 or 3:15-4:00   Wednesdays 9-10 or 2:30 - 3:30,   Thursdays 9-11:30 or 3:15 - 4:00 Fridays 10:00- 11:30. Five hours of in-person tutoring will be required. Some additional times may be available. These will be announced on the first day of class. Students will subscribe for specific hours during the first week of class.;Open;36
+;;OFF;PART-ONL
+F;10:00AM - 12:00PM;LC;202

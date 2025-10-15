@@ -1,4 +1,4 @@
-ENGL-123 sections (2025-10-15T08:20:59):
+ENGL-123 sections (2025-10-15T10:08:14):
 Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
 2026SP;SRC;9295;ENGL-123 - Critical Thinking: Writing About Literature 1/26/2026 - 5/22/2026 M W 12:45PM - 2:10PM SRC E174;M W;12:45PM - 2:10PM;SRC;E174;3.00;Huang, Lynn;Huang, Lynn;Prerequisite: ENGL-C1000 or equivalent Note: Class meets at the scheduled times on the San Ramon Campus.;Open;25
 M W;12:45PM - 2:10PM;SRC;E174

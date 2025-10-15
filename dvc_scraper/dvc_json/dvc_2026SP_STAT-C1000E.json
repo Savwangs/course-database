@@ -1,0 +1,203 @@
+{
+  "course_code": "STAT-C1000E",
+  "course_title": "Introduction to Statistics",
+  "last_update": "2025-10-15T10:23:56",
+  "sections": [
+    {
+      "section_number": "9155",
+      "instructor": "Staff, SRC",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "9:35AM - 11:55AM",
+          "room": "E225",
+          "format": "in-person"
+        },
+        {
+          "days": "M W",
+          "time": "11:55AM - 12:40PM",
+          "room": "E225",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "8113",
+      "instructor": "Carter, Jamylle",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "6:30PM - 8:50PM",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "W",
+          "time": "6:30PM - 8:50PM",
+          "room": "148",
+          "format": "in-person"
+        },
+        {
+          "days": "M W",
+          "time": "8:50PM - 9:35PM",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "W",
+          "time": "8:50PM - 9:35PM",
+          "room": "148",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "6161",
+      "instructor": "Carter, Jamylle",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "6:30PM - 8:50PM",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "W",
+          "time": "6:30PM - 8:50PM",
+          "room": "148",
+          "format": "in-person"
+        },
+        {
+          "days": "M W",
+          "time": "8:50PM - 9:35PM",
+          "room": "PART-ONL",
+          "format": "hybrid"
+        },
+        {
+          "days": "W",
+          "time": "8:50PM - 9:35PM",
+          "room": "148",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "3194",
+      "instructor": "Carter, Jamylle",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "1:25PM - 3:45PM",
+          "room": "202",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "3:45PM - 4:30PM",
+          "room": "202",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "2941",
+      "instructor": "Keating, Katrina",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "11:10AM - 1:20PM",
+          "room": "250",
+          "format": "in-person"
+        },
+        {
+          "days": "M W",
+          "time": "1:20PM - 2:15PM",
+          "room": "250",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "2024",
+      "instructor": "Keating, Katrina",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "7:55AM - 10:15AM",
+          "room": "250",
+          "format": "in-person"
+        },
+        {
+          "days": "M W",
+          "time": "10:15AM - 11:00AM",
+          "room": "250",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "2023",
+      "instructor": "Lang, Lindsey",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "11:10AM - 1:20PM",
+          "room": "103",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "1:20PM - 2:15PM",
+          "room": "103",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "2019",
+      "instructor": "Vanderbilt, Read",
+      "meetings": [
+        {
+          "days": "M W",
+          "time": "11:10AM - 1:30PM",
+          "room": "149",
+          "format": "in-person"
+        },
+        {
+          "days": "M W",
+          "time": "1:30PM - 2:15PM",
+          "room": "149",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    },
+    {
+      "section_number": "2015",
+      "instructor": "Gomez, Concha",
+      "meetings": [
+        {
+          "days": "T Th",
+          "time": "7:55AM - 10:15AM",
+          "room": "103",
+          "format": "in-person"
+        },
+        {
+          "days": "T Th",
+          "time": "10:15AM - 11:00AM",
+          "room": "103",
+          "format": "in-person"
+        }
+      ],
+      "status": "Open"
+    }
+  ],
+  "prerequisites": "Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra."
+}

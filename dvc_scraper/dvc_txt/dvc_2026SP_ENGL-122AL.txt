@@ -1,4 +1,4 @@
-ENGL-122AL sections (2025-10-15T08:20:38):
+ENGL-122AL sections (2025-10-15T10:07:54):
 Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
 2026SP;DVC;5108;ENGL-122AL - Academic Reading and Writing for Multilingual Students 1/26/2026 - 5/22/2026 OFF ONLINE;;;OFF;ONLINE;5.00;DuLaney-Greger, Keri;DuLaney-Greger, Keri;Prerequisite: Placement as determined by the college's multiple measures assessment process Note: ENGL-122AL is limited to 3 units for UC transfer. Note: 100% online course - no required online meetings.   Instruction will be provided through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to begin.;Open;26
 ;;OFF;ONLINE

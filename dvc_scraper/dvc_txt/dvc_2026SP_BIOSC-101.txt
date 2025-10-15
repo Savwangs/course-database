@@ -1,4 +1,4 @@
-BIOSC-101 sections (2025-10-15T08:07:31):
+BIOSC-101 sections (2025-10-15T09:54:52):
 Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
 2026SP;DVC;5039;BIOSC-101 - Fundamentals of Biological Science 1/26/2026 - 5/22/2026 OFF ONLINE;;;OFF;ONLINE;3.00;Ensign, Caitlin;Ensign, Caitlin;Advisory: ENGL-C1000 or equivalent Note: Students who have successfully completed BIOSC-102 should not enroll in BIOSC-101. Students who have successfully completed BIOSC-102 will not receive credit for BIOSC-101. Note: 100% online course - no scheduled  meetings. This course may use exam proctoring software to administer exams. Access to a computer with audio and video capability is required. Instruction will be provided through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to begin.;Open;45
 ;;OFF;ONLINE

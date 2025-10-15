@@ -1,4 +1,4 @@
-ENGL-263 sections (2025-10-15T08:26:37):
+ENGL-263 sections (2025-10-15T10:13:42):
 Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
 2026SP;DVC;5153;ENGL-263 - Survey of Late American Literature 1/26/2026 - 5/22/2026 OFF ONLINE;;;OFF;ONLINE;3.00;Hobson, Ivan;Hobson, Ivan;Prerequisite: ENGL-C1000 or equivalent Note: 100% online course - no scheduled meetings. Instruction will be provided through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to begin.;Open;45
 ;;OFF;ONLINE

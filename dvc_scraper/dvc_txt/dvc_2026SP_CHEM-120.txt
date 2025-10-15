@@ -1,4 +1,4 @@
-CHEM-120 sections (2025-10-15T08:12:51):
+CHEM-120 sections (2025-10-15T10:00:10):
 Term;Location;Section #;Course Start Date - End Date Meeting Days/Time/Building/Room;Units;Instructor(s);Comments;Status;Seats Available
 2026SP;SRC;9212;CHEM-120 - General College Chemistry I 1/26/2026 - 5/22/2026 M W 2:30PM - 3:55PM SRC E230 M W 4:30PM - 7:35PM SRC E237;M W;2:30PM - 3:55PM;SRC;E230;M W;4:30PM - 7:35PM;SRC;E237;5.00;Symmank, Beverly;Symmank, Beverly;Prerequisite: Prerequisite: CHEM-108 or score of 3, 4, or 5 on AP Chemistry Test or appropriate chemistry skill level demonstrated through Chemistry Diagnostic Test or equivalent; Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: Class?meets at the scheduled times on the San Ramon Campus;Open;28
 M W;2:30PM - 3:55PM;SRC;E230
