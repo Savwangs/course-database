@@ -5,6 +5,7 @@
   "sections": [
     {
       "section_number": "9183",
+      "units": "4.00",
       "instructor": "Chiang, Chien-I",
       "meetings": [
         {
@@ -26,10 +27,11 @@
           "format": "in-person"
         }
       ],
-      "status": "MATH-292 (may be taken concurrently) or equivalent. Note: Class?meets at the scheduled times on the San Ramon Campus"
+      "status": "Open"
     },
     {
       "section_number": "9031",
+      "units": "4.00",
       "instructor": "Chiang, Chien-I",
       "meetings": [
         {
@@ -51,10 +53,11 @@
           "format": "in-person"
         }
       ],
-      "status": "MATH-292 (may be taken concurrently) or equivalent. Note: Class?meets at the scheduled times on the San Ramon Campus"
+      "status": "Open"
     },
     {
       "section_number": "6008",
+      "units": "4.00",
       "instructor": "Hamida, Youcef",
       "meetings": [
         {
@@ -76,10 +79,11 @@
           "format": "in-person"
         }
       ],
-      "status": "MATH-292 (may be taken concurrently) or equivalent. Note: Section 6008 is part of the DVC MESA program. Students must be a current student in the MESA or friends of MESA program to enroll. For program and registration information please see http://www.dvc.edu/current/learning community/mesa/index.html or email Brandy Gibson at bgibson@dvc.edu. Note: Face to face course. This class will meet at the scheduled times on the Pleasant Hill Campus."
+      "status": "Open"
     },
     {
       "section_number": "1211",
+      "units": "4.00",
       "instructor": "Self, Matthew",
       "meetings": [
         {
@@ -101,10 +105,11 @@
           "format": "in-person"
         }
       ],
-      "status": "MATH-292 (may be taken concurrently) or equivalent. Note: Class meets on-campus as scheduled."
+      "status": "Open"
     },
     {
       "section_number": "1201",
+      "units": "4.00",
       "instructor": "Hamida, Youcef",
       "meetings": [
         {
@@ -126,10 +131,11 @@
           "format": "in-person"
         }
       ],
-      "status": "MATH-292 (may be taken concurrently) or equivalent. Note: Class meets weekly as scheduled."
+      "status": "Open"
     },
     {
       "section_number": "1200",
+      "units": "4.00",
       "instructor": "Hamida, Youcef",
       "meetings": [
         {
@@ -151,10 +157,11 @@
           "format": "in-person"
         }
       ],
-      "status": "MATH-292 (may be taken concurrently) or equivalent. Note: Class meets on-campus as scheduled."
+      "status": "Open"
     },
     {
       "section_number": "1199",
+      "units": "4.00",
       "instructor": "Hamida, Youcef",
       "meetings": [
         {
@@ -176,7 +183,7 @@
           "format": "in-person"
         }
       ],
-      "status": "MATH-292 (may be taken concurrently) or equivalent. Note: Class meets on-campus as scheduled."
+      "status": "Open"
     }
   ],
   "prerequisites": "PHYS-130 or equivalent; MATH-292 (may be taken concurrently) or equivalent."

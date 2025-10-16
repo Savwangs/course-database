@@ -5,6 +5,7 @@
   "sections": [
     {
       "section_number": "9071",
+      "units": "5.00",
       "instructor": "Reyes, Brandon",
       "meetings": [
         {
@@ -24,6 +25,7 @@
     },
     {
       "section_number": "8015",
+      "units": "5.00",
       "instructor": "McPheron, Linda",
       "meetings": [
         {
@@ -43,7 +45,8 @@
     },
     {
       "section_number": "1085",
-      "instructor": "Greene, Valerie",
+      "units": "5.00",
+      "instructor": "Greene, Valerie, Prerequisite: CHEM-120 (may be taken concurrently) or equivalent Advisory: ENGL-C1000 or equivalent. BIOSC-101 or 102 and BIOSC-130 or equivalents. Note: Class meets on campus as scheduled. Additional intertidal field trip on Friday, April 24 or Saturday, April 25, 2026. Details will be given at the first class meeting",
       "meetings": [
         {
           "days": "M W",
@@ -62,7 +65,8 @@
     },
     {
       "section_number": "1084",
-      "instructor": "Greene, Valerie",
+      "units": "5.00",
+      "instructor": "Greene, Valerie, Prerequisite: CHEM-120 (may be taken concurrently) or equivalent Advisory: ENGL-C1000 or equivalent. BIOSC-101 or 102 and BIOSC-130 or equivalents. Note: Class meets on campus as scheduled. Additional intertidal field trip on Friday, April 24 or Saturday, April 25, 2026. Details will be given at the first class meeting",
       "meetings": [
         {
           "days": "T Th",
@@ -81,7 +85,8 @@
     },
     {
       "section_number": "1083",
-      "instructor": "Halbrook, Kandres",
+      "units": "5.00",
+      "instructor": "Halbrook, Kandres, Prerequisite: CHEM-120 (may be taken concurrently) or equivalent Advisory: ENGL-C1000 or equivalent. BIOSC-101 or 102 and BIOSC-130 or equivalents. Note: Class meets on campus as scheduled. Additional intertidal field trip on Friday, April 24 or Saturday, April 25, 2026. Details will be given at the first class meeting",
       "meetings": [
         {
           "days": "M W",

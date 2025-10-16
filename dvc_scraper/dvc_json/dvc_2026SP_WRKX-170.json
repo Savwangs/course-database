@@ -1,0 +1,77 @@
+{
+  "course_code": "WRKX-170",
+  "course_title": "Work Experience Education",
+  "last_update": "2025-10-15T15:39:51",
+  "sections": [
+    {
+      "section_number": "9092",
+      "units": "1.00/4.00",
+      "instructor": "Staff, DVC",
+      "meetings": [],
+      "status": "Open"
+    },
+    {
+      "section_number": "7357",
+      "units": "1.00/4.00",
+      "instructor": "Berggren, Robert",
+      "meetings": [],
+      "status": "Open"
+    },
+    {
+      "section_number": "7352",
+      "units": "1.00/4.00",
+      "instructor": "Hurtado, Lance",
+      "meetings": [],
+      "status": "Open"
+    },
+    {
+      "section_number": "7351",
+      "units": "1.00/4.00",
+      "instructor": "Lodato, Louise",
+      "meetings": [],
+      "status": "Open"
+    },
+    {
+      "section_number": "7350",
+      "units": "1.00/4.00",
+      "instructor": "Brooks, Erin",
+      "meetings": [],
+      "status": "Open"
+    },
+    {
+      "section_number": "7199",
+      "units": "1.00/4.00",
+      "instructor": "Berggren, Robert",
+      "meetings": [],
+      "status": "Open"
+    },
+    {
+      "section_number": "7126",
+      "units": "1.00/4.00",
+      "instructor": "Smith, Rhonda",
+      "meetings": [],
+      "status": "Open"
+    },
+    {
+      "section_number": "7125",
+      "units": "1.00/4.00",
+      "instructor": "Greenberg, Marisa",
+      "meetings": [],
+      "status": "Open"
+    },
+    {
+      "section_number": "7358",
+      "units": "1.00/4.00",
+      "instructor": "Heinemann, Robin",
+      "meetings": [],
+      "status": "Open"
+    },
+    {
+      "section_number": "7353",
+      "units": "1.00/4.00",
+      "instructor": "Christiana, Dominick",
+      "meetings": [],
+      "status": "Open"
+    }
+  ]
+}

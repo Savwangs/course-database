@@ -5,7 +5,8 @@
   "sections": [
     {
       "section_number": "9212",
-      "instructor": "Symmank, Beverly",
+      "units": "5.00",
+      "instructor": "Symmank, Beverly, Prerequisite: Prerequisite: CHEM-108 or score of 3, 4, or 5 on AP Chemistry Test or appropriate chemistry skill level demonstrated through Chemistry Diagnostic Test or equivalent",
       "meetings": [
         {
           "days": "M W",
@@ -20,11 +21,12 @@
           "format": "in-person"
         }
       ],
-      "status": "Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: Class?meets at the scheduled times on the San Ramon Campus"
+      "status": "Open"
     },
     {
       "section_number": "9115",
-      "instructor": "Petersen, Anne",
+      "units": "5.00",
+      "instructor": "Petersen, Anne, Prerequisite: Prerequisite: CHEM-108 or score of 3, 4, or 5 on AP Chemistry Test or appropriate chemistry skill level demonstrated through Chemistry Diagnostic Test or equivalent",
       "meetings": [
         {
           "days": "T Th",
@@ -39,11 +41,12 @@
           "format": "in-person"
         }
       ],
-      "status": "Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: Class meets at the scheduled times on the San Ramon Campus. CHEM-120-9115 and BIOSC-131-9071 are scheduled to encourage enrollment and collaboration between students in both sections."
+      "status": "Open"
     },
     {
       "section_number": "8010",
-      "instructor": "Staff, DVC",
+      "units": "5.00",
+      "instructor": "Staff, DVC, Prerequisite: Prerequisite: CHEM-108 or score of 3, 4, or 5 on AP Chemistry Test or appropriate chemistry skill level demonstrated through Chemistry Diagnostic Test or equivalent",
       "meetings": [
         {
           "days": "M W",
@@ -58,11 +61,12 @@
           "format": "in-person"
         }
       ],
-      "status": "Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: Face to face course.  This class will meet at the scheduled times on the Pleasant Hill campus."
+      "status": "Open"
     },
     {
       "section_number": "8009",
-      "instructor": "Eskandari, Vahid",
+      "units": "5.00",
+      "instructor": "Eskandari, Vahid, Prerequisite: Prerequisite: CHEM-108 or score of 3, 4, or 5 on AP Chemistry Test or appropriate chemistry skill level demonstrated through Chemistry Diagnostic Test or equivalent",
       "meetings": [
         {
           "days": "T Th",
@@ -77,11 +81,12 @@
           "format": "in-person"
         }
       ],
-      "status": "Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note:?Face to face course.?This class will meet at the scheduled times on the Pleasant Hill Campus."
+      "status": "Open"
     },
     {
       "section_number": "6001",
-      "instructor": "Wilson, Kathryn",
+      "units": "5.00",
+      "instructor": "Wilson, Kathryn, Prerequisite: Prerequisite: CHEM-108 or score of 3, 4, or 5 on AP Chemistry Test or appropriate chemistry skill level demonstrated through Chemistry Diagnostic Test or equivalent",
       "meetings": [
         {
           "days": "T Th",
@@ -96,11 +101,12 @@
           "format": "in-person"
         }
       ],
-      "status": "Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Section 6001 is part of the DVC MESA program. Students must be a current student in the MESA or friends of MESA program to enroll. For program and registration information please see http://www.dvc.edu/current/learning community/mesa/index.html or email Brandy Gibson at bgibson@dvc.edu. Note: Face to face course. This class will meet at the scheduled times on the Pleasant Hill Campus."
+      "status": "Open"
     },
     {
       "section_number": "1043",
-      "instructor": "Wilson, Kathryn",
+      "units": "5.00",
+      "instructor": "Wilson, Kathryn, Prerequisite: Prerequisite: CHEM-108 or score of 3, 4, or 5 on AP Chemistry Test or appropriate chemistry skill level demonstrated through Chemistry Diagnostic Test or equivalent",
       "meetings": [
         {
           "days": "T Th",
@@ -115,11 +121,12 @@
           "format": "in-person"
         }
       ],
-      "status": "Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note:?Face to face course.?This class will meet at the scheduled times on the Pleasant Hill Campus."
+      "status": "Open"
     },
     {
       "section_number": "1041",
-      "instructor": "Gerken, Craig",
+      "units": "5.00",
+      "instructor": "Gerken, Craig, Prerequisite: Prerequisite: CHEM-108 or score of 3, 4, or 5 on AP Chemistry Test or appropriate chemistry skill level demonstrated through Chemistry Diagnostic Test or equivalent",
       "meetings": [
         {
           "days": "M W",
@@ -134,11 +141,12 @@
           "format": "in-person"
         }
       ],
-      "status": "Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note:?Face to face course.?This class will meet at the scheduled times on the Pleasant Hill Campus."
+      "status": "Open"
     },
     {
       "section_number": "1040",
-      "instructor": "Gerken, Craig",
+      "units": "5.00",
+      "instructor": "Gerken, Craig, Prerequisite: Prerequisite: CHEM-108 or score of 3, 4, or 5 on AP Chemistry Test or appropriate chemistry skill level demonstrated through Chemistry Diagnostic Test or equivalent",
       "meetings": [
         {
           "days": "T Th",
@@ -153,11 +161,12 @@
           "format": "in-person"
         }
       ],
-      "status": "Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note:?Face to face course.?This class will meet at the scheduled times on the Pleasant Hill Campus."
+      "status": "Open"
     },
     {
       "section_number": "1039",
-      "instructor": "Antonakos, Cory",
+      "units": "5.00",
+      "instructor": "Antonakos, Cory, Prerequisite: Prerequisite: CHEM-108 or score of 3, 4, or 5 on AP Chemistry Test or appropriate chemistry skill level demonstrated through Chemistry Diagnostic Test or equivalent, Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: Partially online course with required meetings Wednesdays 11:10AM-12:35PM and Tuesdays and Thursdays 11:10AM-2:15PM (on-campus, see room on schedule) with all other instruction provided online through the college learning management system Canvas. Class meets on-campus as scheduled.",
       "meetings": [
         {
           "days": "",
@@ -178,11 +187,12 @@
           "format": "in-person"
         }
       ],
-      "status": "Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: Partially online course with required meetings Wednesdays 11:10AM-12:35PM and Tuesdays and Thursdays 11:10AM-2:15PM (on-campus, see room on schedule) with all other instruction provided online through the college learning management system Canvas. Class meets on-campus as scheduled."
+      "status": "Open"
     },
     {
       "section_number": "1038",
-      "instructor": "Antonakos, Cory",
+      "units": "5.00",
+      "instructor": "Antonakos, Cory, Prerequisite: Prerequisite: CHEM-108 or score of 3, 4, or 5 on AP Chemistry Test or appropriate chemistry skill level demonstrated through Chemistry Diagnostic Test or equivalent, Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: Partially online course with required meetings Wednesdays 11:10AM-12:35PM and Tuesdays and Thursdays 2:30-5:40PM (on-campus, see room on schedule) with all other instruction provided online through the college learning management system Canvas. Class meets on-campus as scheduled.",
       "meetings": [
         {
           "days": "",
@@ -203,11 +213,12 @@
           "format": "in-person"
         }
       ],
-      "status": "Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: Partially online course with required meetings Wednesdays 11:10AM-12:35PM and Tuesdays and Thursdays 2:30-5:40PM (on-campus, see room on schedule) with all other instruction provided online through the college learning management system Canvas. Class meets on-campus as scheduled."
+      "status": "Open"
     },
     {
       "section_number": "1037",
-      "instructor": "Kulp, Jamie",
+      "units": "5.00",
+      "instructor": "Kulp, Jamie, Prerequisite: Prerequisite: CHEM-108 or score of 3, 4, or 5 on AP Chemistry Test or appropriate chemistry skill level demonstrated through Chemistry Diagnostic Test or equivalent",
       "meetings": [
         {
           "days": "M W",
@@ -222,7 +233,7 @@
           "format": "in-person"
         }
       ],
-      "status": "Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note:?Face to face course.?This class will meet at the scheduled times on the Pleasant Hill Campus."
+      "status": "Open"
     }
   ],
   "prerequisites": "Prerequisite: CHEM-108 or score of 3, 4, or 5 on AP Chemistry Test or appropriate chemistry skill level demonstrated through Chemistry Diagnostic Test or equivalent; Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra."

@@ -5,7 +5,8 @@
   "sections": [
     {
       "section_number": "8305",
-      "instructor": "Self, Matthew",
+      "units": "0.50",
+      "instructor": "Self, Matthew, Prerequisite: PHYS-120 (may be taken concurrently) and MATH-182 or MATH-192 (may be taken concurrently) or equivalents Note: The calculus component may be required for certain transfer majors Note: 100% online course with both asynchronous work and required meetings Thursdays 4/30, 5/7, and 5/14, 5:30-7:00pm (online through Zoom). Instruction will be provided through the college learning management system Canvas and Zoom software. Access to a computer with audio and video capability is required. On the course start date, log into Canvas, www.dvc.edu/online to begin.",
       "meetings": [
         {
           "days": "Online",
@@ -24,6 +25,7 @@
     },
     {
       "section_number": "8300",
+      "units": "0.50",
       "instructor": "Kisseleva-Eggleton, Ludmila",
       "meetings": [
         {

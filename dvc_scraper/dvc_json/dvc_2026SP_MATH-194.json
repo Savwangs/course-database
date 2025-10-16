@@ -5,7 +5,8 @@
   "sections": [
     {
       "section_number": "8242",
-      "instructor": "Gomez, Concha",
+      "units": "3.00",
+      "instructor": "Gomez, Concha, Prerequisite: MATH-193 or equivalent Note: Partially online course. In addition to online instruction, this class has mandatory in-person meetings 5:30-7:30pm on Thursdays 2/26, 3/19, 4/30 (exams) and 5/21 (final exam). All other instruction provided online through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to locate course.",
       "meetings": [
         {
           "days": "",
@@ -24,6 +25,7 @@
     },
     {
       "section_number": "2788",
+      "units": "3.00",
       "instructor": "Knight, Lynn Knight",
       "meetings": [
         {
@@ -37,6 +39,7 @@
     },
     {
       "section_number": "2703",
+      "units": "3.00",
       "instructor": "Parks, Will",
       "meetings": [
         {
@@ -50,6 +53,7 @@
     },
     {
       "section_number": "1339",
+      "units": "3.00",
       "instructor": "Moreno-Vasquez, Arcie",
       "meetings": [
         {

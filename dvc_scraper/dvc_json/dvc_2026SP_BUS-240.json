@@ -5,7 +5,8 @@
   "sections": [
     {
       "section_number": "9113",
-      "instructor": "Uwagie Ero, Francis",
+      "units": "3.00",
+      "instructor": "Uwagie Ero, Francis, Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: 100% online course - no scheduled meetings. Instruction will be provided through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to begin.",
       "meetings": [
         {
           "days": "Online",
@@ -18,7 +19,8 @@
     },
     {
       "section_number": "6207",
-      "instructor": "Lacayo, Allan",
+      "units": "3.00",
+      "instructor": "Lacayo, Allan, Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: Class meets weekly as scheduled.  This course is part of the AANHPI Learning Community. Students must be part of this learning community to enroll. For program information, contact AANHPI@dvc.edu.",
       "meetings": [
         {
           "days": "M W",
@@ -37,7 +39,8 @@
     },
     {
       "section_number": "6158",
-      "instructor": "Lacayo, Allan",
+      "units": "3.00",
+      "instructor": "Lacayo, Allan, Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: This section is part of the PACE program. Students must be PACE students to enroll. For program information, go to www.dvc.edu/pace.  Note: 100% online course. All instruction will be provided via the internet through the college learning management system CANVAS. Classes you are registered for will appear in Canvas on the first day of class unless published earlier by your instructor. There are no required class meetings. Go to www.dvc.edu/online for course access information.",
       "meetings": [
         {
           "days": "Online",
@@ -50,6 +53,7 @@
     },
     {
       "section_number": "5248",
+      "units": "3.00",
       "instructor": "Danko, Christopher",
       "meetings": [
         {
@@ -63,6 +67,7 @@
     },
     {
       "section_number": "5169",
+      "units": "3.00",
       "instructor": "Lacayo, Allan",
       "meetings": [
         {
@@ -76,6 +81,7 @@
     },
     {
       "section_number": "5098",
+      "units": "3.00",
       "instructor": "Lacayo, Allan",
       "meetings": [
         {
@@ -89,6 +95,7 @@
     },
     {
       "section_number": "2927",
+      "units": "3.00",
       "instructor": "Lacayo, Allan",
       "meetings": [
         {
@@ -108,6 +115,7 @@
     },
     {
       "section_number": "2330",
+      "units": "3.00",
       "instructor": "Lacayo, Allan",
       "meetings": [
         {
@@ -127,6 +135,7 @@
     },
     {
       "section_number": "2238",
+      "units": "3.00",
       "instructor": "Lacayo, Allan",
       "meetings": [
         {
@@ -146,6 +155,7 @@
     },
     {
       "section_number": "2236",
+      "units": "3.00",
       "instructor": "Lacayo, Allan",
       "meetings": [
         {
@@ -165,7 +175,8 @@
     },
     {
       "section_number": "8429",
-      "instructor": "Buckley, Ryan",
+      "units": "3.00",
+      "instructor": "Buckley, Ryan, Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: Partially online course with required meetings Thursday 6:00-8:00 PM (on-campus, see room on schedule) with all other  instruction provided online through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to locate course.",
       "meetings": [
         {
           "days": "",
@@ -184,6 +195,7 @@
     },
     {
       "section_number": "5147",
+      "units": "3.00",
       "instructor": "Buckley, Ryan",
       "meetings": [
         {
@@ -197,6 +209,7 @@
     },
     {
       "section_number": "5146",
+      "units": "3.00",
       "instructor": "Danko, Christopher",
       "meetings": [
         {
@@ -210,6 +223,7 @@
     },
     {
       "section_number": "5099",
+      "units": "3.00",
       "instructor": "Olmos, Benjamin",
       "meetings": [
         {

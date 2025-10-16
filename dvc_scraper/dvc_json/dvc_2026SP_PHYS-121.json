@@ -5,6 +5,7 @@
   "sections": [
     {
       "section_number": "9312",
+      "units": "4.00",
       "instructor": "Lee, Kyung-Min",
       "meetings": [
         {
@@ -30,7 +31,8 @@
     },
     {
       "section_number": "9258",
-      "instructor": "Chiang, Chien-I Lee, Kyung-Min",
+      "units": "4.00",
+      "instructor": "Chiang, Chien-I Lee, Kyung-Min, Chiang, Chien-I, Lee, Kyung-Min, Prerequisite: PHYS-120 or equivalent Note: Partially online course with required meetings Wednesdays 5:40-6:55PM and 7:05-9:55PM (on-campus discussion/lab, see room on schedule) with all other instruction provided online through the college learning management system CANVAS.",
       "meetings": [
         {
           "days": "",
@@ -51,10 +53,11 @@
           "format": "in-person"
         }
       ],
-      "status": "Prerequisite: PHYS-120 or equivalent Note: Partially online course with required meetings Wednesdays 5:40-6:55PM and 7:05-9:55PM (on-campus discussion/lab, see room on schedule) with all other instruction provided online through the college learning management system CANVAS."
+      "status": "Open"
     },
     {
       "section_number": "8057",
+      "units": "4.00",
       "instructor": "Hansen, Erin",
       "meetings": [
         {
@@ -80,6 +83,7 @@
     },
     {
       "section_number": "8056",
+      "units": "4.00",
       "instructor": "Hansen, Erin",
       "meetings": [
         {
@@ -105,6 +109,7 @@
     },
     {
       "section_number": "1184",
+      "units": "4.00",
       "instructor": "Lamichhane, Krishna",
       "meetings": [
         {

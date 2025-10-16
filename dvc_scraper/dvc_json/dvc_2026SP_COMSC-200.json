@@ -5,6 +5,7 @@
   "sections": [
     {
       "section_number": "5577",
+      "units": "4.00",
       "instructor": "Stalica, Henry",
       "meetings": [
         {
@@ -18,6 +19,7 @@
     },
     {
       "section_number": "5119",
+      "units": "4.00",
       "instructor": "Melvin, Ryan",
       "meetings": [
         {
@@ -31,6 +33,7 @@
     },
     {
       "section_number": "5104",
+      "units": "4.00",
       "instructor": "Andreopoulos, William",
       "meetings": [
         {
@@ -44,7 +47,8 @@
     },
     {
       "section_number": "2521",
-      "instructor": "Hrycewicz, Paul",
+      "units": "4.00",
+      "instructor": "Hrycewicz, Paul, Prerequisite: COMSC-165 or equivalent Note: Partially online course with required meetings Wednesdays from 11:10AM-2:20PM (on-campus, see room on schedule) with all other instruction provided online through the college learning management system Canvas.",
       "meetings": [
         {
           "days": "",

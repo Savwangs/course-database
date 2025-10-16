@@ -90,20 +90,74 @@ def parse_course_txt_to_object(txt_path: Path) -> dict | None:
 
         units_idx = None
         for idx, c in enumerate(cells):
-            if re.fullmatch(r"\d+\.\d{2}", c):
+            # match 1.00 or 1.00/4.00 (and similar)
+            if re.fullmatch(r"\d+\.\d{2}(?:/\d+\.\d{2})?", c):
                 units_idx = idx
+                break
 
+        units = ""
         instructor = ""
         comments   = ""
         status     = ""
-        if units_idx is not None:
-            tail = cells[units_idx+1:]
-            if len(tail) >= 1: instructor = tail[0].split(";")[0].strip()
-            if len(tail) >= 3: comments   = tail[2].strip()
-            if len(tail) >= 4: status     = tail[3].strip()
 
+        if units_idx is not None:
+            units = cells[units_idx].strip()
+
+            # Walk the columns to the right of Units and pick off:
+            #   - 1–2 instructor cells (names often repeated), 
+            #   - then a comments cell (usually starts with "Note:"),
+            #   - then a status cell ("Open", "Closed", etc.)
+            #
+            # We’ll stop when we hit a known boundary.
+            tail = cells[units_idx + 1:]
+
+            # helper predicates
+            def looks_like_status(s: str) -> bool:
+                return bool(re.match(r"^(Open|Closed|Waitlist|Waitlisted|Cancelled|Full)\b", s, re.I))
+
+            def looks_like_instructor(s: str) -> bool:
+                # common patterns: "Last, First", or "Staff, DVC"
+                return ("," in s) and not s.lower().startswith("note:")
+
+            # gather possible instructors (dedup preserve order)
+            instrs = []
+            k = 0
+            while k < len(tail):
+                cell = tail[k].strip()
+                if not cell:
+                    k += 1
+                    continue
+                if cell.lower().startswith("note:") or looks_like_status(cell) or cell.isdigit():
+                    break
+                if looks_like_instructor(cell):
+                    if cell not in instrs:
+                        instrs.append(cell)
+                    k += 1
+                    # allow a duplicate instructor right after (as seen in your data)
+                    continue
+                # if it doesn't look like instructor, bail to let next steps classify it
+                break
+
+            # comments (first "Note:" after instructors)
+            comments_idx = None
+            for j in range(k, len(tail)):
+                if tail[j].strip().lower().startswith("note:"):
+                    comments_idx = j
+                    comments = tail[j].strip()
+                    k = j + 1
+                    break
+
+            # status (next recognizable status token)
+            for j in range(k, len(tail)):
+                cand = tail[j].strip()
+                if looks_like_status(cand):
+                    status = cand
+                    break
+
+            instructor = ", ".join(instrs)
         section_obj = {
             "section_number": section_num,
+            "units": units,  # <-- add the whole units string (e.g., "1.00/4.00")
             "instructor": instructor,
             "meetings": [],
             "status": status or "Open, Seats Available",

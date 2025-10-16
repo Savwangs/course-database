@@ -5,7 +5,8 @@
   "sections": [
     {
       "section_number": "6585",
-      "instructor": "Katdare, Sonia",
+      "units": "4.00",
+      "instructor": "Katdare, Sonia, Prerequisite: PHYS-110 and PHYS-111 combined or PHYS-112 or PHYS-120 or PHYS-129 or one year high school physics or equivalent Co-requisite: MATH-193 (may be taken previously) or equivalent Note: PHYS-129 is strongly advised for students who have not yet completed an equivalent prerequisite or for students who completed the prerequisite more than a year ago. Note: It is strongly recommended that Physics 129 be taken before Physics 130. Class meets weekly as scheduled. Note: This section is part of the DVC MESA program. Students must be a current student in the MESA or friends of MESA program to enroll. For program and registration information, please see http://www.dvc.edu/current/learningcommunity/mesa/index.html Note: Class meets on-campus as scheduled.",
       "meetings": [
         {
           "days": "T Th",
@@ -30,6 +31,7 @@
     },
     {
       "section_number": "1197",
+      "units": "4.00",
       "instructor": "Christianson, Kent",
       "meetings": [
         {
@@ -55,6 +57,7 @@
     },
     {
       "section_number": "1196",
+      "units": "4.00",
       "instructor": "Katdare, Sonia",
       "meetings": [
         {
@@ -80,6 +83,7 @@
     },
     {
       "section_number": "1195",
+      "units": "4.00",
       "instructor": "Speliotopoulos, Achilles",
       "meetings": [
         {
@@ -105,6 +109,7 @@
     },
     {
       "section_number": "1194",
+      "units": "4.00",
       "instructor": "Speliotopoulos, Achilles",
       "meetings": [
         {
@@ -130,6 +135,7 @@
     },
     {
       "section_number": "1193",
+      "units": "4.00",
       "instructor": "Large, Evan",
       "meetings": [
         {
@@ -155,6 +161,7 @@
     },
     {
       "section_number": "1191",
+      "units": "4.00",
       "instructor": "Large, Evan",
       "meetings": [
         {

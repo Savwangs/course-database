@@ -5,6 +5,7 @@
   "sections": [
     {
       "section_number": "9146",
+      "units": "5.00",
       "instructor": "Staff, SRC",
       "meetings": [
         {
@@ -18,7 +19,8 @@
     },
     {
       "section_number": "8168",
-      "instructor": "Tardivel, Dominic",
+      "units": "5.00",
+      "instructor": "Tardivel, Dominic, Prerequisite: MATH-292 or equivalent Advisory: MATH-194 or equivalent (may be taken concurrently) Note: TI-83 or TI-84 graphing calculator required. Note: Partially online course. In addition to online instruction, this class has mandatory in-person meetings 5:30-8:00pm on Thursdays 2/26, 4/2, 4/30 (exams) and 5/21 (final exam). All other instruction provided online through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to locate course.",
       "meetings": [
         {
           "days": "",
@@ -37,6 +39,7 @@
     },
     {
       "section_number": "2701",
+      "units": "5.00",
       "instructor": "Newton, Kit",
       "meetings": [
         {
@@ -50,6 +53,7 @@
     },
     {
       "section_number": "1342",
+      "units": "5.00",
       "instructor": "Tardivel, Dominic",
       "meetings": [
         {
@@ -63,6 +67,7 @@
     },
     {
       "section_number": "1328",
+      "units": "5.00",
       "instructor": "Mohan, Adhitya",
       "meetings": [
         {

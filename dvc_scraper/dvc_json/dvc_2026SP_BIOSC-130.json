@@ -5,6 +5,7 @@
   "sections": [
     {
       "section_number": "9060",
+      "units": "5.00",
       "instructor": "Cole Ekberg, Marci",
       "meetings": [
         {
@@ -24,6 +25,7 @@
     },
     {
       "section_number": "8150",
+      "units": "5.00",
       "instructor": "Matern, Scott",
       "meetings": [
         {
@@ -43,6 +45,7 @@
     },
     {
       "section_number": "8014",
+      "units": "5.00",
       "instructor": "Matern, Scott",
       "meetings": [
         {
@@ -62,7 +65,8 @@
     },
     {
       "section_number": "6004",
-      "instructor": "Pandev, Nichole",
+      "units": "5.00",
+      "instructor": "Pandev, Nichole, Prerequisite: CHEM-120 or equivalent Advisory: ENGL-C1000 or equivalent and BIOSC-101 or BIOSC-102 or equivalents Note: Section 6004 is part of the DVC MESA program. Students must be a current student in the MESA or friends of MESA program to enroll. For program and registration information, please see  www.dvc.edu/current/learning-community/mesa/index.html. Note: Class meets on campus as scheduled.",
       "meetings": [
         {
           "days": "M W",
@@ -77,10 +81,11 @@
           "format": "in-person"
         }
       ],
-      "status": "Clsd"
+      "status": "Open, Seats Available"
     },
     {
       "section_number": "1082",
+      "units": "5.00",
       "instructor": "Pandev, Nichole",
       "meetings": [
         {
@@ -100,6 +105,7 @@
     },
     {
       "section_number": "1081",
+      "units": "5.00",
       "instructor": "Vandervorst, Kacey",
       "meetings": [
         {

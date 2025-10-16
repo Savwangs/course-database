@@ -5,6 +5,7 @@
   "sections": [
     {
       "section_number": "9473",
+      "units": "4.00",
       "instructor": "Staff, SRC",
       "meetings": [
         {
@@ -18,6 +19,7 @@
     },
     {
       "section_number": "2590",
+      "units": "4.00",
       "instructor": "Lantzy, Henry",
       "meetings": [
         {
@@ -31,6 +33,7 @@
     },
     {
       "section_number": "1799",
+      "units": "4.00",
       "instructor": "Parks, Will",
       "meetings": [
         {
@@ -40,10 +43,11 @@
           "format": "in-person"
         }
       ],
-      "status": "however, it is not a required prerequisite for the course. Class meets on-campus as scheduled."
+      "status": "Open"
     },
     {
       "section_number": "1182",
+      "units": "4.00",
       "instructor": "Maiti, Baishali",
       "meetings": [
         {
@@ -53,10 +57,11 @@
           "format": "in-person"
         }
       ],
-      "status": "however, it is not a required prerequisite for the course. Class meets on-campus as scheduled."
+      "status": "Open"
     },
     {
       "section_number": "2595",
+      "units": "4.00",
       "instructor": "Narin, Stephen",
       "meetings": [
         {

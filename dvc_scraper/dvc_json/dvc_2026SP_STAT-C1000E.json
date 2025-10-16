@@ -5,6 +5,7 @@
   "sections": [
     {
       "section_number": "9155",
+      "units": "5.00",
       "instructor": "Staff, SRC",
       "meetings": [
         {
@@ -24,7 +25,8 @@
     },
     {
       "section_number": "8113",
-      "instructor": "Carter, Jamylle",
+      "units": "5.00",
+      "instructor": "Carter, Jamylle, Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: This course provides students with support to be successful in STAT-C1000E Introduction to Statistics. Studies show significantly improved success rates for students who enroll in a support course to accompany their transfer-level math course. This course provides additional support for students in one integrated course who want to feel more confident in their math skills. STAT-C1000E is limited to 4 units for UC transfer. Note: Partially online course with required on-campus meetings 6:30-9:35pm on Wednesdays 2/18, 3/18, 4/22 (exams) and 5/20 (final exam) and online meetings, Mondays and Wednesdays 6:30-9:35pm, through Zoom. Online instruction will be provided through the college learning management system Canvas and Zoom software. Access to a computer with audio and video capability is required. On the course start date, log into Canvas, www.dvc.edu/online to locate course.",
       "meetings": [
         {
           "days": "M W",
@@ -55,7 +57,8 @@
     },
     {
       "section_number": "6161",
-      "instructor": "Carter, Jamylle",
+      "units": "5.00",
+      "instructor": "Carter, Jamylle, Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: This course provides students with support to be successful in STAT-C1000E Introduction to Statistics. Studies show significantly improved success rates for students who enroll in a support course to accompany their transfer-level math course. This course provides additional support for students in one integrated course who want to feel more confident in their math skills. STAT-C1000E is limited to 4 units for UC transfer. Note: Section 6161 is part of the DVC PACE program. Students must be a PACE student to enroll. For program and registration information, go to www.dvc.edu/pace.  Note: Partially online course with required on-campus meetings 6:30-9:35pm on Wednesdays 2/18, 3/18, 4/22 (exams) and 5/20 (final exam) and online meetings, Mondays and Wednesdays 6:30-9:35pm, through Zoom. Online instruction will be provided through the college learning management system Canvas and Zoom software. Access to a computer with audio and video capability is required. On the course start date, log into Canvas, www.dvc.edu/online to locate course.",
       "meetings": [
         {
           "days": "M W",
@@ -86,6 +89,7 @@
     },
     {
       "section_number": "3194",
+      "units": "5.00",
       "instructor": "Carter, Jamylle",
       "meetings": [
         {
@@ -105,6 +109,7 @@
     },
     {
       "section_number": "2941",
+      "units": "5.00",
       "instructor": "Keating, Katrina",
       "meetings": [
         {
@@ -124,6 +129,7 @@
     },
     {
       "section_number": "2024",
+      "units": "5.00",
       "instructor": "Keating, Katrina",
       "meetings": [
         {
@@ -143,6 +149,7 @@
     },
     {
       "section_number": "2023",
+      "units": "5.00",
       "instructor": "Lang, Lindsey",
       "meetings": [
         {
@@ -162,6 +169,7 @@
     },
     {
       "section_number": "2019",
+      "units": "5.00",
       "instructor": "Vanderbilt, Read",
       "meetings": [
         {
@@ -181,6 +189,7 @@
     },
     {
       "section_number": "2015",
+      "units": "5.00",
       "instructor": "Gomez, Concha",
       "meetings": [
         {

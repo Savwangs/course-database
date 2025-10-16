@@ -5,9 +5,10 @@
   "sections": [
     {
       "section_number": "7234",
-      "instructor": "",
+      "units": "1.00/4.00",
+      "instructor": "Smith, Rhonda",
       "meetings": [],
-      "status": "Open, Seats Available"
+      "status": "Open"
     }
   ]
 }

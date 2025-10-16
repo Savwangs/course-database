@@ -5,6 +5,7 @@
   "sections": [
     {
       "section_number": "9294",
+      "units": "4.00",
       "instructor": "Staff, SRC",
       "meetings": [
         {
@@ -18,7 +19,8 @@
     },
     {
       "section_number": "8213",
-      "instructor": "Needham, Sam",
+      "units": "4.00",
+      "instructor": "Needham, Sam, Prerequisite: MATH-193 or equivalent may be taken either as a prerequisite or concurrently Note: Partially online course. In addition to online instruction, this class has mandatory in-person meetings 4:30-6:35pm on Tuesdays 1/27 (orientation) and 2/24, 3/31, 4/28 (exams) and 5/19 (final exam). All other instruction provided online through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to locate course.",
       "meetings": [
         {
           "days": "",
@@ -37,6 +39,7 @@
     },
     {
       "section_number": "3790",
+      "units": "4.00",
       "instructor": "Needham, Sam",
       "meetings": [
         {
@@ -50,6 +53,7 @@
     },
     {
       "section_number": "1686",
+      "units": "4.00",
       "instructor": "McNeill, Amber",
       "meetings": [
         {

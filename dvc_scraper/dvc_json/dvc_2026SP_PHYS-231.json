@@ -5,6 +5,7 @@
   "sections": [
     {
       "section_number": "9441",
+      "units": "4.00",
       "instructor": "Chiang, Chien-I",
       "meetings": [
         {
@@ -26,10 +27,11 @@
           "format": "in-person"
         }
       ],
-      "status": "MATH-294 or equivalent (may be taken concurrently) Note: Class?meets at the scheduled times on the San Ramon Campus"
+      "status": "Open"
     },
     {
       "section_number": "6009",
+      "units": "4.00",
       "instructor": "Colwell, Kitran",
       "meetings": [
         {
@@ -51,10 +53,11 @@
           "format": "in-person"
         }
       ],
-      "status": "MATH-294 or equivalent (may be taken concurrently) Note: Section 6009 is part of the DVC MESA program. Students must be a current student in the MESA or friends of MESA program to enroll. For program and registration information please see http://www.dvc.edu/current/learning community/mesa/index.html or email Brandy Gibson at bgibson@dvc.edu. Note: Face to face course. This class will meet at the scheduled times on the Pleasant Hill Campus."
+      "status": "Open"
     },
     {
       "section_number": "1206",
+      "units": "4.00",
       "instructor": "Speliotopoulos, Achilles",
       "meetings": [
         {
@@ -76,10 +79,11 @@
           "format": "in-person"
         }
       ],
-      "status": "MATH-294 or equivalent (may be taken concurrently) Note: Class meets weekly as scheduled."
+      "status": "Open"
     },
     {
       "section_number": "1205",
+      "units": "4.00",
       "instructor": "Rodriguez, John",
       "meetings": [
         {
@@ -101,10 +105,11 @@
           "format": "in-person"
         }
       ],
-      "status": "MATH-294 or equivalent (may be taken concurrently) Note: Class meets on-campus as scheduled."
+      "status": "Open"
     },
     {
       "section_number": "1204",
+      "units": "4.00",
       "instructor": "Rodriguez, John",
       "meetings": [
         {
@@ -126,10 +131,11 @@
           "format": "in-person"
         }
       ],
-      "status": "MATH-294 or equivalent (may be taken concurrently) Note: Class meets on-campus as scheduled."
+      "status": "Open"
     },
     {
       "section_number": "1203",
+      "units": "4.00",
       "instructor": "Colwell, Kitran",
       "meetings": [
         {
@@ -151,10 +157,11 @@
           "format": "in-person"
         }
       ],
-      "status": "MATH-294 or equivalent (may be taken concurrently) Note: Class meets on-campus as scheduled."
+      "status": "Open"
     },
     {
       "section_number": "1202",
+      "units": "4.00",
       "instructor": "Colwell, Kitran",
       "meetings": [
         {
@@ -176,7 +183,7 @@
           "format": "in-person"
         }
       ],
-      "status": "MATH-294 or equivalent (may be taken concurrently) Note: Class meets on-campus as scheduled."
+      "status": "Open"
     }
   ],
   "prerequisites": "PHYS-230 or equivalent; MATH-294 or equivalent (may be taken concurrently)"

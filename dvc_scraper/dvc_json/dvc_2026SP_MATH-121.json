@@ -5,6 +5,7 @@
   "sections": [
     {
       "section_number": "9182",
+      "units": "3.00",
       "instructor": "Staff, SRC",
       "meetings": [
         {
@@ -18,7 +19,8 @@
     },
     {
       "section_number": "8067",
-      "instructor": "Knight, Lynn Knight",
+      "units": "3.00",
+      "instructor": "Knight, Lynn Knight, Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Advisory: High school geometry or equivalent Note: Partially online course. In addition to online instruction, this class has mandatory in-person meetings from 10:00-12:00pm on Saturdays 3/15, 4/26 (exams) and 5/17 (final exam.) All other instruction provided online through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to locate course.",
       "meetings": [
         {
           "days": "",

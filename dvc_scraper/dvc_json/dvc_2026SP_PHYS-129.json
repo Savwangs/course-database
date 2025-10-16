@@ -5,7 +5,8 @@
   "sections": [
     {
       "section_number": "6336",
-      "instructor": "Little, Justin",
+      "units": "4.00",
+      "instructor": "Little, Justin, Co-requisite: MATH-192 or equivalent (may be taken previously) Note: For those students who have not recently completed a full year of high school physics, the physics department strongly recommends completion of PHYS-129 before enrolling in PHYS-130. Note: This section is part of the DVC MESA program. Students must be a current student in the MESA or friends of MESA program to enroll. For program and registration information, please see http://www.dvc.edu/current/learningcommunity/mesa/index.html Note: Class meets on-campus as scheduled.",
       "meetings": [
         {
           "days": "F",
@@ -30,7 +31,8 @@
     },
     {
       "section_number": "1190",
-      "instructor": "Little, Justin",
+      "units": "4.00",
+      "instructor": "Little, Justin, Co-requisite: MATH-192 or equivalent (may be taken previously) Note: For those students who have not recently completed a full year of high school physics, the physics department strongly recommends completion of PHYS-129 before enrolling in PHYS-130. Note: Class meets on-campus as scheduled.",
       "meetings": [
         {
           "days": "F",
@@ -55,7 +57,8 @@
     },
     {
       "section_number": "1189",
-      "instructor": "Pevyhouse, Alice",
+      "units": "4.00",
+      "instructor": "Pevyhouse, Alice, Co-requisite: MATH-192 or equivalent (may be taken previously) Note: For those students who have not recently completed a full year of high school physics, the physics department strongly recommends completion of PHYS-129 before enrolling in PHYS-130. Note: Class meets on-campus as scheduled.",
       "meetings": [
         {
           "days": "T Th",
@@ -80,7 +83,8 @@
     },
     {
       "section_number": "1188",
-      "instructor": "Staff, DVC",
+      "units": "4.00",
+      "instructor": "Staff, DVC, Co-requisite: MATH-192 or equivalent (may be taken previously) Note: For those students who have not recently completed a full year of high school physics, the physics department strongly recommends completion of PHYS-129 before enrolling in PHYS-130. Note: Class meets on-campus as scheduled.",
       "meetings": [
         {
           "days": "F",
@@ -105,7 +109,8 @@
     },
     {
       "section_number": "1187",
-      "instructor": "Gheith, Muhammed",
+      "units": "4.00",
+      "instructor": "Gheith, Muhammed, Co-requisite: MATH-192 or equivalent (may be taken previously) Note: For those students who have not recently completed a full year of high school physics, the physics department strongly recommends completion of PHYS-129 before enrolling in PHYS-130. Note: Class meets on-campus as scheduled.",
       "meetings": [
         {
           "days": "M W",

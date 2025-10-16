@@ -5,6 +5,7 @@
   "sections": [
     {
       "section_number": "9061",
+      "units": "4.00",
       "instructor": "Staff, SRC",
       "meetings": [
         {
@@ -18,7 +19,8 @@
     },
     {
       "section_number": "8143",
-      "instructor": "Asghary, Zahra",
+      "units": "4.00",
+      "instructor": "Asghary, Zahra, Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: Section 8143 is linked to MATH-082-8142, a support course for MATH-182 students. Students must enroll in both MATH-082-8142 and MATH-182-8143 in order to be eligible for this section. The combined classes meet on MTWTH from 6:30-8:35pm.  Note: Partially online course with required on-campus meetings 6:30 - 8:35 pm on Thursdays 2/26, 4/9, 5/14 (exams) and 5/21 (final exam) and online meetings, Mondays, Tuesdays, Wednesdays, and Thursdays 6:30 - 8:35 pm, through Zoom.  Online instruction will be provided through the college learning management system Canvas and Zoom software. Access to a computer with audio and video capability is required. On the course start date, log into Canvas, www.dvc.edu/online to locate course.",
       "meetings": [
         {
           "days": "M T W Th",
@@ -37,7 +39,8 @@
     },
     {
       "section_number": "6333",
-      "instructor": "Asghary, Zahra",
+      "units": "4.00",
+      "instructor": "Asghary, Zahra, Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: Section 6333 is part of the DVC PACE program. Students must be a PACE student to enroll. For program and registration information, go to www.dvc.edu/pace.  Note: Section 6333 is linked to MATH-082-6301, a support course for MATH-182 students. Students must enroll in both MATH-082-6301 and MATH-182-6333 in order to be eligible for this section. The combined classes meet on MTWTH from 6:30-8:35pm.  Note: Partially online course with required on-campus meetings 6:30 - 8:35 pm on Thursdays 2/26, 4/9, 5/14 (exams) and 5/21 (final exam) and online meetings, Mondays, Tuesdays, Wednesdays, and Thursdays 6:30 - 8:35 pm, through Zoom.  Online instruction will be provided through the college learning management system Canvas and Zoom software. Access to a computer with audio and video capability is required. On the course start date, log into Canvas, www.dvc.edu/online to locate course.",
       "meetings": [
         {
           "days": "M T W Th",
@@ -56,7 +59,8 @@
     },
     {
       "section_number": "2593",
-      "instructor": "Chan, Kwai-Ching",
+      "units": "4.00",
+      "instructor": "Chan, Kwai-Ching, Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: Section 2593 is linked to MATH-082-2452, a support course for MATH-182 students. Students must enroll in both MATH-082-2452 and MATH-182-2593 in order to be eligible for this section. The combined classes meet on MTWTH from 1:25-3:30pm. Class meets on-campus as scheduled.",
       "meetings": [
         {
           "days": "M T W Th",
@@ -69,7 +73,8 @@
     },
     {
       "section_number": "2591",
-      "instructor": "Huynh, My",
+      "units": "4.00",
+      "instructor": "Huynh, My, Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: Section 2591 is linked to MATH-082-2569, a support course for MATH-182 students. Students must enroll in both MATH-082-2569 and MATH-182-2591 in order to be eligible for this section. The combined classes meet on MTWTH from 8:55-11:00am. Class meets on-campus as scheduled.",
       "meetings": [
         {
           "days": "M T W Th",
@@ -82,6 +87,7 @@
     },
     {
       "section_number": "1603",
+      "units": "4.00",
       "instructor": "Knight, Lynn Knight",
       "meetings": [
         {
@@ -95,7 +101,8 @@
     },
     {
       "section_number": "1601",
-      "instructor": "Sohi, Anna",
+      "units": "4.00",
+      "instructor": "Sohi, Anna, Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Partially online course. In addition to online instruction, this class has mandatory in-person meetings 11:00-1:00pm on Fridays 1/30 (orientation) and 2/27, 4/3, 5/8 (exams) and 5/22 (final exam). All other instruction provided online through the college learning management system Canvas.  On the course start date, log into Canvas, www.dvc.edu/online to locate course.",
       "meetings": [
         {
           "days": "",
@@ -114,6 +121,7 @@
     },
     {
       "section_number": "1599",
+      "units": "4.00",
       "instructor": "Serrano Bautista, Ramona",
       "meetings": [
         {
@@ -127,6 +135,7 @@
     },
     {
       "section_number": "1598",
+      "units": "4.00",
       "instructor": "Walters, Julie",
       "meetings": [
         {

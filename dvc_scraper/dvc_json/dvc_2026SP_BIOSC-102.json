@@ -5,7 +5,8 @@
   "sections": [
     {
       "section_number": "9378",
-      "instructor": "Levin, Anna",
+      "units": "4.00",
+      "instructor": "Levin, Anna, Advisory: ENGL-C1000 or equivalent Note: Students who have successfully completed BIOSC-101 should not enroll in BIOSC-102. Students who have successfully completed BIOSC-101 will not receive credit for BIOSC-102. Note: Partially online course with required on-campus meetings Wednesdays 11:10AM-2:20 PM ( see room on schedule) with all other instruction provided online through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online , to locate course.",
       "meetings": [
         {
           "days": "",
@@ -24,7 +25,8 @@
     },
     {
       "section_number": "9207",
-      "instructor": "Levin, Anna Polos, John Leonard",
+      "units": "4.00",
+      "instructor": "Levin, Anna Polos, John Leonard, Levin, Anna, Polos, John Leonard, Advisory: ENGL-C1000 or equivalent Note: Students who have successfully completed BIOSC-101 should not enroll in BIOSC-102. Students who have successfully completed BIOSC-101 will not receive credit for BIOSC-102. Note: Partially online course with required meetings Wednesday 5:30pm-8:40pm (on-campus lab, see room on schedule) with all other instruction provided online through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to locate course.",
       "meetings": [
         {
           "days": "",
@@ -39,10 +41,11 @@
           "format": "in-person"
         }
       ],
-      "status": "Advisory: ENGL-C1000 or equivalent Note: Students who have successfully completed BIOSC-101 should not enroll in BIOSC-102. Students who have successfully completed BIOSC-101 will not receive credit for BIOSC-102. Note: Partially online course with required meetings Wednesday 5:30pm-8:40pm (on-campus lab, see room on schedule) with all other instruction provided online through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to locate course."
+      "status": "Open"
     },
     {
       "section_number": "9012",
+      "units": "4.00",
       "instructor": "Rush, Andrew",
       "meetings": [
         {
@@ -62,7 +65,8 @@
     },
     {
       "section_number": "8012",
-      "instructor": "McPheron, Linda",
+      "units": "4.00",
+      "instructor": "McPheron, Linda, Advisory: ENGL-C1000 or equivalent Note: Students who have successfully completed BIOSC-101 should not enroll in BIOSC-102. Students who have successfully completed BIOSC-101 will not receive credit for BIOSC-102. Note: Partially online course with required on-campus meetings for lab, Wednesdays 6:00pm - 9:10 pm (see room on schedule). All other instruction provided online through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to locate course.",
       "meetings": [
         {
           "days": "",
@@ -81,6 +85,7 @@
     },
     {
       "section_number": "5040",
+      "units": "4.00",
       "instructor": "Staff, DVC",
       "meetings": [
         {
@@ -100,6 +105,7 @@
     },
     {
       "section_number": "1069",
+      "units": "4.00",
       "instructor": "Parkinson, Susan",
       "meetings": [
         {
@@ -119,6 +125,7 @@
     },
     {
       "section_number": "1068",
+      "units": "4.00",
       "instructor": "Michaud, Brianna",
       "meetings": [
         {
@@ -138,6 +145,7 @@
     },
     {
       "section_number": "1067",
+      "units": "4.00",
       "instructor": "Preble, Mackenzie",
       "meetings": [
         {
@@ -157,6 +165,7 @@
     },
     {
       "section_number": "1065",
+      "units": "4.00",
       "instructor": "Bird, Alicia",
       "meetings": [
         {
@@ -176,6 +185,7 @@
     },
     {
       "section_number": "1064",
+      "units": "4.00",
       "instructor": "Parkinson, Susan",
       "meetings": [
         {
@@ -195,6 +205,7 @@
     },
     {
       "section_number": "1063",
+      "units": "4.00",
       "instructor": "Preble, Mackenzie",
       "meetings": [
         {
@@ -214,6 +225,7 @@
     },
     {
       "section_number": "1062",
+      "units": "4.00",
       "instructor": "Poague, Jason",
       "meetings": [
         {

@@ -5,6 +5,7 @@
   "sections": [
     {
       "section_number": "9024",
+      "units": "4.00",
       "instructor": "Strickland, Joanne",
       "meetings": [
         {
@@ -18,7 +19,8 @@
     },
     {
       "section_number": "8292",
-      "instructor": "Youn, Steve",
+      "units": "4.00",
+      "instructor": "Youn, Steve, Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Note: See schedule of classes for programming language presented. Students may petition to repeat this course when software or hardware is changed. Only the first course completed will be applied toward a degree or certificate requirement. Units for both courses will apply towards the 60 units required for the degree. Note: Partially online course with required meetings Tu/Th  (on-campus lab/lecture, see room on schedule) with all other instruction provided online through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to locate course.",
       "meetings": [
         {
           "days": "",
@@ -37,6 +39,7 @@
     },
     {
       "section_number": "5657",
+      "units": "4.00",
       "instructor": "Aladegbami, Kemi",
       "meetings": [
         {
@@ -50,6 +53,7 @@
     },
     {
       "section_number": "5452",
+      "units": "4.00",
       "instructor": "Jagpal, Rupinder",
       "meetings": [
         {
@@ -63,6 +67,7 @@
     },
     {
       "section_number": "5451",
+      "units": "4.00",
       "instructor": "Jagpal, Rupinder",
       "meetings": [
         {
@@ -76,6 +81,7 @@
     },
     {
       "section_number": "5404",
+      "units": "4.00",
       "instructor": "Khaja, Gene",
       "meetings": [
         {
@@ -89,6 +95,7 @@
     },
     {
       "section_number": "5207",
+      "units": "4.00",
       "instructor": "Khaja, Gene",
       "meetings": [
         {
@@ -102,6 +109,7 @@
     },
     {
       "section_number": "5523",
+      "units": "4.00",
       "instructor": "Amato, Nicholas",
       "meetings": [
         {

@@ -26,8 +26,9 @@ COURSES = [
     "PHYS-112","PHYS-120","PHYS-121","PHYS-124","PHYS-125","PHYS-129","PHYS-130","PHYS-230",
     "PHYS-231","STAT-C1000","STAT-C1000E"
 ]
+COURSES = ["WRKX-170"] # for demo purposes
 
-COURSE_VALUE = "" 
+COURSE_VALUE = ""
 OUTPUT_FILE  = f"dvc_{TERM_VALUE}_{COURSE_VALUE}.txt"
 OUTPUT_DIR = "dvc_txt" 
 # ------------------

@@ -5,6 +5,7 @@
   "sections": [
     {
       "section_number": "8011",
+      "units": "5.00",
       "instructor": "Fraund, Matthew",
       "meetings": [
         {
@@ -24,6 +25,7 @@
     },
     {
       "section_number": "6002",
+      "units": "5.00",
       "instructor": "Burns, Laura",
       "meetings": [
         {
@@ -43,6 +45,7 @@
     },
     {
       "section_number": "1048",
+      "units": "5.00",
       "instructor": "Fell, Jason",
       "meetings": [
         {
@@ -62,6 +65,7 @@
     },
     {
       "section_number": "1047",
+      "units": "5.00",
       "instructor": "Ruehl, Jean",
       "meetings": [
         {
@@ -81,6 +85,7 @@
     },
     {
       "section_number": "1046",
+      "units": "5.00",
       "instructor": "Burns, Laura",
       "meetings": [
         {
@@ -100,6 +105,7 @@
     },
     {
       "section_number": "1045",
+      "units": "5.00",
       "instructor": "Burns, Laura",
       "meetings": [
         {
@@ -119,6 +125,7 @@
     },
     {
       "section_number": "1044",
+      "units": "5.00",
       "instructor": "Ruehl, Jean",
       "meetings": [
         {

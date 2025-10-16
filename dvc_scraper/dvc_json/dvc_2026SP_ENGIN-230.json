@@ -5,7 +5,8 @@
   "sections": [
     {
       "section_number": "8162",
-      "instructor": "Erickson, Ashley",
+      "units": "4.00",
+      "instructor": "Erickson, Ashley, Prerequisite: PHYS-230 or equivalent. Corequisite: MATH-294 or equivalent. Note: Partially online course. In addition to online instruction, this class has mandatory in-person meetings 6:30-8:00pm on the following Mondays: 1/26 (orientation), 3/09, 4/20, 5/11, (exams) and 5/18  (final exam). All other instruction provided online through the college learning management system Canvas. This section of ENGIN-230 has online asynchronous labs. Students are advised to check with an advisor regarding articulation of online ENGIN-230 labs at transfer programs of interest. Access to a computer with a webcam and a microphone is required. Go to www.dvc.edu/online for course access information.",
       "meetings": [
         {
           "days": "",
@@ -24,6 +25,7 @@
     },
     {
       "section_number": "3801",
+      "units": "4.00",
       "instructor": "Bani-Hashemi, Ali",
       "meetings": [
         {
@@ -43,7 +45,8 @@
     },
     {
       "section_number": "2597",
-      "instructor": "Erickson, Ashley",
+      "units": "4.00",
+      "instructor": "Erickson, Ashley, Prerequisite: PHYS-230 or equivalent. Corequisite: MATH-294 or equivalent. Note: Partially online course. In addition to online asynchronous instruction, this class has mandatory in-person meetings for labs on Thursdays 1/26 through 5/22, 8:00-11:05am. All other instruction will be provided online through the college learning management system Canvas. Go to www.dvc.edu/online for course access information.",
       "meetings": [
         {
           "days": "",

@@ -5,7 +5,8 @@
   "sections": [
     {
       "section_number": "8204",
-      "instructor": "Staff, DVC",
+      "units": "4.00",
+      "instructor": "Staff, DVC, Prerequisite: COMSC-165 or equivalent Note: Partially online course with required meetings Tuesdays from 7:25-9:30PM (on-campus, see room on schedule) with all other instruction provided online through the college learning management system Canvas.",
       "meetings": [
         {
           "days": "",
@@ -24,7 +25,8 @@
     },
     {
       "section_number": "5447",
-      "instructor": "Johnson, Samuel",
+      "units": "4.00",
+      "instructor": "Johnson, Samuel, Prerequisite: COMSC-165 or equivalent Note: 100% online course - no required online meetings.   Instruction will be provided through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to begin.",
       "meetings": [
         {
           "days": "Online",
@@ -37,6 +39,7 @@
     },
     {
       "section_number": "5343",
+      "units": "4.00",
       "instructor": "Lai, Xinyi",
       "meetings": [
         {
@@ -50,6 +53,7 @@
     },
     {
       "section_number": "5324",
+      "units": "4.00",
       "instructor": "Pentcheva, Caterina",
       "meetings": [
         {
@@ -63,6 +67,7 @@
     },
     {
       "section_number": "5159",
+      "units": "4.00",
       "instructor": "Pentcheva, Caterina",
       "meetings": [
         {
@@ -76,6 +81,7 @@
     },
     {
       "section_number": "5138",
+      "units": "4.00",
       "instructor": "Melvin, Ryan",
       "meetings": [
         {
@@ -89,6 +95,7 @@
     },
     {
       "section_number": "5071",
+      "units": "4.00",
       "instructor": "Lo, Lan",
       "meetings": [
         {

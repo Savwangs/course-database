@@ -5,6 +5,7 @@
   "sections": [
     {
       "section_number": "9029",
+      "units": "5.00",
       "instructor": "Fein, Matthew",
       "meetings": [
         {
@@ -24,6 +25,7 @@
     },
     {
       "section_number": "8025",
+      "units": "5.00",
       "instructor": "Staff, DVC",
       "meetings": [
         {
@@ -43,7 +45,8 @@
     },
     {
       "section_number": "8024",
-      "instructor": "Bloom, Karen",
+      "units": "5.00",
+      "instructor": "Bloom, Karen, Prerequisite:CHEM-107 or CHEM-108 or CHEM-109 or CHEM-120 or equivalent. Advisory: ENGL-C1000 or equivalent and High school or college biology or equivalent. Note: Partially online course with required on-campus meetings for lab, Mondays and Wednesdays 4:05PM -7:10PM and Lecture Exams on 2/18, 3/18, 4/22 and 5/20  from 2:30PM-3:55PM (see room on schedule). All other instruction provided online through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to locate course.",
       "meetings": [
         {
           "days": "",
@@ -62,6 +65,7 @@
     },
     {
       "section_number": "1096",
+      "units": "5.00",
       "instructor": "Pierroz, Grady",
       "meetings": [
         {
@@ -81,6 +85,7 @@
     },
     {
       "section_number": "1095",
+      "units": "5.00",
       "instructor": "Staff, DVC",
       "meetings": [
         {

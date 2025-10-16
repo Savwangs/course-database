@@ -5,7 +5,8 @@
   "sections": [
     {
       "section_number": "5461",
-      "instructor": "Erickson, Ashley",
+      "units": "4.00",
+      "instructor": "Erickson, Ashley, Prerequisite: Math-192 (may be taken concurrently) or equivalent Note: This class has mandatory online meetings 7:00-8:30pm on the following Wednesdays 1/28 (orientation), 3/11, 4/22, 5/13  (exams) and 5/20 (final exam). All other instruction provided online through the college learning management system Canvas.   Access to a computer with a webcam and a microphone is required. Students will be required to install and use the CLion IDE software and GitHub repository for completing assignments (both available for free to students). Go to www.dvc.edu/online for course access information.  This section of ENGIN-135 has online asynchronous labs. Students are advised to check with an advisor regarding articulation of online ENGIN-135 labs at transfer programs of interest.",
       "meetings": [
         {
           "days": "Online",
