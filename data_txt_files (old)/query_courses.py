@@ -256,7 +256,7 @@ if __name__ == "__main__":
     print_results(res)
 
     print("\n" + "="*80)
-    print("8️⃣  List all open BIOSC courses suitable for CS transfer students.")
+    print("7️⃣  List all open BIOSC courses suitable for CS transfer students.")
     print("="*80)
 
 
