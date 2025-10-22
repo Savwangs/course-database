@@ -1,4 +1,4 @@
-import os, json
+import os, json, re
 from pathlib import Path
 from openai import OpenAI
 from dotenv import load_dotenv
@@ -16,13 +16,16 @@ with open(db_path, "r", encoding="utf-8") as f:
 
 print(f"✅ Loaded {len(course_data)} courses from {db_path}")
 
-def search_courses(keyword, mode=None, status=None):
-    """Return courses filtered by code/title, and optionally by format/status.
+def search_courses(keyword, mode=None, status=None, day_filter=None, time_filter=None, instructor_filter=None):
+    """Return courses filtered by code/title, and optionally by format/status/day/time/instructor.
     
     Args:
         keyword: str or list of str - Course code(s) to search for
         mode: str or list of str - Format filter (in-person, online, hybrid)
         status: str - Status filter (open, closed)
+        day_filter: str - Day code filter (M, T, W, Th, F)
+        time_filter: str - Time of day filter (morning, afternoon, evening)
+        instructor_filter: str - Instructor name filter
     """
     # Handle keyword as list or string
     if isinstance(keyword, list):
@@ -75,8 +78,69 @@ def search_courses(keyword, mode=None, status=None):
             else:
                 mode_match = mode == section_format
             
-            if mode_match and (not status or status in stat):
-                filtered_sections.append(section)
+            # Apply status filter
+            if status and status not in stat:
+                continue
+            
+            if not mode_match:
+                continue
+            
+            # Apply instructor filter
+            if instructor_filter:
+                instructor = section.get("instructor", "").lower()
+                if instructor_filter.lower() not in instructor:
+                    continue
+            
+            # Apply day and time filters by checking meetings
+            if day_filter or time_filter:
+                has_matching_meeting = False
+                for meeting in section.get("meetings", []):
+                    days = meeting.get("days", "")
+                    time_str = meeting.get("time", "")
+                    
+                    # Check day filter
+                    day_match = True
+                    if day_filter:
+                        # Check if the day code is in the days string
+                        day_match = day_filter in days
+                    
+                    # Check time filter
+                    time_match = True
+                    if time_filter and time_str and time_str.lower() != "asynchronous":
+                        # Parse time to check if it's in the range
+                        try:
+                            # Extract start time (e.g., "8:30AM - 11:00AM" -> "8:30AM")
+                            start_time = time_str.split("-")[0].strip()
+                            # Convert to 24-hour format for comparison
+                            if "PM" in start_time and not start_time.startswith("12"):
+                                hour = int(start_time.split(":")[0])
+                                hour += 12
+                            elif "AM" in start_time and start_time.startswith("12"):
+                                hour = 0
+                            else:
+                                hour = int(start_time.split(":")[0])
+                            
+                            # Check time ranges
+                            if time_filter == "morning":
+                                time_match = hour < 12
+                            elif time_filter == "afternoon":
+                                time_match = 12 <= hour < 17
+                            elif time_filter == "evening":
+                                time_match = hour >= 17
+                        except:
+                            # If parsing fails, include the section
+                            time_match = False
+                    
+                    # If both day and time match for this meeting, include the section
+                    if day_match and time_match:
+                        has_matching_meeting = True
+                        break
+                
+                # Skip section if no meetings match the filters
+                if not has_matching_meeting:
+                    continue
+            
+            filtered_sections.append(section)
         if filtered_sections:
             result = {
                 "course_code": course["course_code"],
@@ -115,11 +179,12 @@ def ask_course_assistant(user_query: str):
     # Extract course code (specific like COMSC-110)
     keyword = ""
     for word in user_query.split():
-        # Handle formats: COMSC-110, comsc-200, math 292, physc 230
+        # Handle formats: COMSC-110, comsc-200, math 292, physc 230, MATH193
         word_clean = word.strip(",.?!").upper()
+        word_lower = word.strip(",.?!").lower()
+        
+        # Case 1: Has dash like "comsc-110" or "physc-230"
         if "-" in word_clean and any(ch.isdigit() for ch in word_clean):
-            # Handle cases like "comsc-110" or "physc-230"
-            # Split and map the prefix
             parts = word_clean.split("-")
             prefix_lower = parts[0].lower()
             # Check if prefix needs mapping
@@ -128,7 +193,23 @@ def ask_course_assistant(user_query: str):
             else:
                 keyword = word_clean
             break
-        # Handle space-separated like "math 292" or "physc 230"
+        
+        # Case 2: No separator like "MATH193" or "comsc110"
+        # Match pattern: letters followed by numbers (e.g., MATH193, biosc101)
+        elif any(ch.isalpha() for ch in word_clean) and any(ch.isdigit() for ch in word_clean) and "-" not in word_clean:
+            # Split into letter part and number part
+            match = re.match(r'^([a-zA-Z]+)(\d+)$', word_clean)
+            if match:
+                prefix = match.group(1).lower()
+                number = match.group(2)
+                # Check if prefix needs mapping
+                if prefix in subject_map:
+                    keyword = f"{subject_map[prefix]}-{number}"
+                else:
+                    keyword = f"{prefix.upper()}-{number}"
+                break
+        
+        # Case 3: Space-separated like "math 292" or "physc 230"
         elif any(ch.isdigit() for ch in word_clean) and len(word_clean) <= 4:
             # Check if previous word was a subject
             words = user_query.split()
@@ -172,7 +253,7 @@ def ask_course_assistant(user_query: str):
     # ✅ Check if this is a prerequisite query
     if "prerequisite" in query_lower or "prereq" in query_lower:
         # Get course data without filtering by sections
-        results = search_courses(keyword, mode=None, status=None)
+        results = search_courses(keyword, mode=None, status=None, day_filter=None, time_filter=None, instructor_filter=None)
         if results:
             course = results[0]
             prereqs = course.get("prerequisites", "No prerequisites listed")
@@ -220,9 +301,21 @@ def ask_course_assistant(user_query: str):
     
     if "open" in query_lower:
         status = "open"
+    
+    # Check if instructor name is mentioned
+    instructor_mentioned = None
+    common_titles = ["professor", "prof", "dr", "instructor"]
+    for word in user_query.split():
+        if word.lower() in common_titles:
+            # Get the next word(s) as instructor name
+            words = user_query.split()
+            idx = words.index(word)
+            if idx + 1 < len(words):
+                instructor_mentioned = words[idx + 1].strip(",.?!")
+                break
 
     # Call updated search with filters
-    results = search_courses(keyword, mode, status)
+    results = search_courses(keyword, mode, status, day_filter, time_filter, instructor_mentioned)
     
     # Format keyword display
     if isinstance(keyword, list):
@@ -235,37 +328,21 @@ def ask_course_assistant(user_query: str):
     is_subject_search = isinstance(keyword, list) or (isinstance(keyword, str) and "-" not in keyword)
     truncate_limit = 8000 if is_subject_search else 4000
     
-    # Build context with additional filters info
-    filter_info = []
+    # Build context - filters already applied in search_courses
+    filter_descriptions = []
     if day_filter:
-        filter_info.append(f"Day filter: Only show sections on {day_filter}")
+        filter_descriptions.append(f"Day: {day_filter}")
     if time_filter:
-        time_ranges = {
-            "morning": "before 12:00 PM",
-            "afternoon": "between 12:00 PM and 5:00 PM",
-            "evening": "after 5:00 PM"
-        }
-        filter_info.append(f"Time filter: Only show sections {time_ranges[time_filter]}")
-    
-    # Check if instructor name is mentioned
-    instructor_mentioned = None
-    common_titles = ["professor", "prof", "dr", "instructor"]
-    for word in user_query.split():
-        if word.lower() in common_titles:
-            # Get the next word(s) as instructor name
-            words = user_query.split()
-            idx = words.index(word)
-            if idx + 1 < len(words):
-                instructor_mentioned = words[idx + 1].strip(",.?!")
-                filter_info.append(f"Instructor filter: Only show sections taught by instructor with name containing '{instructor_mentioned}'")
-                break
+        filter_descriptions.append(f"Time: {time_filter}")
+    if instructor_mentioned:
+        filter_descriptions.append(f"Instructor: {instructor_mentioned}")
     
     context = (
         f"I found {len(results)} matching course(s) for '{keyword_display}'.\n"
     )
-    if filter_info:
-        context += f"\nIMPORTANT FILTERS TO APPLY:\n" + "\n".join(f"- {f}" for f in filter_info) + "\n"
-    context += f"\nHere is the JSON data:\n{json.dumps(results, indent=2)[:truncate_limit]}"
+    if filter_descriptions:
+        context += f"Filters applied: {', '.join(filter_descriptions)}\n"
+    context += f"\nHere is the JSON data (already filtered):\n{json.dumps(results, indent=2)[:truncate_limit]}"
 
     response = client.chat.completions.create(
         model="gpt-4o-mini",
@@ -276,52 +353,46 @@ def ask_course_assistant(user_query: str):
 
 CRITICAL RULES:
 1. Only use data from the assistant message - never invent information
-2. If "IMPORTANT FILTERS TO APPLY" is provided, you MUST apply those filters strictly:
-   - Instructor filter: Only show sections where instructor name contains the specified name
-   - Day filter: Only show sections where "days" field contains the specified day code
-   - Time filter: Parse the "time" field and only show sections in the specified time range
-3. Show ALL courses and ALL sections that match the filters - do not summarize or skip any
-4. When showing in-person search results, organize into TWO SEPARATE GROUPS per course:
+2. The data has already been filtered - show ALL sections provided
+3. When showing search results, organize into THREE SEPARATE GROUPS per course:
    
    ### HYBRID SECTIONS (includes in-person meetings):
-   [List ALL matching sections classified as hybrid]
+   [List ALL sections where format is "hybrid"]
    
    ### IN-PERSON SECTIONS (fully in-person):
-   [List ALL matching sections classified as in-person, NOT hybrid]
+   [List ALL sections where format is "in-person"]
    
    ### ONLINE SECTIONS:
-   [List ALL matching sections classified as online]
+   [List ALL sections where format is "online"]
 
-5. For each section, display:
+4. For each section, display:
    - Section number, Instructor, Days, Time, Location, Units
    - Keep notes brief (only essential prereqs/requirements)
 
-6. If no matches after applying filters: "No sections found matching your criteria."
+5. If no sections in a category: "No [category] sections found."
 
-7. When showing results for MULTIPLE courses (e.g., all physics courses):
+6. When showing results for MULTIPLE courses:
    - List EVERY course found
    - Group by course code
-   - Show each course separately with matching sections
+   - Show each course separately with its sections
 
-Example with Filters:
-
-FILTERS APPLIED: Only Monday sections, Morning time (before 12 PM)
+Example Output:
 
 **MATH-193: Calculus III**
 
 ### HYBRID SECTIONS:
-- Section 1234
-  - Instructor: Smith, John
-  - Days: M W
-  - Time: 10:00AM - 11:30AM
-  - Location: MATH 101
-  - Units: 5.00
+No hybrid sections found.
 
 ### IN-PERSON SECTIONS:
-No in-person sections found on Monday mornings.
+- Section 6134
+  - Instructor: Willett, Peter
+  - Days: M W
+  - Time: 8:30AM - 11:00AM
+  - Location: 209
+  - Units: 5.00
 
 ### ONLINE SECTIONS:
-No online sections found (online courses don't have specific meeting times).
+No online sections found.
 """
             },
             {"role": "user", "content": user_query},
@@ -335,7 +406,7 @@ test_queries = [
     "Show me all avaliable comsc-200 in person sections",
     "What math-292 section is taught by Professor Julie",
     "I want a fun stem class", 
-    "Show me open MATH-193 sections on monday mornings",
+    "Show me open MATH193 sections on monday mornings",
     "What are the prerequisites for physc 230"
 ]
 
@@ -343,4 +414,3 @@ for q in test_queries:
     print(f"🧩 Query: {q}")
     print(ask_course_assistant(q))
     print("\n" + "-"*80 + "\n")
-
