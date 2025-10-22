@@ -3363,8 +3363,8 @@
     ]
   },
   {
-    "course_code": "",
-    "course_title": "",
+    "course_code": "COMSC-165",
+    "course_title": "Advanced Programming with C and C++",
     "last_update": "2025-10-15T10:02:37",
     "sections": [
       {
@@ -3558,8 +3558,8 @@
     ]
   },
   {
-    "course_code": "",
-    "course_title": "",
+    "course_code": "COMSC-200",
+    "course_title": "Object Oriented Programming C++",
     "last_update": "2025-10-15T10:03:40",
     "sections": [
       {
@@ -3747,8 +3747,8 @@
     ]
   },
   {
-    "course_code": "",
-    "course_title": "",
+    "course_code": "COMSC-260",
+    "course_title": "Assembly Language Programming/Computer Organization",
     "last_update": "2025-10-15T10:04:29",
     "sections": [
       {
@@ -3975,8 +3975,8 @@
     ]
   },
   {
-    "course_code": "",
-    "course_title": "",
+    "course_code": "ENGIN-121",
+    "course_title": "Engineering Drawing/Descriptive Geometry",
     "last_update": "2025-10-15T10:05:32",
     "sections": [
       {
