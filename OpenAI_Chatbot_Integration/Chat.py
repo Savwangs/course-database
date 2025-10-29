@@ -395,8 +395,13 @@ def ask_course_assistant(user_query: str, *, parser_temperature: float = 0.0, re
     if status: filter_bits.append(f"Status: {status}")
     if mode: filter_bits.append(f"Mode: {mode if isinstance(mode, str) else ','.join(mode)}")
 
-    context = f"I found {len(results)} matching course(s) for '{keyword_display}'.\n"
-    if filter_bits: context += "Filters applied: " + ", ".join(filter_bits) + "\n"
+    context = f"User asked: '{user_query}'\n\n"
+    context += f"I found {len(results)} matching course(s) for '{keyword_display}'.\n"
+    if filter_bits: 
+        context += "Filters applied: " + ", ".join(filter_bits) + "\n"
+        context += "IMPORTANT: The JSON data below has been PRE-FILTERED to match these exact criteria. Show ONLY the sections in this data.\n"
+        if instructor_mentioned:
+            context += f"NOTE: User specifically asked about instructor '{instructor_mentioned}' - show ONLY sections taught by this instructor.\n"
     context += "\nHere is the JSON data (already filtered):\n" + json.dumps(results, indent=2)[:truncate_limit]
 
     # LLM formatter (explicit temperature)
@@ -410,8 +415,11 @@ def ask_course_assistant(user_query: str, *, parser_temperature: float = 0.0, re
 
                 CRITICAL RULES:
                 1. Only use data from the assistant message - never invent information
-                2. The data has already been filtered - show ALL sections provided
-                3. When showing search results, organize into THREE SEPARATE GROUPS per course:
+                2. The data has already been PRE-FILTERED by the system to match the user's request
+                3. If filters are mentioned (e.g., "Filters applied: Instructor: Lo"), show ONLY sections that exactly match those filters
+                4. DO NOT include sections that don't match the specified filters
+                5. If an instructor filter is applied, ONLY show sections taught by that specific instructor
+                6. When showing search results, organize into THREE SEPARATE GROUPS per course:
                 
                 ### HYBRID SECTIONS (includes in-person meetings):
                 [List ALL sections where format is "hybrid"]
@@ -422,13 +430,13 @@ def ask_course_assistant(user_query: str, *, parser_temperature: float = 0.0, re
                 ### ONLINE SECTIONS:
                 [List ALL sections where format is "online"]
 
-                4. For each section, display:
+                7. For each section, display:
                 - Section number, Instructor, Days, Time, Location, Units
                 - Keep notes brief (only essential prereqs/requirements)
 
-                5. If no sections in a category: "No [category] sections found."
+                8. If no sections in a category: "No [category] sections found."
 
-                6. When showing results for MULTIPLE courses:
+                9. When showing results for MULTIPLE courses:
                 - List EVERY course found
                 - Group by course code
                 - Show each course separately with its sections

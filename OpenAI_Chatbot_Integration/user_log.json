@@ -427,5 +427,148 @@
       }
     },
     "response": "### MATH-195: Discrete Mathematics\n\n#### HYBRID SECTIONS (includes in-person meetings):\nNo hybrid sections found.\n\n#### IN-PERSON SECTIONS (fully in-person):\n- **Section Number:** 9294  \n  **Instructor:** Staff, SRC  \n  **Days:** M W  \n  **Time:** 12:45PM - 2:50PM  \n  **Location:** E164  \n  **Units:** 4.00  \n  **Notes:** Prerequisites: MATH-193 or equivalent may be taken either as a prerequisite or concurrently\n\n- **Section Number:** 1686  \n  **Instructor:** McNeill, Amber  \n  **Days:** M W  \n  **Time:** 8:55AM - 11:00AM  \n  **Location:** 143  \n  **Units:** 4.00  \n  **Notes:** Prerequisites: MATH-193 or equivalent may be taken either as a prerequisite or concurrently\n\n#### ONLINE SECTIONS:\nNo online sections found."
+  },
+  {
+    "timestamp": "2025-10-29T11:10:10.989433",
+    "user_prompt": "Show me all avaliable comsc-200 in person sections",
+    "parsed_data": {
+      "course_codes": [
+        "COMSC-200"
+      ],
+      "subjects": [
+        "COMSC"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": "in-person",
+        "status": null,
+        "day": null,
+        "time": null,
+        "instructor": null
+      }
+    },
+    "response": "### COMSC-200: Object Oriented Programming C++\n\n#### IN-PERSON SECTIONS (fully in-person):\n- **Section Number:** 2521  \n  **Instructor:** Hrycewicz, Paul  \n  **Days:** W  \n  **Time:** 11:10AM - 2:20PM  \n  **Location:** Room 113  \n  **Units:** 4.00  \n  **Notes:** Prerequisite: COMSC-165 or equivalent. Partially online course with required meetings.  \n\n#### HYBRID SECTIONS (includes in-person meetings):\n- **Section Number:** 2521  \n  **Instructor:** Hrycewicz, Paul  \n  **Days:** N/A  \n  **Time:** N/A  \n  **Location:** PART-ONL  \n  **Units:** 4.00  \n  **Notes:** Prerequisite: COMSC-165 or equivalent. Partially online course with required meetings.  \n\n#### ONLINE SECTIONS:\nNo online sections found."
+  },
+  {
+    "timestamp": "2025-10-29T11:10:19.063598",
+    "user_prompt": "What math-292 section is taught by Professor Julie",
+    "parsed_data": {
+      "course_codes": [
+        "MATH-292"
+      ],
+      "subjects": [
+        "MATH"
+      ],
+      "intent": "instructors",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": null,
+        "time": null,
+        "instructor": "Julie"
+      }
+    },
+    "response": "### MATH-292: Analytic Geometry and Calculus III\n\n#### IN-PERSON SECTIONS (fully in-person):\n- **Section Number:** 6153  \n  **Instructor:** Walters, Julie  \n  **Days:** M W  \n  **Time:** 9:35AM - 12:05PM  \n  **Location:** 240  \n  **Units:** 5.00  \n  **Notes:** Prerequisites: MATH-193 or equivalent\n\n- **Section Number:** 0242  \n  **Instructor:** Walters, Julie  \n  **Days:** M W  \n  **Time:** 9:35AM - 12:05PM  \n  **Location:** 240  \n  **Units:** 5.00  \n  **Notes:** Prerequisites: MATH-193 or equivalent\n\n#### HYBRID SECTIONS:\nNo hybrid sections found.\n\n#### ONLINE SECTIONS:\nNo online sections found."
+  },
+  {
+    "timestamp": "2025-10-29T11:10:20.881476",
+    "user_prompt": "I want a fun stem class",
+    "parsed_data": {
+      "course_codes": [],
+      "subjects": [],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": null,
+        "time": null,
+        "instructor": null
+      }
+    },
+    "response": "I can help you find **DVC STEM courses** and details like sections, instructors, and prerequisites.\n\n**Try one of these:**\n- \"Show me **open** MATH-193 sections **Monday morning**.\"\n- \"Who teaches **PHYS-130** on **Thursdays**?\"\n- \"What are the **prerequisites** for **COMSC-200**?\"\n- \"Show **online** **COMSC** classes.\"\n\nPlease include a **subject** (e.g., COMSC, MATH, PHYS, CHEM, BIOSC, ENGIN) or a specific **course code** (e.g., COMSC-110)."
+  },
+  {
+    "timestamp": "2025-10-29T11:10:32.069635",
+    "user_prompt": "Show me open MATH193 sections on monday mornings",
+    "parsed_data": {
+      "course_codes": [
+        "MATH-193"
+      ],
+      "subjects": [
+        "MATH"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": "open",
+        "day": "M",
+        "time": "morning",
+        "instructor": null
+      }
+    },
+    "response": "### MATH-193: Analytic Geometry and Calculus II\n\n#### IN-PERSON SECTIONS (fully in-person):\n- **Section Number:** 6134  \n  **Instructor:** Willett, Peter  \n  **Days:** M W  \n  **Time:** 8:30AM - 11:00AM  \n  **Location:** 209  \n  **Units:** 5.00  \n\n- **Section Number:** 1341  \n  **Instructor:** Willett, Peter  \n  **Days:** M W  \n  **Time:** 8:30AM - 11:00AM  \n  **Location:** 209  \n  **Units:** 5.00  \n\n- **Section Number:** 1240  \n  **Instructor:** Raymond, Brian  \n  **Days:** M W  \n  **Time:** 9:35AM - 12:05PM  \n  **Location:** 109  \n  **Units:** 5.00  \n\n#### HYBRID SECTIONS:\nNo hybrid sections found.\n\n#### ONLINE SECTIONS:\nNo online sections found."
+  },
+  {
+    "timestamp": "2025-10-29T11:10:34.179667",
+    "user_prompt": "What are the prerequisites for physc 230",
+    "parsed_data": {
+      "course_codes": [
+        "PHYS-230"
+      ],
+      "subjects": [
+        "PHYS"
+      ],
+      "intent": "prerequisites",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": null,
+        "time": null,
+        "instructor": null
+      }
+    },
+    "response": "**PHYS-230: Physics for Engineers and Scientists B: Heat and Electro-Magnetism**\n\nPrerequisites: PHYS-130 or equivalent; MATH-292 (may be taken concurrently) or equivalent."
+  },
+  {
+    "timestamp": "2025-10-29T11:11:28.796431",
+    "user_prompt": "What section is Professor Lo teaching comsc260",
+    "parsed_data": {
+      "course_codes": [
+        "COMSC-260"
+      ],
+      "subjects": [
+        "COMSC"
+      ],
+      "intent": "instructors",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": null,
+        "time": null,
+        "instructor": "Lo"
+      }
+    },
+    "response": "### COMSC-260: Assembly Language Programming/Computer Organization\n\n#### HYBRID SECTIONS (includes in-person meetings):\nNo hybrid sections found.\n\n#### IN-PERSON SECTIONS (fully in-person):\nNo in-person sections found.\n\n#### ONLINE SECTIONS:\n- **Section Number:** 5071  \n  **Instructor:** Lo, Lan  \n  **Days:** Online  \n  **Time:** Asynchronous  \n  **Location:** ONLINE  \n  **Units:** 4.00  \n  **Notes:** Prerequisite: COMSC-165 or equivalent"
+  },
+  {
+    "timestamp": "2025-10-29T11:12:34.317211",
+    "user_prompt": "Show me avaliable math192 sections on Fridays and if there aren't any avalible on Fridays then show me on Tuesdays",
+    "parsed_data": {
+      "course_codes": [
+        "MATH-192"
+      ],
+      "subjects": [
+        "MATH"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": "open",
+        "day": "F",
+        "time": null,
+        "instructor": null
+      }
+    },
+    "response": "I found **no sections** with your current filters (**status=open, day=F**) for **MATH-192**.\n\nTry relaxing one or more filters. For example:\n- Remove the **instructor** name to see all sections\n- Try a different **day** or **time** window\n- Include **hybrid** or **online** if you only searched in-person\n\nWant me to show **all available sections** for this course/subject?"
   }
 ]
