@@ -2,6 +2,7 @@ import os, json, re
 from pathlib import Path
 from openai import OpenAI
 from dotenv import load_dotenv
+from datetime import datetime
 
 load_dotenv()
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
@@ -15,6 +16,46 @@ with open(db_path, "r", encoding="utf-8") as f:
     course_data = json.load(f)
 
 print(f"✅ Loaded {len(course_data)} courses from {db_path}")
+
+# === LOGGING MODULE ===
+log_file_path = Path(__file__).parent / "user_log.json"
+
+def log_interaction(user_prompt: str, parsed_data: dict, response: str):
+    """
+    Log user interactions to a JSON file with automatic appending.
+    
+    Args:
+        user_prompt: The raw user query
+        parsed_data: The parsed query parameters from LLM
+        response: The formatted response returned to user
+    """
+    log_entry = {
+        "timestamp": datetime.now().isoformat(),
+        "user_prompt": user_prompt,
+        "parsed_data": parsed_data,
+        "response": response
+    }
+    
+    # Load existing logs or create new list
+    if log_file_path.exists():
+        try:
+            with open(log_file_path, "r", encoding="utf-8") as f:
+                logs = json.load(f)
+            if not isinstance(logs, list):
+                logs = []
+        except (json.JSONDecodeError, Exception):
+            logs = []
+    else:
+        logs = []
+    
+    # Append new entry
+    logs.append(log_entry)
+    
+    # Write back to file
+    with open(log_file_path, "w", encoding="utf-8") as f:
+        json.dump(logs, f, indent=2, ensure_ascii=False)
+    
+    print(f"📝 Logged interaction to {log_file_path}")
 
 def search_courses(keyword, mode=None, status=None, day_filter=None, time_filter=None, instructor_filter=None):
     """Return courses filtered by code/title, and optionally by format/status/day/time/instructor.
@@ -223,7 +264,7 @@ def llm_parse_query(user_query: str, *, temperature: float = 0.0):
     return parsed
 
 
-def ask_course_assistant(user_query: str, *, parser_temperature: float = 0.0, response_temperature: float = 0.2):
+def ask_course_assistant(user_query: str, *, parser_temperature: float = 0.0, response_temperature: float = 0.2, enable_logging: bool = True):
     """LLM parses → we search → LLM formats. Includes fallbacks + out-of-scope and no-results handling."""
     query_lower = user_query.lower()
     parsed = llm_parse_query(user_query, temperature=parser_temperature)
@@ -255,15 +296,18 @@ def ask_course_assistant(user_query: str, *, parser_temperature: float = 0.0, re
 
     # If the parse yields nothing useful, treat as out-of-scope/nonspecific and guide the user.
     if not course_codes and not subjects:
-        return (
+        response = (
             "I can help you find **DVC STEM courses** and details like sections, instructors, and prerequisites.\n\n"
             "**Try one of these:**\n"
-            "- “Show me **open** MATH-193 sections **Monday morning**.”\n"
-            "- “Who teaches **PHYS-130** on **Thursdays**?”\n"
-            "- “What are the **prerequisites** for **COMSC-200**?”\n"
-            "- “Show **online** **COMSC** classes.”\n\n"
+            '- "Show me **open** MATH-193 sections **Monday morning**."\n'
+            '- "Who teaches **PHYS-130** on **Thursdays**?"\n'
+            '- "What are the **prerequisites** for **COMSC-200**?"\n'
+            '- "Show **online** **COMSC** classes."\n\n'
             "Please include a **subject** (e.g., COMSC, MATH, PHYS, CHEM, BIOSC, ENGIN) or a specific **course code** (e.g., COMSC-110)."
         )
+        if enable_logging:
+            log_interaction(user_query, parsed, response)
+        return response
 
     # Fast path for prerequisite intent
     if intent == "prerequisites":
@@ -279,11 +323,17 @@ def ask_course_assistant(user_query: str, *, parser_temperature: float = 0.0, re
             if not chosen:
                 chosen = results[0]
             prereqs = chosen.get("prerequisites", "No prerequisites listed")
-            return f"**{chosen['course_code']}: {chosen['course_title']}**\n\nPrerequisites: {prereqs}"
-        return (
-            f"I couldn’t find any courses for **{', '.join(keywords_for_prereq) if isinstance(keywords_for_prereq, list) else keywords_for_prereq}**.\n"
+            response = f"**{chosen['course_code']}: {chosen['course_title']}**\n\nPrerequisites: {prereqs}"
+            if enable_logging:
+                log_interaction(user_query, parsed, response)
+            return response
+        response = (
+            f"I couldn't find any courses for **{', '.join(keywords_for_prereq) if isinstance(keywords_for_prereq, list) else keywords_for_prereq}**.\n"
             "Double-check the course code/subject, or try another course (e.g., COMSC-110, MATH-193)."
         )
+        if enable_logging:
+            log_interaction(user_query, parsed, response)
+        return response
 
     # Search with parsed filters
     keyword = course_codes if course_codes else subjects
@@ -303,17 +353,20 @@ def ask_course_assistant(user_query: str, *, parser_temperature: float = 0.0, re
 
         if not baseline:
             # Nothing exists for this keyword at all (likely wrong code/prefix)
-            return (
-                f"I couldn’t find any courses for **{', '.join(keyword) if isinstance(keyword, list) else keyword}**.\n"
+            response = (
+                f"I couldn't find any courses for **{', '.join(keyword) if isinstance(keyword, list) else keyword}**.\n"
                 "Please check the **subject/prefix** or **course code**, or try a broader query.\n\n"
                 "**Examples:**\n"
-                "- “Show **COMSC** classes.”\n"
-                "- “Find **MATH-193** sections.”\n"
-                "- “Any **online PHYS** this **evening**?”"
+                '- "Show **COMSC** classes."\n'
+                '- "Find **MATH-193** sections."\n'
+                '- "Any **online PHYS** this **evening**?"'
             )
+            if enable_logging:
+                log_interaction(user_query, parsed, response)
+            return response
         else:
             # The course/subject exists, but filters were too strict
-            return (
+            response = (
                 f"I found **no sections** with your current filters (**{applied_str}**) for "
                 f"**{', '.join(keyword) if isinstance(keyword, list) else keyword}**.\n\n"
                 "Try relaxing one or more filters. For example:\n"
@@ -322,6 +375,9 @@ def ask_course_assistant(user_query: str, *, parser_temperature: float = 0.0, re
                 "- Include **hybrid** or **online** if you only searched in-person\n\n"
                 "Want me to show **all available sections** for this course/subject?"
             )
+            if enable_logging:
+                log_interaction(user_query, parsed, response)
+            return response
 
     # Build formatting context (matches your original assistant prompt shape)
     if isinstance(keyword, list):
@@ -344,7 +400,7 @@ def ask_course_assistant(user_query: str, *, parser_temperature: float = 0.0, re
     context += "\nHere is the JSON data (already filtered):\n" + json.dumps(results, indent=2)[:truncate_limit]
 
     # LLM formatter (explicit temperature)
-    response = client.chat.completions.create(
+    llm_response = client.chat.completions.create(
         model="gpt-4o-mini",
         temperature=response_temperature,
         messages=[
@@ -382,7 +438,13 @@ def ask_course_assistant(user_query: str, *, parser_temperature: float = 0.0, re
             {"role": "assistant", "content": context},
         ],
     )
-    return response.choices[0].message.content.strip()
+    final_response = llm_response.choices[0].message.content.strip()
+    
+    # Log the interaction
+    if enable_logging:
+        log_interaction(user_query, parsed, final_response)
+    
+    return final_response
 
 test_queries = [
     "Show me all avaliable comsc-200 in person sections",
