@@ -152,254 +152,236 @@ def search_courses(keyword, mode=None, status=None, day_filter=None, time_filter
                 result["prerequisites"] = course["prerequisites"]
             results.append(result)
     return results
-def ask_course_assistant(user_query: str):
-    """Send user query to GPT for a summary."""
+
+
+def llm_parse_query(user_query: str, *, temperature: float = 0.0):
+    """LLM-first parser → course_codes, subjects, intent, filters (constrained to DB)."""
+    all_course_codes = sorted({c["course_code"].upper() for c in course_data})
+    all_subject_prefixes = sorted({c["course_code"].split("-")[0].upper() for c in course_data})
+
+    parser_system = (
+        "You are an intent and entity parser for a community college course finder. "
+        "Normalize and correct typos in the user's text (e.g., 'avalibale'→'available', "
+        "'phycs'→'PHYS', 'prof julli'→'Julie') before extracting entities. "
+        "Return STRICT JSON ONLY (no prose/markdown) with keys:\n"
+        "{\n"
+        '  "course_codes": [list of exact course codes like "COMSC-110"],\n'
+        '  "subjects": [list of subject prefixes like "COMSC","MATH"],\n'
+        '  "intent": "find_sections" | "prerequisites" | "instructors",\n'
+        '  "filters": {\n'
+        '     "mode": "in-person" | "online" | "hybrid" | null,\n'
+        '     "status": "open" | "closed" | null,\n'
+        '     "day": "M" | "T" | "W" | "Th" | "F" | null,\n'
+        '     "time": "morning" | "afternoon" | "evening" | null,\n'
+        '     "instructor": string or null\n'
+        "  }\n"
+        "}\n"
+        "Rules:\n"
+        "- Only choose course_codes from ALLOWED_COURSE_CODES.\n"
+        "- Only choose subjects from ALLOWED_SUBJECT_PREFIXES.\n"
+        "- If the user asks about prerequisites/prereq, set intent='prerequisites'.\n"
+        "- If the user asks about professor/instructor/teacher/who teaches, set intent='instructors'.\n"
+        "- Otherwise default to intent='find_sections'.\n"
+        "- Extract simple filters if present; else use nulls."
+    )
+
+    parser_user = json.dumps({
+        "USER_QUERY": user_query,
+        "ALLOWED_COURSE_CODES": all_course_codes,
+        "ALLOWED_SUBJECT_PREFIXES": all_subject_prefixes,
+        "NOTES": "Days may be written as Monday/Mon/Tues/Thursday/etc.; map to M,T,W,Th,F."
+    })
+
+    try:
+        resp = client.chat.completions.create(
+            model="gpt-4o-mini",
+            temperature=temperature,  # 0.0 = deterministic parsing
+            messages=[
+                {"role": "system", "content": parser_system},
+                {"role": "user", "content": parser_user},
+            ],
+        )
+        parsed = json.loads(resp.choices[0].message.content.strip())
+    except Exception:
+        parsed = {}
+
+    # Normalize + guard
+    parsed = parsed if isinstance(parsed, dict) else {}
+    parsed.setdefault("course_codes", [])
+    parsed.setdefault("subjects", [])
+    parsed.setdefault("intent", "find_sections")
+    parsed.setdefault("filters", {"mode": None, "status": None, "day": None, "time": None, "instructor": None})
+
+    parsed["course_codes"] = [str(c).upper() for c in parsed["course_codes"] if isinstance(c, str)]
+    parsed["subjects"] = [str(s).upper() for s in parsed["subjects"] if isinstance(s, str)]
+    if not isinstance(parsed["filters"], dict):
+        parsed["filters"] = {"mode": None, "status": None, "day": None, "time": None, "instructor": None}
+
+    # Enforce allow-lists so the parser can’t return codes/subjects not in your DB
+    parsed["course_codes"] = [c for c in parsed["course_codes"] if c in all_course_codes]
+    parsed["subjects"] = [s for s in parsed["subjects"] if s in all_subject_prefixes]
+    return parsed
+
+
+def ask_course_assistant(user_query: str, *, parser_temperature: float = 0.0, response_temperature: float = 0.2):
+    """LLM parses → we search → LLM formats. Includes fallbacks + out-of-scope and no-results handling."""
     query_lower = user_query.lower()
-    
-    # Subject keyword mapping to course code prefixes
-    subject_map = {
-        "engineering": "ENGIN",
-        "engineer": "ENGIN",
-        "physics": "PHYS",
-        "physical": "PHYS",
-        "physc": "PHYS",  # Handle typo
-        "biology": "BIOSC",
-        "bio": "BIOSC",
-        "biological": "BIOSC",
-        "chemistry": "CHEM",
-        "chem": "CHEM",
-        "computer science": "COMSC",
-        "compsci": "COMSC",
-        "comsc": "COMSC",
-        "cs": "COMSC",
-        "math": "MATH",
-        "mathematics": "MATH",
-    }
-    
-    # Extract course code (specific like COMSC-110)
-    keyword = ""
-    for word in user_query.split():
-        # Handle formats: COMSC-110, comsc-200, math 292, physc 230, MATH193
-        word_clean = word.strip(",.?!").upper()
-        word_lower = word.strip(",.?!").lower()
-        
-        # Case 1: Has dash like "comsc-110" or "physc-230"
-        if "-" in word_clean and any(ch.isdigit() for ch in word_clean):
-            parts = word_clean.split("-")
-            prefix_lower = parts[0].lower()
-            # Check if prefix needs mapping
-            if prefix_lower in subject_map:
-                keyword = f"{subject_map[prefix_lower]}-{parts[1]}"
-            else:
-                keyword = word_clean
-            break
-        
-        # Case 2: No separator like "MATH193" or "comsc110"
-        # Match pattern: letters followed by numbers (e.g., MATH193, biosc101)
-        elif any(ch.isalpha() for ch in word_clean) and any(ch.isdigit() for ch in word_clean) and "-" not in word_clean:
-            # Split into letter part and number part
-            match = re.match(r'^([a-zA-Z]+)(\d+)$', word_clean)
-            if match:
-                prefix = match.group(1).lower()
-                number = match.group(2)
-                # Check if prefix needs mapping
-                if prefix in subject_map:
-                    keyword = f"{subject_map[prefix]}-{number}"
-                else:
-                    keyword = f"{prefix.upper()}-{number}"
-                break
-        
-        # Case 3: Space-separated like "math 292" or "physc 230"
-        elif any(ch.isdigit() for ch in word_clean) and len(word_clean) <= 4:
-            # Check if previous word was a subject
-            words = user_query.split()
-            for i, w in enumerate(words):
-                w_clean = w.strip(",.?!").upper()
-                if w_clean == word_clean and i > 0:
-                    prev = words[i-1].strip(",.?!").lower()
-                    # Check if prev is in subject map or matches a subject
-                    mapped_prefix = None
-                    if prev in subject_map:
-                        mapped_prefix = subject_map[prev]
-                    else:
-                        # Check if it starts with any subject keyword
-                        for subj_keyword in subject_map.keys():
-                            if prev.startswith(subj_keyword):
-                                mapped_prefix = subject_map[subj_keyword]
-                                break
-                    
-                    if mapped_prefix:
-                        keyword = f"{mapped_prefix}-{word_clean}"
-                        break
-            if keyword:
-                break
-    
-    # If no specific course code, check for subject keywords (can match multiple)
-    keywords = []
-    if not keyword:
-        for subject_keyword, course_prefix in subject_map.items():
-            if subject_keyword in query_lower:
-                if course_prefix not in keywords:
-                    keywords.append(course_prefix)
-        
-        # If multiple subjects found, use all of them; if one found, use it
-        if keywords:
-            keyword = keywords if len(keywords) > 1 else keywords[0]
-    
-    # If still no keyword found, ask for more specificity
-    if not keyword:
-        return "To help you find a course, could you please be more specific about what subject you're interested in? (e.g., COMSC-110, engineering, physics, biology)"
+    parsed = llm_parse_query(user_query, temperature=parser_temperature)
 
-    # ✅ Check if this is a prerequisite query
-    if "prerequisite" in query_lower or "prereq" in query_lower:
-        # Get course data without filtering by sections
-        results = search_courses(keyword, mode=None, status=None, day_filter=None, time_filter=None, instructor_filter=None)
-        if results:
-            course = results[0]
-            prereqs = course.get("prerequisites", "No prerequisites listed")
-            return f"**{course['course_code']}: {course['course_title']}**\n\nPrerequisites: {prereqs}"
-        else:
-            return f"No course found for {keyword}."
-    
-    # ✅ Detect filters from natural language
-    mode = None
-    status = None
-    day_filter = None
-    time_filter = None
-    
-    # Detect day mentions
-    days_map = {
-        "monday": "M", "mon": "M",
-        "tuesday": "T", "tue": "T", "tues": "T",
-        "wednesday": "W", "wed": "W",
-        "thursday": "Th", "thu": "Th", "thur": "Th", "thurs": "Th",
-        "friday": "F", "fri": "F"
-    }
-    for day_name, day_code in days_map.items():
-        if day_name in query_lower:
-            day_filter = day_code
-            break
-    
-    # Detect time of day
-    if "morning" in query_lower:
-        time_filter = "morning"
-    elif "afternoon" in query_lower:
-        time_filter = "afternoon"
-    elif "evening" in query_lower:
-        time_filter = "evening"
-    
-    # Modality detection - FIXED: only set mode if explicitly mentioned
-    # If days/times mentioned, don't auto-filter to in-person (show all formats)
-    if "in-person" in query_lower or "in person" in query_lower:
-        mode = ["in-person", "hybrid"]
-    elif "online" in query_lower:
-        mode = "online"
-    elif "hybrid" in query_lower:
-        mode = "hybrid"
-    # If day/time mentioned but no explicit modality, don't filter mode
-    # This allows showing online sections too
-    
-    if "open" in query_lower:
+    course_codes = parsed.get("course_codes", [])
+    subjects = parsed.get("subjects", [])
+    intent = parsed.get("intent", "find_sections")
+    filters = parsed.get("filters", {}) or {}
+    mode = filters.get("mode"); status = filters.get("status")
+    day_filter = filters.get("day"); time_filter = filters.get("time")
+    instructor_mentioned = filters.get("instructor")
+
+    # Optional: map “available/avaliable/avail” → open (parity with user phrasing)
+    if not status and ("available" in query_lower or "avaliable" in query_lower or "avail" in query_lower):
         status = "open"
-    
-    # Check if instructor name is mentioned
-    instructor_mentioned = None
-    common_titles = ["professor", "prof", "dr", "instructor"]
-    for word in user_query.split():
-        if word.lower() in common_titles:
-            # Get the next word(s) as instructor name
-            words = user_query.split()
-            idx = words.index(word)
-            if idx + 1 < len(words):
-                instructor_mentioned = words[idx + 1].strip(",.?!")
+
+    # Match previous behavior: "in-person" also includes "hybrid"
+    if mode == "in-person":
+        mode = ["in-person", "hybrid"]
+
+    # Instructor title fallback (prof/Dr/instructor + next token)
+    if not instructor_mentioned:
+        titles = {"professor", "prof", "dr", "instructor", "teacher"}
+        words = user_query.split()
+        for i, w in enumerate(words):
+            if w.strip(",.?!").lower() in titles and i + 1 < len(words):
+                instructor_mentioned = words[i+1].strip(",.?!")
                 break
 
-    # Call updated search with filters
+    # If the parse yields nothing useful, treat as out-of-scope/nonspecific and guide the user.
+    if not course_codes and not subjects:
+        return (
+            "I can help you find **DVC STEM courses** and details like sections, instructors, and prerequisites.\n\n"
+            "**Try one of these:**\n"
+            "- “Show me **open** MATH-193 sections **Monday morning**.”\n"
+            "- “Who teaches **PHYS-130** on **Thursdays**?”\n"
+            "- “What are the **prerequisites** for **COMSC-200**?”\n"
+            "- “Show **online** **COMSC** classes.”\n\n"
+            "Please include a **subject** (e.g., COMSC, MATH, PHYS, CHEM, BIOSC, ENGIN) or a specific **course code** (e.g., COMSC-110)."
+        )
+
+    # Fast path for prerequisite intent
+    if intent == "prerequisites":
+        keywords_for_prereq = course_codes or subjects
+        results = search_courses(keywords_for_prereq)
+        if results:
+            chosen = None
+            if course_codes:
+                wanted = set(course_codes)
+                for r in results:
+                    if r["course_code"].upper() in wanted:
+                        chosen = r; break
+            if not chosen:
+                chosen = results[0]
+            prereqs = chosen.get("prerequisites", "No prerequisites listed")
+            return f"**{chosen['course_code']}: {chosen['course_title']}**\n\nPrerequisites: {prereqs}"
+        return (
+            f"I couldn’t find any courses for **{', '.join(keywords_for_prereq) if isinstance(keywords_for_prereq, list) else keywords_for_prereq}**.\n"
+            "Double-check the course code/subject, or try another course (e.g., COMSC-110, MATH-193)."
+        )
+
+    # Search with parsed filters
+    keyword = course_codes if course_codes else subjects
     results = search_courses(keyword, mode, status, day_filter, time_filter, instructor_mentioned)
-    
-    # Format keyword display
+
+    # If nothing matched under the current filters, try unfiltered to diagnose
+    if not results:
+        baseline = search_courses(keyword, mode=None, status=None, day_filter=None, time_filter=None, instructor_filter=None)
+        # Build a short filter description to show the user what was applied
+        applied = []
+        if mode: applied.append(f"mode={mode if isinstance(mode, str) else ','.join(mode)}")
+        if status: applied.append(f"status={status}")
+        if day_filter: applied.append(f"day={day_filter}")
+        if time_filter: applied.append(f"time={time_filter}")
+        if instructor_mentioned: applied.append(f"instructor={instructor_mentioned}")
+        applied_str = ", ".join(applied) if applied else "none"
+
+        if not baseline:
+            # Nothing exists for this keyword at all (likely wrong code/prefix)
+            return (
+                f"I couldn’t find any courses for **{', '.join(keyword) if isinstance(keyword, list) else keyword}**.\n"
+                "Please check the **subject/prefix** or **course code**, or try a broader query.\n\n"
+                "**Examples:**\n"
+                "- “Show **COMSC** classes.”\n"
+                "- “Find **MATH-193** sections.”\n"
+                "- “Any **online PHYS** this **evening**?”"
+            )
+        else:
+            # The course/subject exists, but filters were too strict
+            return (
+                f"I found **no sections** with your current filters (**{applied_str}**) for "
+                f"**{', '.join(keyword) if isinstance(keyword, list) else keyword}**.\n\n"
+                "Try relaxing one or more filters. For example:\n"
+                "- Remove the **instructor** name to see all sections\n"
+                "- Try a different **day** or **time** window\n"
+                "- Include **hybrid** or **online** if you only searched in-person\n\n"
+                "Want me to show **all available sections** for this course/subject?"
+            )
+
+    # Build formatting context (matches your original assistant prompt shape)
     if isinstance(keyword, list):
+        is_subject_search = all("-" not in k for k in keyword)
         keyword_display = " and ".join(keyword)
     else:
+        is_subject_search = "-" not in keyword
         keyword_display = keyword
-    
-    # Determine truncation limit based on whether it's a subject search or specific course
-    # For subject searches (e.g., all PHYS courses), allow more data
-    is_subject_search = isinstance(keyword, list) or (isinstance(keyword, str) and "-" not in keyword)
     truncate_limit = 8000 if is_subject_search else 4000
-    
-    # Build context - filters already applied in search_courses
-    filter_descriptions = []
-    if day_filter:
-        filter_descriptions.append(f"Day: {day_filter}")
-    if time_filter:
-        filter_descriptions.append(f"Time: {time_filter}")
-    if instructor_mentioned:
-        filter_descriptions.append(f"Instructor: {instructor_mentioned}")
-    
-    context = (
-        f"I found {len(results)} matching course(s) for '{keyword_display}'.\n"
-    )
-    if filter_descriptions:
-        context += f"Filters applied: {', '.join(filter_descriptions)}\n"
-    context += f"\nHere is the JSON data (already filtered):\n{json.dumps(results, indent=2)[:truncate_limit]}"
 
+    filter_bits = []
+    if day_filter: filter_bits.append(f"Day: {day_filter}")
+    if time_filter: filter_bits.append(f"Time: {time_filter}")
+    if instructor_mentioned: filter_bits.append(f"Instructor: {instructor_mentioned}")
+    if status: filter_bits.append(f"Status: {status}")
+    if mode: filter_bits.append(f"Mode: {mode if isinstance(mode, str) else ','.join(mode)}")
+
+    context = f"I found {len(results)} matching course(s) for '{keyword_display}'.\n"
+    if filter_bits: context += "Filters applied: " + ", ".join(filter_bits) + "\n"
+    context += "\nHere is the JSON data (already filtered):\n" + json.dumps(results, indent=2)[:truncate_limit]
+
+    # LLM formatter (explicit temperature)
     response = client.chat.completions.create(
         model="gpt-4o-mini",
+        temperature=response_temperature,
         messages=[
             {
                 "role": "system",
                 "content": """You are a DVC course assistant. Format course data clearly for students.
 
-CRITICAL RULES:
-1. Only use data from the assistant message - never invent information
-2. The data has already been filtered - show ALL sections provided
-3. When showing search results, organize into THREE SEPARATE GROUPS per course:
-   
-   ### HYBRID SECTIONS (includes in-person meetings):
-   [List ALL sections where format is "hybrid"]
-   
-   ### IN-PERSON SECTIONS (fully in-person):
-   [List ALL sections where format is "in-person"]
-   
-   ### ONLINE SECTIONS:
-   [List ALL sections where format is "online"]
+                CRITICAL RULES:
+                1. Only use data from the assistant message - never invent information
+                2. The data has already been filtered - show ALL sections provided
+                3. When showing search results, organize into THREE SEPARATE GROUPS per course:
+                
+                ### HYBRID SECTIONS (includes in-person meetings):
+                [List ALL sections where format is "hybrid"]
+                
+                ### IN-PERSON SECTIONS (fully in-person):
+                [List ALL sections where format is "in-person"]
+                
+                ### ONLINE SECTIONS:
+                [List ALL sections where format is "online"]
 
-4. For each section, display:
-   - Section number, Instructor, Days, Time, Location, Units
-   - Keep notes brief (only essential prereqs/requirements)
+                4. For each section, display:
+                - Section number, Instructor, Days, Time, Location, Units
+                - Keep notes brief (only essential prereqs/requirements)
 
-5. If no sections in a category: "No [category] sections found."
+                5. If no sections in a category: "No [category] sections found."
 
-6. When showing results for MULTIPLE courses:
-   - List EVERY course found
-   - Group by course code
-   - Show each course separately with its sections
-
-Example Output:
-
-**MATH-193: Calculus III**
-
-### HYBRID SECTIONS:
-No hybrid sections found.
-
-### IN-PERSON SECTIONS:
-- Section 6134
-  - Instructor: Willett, Peter
-  - Days: M W
-  - Time: 8:30AM - 11:00AM
-  - Location: 209
-  - Units: 5.00
-
-### ONLINE SECTIONS:
-No online sections found.
-"""
+                6. When showing results for MULTIPLE courses:
+                - List EVERY course found
+                - Group by course code
+                - Show each course separately with its sections
+                """
             },
             {"role": "user", "content": user_query},
             {"role": "assistant", "content": context},
         ],
     )
-
     return response.choices[0].message.content.strip()
 
 test_queries = [
