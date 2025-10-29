@@ -458,3 +458,49 @@ for q in test_queries:
     print(f"🧩 Query: {q}")
     print(ask_course_assistant(q))
     print("\n" + "-"*80 + "\n")
+
+# === INTERACTIVE USER INPUT LOOP ===
+print("\n" + "="*80)
+print("🎓 DVC Course Assistant - Interactive Mode")
+print("="*80)
+print("Ask me about courses, sections, prerequisites, or instructors!")
+print("Examples:")
+print("  • 'Show me open COMSC-110 sections on Monday mornings'")
+print("  • 'What are the prerequisites for MATH-193?'")
+print("  • 'Find online PHYS classes'")
+print("Type 'exit' or 'quit' to end the session.")
+print("="*80 + "\n")
+
+while True:
+    try:
+        # Prompt user for input
+        user_input = input("💬 Enter a query (or type 'exit' to quit): ").strip()
+        
+        # Check for exit command
+        if user_input.lower() in ['exit', 'quit', 'q']:
+            print("\n👋 Thanks for using the DVC Course Assistant! Goodbye!\n")
+            break
+        
+        # Skip empty inputs
+        if not user_input:
+            print("⚠️  Please enter a query.\n")
+            continue
+        
+        # Call the assistant (logging happens automatically inside)
+        print("\n🔍 Searching...\n")
+        response = ask_course_assistant(user_input)
+        
+        # Print the formatted response
+        print(response)
+        print("\n" + "-"*80 + "\n")
+        
+    except KeyboardInterrupt:
+        # Handle Ctrl+C gracefully
+        print("\n\n👋 Session interrupted. Goodbye!\n")
+        break
+        
+    except Exception as e:
+        # Handle any other errors gracefully
+        print(f"\n⚠️  Something went wrong, please try again.")
+        print(f"   (Error details: {str(e)[:100]})\n")
+        continue
