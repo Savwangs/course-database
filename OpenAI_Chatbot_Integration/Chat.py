@@ -196,9 +196,18 @@ def search_courses(keyword, mode=None, status=None, day_filter=None, time_filter
 
 
 def llm_parse_query(user_query: str, *, temperature: float = 0.0):
-    """LLM-first parser → course_codes, subjects, intent, filters (constrained to DB)."""
+    """LLM-first parser → course_codes, subjects, intent, filters (constrained to DB).
+    Title→code matching is delegated entirely to the LLM (no local alias logic)."""
+    # ----- Allow-lists from DB -----
     all_course_codes = sorted({c["course_code"].upper() for c in course_data})
     all_subject_prefixes = sorted({c["course_code"].split("-")[0].upper() for c in course_data})
+
+    # Provide titles to the LLM for title↔code mapping
+    allowed_titles_payload = [
+        {"course_code": c["course_code"].upper(), "course_title": c.get("course_title", "")}
+        for c in course_data
+        if c.get("course_title")
+    ]
 
     parser_system = (
         "You are an intent and entity parser for a community college course finder. "
@@ -206,20 +215,23 @@ def llm_parse_query(user_query: str, *, temperature: float = 0.0):
         "'phycs'→'PHYS', 'prof julli'→'Julie') before extracting entities. "
         "Return STRICT JSON ONLY (no prose/markdown) with keys:\n"
         "{\n"
-        '  "course_codes": [list of exact course codes like "COMSC-110"],\n'
-        '  "subjects": [list of subject prefixes like "COMSC","MATH"],\n'
-        '  "intent": "find_sections" | "prerequisites" | "instructors",\n'
-        '  "filters": {\n'
-        '     "mode": "in-person" | "online" | "hybrid" | null,\n'
-        '     "status": "open" | "closed" | null,\n'
-        '     "day": "M" | "T" | "W" | "Th" | "F" | null,\n'
-        '     "time": "morning" | "afternoon" | "evening" | null,\n'
-        '     "instructor": string or null\n'
+        '  \"course_codes\": [list of exact course codes like \"COMSC-110\"],\n'
+        '  \"subjects\": [list of subject prefixes like \"COMSC\",\"MATH\"],\n'
+        '  \"intent\": \"find_sections\" | \"prerequisites\" | \"instructors\",\n'
+        '  \"filters\": {\n'
+        '     \"mode\": \"in-person\" | \"online\" | \"hybrid\" | null,\n'
+        '     \"status\": \"open\" | \"closed\" | null,\n'
+        '     \"day\": \"M\" | \"T\" | \"W\" | \"Th\" | \"F\" | null,\n'
+        '     \"time\": \"morning\" | \"afternoon\" | \"evening\" | null,\n'
+        '     \"instructor\": string or null\n'
         "  }\n"
         "}\n"
         "Rules:\n"
         "- Only choose course_codes from ALLOWED_COURSE_CODES.\n"
         "- Only choose subjects from ALLOWED_SUBJECT_PREFIXES.\n"
+        "- If the user mentions a course by TITLE (e.g., 'differential equations', 'human biology'), "
+        "  map it to the corresponding code(s) by looking it up in ALLOWED_TITLES (case/typo-insensitive) "
+        "  and place those into course_codes.\n"
         "- If the user asks about prerequisites/prereq, set intent='prerequisites'.\n"
         "- If the user asks about professor/instructor/teacher/who teaches, set intent='instructors'.\n"
         "- Otherwise default to intent='find_sections'.\n"
@@ -230,13 +242,14 @@ def llm_parse_query(user_query: str, *, temperature: float = 0.0):
         "USER_QUERY": user_query,
         "ALLOWED_COURSE_CODES": all_course_codes,
         "ALLOWED_SUBJECT_PREFIXES": all_subject_prefixes,
+        "ALLOWED_TITLES": allowed_titles_payload,  # LLM uses this to map titles → codes
         "NOTES": "Days may be written as Monday/Mon/Tues/Thursday/etc.; map to M,T,W,Th,F."
     })
 
     try:
         resp = client.chat.completions.create(
             model="gpt-4o-mini",
-            temperature=temperature,  # 0.0 = deterministic parsing
+            temperature=temperature,  # deterministic parsing
             messages=[
                 {"role": "system", "content": parser_system},
                 {"role": "user", "content": parser_user},
@@ -246,7 +259,7 @@ def llm_parse_query(user_query: str, *, temperature: float = 0.0):
     except Exception:
         parsed = {}
 
-    # Normalize + guard
+    # ---- Normalize + guard ----
     parsed = parsed if isinstance(parsed, dict) else {}
     parsed.setdefault("course_codes", [])
     parsed.setdefault("subjects", [])
@@ -258,13 +271,14 @@ def llm_parse_query(user_query: str, *, temperature: float = 0.0):
     if not isinstance(parsed["filters"], dict):
         parsed["filters"] = {"mode": None, "status": None, "day": None, "time": None, "instructor": None}
 
-    # Enforce allow-lists so the parser can’t return codes/subjects not in your DB
+    # ---- Final allow-list enforcement ----
     parsed["course_codes"] = [c for c in parsed["course_codes"] if c in all_course_codes]
     parsed["subjects"] = [s for s in parsed["subjects"] if s in all_subject_prefixes]
+
     return parsed
 
 
-def ask_course_assistant(user_query: str, *, parser_temperature: float = 0.0, response_temperature: float = 0.2, enable_logging: bool = True):
+def ask_course_assistant(user_query: str, *, parser_temperature: float = 0.0, response_temperature: float = 0.1, enable_logging: bool = True):
     """LLM parses → we search → LLM formats. Includes fallbacks + out-of-scope and no-results handling."""
     query_lower = user_query.lower()
     parsed = llm_parse_query(user_query, temperature=parser_temperature)
@@ -297,13 +311,13 @@ def ask_course_assistant(user_query: str, *, parser_temperature: float = 0.0, re
     # If the parse yields nothing useful, treat as out-of-scope/nonspecific and guide the user.
     if not course_codes and not subjects:
         response = (
-            "I can help you find **DVC STEM courses** and details like sections, instructors, and prerequisites.\n\n"
-            "**Try one of these:**\n"
-            '- "Show me **open** MATH-193 sections **Monday morning**."\n'
-            '- "Who teaches **PHYS-130** on **Thursdays**?"\n'
-            '- "What are the **prerequisites** for **COMSC-200**?"\n'
-            '- "Show **online** **COMSC** classes."\n\n'
-            "Please include a **subject** (e.g., COMSC, MATH, PHYS, CHEM, BIOSC, ENGIN) or a specific **course code** (e.g., COMSC-110)."
+            "I can help you find DVC STEM courses and details like sections, instructors, and prerequisites.\n\n"
+            "Try one of these:\n"
+            '- "Show me open MATH-193 sections Monday morning."\n'
+            '- "Who teaches PHYS-130 on Thursdays?"\n'
+            '- "What are the prerequisites for COMSC-200?"\n'
+            '- "Show online COMSC classes."\n\n'
+            "Please include a subject (e.g., COMSC, MATH, PHYS, CHEM, BIOSC, ENGIN) or a specific course code (e.g., COMSC-110)."
         )
         if enable_logging:
             log_interaction(user_query, parsed, response)
@@ -411,36 +425,57 @@ def ask_course_assistant(user_query: str, *, parser_temperature: float = 0.0, re
         messages=[
             {
                 "role": "system",
-                "content": """You are a DVC course assistant. Format course data clearly for students.
+                "content": """You are a DVC course assistant. Your job is to turn PRE-FILTERED JSON into a clear, student-friendly answer.
 
-                CRITICAL RULES:
-                1. Only use data from the assistant message - never invent information
-                2. The data has already been PRE-FILTERED by the system to match the user's request
-                3. If filters are mentioned (e.g., "Filters applied: Instructor: Lo"), show ONLY sections that exactly match those filters
-                4. DO NOT include sections that don't match the specified filters
-                5. If an instructor filter is applied, ONLY show sections taught by that specific instructor
-                6. When showing search results, organize into THREE SEPARATE GROUPS per course:
-                
-                ### HYBRID SECTIONS (includes in-person meetings):
-                [List ALL sections where format is "hybrid"]
-                
-                ### IN-PERSON SECTIONS (fully in-person):
-                [List ALL sections where format is "in-person"]
-                
-                ### ONLINE SECTIONS:
-                [List ALL sections where format is "online"]
+            CORE PRINCIPLES
+            1) Use ONLY the JSON in the assistant message. Do not invent or infer missing data.
+            2) The JSON is already PRE-FILTERED to match the user's request. Respect those filters exactly.
+            3) If the assistant context lists filters (e.g., Instructor: Lo), show ONLY sections that match them.
+            4) Never include sections that fail the filters.
+            5) Present results clearly, concisely, and consistently for fast scanning.
 
-                7. For each section, display:
-                - Section number, Instructor, Days, Time, Location, Units
-                - Keep notes brief (only essential prereqs/requirements)
+            OUTPUT STRUCTURE
+            A) One-line Summary:
+            - Briefly restate the user's goal and show a quick count (e.g., “Found 3 sections for MATH-193 (Mon, morning).”).
+            - If no results, return a short, helpful message and stop (also include 1–3 next-step suggestions).
 
-                8. If no sections in a category: "No [category] sections found."
+            B) Per-Course Listing (for EVERY course in the JSON):
+            - Format: **COURSE_CODE: Course Title**
+            - Group sections into THREE headings (always in this order):
+                ### HYBRID SECTIONS (includes in-person meetings)
+                ### IN-PERSON SECTIONS (fully in-person)
+                ### ONLINE SECTIONS
+            - Under each heading, list ALL matching sections or write “No [category] sections found.”
+            - For each section, show:
+                - Section number
+                - Instructor
+                - Days
+                - Time
+                - Location
+                - Units
+            - Keep notes brief and only when present in the JSON (e.g., essential advisories). Do not paraphrase missing notes.
 
-                9. When showing results for MULTIPLE courses:
-                - List EVERY course found
-                - Group by course code
-                - Show each course separately with its sections
-                """
+            C) Friendly Wrap-Up:
+            - Add 1-2 actionable “Next steps” (e.g., “Prefer evenings? Say "evening",” “Want online only? Say "online",” “Ask for prerequisites.”).
+
+            OPTIONAL ENHANCEMENTS (only when prompted or context indicates)
+            - If the user asks for “all available”, “more options”, or “other available courses”, include an extra section:
+            **Other available options that meet your filters**
+            - List other courses/sections from the provided JSON that satisfy the same filters (still obey all filtering rules).
+            - If the assistant context includes articulation or comparison data (e.g., alternatives array), render it in a short, bulleted block after the main listings.
+            - If the assistant context includes a flag/text indicating “Show alternatives” or similar, add the above section.
+
+            STYLE & TONE
+            - Use bullet lists; avoid long paragraphs.
+            - Be consistent in label order and punctuation.
+            - Keep it positive and helpful, but terse.
+
+            NEVER DO
+            - Do not reprint the raw JSON.
+            - Do not add categories beyond the three specified.
+            - Do not include sections that are not in the provided JSON.
+            """
+
             },
             {"role": "user", "content": user_query},
             {"role": "assistant", "content": context},
