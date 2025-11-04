@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DVC Course Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Markdown parsing library -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">🎓 DVC Course Assistant</h1>
+                <p class="subtitle">Find STEM courses, sections, instructors, and prerequisites</p>
+            </div>
+        </header>
+
+        <!-- Chat Container -->
+        <div class="chat-container">
+            <div class="chat-messages" id="chatMessages">
+                <!-- Welcome Message -->
+                <div class="message assistant-message">
+                    <div class="message-avatar">🤖</div>
+                    <div class="message-content">
+                        <div class="message-text">
+                            <p>Welcome! I'm your DVC STEM course assistant. I can help you with:</p>
+                            <ul>
+                                <li>Finding open sections and class schedules</li>
+                                <li>Course prerequisites and requirements</li>
+                                <li>Instructor information</li>
+                                <li>Filtering by format (online/in-person/hybrid), day, and time</li>
+                            </ul>
+                            <p><strong>Try asking:</strong></p>
+                            <div class="example-queries">
+                                <button class="example-btn" onclick="sendExampleQuery(this.textContent)">Show me open COMSC-110 sections</button>
+                                <button class="example-btn" onclick="sendExampleQuery(this.textContent)">What are the prerequisites for MATH-193?</button>
+                                <button class="example-btn" onclick="sendExampleQuery(this.textContent)">Find online PHYS classes</button>
+                                <button class="example-btn" onclick="sendExampleQuery(this.textContent)">Show MATH classes on Monday mornings</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-container">
+                <form id="chatForm" class="chat-form">
+                    <div class="input-wrapper">
+                        <textarea 
+                            id="userInput" 
+                            class="chat-input" 
+                            placeholder="Ask about courses, sections, prerequisites, or instructors..."
+                            rows="1"
+                        ></textarea>
+                        <button type="submit" class="send-button" id="sendButton">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="input-hint">
+                        Press Enter to send, Shift+Enter for new line
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+

@@ -1,0 +1,12 @@
+# Flask Web Framework
+Flask==3.0.0
+
+# OpenAI API Client
+openai==1.3.0
+
+# Environment Variables Management
+python-dotenv==1.0.0
+
+# Additional Dependencies
+Werkzeug==3.0.1
+
