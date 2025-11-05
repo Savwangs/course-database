@@ -557,7 +557,21 @@ if __name__ == '__main__':
     print("🎓 DVC Course Assistant - Flask Web App")
     print("="*80)
     print(f"✅ Loaded {len(course_data)} courses")
-    print("🌐 Starting server at http://127.0.0.1:5000")
-    print("="*80 + "\n")
-    app.run(debug=True, host='127.0.0.1', port=5000)
+    
+    # Get port from environment variable (Render provides this)
+    port = int(os.environ.get('PORT', 5000))
+    
+    # Determine if running locally or in production
+    is_production = os.environ.get('RENDER') is not None
+    
+    if is_production:
+        # Production settings for Render
+        print(f"🌐 Starting production server on 0.0.0.0:{port}")
+        print("="*80 + "\n")
+        app.run(debug=False, host='0.0.0.0', port=port)
+    else:
+        # Local development settings
+        print(f"🌐 Starting development server at http://127.0.0.1:{port}")
+        print("="*80 + "\n")
+        app.run(debug=True, host='127.0.0.1', port=port)
 
