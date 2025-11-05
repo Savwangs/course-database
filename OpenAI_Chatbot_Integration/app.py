@@ -66,48 +66,111 @@ def log_interaction(user_prompt: str, parsed_data: dict, response: str):
 
 def search_courses(keyword, mode=None, status=None, day_filter=None, time_filter=None, instructor_filter=None):
     """Return courses filtered by code/title, and optionally by format/status/day/time/instructor.
-    
-    Args:
-        keyword: str or list of str - Course code(s) to search for
-        mode: str or list of str - Format filter (in-person, online, hybrid)
-        status: str - Status filter (open, closed)
-        day_filter: str - Day code filter (M, T, W, Th, F)
-        time_filter: str - Time of day filter (morning, afternoon, evening)
-        instructor_filter: str - Instructor name filter
+       Now supports 'or'/'and' in filters. Examples:
+       - mode:        "online or hybrid"
+       - status:      "open or waitlist"
+       - day_filter:  "M and W", "T or Th", "Mon and Wed", "Tue/Thu"
+       - time_filter: "morning or evening"
+       - instructor:  "Lo or Julie"
     """
+    def _split_tokens(s: str):
+        """Split on natural separators without regex and detect AND vs OR."""
+        s_low = s.lower().strip()
+        is_and = " and " in s_low
+        tmp = (
+            s_low.replace(" and ", "|")
+                 .replace(" or ", "|")
+                 .replace(",", "|")
+                 .replace("/", "|")
+        )
+        parts = [p.strip() for p in tmp.split("|") if p.strip()]
+        return parts, is_and
+
+    def _normalize_mode(m):
+        if m is None:
+            return None
+        if isinstance(m, list):
+            return [x.lower() for x in m]
+        if isinstance(m, str):
+            parts, _ = _split_tokens(m)
+            return parts if parts else [m.lower()]
+        return [str(m).lower()]
+
+    def _normalize_status(s):
+        if s is None:
+            return None
+        if isinstance(s, list):
+            return [x.lower() for x in s]
+        if isinstance(s, str):
+            parts, _ = _split_tokens(s)
+            return parts if parts else [s.lower()]
+        return [str(s).lower()]
+
+    def _normalize_instructor(i):
+        if not i:
+            return None
+        if isinstance(i, str):
+            parts, _ = _split_tokens(i)
+            return parts if parts else [i]
+        return [str(i)]
+
+    def _normalize_time(t):
+        if not t:
+            return None, False
+        if isinstance(t, str):
+            parts, is_and = _split_tokens(t)
+            parts = [p for p in parts if p in {"morning", "afternoon", "evening"}]
+            return (parts if parts else [t]), is_and
+        if isinstance(t, list):
+            return [x for x in t], False
+        return [str(t)], False
+
+    def _normalize_day(d):
+        """Return (tokens_as_codes, require_all). Accepts names or codes."""
+        if not d:
+            return None, False
+        name_to_code = {
+            "monday": "M", "mon": "M", "m": "M",
+            "tuesday": "T", "tue": "T", "tues": "T", "t": "T",
+            "wednesday": "W", "wed": "W", "w": "W",
+            "thursday": "Th", "thu": "Th", "thur": "Th", "thurs": "Th", "th": "Th",
+            "friday": "F", "fri": "F", "f": "F",
+        }
+        if isinstance(d, str):
+            parts, is_and = _split_tokens(d)
+            codes = [name_to_code.get(p, p) for p in parts]
+            return codes, is_and
+        if isinstance(d, list):
+            return d, False
+        return [str(d)], False
+
+    # Normalize flexible filters
+    mode_norm = _normalize_mode(mode)                      # list[str] or None
+    status_norm = _normalize_status(status)                # list[str] or None
+    instr_norm = _normalize_instructor(instructor_filter)  # list[str] or None
+    time_terms, time_all = _normalize_time(time_filter)    # list[str], bool
+    day_terms, day_all = _normalize_day(day_filter)        # list[str], bool
+
     # Handle keyword as list or string
-    if isinstance(keyword, list):
-        keywords = [k.lower() for k in keyword]
-    else:
-        keywords = [keyword.lower()]
-    
+    keywords = [k.lower() for k in (keyword if isinstance(keyword, list) else [keyword])]
+
     results = []
     for course in course_data:
         course_code_lower = course["course_code"].lower()
         course_title_lower = course["course_title"].lower()
-        
-        # Check if any keyword matches
-        match = False
-        for kw in keywords:
-            if kw in course_code_lower or kw in course_title_lower:
-                match = True
-                break
-        
-        if not match:
+
+        if not any(kw in course_code_lower or kw in course_title_lower for kw in keywords):
             continue
+
         filtered_sections = []
         for section in course["sections"]:
             stat = section["status"].lower()
-            
-            # Determine the overall format of the section by examining ALL meetings
+
             if not section.get("meetings"):
                 continue
-            
-            # Get all unique formats from all meetings
+
+            # Derive section_format from all meetings
             all_formats = set(m["format"].lower() for m in section["meetings"] if m.get("format"))
-            
-            # Determine section's primary classification
-            # If it has multiple different formats OR explicitly says "hybrid", it's hybrid
             if "hybrid" in all_formats or len(all_formats) > 1:
                 section_format = "hybrid"
             elif "in-person" in all_formats:
@@ -116,91 +179,79 @@ def search_courses(keyword, mode=None, status=None, day_filter=None, time_filter
                 section_format = "online"
             else:
                 section_format = list(all_formats)[0] if all_formats else ""
-            
-            # Check if mode matches (can be a list of modes or single mode)
-            mode_match = False
-            if not mode:
-                mode_match = True
-            elif isinstance(mode, list):
-                mode_match = section_format in mode
-            else:
-                mode_match = mode == section_format
-            
-            # Apply status filter
-            if status and status not in stat:
+
+            # MODE: OR semantics
+            if mode_norm and section_format not in mode_norm:
                 continue
-            
-            if not mode_match:
+
+            # STATUS: OR semantics on substring tokens
+            if status_norm and not any(s in stat for s in status_norm):
                 continue
-            
-            # Apply instructor filter
-            if instructor_filter:
+
+            # INSTRUCTOR: OR semantics on substrings
+            if instr_norm:
                 instructor = section.get("instructor", "").lower()
-                if instructor_filter.lower() not in instructor:
+                if not any(name.lower() in instructor for name in instr_norm):
                     continue
-            
-            # Apply day and time filters by checking meetings
-            if day_filter or time_filter:
+
+            # DAY/TIME: per-meeting checks with AND/OR semantics
+            if day_terms or time_terms:
                 has_matching_meeting = False
                 for meeting in section.get("meetings", []):
-                    days = meeting.get("days", "")
+                    days = meeting.get("days", "") or ""
                     time_str = meeting.get("time", "")
-                    
-                    # Check day filter
-                    day_match = True
-                    if day_filter:
-                        # Check if the day code is in the days string
-                        day_match = day_filter in days
-                    
-                    # Check time filter
-                    time_match = True
-                    if time_filter and time_str and time_str.lower() != "asynchronous":
-                        # Parse time to check if it's in the range
+
+                    # Day check
+                    day_ok = True
+                    if day_terms:
+                        def _has_day(code):
+                            if code == "Th":
+                                return "Th" in days
+                            return code in days
+                        day_ok = all(_has_day(c) for c in day_terms) if day_all else any(_has_day(c) for c in day_terms)
+
+                    # Time check
+                    time_ok = True
+                    if time_terms and time_str and time_str.lower() != "asynchronous":
                         try:
-                            # Extract start time (e.g., "8:30AM - 11:00AM" -> "8:30AM")
-                            start_time = time_str.split("-")[0].strip()
-                            # Convert to 24-hour format for comparison
-                            if "PM" in start_time and not start_time.startswith("12"):
-                                hour = int(start_time.split(":")[0])
-                                hour += 12
-                            elif "AM" in start_time and start_time.startswith("12"):
+                            start_raw = time_str.split("-")[0].strip()
+                            if "PM" in start_raw and not start_raw.startswith("12"):
+                                hour = int(start_raw.split(":")[0]) + 12
+                            elif "AM" in start_raw and start_raw.startswith("12"):
                                 hour = 0
                             else:
-                                hour = int(start_time.split(":")[0])
-                            
-                            # Check time ranges
-                            if time_filter == "morning":
-                                time_match = hour < 12
-                            elif time_filter == "afternoon":
-                                time_match = 12 <= hour < 17
-                            elif time_filter == "evening":
-                                time_match = hour >= 17
+                                hour = int(start_raw.split(":")[0])
+
+                            def _bucket(h):
+                                if h < 12: return "morning"
+                                if 12 <= h < 17: return "afternoon"
+                                return "evening"
+
+                            bucket = _bucket(hour)
+                            time_ok = all(t == bucket for t in time_terms) if time_all else any(t == bucket for t in time_terms)
                         except:
-                            # If parsing fails, include the section
-                            time_match = False
-                    
-                    # If both day and time match for this meeting, include the section
-                    if day_match and time_match:
+                            time_ok = False
+
+                    if day_ok and time_ok:
                         has_matching_meeting = True
                         break
-                
-                # Skip section if no meetings match the filters
+
                 if not has_matching_meeting:
                     continue
-            
+
             filtered_sections.append(section)
+
         if filtered_sections:
             result = {
                 "course_code": course["course_code"],
                 "course_title": course["course_title"],
                 "sections": filtered_sections
             }
-            # Include prerequisites if available
             if "prerequisites" in course:
                 result["prerequisites"] = course["prerequisites"]
             results.append(result)
-    return results
 
+    return results
 
 def llm_parse_query(user_query: str, *, temperature: float = 0.0):
     """LLM-first parser → course_codes, subjects, intent, filters (constrained to DB).
@@ -496,7 +547,6 @@ def ask_course_assistant(user_query: str, *, parser_temperature: float = 0.0, re
     
     return final_response
 
-
 # === FLASK ROUTES ===
 
 @app.route('/')
@@ -560,4 +610,3 @@ if __name__ == '__main__':
     print("🌐 Starting server at http://127.0.0.1:5000")
     print("="*80 + "\n")
     app.run(debug=True, host='127.0.0.1', port=5000)
-
