@@ -1033,5 +1033,108 @@
       }
     },
     "response": "Found 1 open section for COMSC-260 taught by Professor Lo.\n\n**COMSC-260: Assembly Language Programming/Computer Organization**\n### ONLINE SECTIONS\n- **Section Number:** 5071\n  - **Instructor:** Lo, Lan\n  - **Days:** Online\n  - **Time:** Asynchronous\n  - **Location:** ONLINE\n  - **Units:** 4.00\n\nFriendly Wrap-Up:\n- Interested in more courses? Let me know!\n- Want to check prerequisites? Just ask!"
+  },
+  {
+    "timestamp": "2025-11-04T19:41:58.957299",
+    "user_prompt": "Show me open COMSC-110 sections",
+    "parsed_data": {
+      "course_codes": [
+        "COMSC-110"
+      ],
+      "subjects": [
+        "COMSC"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": "open",
+        "day": null,
+        "time": null,
+        "instructor": null
+      }
+    },
+    "response": "### One-line Summary:\nFound 8 open sections for COMSC-110 (Introduction to Programming).\n\n### COMSC-110: Introduction to Programming\n#### HYBRID SECTIONS (includes in-person meetings)\n- **Section 8292**\n  - Instructor: Youn, Steve\n  - Days: T Th\n  - Time: 6:30PM - 7:55PM\n  - Location: NEED RM\n  - Units: 4.00\n  - Note: Partially online course with required meetings on-campus.\n\n#### IN-PERSON SECTIONS (fully in-person)\nNo in-person sections found.\n\n#### ONLINE SECTIONS\n- **Section 9024**\n  - Instructor: Strickland, Joanne\n  - Days: Online\n  - Time: Asynchronous\n  - Location: ONLINE\n  - Units: 4.00\n\n- **Section 5657**\n  - Instructor: Aladegbami, Kemi\n  - Days: Online\n  - Time: Asynchronous\n  - Location: ONLINE\n  - Units: 4.00\n\n- **Section 5452**\n  - Instructor: Jagpal, Rupinder\n  - Days: Online\n  - Time: Asynchronous\n  - Location: ONLINE\n  - Units: 4.00\n\n- **Section 5451**\n  - Instructor: Jagpal, Rupinder\n  - Days: Online\n  - Time: Asynchronous\n  - Location: ONLINE\n  - Units: 4.00\n\n- **Section 5404**\n  - Instructor: Khaja, Gene\n  - Days: Online\n  - Time: Asynchronous\n  - Location: ONLINE\n  - Units: 4.00\n\n- **Section 5207**\n  - Instructor: Khaja, Gene\n  - Days: Online\n  - Time: Asynchronous\n  - Location: ONLINE\n  - Units: 4.00\n\n- **Section 5523**\n  - Instructor: Amato, Nicholas\n  - Days: Online\n  - Time: Asynchronous\n  - Location: ONLINE\n  - Units: 4.00\n\n### Friendly Wrap-Up:\nWant to explore more options? Say \"more options.\" Interested in specific days or times? Let me know!"
+  },
+  {
+    "timestamp": "2025-11-04T19:42:34.170727",
+    "user_prompt": "Find me open Differential Equations classes",
+    "parsed_data": {
+      "course_codes": [
+        "MATH-294"
+      ],
+      "subjects": [
+        "MATH"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": "open",
+        "day": null,
+        "time": null,
+        "instructor": null
+      }
+    },
+    "response": "Found 5 open sections for MATH-294 (Differential Equations).\n\n**MATH-294: Differential Equations**\n### HYBRID SECTIONS (includes in-person meetings)\n- **Section 8168**\n  - Instructor: Tardivel, Dominic\n  - Days: Th\n  - Time: 5:30PM - 8:00PM\n  - Location: 107\n  - Units: 5.00\n  - Notes: Prerequisite: MATH-292 or equivalent. Advisory: MATH-194 or equivalent (may be taken concurrently). TI-83 or TI-84 graphing calculator required. Partially online course with mandatory in-person meetings on specified dates.\n\n### IN-PERSON SECTIONS (fully in-person)\n- **Section 9146**\n  - Instructor: Staff, SRC\n  - Days: T Th\n  - Time: 1:00PM - 3:30PM\n  - Location: E164\n  - Units: 5.00\n- **Section 2701**\n  - Instructor: Newton, Kit\n  - Days: T Th\n  - Time: 2:30PM - 5:00PM\n  - Location: 104\n  - Units: 5.00\n- **Section 1342**\n  - Instructor: Tardivel, Dominic\n  - Days: M W\n  - Time: 12:45PM - 3:15PM\n  - Location: 240\n  - Units: 5.00\n- **Section 1328**\n  - Instructor: Mohan, Adhitya\n  - Days: M W\n  - Time: 8:30AM - 11:00AM\n  - Location: 249\n  - Units: 5.00\n\n### ONLINE SECTIONS\nNo online sections found.\n\nNext steps:\n- Prefer evenings? Say \"evening.\"\n- Want online only? Say \"online.\"\n- Ask for prerequisites."
+  },
+  {
+    "timestamp": "2025-11-04T19:43:18.646015",
+    "user_prompt": "Show me all the open differentials classes",
+    "parsed_data": {
+      "course_codes": [
+        "MATH-294"
+      ],
+      "subjects": [
+        "MATH"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": "open",
+        "day": null,
+        "time": null,
+        "instructor": null
+      }
+    },
+    "response": "Found 5 sections for MATH-294 (Differential Equations).\n\n**MATH-294: Differential Equations**\n### HYBRID SECTIONS (includes in-person meetings)\n- **Section 8168**\n  - Instructor: Tardivel, Dominic\n  - Days: Th\n  - Time: 5:30PM - 8:00PM\n  - Location: 107\n  - Units: 5.00\n  - Notes: Prerequisite: MATH-292 or equivalent. Advisory: MATH-194 or equivalent (may be taken concurrently). TI-83 or TI-84 graphing calculator required. Mandatory in-person meetings on 2/26, 4/2, 4/30 (exams), and 5/21 (final exam).\n\n### IN-PERSON SECTIONS (fully in-person)\n- **Section 9146**\n  - Instructor: Staff, SRC\n  - Days: T Th\n  - Time: 1:00PM - 3:30PM\n  - Location: E164\n  - Units: 5.00\n- **Section 2701**\n  - Instructor: Newton, Kit\n  - Days: T Th\n  - Time: 2:30PM - 5:00PM\n  - Location: 104\n  - Units: 5.00\n- **Section 1342**\n  - Instructor: Tardivel, Dominic\n  - Days: M W\n  - Time: 12:45PM - 3:15PM\n  - Location: 240\n  - Units: 5.00\n- **Section 1328**\n  - Instructor: Mohan, Adhitya\n  - Days: M W\n  - Time: 8:30AM - 11:00AM\n  - Location: 249\n  - Units: 5.00\n\n### ONLINE SECTIONS\n- No online sections found.\n\nNext steps:\n- Interested in a specific section? Let me know!\n- Want to explore more courses? Just ask!"
+  },
+  {
+    "timestamp": "2025-11-04T19:44:59.974223",
+    "user_prompt": "Can you show me all the open PHYS 230 sections on Tuesday afternoons and Wednesday afternoons",
+    "parsed_data": {
+      "course_codes": [
+        "PHYS-230"
+      ],
+      "subjects": [
+        "PHYS"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": "open",
+        "day": "T",
+        "time": "afternoon"
+      }
+    },
+    "response": "Found 1 section for PHYS-230 (Tuesday afternoon and Wednesday afternoon).\n\n**PHYS-230: Physics for Engineers and Scientists B: Heat and Electro-Magnetism**\n\n### HYBRID SECTIONS (includes in-person meetings)\nNo hybrid sections found.\n\n### IN-PERSON SECTIONS (fully in-person)\n- **Section 1211**\n  - Instructor: Self, Matthew\n  - Days: T Th, W\n  - Time: 2:30PM - 3:55PM, 2:30PM - 5:20PM\n  - Location: 177, 113\n  - Units: 4.00\n\n### ONLINE SECTIONS\nNo online sections found.\n\n**Next steps:**\n- Prefer evenings? Say \"evening.\"\n- Want online only? Say \"online.\"\n- Ask for prerequisites."
+  },
+  {
+    "timestamp": "2025-11-04T19:45:19.113929",
+    "user_prompt": "Can you show me all the open PHYS 230 sections on Tuesday afternoons or Wednesday afternoons",
+    "parsed_data": {
+      "course_codes": [
+        "PHYS-230"
+      ],
+      "subjects": [
+        "PHYS"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": "open",
+        "day": "T",
+        "time": "afternoon"
+      }
+    },
+    "response": "Found 1 section for PHYS-230 (Tuesday afternoon or Wednesday afternoon).\n\n**PHYS-230: Physics for Engineers and Scientists B: Heat and Electro-Magnetism**\n\n### HYBRID SECTIONS (includes in-person meetings)\nNo hybrid sections found.\n\n### IN-PERSON SECTIONS (fully in-person)\n- **Section 1211**\n  - Instructor: Self, Matthew\n  - Days: T Th, W\n  - Time: 2:30PM - 3:55PM, 2:30PM - 5:20PM\n  - Location: 177, 113\n  - Units: 4.00\n\n### ONLINE SECTIONS\nNo online sections found.\n\n---\n\nNext steps:\n- Prefer evenings? Say \"evening.\"\n- Want online only? Say \"online.\"\n- Ask for prerequisites."
   }
 ]
