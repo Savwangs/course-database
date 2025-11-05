@@ -30,6 +30,7 @@ log_file_path = Path(__file__).parent / "user_log.json"
 def log_interaction(user_prompt: str, parsed_data: dict, response: str):
     """
     Log user interactions to a JSON file with automatic appending.
+    Also prints to console for cloud platforms like Render where filesystem is ephemeral.
     
     Args:
         user_prompt: The raw user query
@@ -40,40 +41,55 @@ def log_interaction(user_prompt: str, parsed_data: dict, response: str):
         "timestamp": datetime.now().isoformat(),
         "user_prompt": user_prompt,
         "parsed_data": parsed_data,
-        "response": response
+        "response": response[:500] + "..." if len(response) > 500 else response  # Truncate for console
     }
     
-    # Load existing logs or create new list
-    if log_file_path.exists():
-        try:
-            with open(log_file_path, "r", encoding="utf-8") as f:
-                logs = json.load(f)
-            if not isinstance(logs, list):
+    # Always print to console (captured by Render logs)
+    print(f"📝 USER LOG: {json.dumps(log_entry, ensure_ascii=False)}")
+    
+    # Try to write to file (works locally, may not persist on Render due to ephemeral filesystem)
+    try:
+        # Load existing logs or create new list
+        if log_file_path.exists():
+            try:
+                with open(log_file_path, "r", encoding="utf-8") as f:
+                    logs = json.load(f)
+                if not isinstance(logs, list):
+                    logs = []
+            except (json.JSONDecodeError, Exception):
                 logs = []
-        except (json.JSONDecodeError, Exception):
+        else:
             logs = []
-    else:
-        logs = []
-    
-    # Append new entry
-    logs.append(log_entry)
-    
-    # Write back to file
-    with open(log_file_path, "w", encoding="utf-8") as f:
-        json.dump(logs, f, indent=2, ensure_ascii=False)
-    
-    print(f"📝 Logged interaction to {log_file_path}")
+        
+        # Append new entry
+        logs.append({
+            "timestamp": datetime.now().isoformat(),
+            "user_prompt": user_prompt,
+            "parsed_data": parsed_data,
+            "response": response
+        })
+        
+        # Write back to file
+        with open(log_file_path, "w", encoding="utf-8") as f:
+            json.dump(logs, f, indent=2, ensure_ascii=False)
+        
+        print(f"✅ Logged to file: {log_file_path}")
+    except Exception as e:
+        # If file logging fails (e.g., on Render), don't crash - console log is already done
+        print(f"⚠️ File logging failed (ephemeral filesystem?): {e}")
+        print("💡 Logs are still captured in console output (check Render logs)")
 
-def search_courses(keyword, mode=None, status=None, day_filter=None, time_filter=None, instructor_filter=None):
+def search_courses(keyword, mode=None, status=None, day_filter=None, time_filter=None, instructor_filter=None, filter_logic="AND"):
     """Return courses filtered by code/title, and optionally by format/status/day/time/instructor.
     
     Args:
         keyword: str or list of str - Course code(s) to search for
         mode: str or list of str - Format filter (in-person, online, hybrid)
         status: str - Status filter (open, closed)
-        day_filter: str - Day code filter (M, T, W, Th, F)
-        time_filter: str - Time of day filter (morning, afternoon, evening)
+        day_filter: str, list - Day code filter (M, T, W, Th, F) or list of days
+        time_filter: str, list - Time of day filter (morning, afternoon, evening) or list of times
         instructor_filter: str - Instructor name filter
+        filter_logic: str - "AND" (all criteria must match) or "OR" (any criteria can match)
     """
     # Handle keyword as list or string
     if isinstance(keyword, list):
@@ -141,48 +157,77 @@ def search_courses(keyword, mode=None, status=None, day_filter=None, time_filter
             
             # Apply day and time filters by checking meetings
             if day_filter or time_filter:
+                # Normalize filters to lists for uniform handling
+                day_list = day_filter if isinstance(day_filter, list) else ([day_filter] if day_filter else [])
+                time_list = time_filter if isinstance(time_filter, list) else ([time_filter] if time_filter else [])
+                
+                # Helper function to check if a time matches a time filter
+                def time_matches(time_str, time_filter_val):
+                    if not time_str or time_str.lower() == "asynchronous":
+                        return False
+                    try:
+                        start_time = time_str.split("-")[0].strip()
+                        if "PM" in start_time and not start_time.startswith("12"):
+                            hour = int(start_time.split(":")[0]) + 12
+                        elif "AM" in start_time and start_time.startswith("12"):
+                            hour = 0
+                        else:
+                            hour = int(start_time.split(":")[0])
+                        
+                        if time_filter_val == "morning":
+                            return hour < 12
+                        elif time_filter_val == "afternoon":
+                            return 12 <= hour < 17
+                        elif time_filter_val == "evening":
+                            return hour >= 17
+                    except:
+                        return False
+                    return False
+                
                 has_matching_meeting = False
-                for meeting in section.get("meetings", []):
-                    days = meeting.get("days", "")
-                    time_str = meeting.get("time", "")
-                    
-                    # Check day filter
-                    day_match = True
-                    if day_filter:
-                        # Check if the day code is in the days string
-                        day_match = day_filter in days
-                    
-                    # Check time filter
-                    time_match = True
-                    if time_filter and time_str and time_str.lower() != "asynchronous":
-                        # Parse time to check if it's in the range
-                        try:
-                            # Extract start time (e.g., "8:30AM - 11:00AM" -> "8:30AM")
-                            start_time = time_str.split("-")[0].strip()
-                            # Convert to 24-hour format for comparison
-                            if "PM" in start_time and not start_time.startswith("12"):
-                                hour = int(start_time.split(":")[0])
-                                hour += 12
-                            elif "AM" in start_time and start_time.startswith("12"):
-                                hour = 0
-                            else:
-                                hour = int(start_time.split(":")[0])
+                
+                if filter_logic == "OR" and day_list and time_list:
+                    # OR logic with paired combinations: (day[0]+time[0]) OR (day[1]+time[1]) etc.
+                    # Example: "Wednesday mornings OR Thursday afternoons"
+                    # Pairs: (W, morning), (Th, afternoon)
+                    max_pairs = max(len(day_list), len(time_list))
+                    for meeting in section.get("meetings", []):
+                        days = meeting.get("days", "")
+                        time_str = meeting.get("time", "")
+                        
+                        # Check if this meeting matches ANY of the paired combinations
+                        for i in range(max_pairs):
+                            day_val = day_list[i] if i < len(day_list) else day_list[-1]
+                            time_val = time_list[i] if i < len(time_list) else time_list[-1]
                             
-                            # Check time ranges
-                            if time_filter == "morning":
-                                time_match = hour < 12
-                            elif time_filter == "afternoon":
-                                time_match = 12 <= hour < 17
-                            elif time_filter == "evening":
-                                time_match = hour >= 17
-                        except:
-                            # If parsing fails, include the section
-                            time_match = False
-                    
-                    # If both day and time match for this meeting, include the section
-                    if day_match and time_match:
-                        has_matching_meeting = True
-                        break
+                            day_match = day_val in days if day_val else True
+                            time_match = time_matches(time_str, time_val) if time_val else True
+                            
+                            if day_match and time_match:
+                                has_matching_meeting = True
+                                break
+                        
+                        if has_matching_meeting:
+                            break
+                
+                else:
+                    # AND logic (default): Check if section has meetings matching all criteria
+                    for meeting in section.get("meetings", []):
+                        days = meeting.get("days", "")
+                        time_str = meeting.get("time", "")
+                        
+                        # For AND with lists: check if meeting matches ANY day in list AND ANY time in list
+                        day_match = True
+                        if day_list:
+                            day_match = any(d in days for d in day_list)
+                        
+                        time_match = True
+                        if time_list:
+                            time_match = any(time_matches(time_str, t) for t in time_list)
+                        
+                        if day_match and time_match:
+                            has_matching_meeting = True
+                            break
                 
                 # Skip section if no meetings match the filters
                 if not has_matching_meeting:
@@ -226,12 +271,13 @@ def llm_parse_query(user_query: str, *, temperature: float = 0.0):
         '  \"subjects\": [list of subject prefixes like \"COMSC\",\"MATH\"],\n'
         '  \"intent\": \"find_sections\" | \"prerequisites\" | \"instructors\",\n'
         '  \"filters\": {\n'
-        '     \"mode\": \"in-person\" | \"online\" | \"hybrid\" | null,\n'
+        '     \"mode\": \"in-person\" | \"online\" | \"hybrid\" | [list] | null,\n'
         '     \"status\": \"open\" | \"closed\" | null,\n'
-        '     \"day\": \"M\" | \"T\" | \"W\" | \"Th\" | \"F\" | null,\n'
-        '     \"time\": \"morning\" | \"afternoon\" | \"evening\" | null,\n'
+        '     \"day\": \"M\" | \"T\" | \"W\" | \"Th\" | \"F\" | [list of days] | null,\n'
+        '     \"time\": \"morning\" | \"afternoon\" | \"evening\" | [list of times] | null,\n'
         '     \"instructor\": string or null\n'
-        "  }\n"
+        "  },\n"
+        '  \"filter_logic\": \"AND\" | \"OR\"\n'
         "}\n"
         "Rules:\n"
         "- Only choose course_codes from ALLOWED_COURSE_CODES.\n"
@@ -242,7 +288,18 @@ def llm_parse_query(user_query: str, *, temperature: float = 0.0):
         "- If the user asks about prerequisites/prereq, set intent='prerequisites'.\n"
         "- If the user asks about professor/instructor/teacher/who teaches, set intent='instructors'.\n"
         "- Otherwise default to intent='find_sections'.\n"
-        "- Extract simple filters if present; else use nulls."
+        "- Extract simple filters if present; else use nulls.\n\n"
+        "IMPORTANT - Handling 'OR' and 'AND' logic:\n"
+        "- If user uses 'OR' (e.g., 'Monday mornings OR Thursday afternoons'), set filter_logic='OR' "
+        "  and provide lists for filters that have multiple options.\n"
+        "  Example: 'Wednesday mornings or Thursday afternoons' → "
+        '  {\"day\": [\"W\", \"Th\"], \"time\": [\"morning\", \"afternoon\"], \"filter_logic\": \"OR\"}\n'
+        "- If user uses 'AND' or commas without 'or', set filter_logic='AND' and combine criteria.\n"
+        "  Example: 'Monday and Wednesday mornings' → "
+        '  {\"day\": [\"M\", \"W\"], \"time\": \"morning\", \"filter_logic\": \"AND\"}\n'
+        "- Default filter_logic is 'AND' if not specified.\n"
+        "- When filter_logic='OR', a section matches if it satisfies ANY of the combined day/time pairs.\n"
+        "- When filter_logic='AND', a section must satisfy ALL specified criteria."
     )
 
     parser_user = json.dumps({
@@ -271,6 +328,7 @@ def llm_parse_query(user_query: str, *, temperature: float = 0.0):
     parsed.setdefault("course_codes", [])
     parsed.setdefault("subjects", [])
     parsed.setdefault("intent", "find_sections")
+    parsed.setdefault("filter_logic", "AND")  # Default to AND logic
     parsed.setdefault("filters", {"mode": None, "status": None, "day": None, "time": None, "instructor": None})
 
     parsed["course_codes"] = [str(c).upper() for c in parsed["course_codes"] if isinstance(c, str)]
@@ -358,7 +416,8 @@ def ask_course_assistant(user_query: str, *, parser_temperature: float = 0.0, re
 
     # Search with parsed filters
     keyword = course_codes if course_codes else subjects
-    results = search_courses(keyword, mode, status, day_filter, time_filter, instructor_mentioned)
+    filter_logic = parsed.get("filter_logic", "AND")  # Get OR/AND logic from parsed data
+    results = search_courses(keyword, mode, status, day_filter, time_filter, instructor_mentioned, filter_logic=filter_logic)
 
     # If nothing matched under the current filters, try unfiltered to diagnose
     if not results:
