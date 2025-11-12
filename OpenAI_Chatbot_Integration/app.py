@@ -1440,10 +1440,25 @@ def conversation_status():
 @app.route('/health', methods=['GET'])
 def health():
     """Health check endpoint"""
+    mongo_status = "not_connected"
+    mongo_error = None
+    
+    if conversations_collection is not None:
+        mongo_status = "connected"
+        try:
+            # Try to ping MongoDB
+            mongo_client.admin.command('ping')
+            mongo_status = "connected_and_working"
+        except Exception as e:
+            mongo_status = "connected_but_error"
+            mongo_error = str(e)
+    
     return jsonify({
         'status': 'healthy',
         'courses_loaded': len(course_data),
-        'mongodb_connected': conversations_collection is not None
+        'mongodb_status': mongo_status,
+        'mongodb_error': mongo_error,
+        'mongodb_uri_set': bool(os.getenv("MONGODB_CONNECTION_URI"))
     })
 
 @app.route('/logs', methods=['GET'])
