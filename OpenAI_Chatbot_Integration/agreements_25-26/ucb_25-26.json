@@ -1,0 +1,98 @@
+{
+    "Berkeley": [
+        {
+            "Year": "2025-2026"
+        },
+        {
+            "Category": "Mathematics (Required for Admission)",
+            "Minimum_Required": "all",
+            "Courses": [
+                {
+                    "UC_Berkeley": {
+                        "Course_Code": "MATH-51",
+                        "Title": "Calculus 1",
+                        "Units": 4
+                    },
+                    "DVC": {
+                        "Course_Code": "MATH-192",
+                        "Title": "Analytic Geometry and Calculus I",
+                        "Units": 5
+                    }
+                },
+                {
+                    "UC_Berkeley": {
+                        "Course_Code": "MATH-52",
+                        "Title": "Calculus 2",
+                        "Units": 4
+                    },
+                    "DVC": {
+                        "Course_Code": "MATH-192",
+                        "Title": "Analytic Geometry and Calculus 2",
+                        "Units": 5
+                    }
+                },
+                {
+                    "UC_Berkeley": {
+                        "Course_Code": "MATH-54",
+                        "Title": "Linear Algebra and Differential Equations",
+                        "Units": 4
+                    },
+                    "DVC": {
+                        "Course_Code": "MATH-194/294",
+                        "Title": "Linear Algebra/Differential Equations",
+                        "Units": 8
+                    }
+                }
+            ]
+        },
+        {
+            "Category": "Highly Recommended",
+            "Minimum_Required": "None",
+            "Courses": [
+                {
+                    "UC_Berkeley": {
+                        "Course_Code": "COMPSCI-61A",
+                        "Title": "The Structure and Interpretation of Computer Programs",
+                        "Units": 4
+                    },
+                    "DVC": [
+                        {
+                            "Course_Code": "COMPSC-140",
+                            "Title": "Python Programming",
+                            "Units": 3
+                        },
+                        {
+                            "Course_Code": "COMPSC-240/MATH 192",
+                            "Title": "Advanced Python Programming/Analytic Geometry and Calculus 1",
+                            "Units": 8
+                        }
+                    ]
+                },
+                {
+                    "UC_Berkeley": {
+                        "Course_Code": "COMPSCI-61B",
+                        "Title": "Data Structures",
+                        "Units": 4
+                    },
+                    "DVC": {
+                        "Course_Code": "COMSC-210",
+                        "Title": "Program Design and Data Structures",
+                        "Units": 4
+                    }
+                },
+                {
+                    "UC_Berkeley": {
+                        "Course_Code": "COMPSCI-61C",
+                        "Title": "Machine Structures",
+                        "Units": 4
+                    },
+                    "DVC": {
+                        "Course_Code": "COMSC-260",
+                        "Title": "Assembly Language Programming/Computer Organization",
+                        "Units": 4
+                    }
+                }
+            ]
+        }
+    ]
+}

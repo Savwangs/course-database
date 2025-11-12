@@ -2195,5 +2195,271 @@
       }
     },
     "response": "**Can you take COMSC-165 and COMSC-200 together?**\n\n❌ **No** - COMSC-200 requires COMSC-165 as a prerequisite, so you must complete COMSC-165 first.\n\n**COMSC-200 prerequisites:** COMSC-165 or equivalent\n"
+  },
+  {
+    "timestamp": "2025-11-12T12:13:41.554762",
+    "user_prompt": "What GE courses should I take at DVC for UC Berkeley?",
+    "parsed_data": {
+      "mode": "uc_transfer",
+      "parsed": {
+        "intent": "find_requirements",
+        "parameters": {
+          "campus": "UCB",
+          "campuses": [
+            "UCB"
+          ]
+        },
+        "filters": {
+          "focus_only": null,
+          "required_only": false,
+          "domains_completed": [],
+          "completed_courses": [],
+          "categories": [
+            "general education"
+          ]
+        }
+      },
+      "campuses": [
+        "UCB"
+      ],
+      "result_counts": {
+        "UCB": 0
+      }
+    },
+    "response": "Transfer prep for UC Berkeley:  \n• COMSC-200 — Object Oriented Programming C++ (4 units)"
+  },
+  {
+    "timestamp": "2025-11-12T12:14:10.516418",
+    "user_prompt": "I've completed Math 192, what does that cover at UCB?",
+    "parsed_data": {
+      "mode": "uc_transfer",
+      "parsed": {
+        "intent": "find_equivalent_course",
+        "parameters": {
+          "campus": "UCB",
+          "campuses": [
+            "UCB"
+          ]
+        },
+        "filters": {
+          "focus_only": "math",
+          "required_only": false,
+          "domains_completed": [],
+          "completed_courses": [
+            "MATH-192"
+          ],
+          "categories": [
+            "math"
+          ]
+        }
+      },
+      "campuses": [
+        "UCB"
+      ],
+      "result_counts": {
+        "UCB": 1
+      }
+    },
+    "response": "Transfer prep for UC Berkeley: (excluding completed domains: ...; completed courses: MATH-192 )\n• MATH-194/294 — Linear Algebra/Differential Equations (8 units)"
+  },
+  {
+    "timestamp": "2025-11-12T12:15:00.935574",
+    "user_prompt": "Give me a fun stem class",
+    "parsed_data": {
+      "course_codes": [
+        "BIOSC-126",
+        "BIOSC-162",
+        "ENGIN-130",
+        "ENGIN-131",
+        "ENGL-175"
+      ],
+      "subjects": [
+        "BIOSC",
+        "ENGIN",
+        "ENGL"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": null,
+        "time": null,
+        "instructor": null
+      }
+    },
+    "response": "Found 7 section(s) for fun STEM classes at DVC:\n\n**BIOSC-126: Ecology and Field Biology**\n### HYBRID SECTIONS (includes in-person meetings)\nNo hybrid sections found.\n\n### IN-PERSON SECTIONS (fully in-person)\n- Section 1080\n  - Instructor: Levin, Anna\n  - Days: T Th (11:10AM - 12:35PM, Room 115), Th (12:55PM - 4:05PM, Room 202)\n  - Units: 4.00\n  - Notes: Labs include field trips to local parks, Ano Nuevo, Marine Mammal Center, Pillar Point Tidepools.\n\n### ONLINE SECTIONS\nNo online sections found.\n\n---\n\n**BIOSC-162: Fundamentals of Marine Biology with Laboratory**\n### HYBRID SECTIONS (includes in-person meetings)\nNo hybrid sections found.\n\n### IN-PERSON SECTIONS (fully in-person)\n- Section 1097\n  - Instructor: Freytag, John\n  - Days: M (11:10AM - 2:20PM, Room 110), W (11:10AM - 2:20PM, Room 117)\n  - Units: 4.00\n  - Notes: Includes field trips, including a three-day trip to Dillon Beach/Bodega Bay.\n\n### ONLINE SECTIONS\nNo online sections found.\n\n---\n\n**ENGIN-130: Energy, Society, and the Environment**\n### HYBRID SECTIONS (includes in-person meetings)\nNo hybrid sections found.\n\n### IN-PERSON SECTIONS (fully in-person)\nNo in-person sections found.\n\n### ONLINE SECTIONS\n- Section 5230\n  - Instructor: Khandani, Seyyed\n  - Days: Online (Asynchronous)\n  - Location: ONLINE\n  - Units: 3.00\n- Section 5223\n  - Instructor: Khandani, Seyyed\n  - Days: Online (Asynchronous)\n  - Location: ONLINE\n  - Units: 3.00\n\n---\n\n**ENGIN-131: Technology and Society**\n### HYBRID SECTIONS (includes in-person meetings)\nNo hybrid sections found.\n\n### IN-PERSON SECTIONS (fully in-person)\n- Section 6258\n  - Instructor: Navayazdan, Afarin\n  - Days: T Th (4:15PM - 5:40PM)\n  - Location: MDHS\n  - Units: 3.00\n\n### ONLINE SECTIONS\n- Section 5224\n  - Instructor: Panahandeh, Mohammad\n  - Days: Online (Asynchronous)\n  - Location: ONLINE\n  - Units: 3.00\n\n---\n\n**ENGL-175: Science Fiction and Fantasy Literature**\n### HYBRID SECTIONS (includes in-person meetings)\nNo hybrid sections found.\n\n### IN-PERSON SECTIONS (fully in-person)\nNo in-person sections found.\n\n### ONLINE SECTIONS\n- Section 5150\n  - Instructor: Garcia, Marcos\n  - Days: Online (Asynchronous)\n  - Location: ONLINE\n  - Units: 3.00\n  - Notes: 100% online, no required meetings.\n\n---\n\nNext steps:\n- Want more hands-on science? Say \"lab classes.\"\n- Prefer online only? Say \"online.\"\n- Ask about prerequisites or which classes transfer to UC!"
+  },
+  {
+    "timestamp": "2025-11-12T12:15:53.342857",
+    "user_prompt": "what are the course requirements for ucb and ucd?",
+    "parsed_data": {
+      "mode": "uc_transfer",
+      "parsed": {
+        "intent": "find_requirements",
+        "parameters": {
+          "campus": "UCB",
+          "campuses": [
+            "UCB",
+            "UCD"
+          ]
+        },
+        "filters": {
+          "focus_only": null,
+          "required_only": false,
+          "domains_completed": [],
+          "completed_courses": [],
+          "categories": []
+        }
+      },
+      "campuses": [
+        "UCB",
+        "UCD"
+      ],
+      "result_counts": {
+        "UCB": 6,
+        "UCD": 18
+      }
+    },
+    "response": "Transfer prep for UC Berkeley:\n• COMSC-200 — Object Oriented Programming C++ (4 units)\n\nTransfer prep for UC Davis:\n• COMSC-200 — Object Oriented Programming C++ (4 units)"
+  },
+  {
+    "timestamp": "2025-11-12T12:16:27.381522",
+    "user_prompt": "what are the math requirements of ucsd?",
+    "parsed_data": {
+      "mode": "uc_transfer",
+      "parsed": {
+        "intent": "find_requirements",
+        "parameters": {
+          "campus": "UCSD",
+          "campuses": [
+            "UCSD"
+          ]
+        },
+        "filters": {
+          "focus_only": "math",
+          "required_only": false,
+          "domains_completed": [],
+          "completed_courses": [],
+          "categories": [
+            "math"
+          ]
+        }
+      },
+      "campuses": [
+        "UCSD"
+      ],
+      "result_counts": {
+        "UCSD": 0
+      }
+    },
+    "response": "Transfer prep for UC San Diego:\n• No DVC course mappings found."
+  },
+  {
+    "timestamp": "2025-11-12T12:36:49.560554",
+    "user_prompt": "Give me games to play",
+    "parsed_data": {
+      "course_codes": [],
+      "subjects": [],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": null,
+        "time": null,
+        "instructor": null
+      }
+    },
+    "response": "I can help you find DVC STEM courses and details and transfer from DVC agreements.\n\nTry one of these:\n- \"Show me open MATH-193 sections Monday morning.\"\n- \"Who teaches PHYS-130 on Thursdays?\"\n- \"What are the prerequisites for COMSC-200?\"\n- \"I have completed Math 192, what does that cover at UCB?\"\n- \"What GE courses should I take at DVC for UC Berkeley?\""
+  },
+  {
+    "timestamp": "2025-11-12T12:37:00.013755",
+    "user_prompt": "What GE courses should I take at DVC for UC Berkeley?",
+    "parsed_data": {
+      "mode": "uc_transfer",
+      "parsed": {
+        "intent": "find_requirements",
+        "parameters": {
+          "campus": "UCB",
+          "campuses": [
+            "UCB"
+          ]
+        },
+        "filters": {
+          "focus_only": null,
+          "required_only": false,
+          "domains_completed": [],
+          "completed_courses": [],
+          "categories": [
+            "general education"
+          ]
+        }
+      },
+      "campuses": [
+        "UCB"
+      ],
+      "result_counts": {
+        "UCB": 0
+      }
+    },
+    "response": "Transfer prep for UC Berkeley:  \n• COMSC-200 — Object Oriented Programming C++ (4 units)"
+  },
+  {
+    "timestamp": "2025-11-12T12:37:40.778768",
+    "user_prompt": "Any more courses to take?",
+    "parsed_data": {
+      "course_codes": [],
+      "subjects": [],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": null,
+        "time": null,
+        "instructor": null
+      }
+    },
+    "response": "I can help you find DVC STEM courses and details and transfer from DVC agreements.\n\nTry one of these:\n- \"Show me open MATH-193 sections Monday morning.\"\n- \"Who teaches PHYS-130 on Thursdays?\"\n- \"What are the prerequisites for COMSC-200?\"\n- \"I have completed Math 192, what does that cover at UCB?\"\n- \"What GE courses should I take at DVC for UC Berkeley?\""
+  },
+  {
+    "timestamp": "2025-11-12T12:38:00.272226",
+    "user_prompt": "Who teaches PHYS-130 on Thursdays?",
+    "parsed_data": {
+      "course_codes": [
+        "PHYS-130"
+      ],
+      "subjects": [
+        "PHYS"
+      ],
+      "intent": "instructors",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": "Th",
+        "time": null,
+        "instructor": null
+      }
+    },
+    "response": "Found 5 section(s) for PHYS-130 (Thursdays).\n\n**PHYS-130: Physics for Engineers and Scientists A: Mechanics and Wave Motion**\n\n### HYBRID SECTIONS (includes in-person meetings)\nNo hybrid sections found.\n\n### IN-PERSON SECTIONS (fully in-person)\n- Section 6585\n  - Instructor: Katdare, Sonia\n  - Days: T Th (11:10AM - 12:35PM, Room 177), W (11:10AM - 2:00PM, Room 113), T (12:45PM - 2:00PM, Room 121)\n  - Units: 4.00\n  - Notes: Prerequisite: PHYS-110 and PHYS-111 combined or PHYS-112 or PHYS-120 or PHYS-129 or one year high school physics or equivalent. Co-requisite: MATH-193 (may be taken previously) or equivalent. PHYS-129 is strongly advised for students who have not yet completed an equivalent prerequisite or for students who completed the prerequisite more than a year ago. This section is part of the DVC MESA program.\n- Section 1197\n  - Instructor: Christianson, Kent\n  - Days: M (11:10AM - 2:00PM, Room 113), W (12:45PM - 2:00PM, Room 1), T Th (2:30PM - 3:55PM, Room 175)\n  - Units: 4.00\n- Section 1196\n  - Instructor: Katdare, Sonia\n  - Days: T Th (11:10AM - 12:35PM, Room 177), W (11:10AM - 2:00PM, Room 113), T (12:45PM - 2:00PM, Room 121)\n  - Units: 4.00\n- Section 1193\n  - Instructor: Large, Evan\n  - Days: M W (9:35AM - 11:00AM, Room 177), T (11:10AM - 12:25PM, Room 113), Th (11:10AM - 2:00PM, Room 113)\n  - Units: 4.00\n- Section 1191\n  - Instructor: Large, Evan\n  - Days: T (8:00AM - 10:50AM, Room 113), M W (9:35AM - 11:00AM, Room 177), Th (9:35AM - 10:50AM, Room 113)\n  - Units: 4.00\n\n### ONLINE SECTIONS\nNo online sections found.\n\nNext steps:\n- Prefer a specific time or instructor? Let me know!\n- Want to see only open sections or check prerequisites? Just ask."
+  },
+  {
+    "timestamp": "2025-11-12T12:38:18.254592",
+    "user_prompt": "Who are the instructors?",
+    "parsed_data": {
+      "course_codes": [
+        "PHYS-130"
+      ],
+      "subjects": [
+        "PHYS"
+      ],
+      "intent": "instructors",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": "Th",
+        "time": null,
+        "instructor": null
+      }
+    },
+    "response": "For those PHYS-130 sections on Thursdays you asked about:\n\nFound 5 section(s) for PHYS-130 (Thursdays).\n\n**PHYS-130: Physics for Engineers and Scientists A: Mechanics and Wave Motion**\n\n### HYBRID SECTIONS (includes in-person meetings)\nNo hybrid sections found.\n\n### IN-PERSON SECTIONS (fully in-person)\nInstructors teaching PHYS-130 on Thursdays:\n- Katdare, Sonia (Sections 6585, 1196)\n- Christianson, Kent (Section 1197)\n- Large, Evan (Sections 1193, 1191)\n\n### ONLINE SECTIONS\nNo online sections found.\n\nNext steps:\n- Want to see which times each instructor teaches?\n- Need details on prerequisites or open seats? Just ask!"
   }
 ]

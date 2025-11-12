@@ -1,0 +1,240 @@
+{
+    "Davis": [
+        {
+            "Year": "2024-2025"
+        },
+        {
+            "Category": "Computer Science (Required for Admission)",
+            "Minimum_Required": "all",
+            "Courses": [
+                {
+                    "UC_Davis": {
+                        "Course_Code": "ECS-020",
+                        "Title": "Discrete Mathematics For Computer Science",
+                        "Units": 4
+                    },
+                    "DVC": {
+                        "Course_Code": "MATH-195",
+                        "Title": "Discrete Mathematics",
+                        "Units": 4
+                    }
+                },
+                {
+                    "UC_Davis": {
+                        "Course_Code": "ECS-36A",
+                        "Title": "Programming and Problem Solving",
+                        "Units": 4
+                    },
+                    "DVC": [
+                        {
+                            "Course_Code": "COMSC-110",
+                            "Title": "Introduction to Programming",
+                            "Units": 4
+                        },
+                        {
+                            "Course_Code": "COMSC-165",
+                            "Title": "Advanced Programming with C and C++",
+                            "Units": 4
+                        },
+                        {
+                            "Course_Code": "COMSC-255",
+                            "Title": "Programming with Java",
+                            "Units": 4
+                        },
+                        {
+                            "Course_Code": "ENGIN-135",
+                            "Title": "Programming for Scientists and Engineers",
+                            "Units": 4
+                        }
+                    ]
+                },
+                {
+                    "UC_Davis": {
+                        "Course_Code": "ECS-36B",
+                        "Title": "Software Development and Object-Oriented Programming in C++",
+                        "Units": 4
+                    },
+                    "DVC": {
+                        "Course_Code": "COMSC-200",
+                        "Title": "Object Oriented Programming C++",
+                        "Units": 4
+                    }
+                },
+                {
+                    "UC_Davis": {
+                        "Course_Code": "ECS-036C",
+                        "Title": "Data Structures, Algorithms, and Programming",
+                        "Units": 4
+                    },
+                    "DVC": {
+                        "Course_Code": "COMSC-210",
+                        "Title": "Program Design and Data Structures",
+                        "Units": 4
+                    }
+                },
+                {
+                    "UC_Davis": {
+                        "Course_Code": "ECS-050",
+                        "Title": "Computer Organization and Machine-Dependent Programming",
+                        "Units": 4
+                    },
+                    "DVC": {
+                        "Course_Code": "COMSC-260",
+                        "Title": "Assembly Language Programming/Computer Organization",
+                        "Units": 4
+                    }
+                }
+            ]
+        },
+        {
+            "Category": "Mathematics (Required for Admission)",
+            "Minimum_Required": "all",
+            "Courses": [
+                {
+                    "UC_Davis": {
+                        "Course_Code": "MAT-21A",
+                        "Title": "Calculus",
+                        "Units": 4
+                    },
+                    "DVC": {
+                        "Course_Code": "MATH-192",
+                        "Title": "Analytic Geometry and Calculus I",
+                        "Units": 5
+                    }
+                },
+                {
+                    "UC_Davis": {
+                        "Course_Code": "MAT-21B",
+                        "Title": "Calculus",
+                        "Units": 4
+                    },
+                    "DVC": {
+                        "Course_Code": "MATH-193",
+                        "Title": "Analytic Geometry and Calculus II",
+                        "Units": 5
+                    }
+                },
+                {
+                    "UC_Davis": {
+                        "Course_Code": "MAT-21C",
+                        "Title": "Calculus",
+                        "Units": 4
+                    },
+                    "DVC": {
+                        "Course_Code": "MATH-292",
+                        "Title": "Analytic Geometry and Calculus III",
+                        "Units": 5
+                    }
+                }
+            ]
+        },
+        {
+            "Category": "Other Major Requirements",
+            "Minimum_Required": 1,
+            "Courses": [
+                {
+                    "UC_Davis": {
+                        "Course_Code": "MAT-22A",
+                        "Title": "Linear Algebra",
+                        "Units": 4
+                    },
+                    "DVC": {
+                        "Course_Code": "MATH-194",
+                        "Title": "Linear Algebra",
+                        "Units": 3
+                    }
+                }
+            ]
+        },
+        {
+            "Category": "Science Sequence (Choose 3 total)",
+            "Minimum_Required": 3,
+            "Courses": [
+                {
+                    "UC_Davis": {
+                        "Course_Code": "BIS-02A",
+                        "Title": "Introduction to Biology: Essentials of Life on Earth",
+                        "Units": 5
+                    },
+                    "DVC": {
+                        "Course_Code": "BIOSC-130",
+                        "Title": "Principles of Cellular and Molecular Biology",
+                        "Units": 5
+                    }
+                },
+                {
+                    "UC_Davis": {
+                        "Course_Code": "BIS-02B",
+                        "Title": "Introduction to Biology: Principles of Ecology, Evolution",
+                        "Units": 5
+                    },
+                    "DVC": {
+                        "Course_Code": "BIOSC-131",
+                        "Title": "Principles of Organismal Biology, Evolution, and Ecology",
+                        "Units": 5
+                    }
+                },
+                {
+                    "UC_Davis": {
+                        "Course_Code": "BIS-02C",
+                        "Title": "Introduction to Biology: Biodiversity the Tree of Life",
+                        "Units": 5
+                    },
+                    "DVC": {
+                        "Course_Code": "BIOSC-131",
+                        "Title": "Principles of Organismal Biology, Evolution, and Ecology",
+                        "Units": 5
+                    }
+                },
+                {
+                    "UC_Davis": {
+                        "Course_Code": "CHE-02A/B/C",
+                        "Title": "General Chemistry Sequence",
+                        "Units": "sequence"
+                    },
+                    "DVC": {
+                        "Course_Code": "CHEM-120/121",
+                        "Title": "General College Chemistry I/II (sequence only)",
+                        "Units": "sequence"
+                    }
+                },
+                {
+                    "UC_Davis": {
+                        "Course_Code": "PHY-09A",
+                        "Title": "Classical Physics",
+                        "Units": 5
+                    },
+                    "DVC": {
+                        "Course_Code": "PHYS-130",
+                        "Title": "Physics for Engineers and Scientists A: Mechanics and Wave Motion",
+                        "Units": 4
+                    }
+                },
+                {
+                    "UC_Davis": {
+                        "Course_Code": "PHY-09B",
+                        "Title": "Classical Physics",
+                        "Units": 5
+                    },
+                    "DVC": {
+                        "Course_Code": "PHYS-230/231",
+                        "Title": "Physics for Engineers and Scientists B & C",
+                        "Units": "sequence"
+                    }
+                },
+                {
+                    "UC_Davis": {
+                        "Course_Code": "PHY-09C",
+                        "Title": "Classical Physics",
+                        "Units": 5
+                    },
+                    "DVC": {
+                        "Course_Code": "PHYS-230",
+                        "Title": "Physics for Engineers and Scientists B",
+                        "Units": 4
+                    }
+                }
+            ]
+        }
+    ]
+}
