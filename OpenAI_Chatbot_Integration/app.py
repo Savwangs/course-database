@@ -428,7 +428,7 @@ def llm_parse_query(user_query: str, *, temperature: float = 0.0):
 
     try:
         resp = client.chat.completions.create(
-            model="gpt-4o",
+            model="gpt-4.1",
             temperature=temperature,  # deterministic parsing
             messages=[
                 {"role": "system", "content": parser_system},
@@ -809,7 +809,7 @@ def ask_course_assistant(user_query: str, *, conversation_history: list = None, 
     
     # LLM formatter with conversation context
     llm_response = client.chat.completions.create(
-        model="gpt-4o",
+        model="gpt-4.1",
         temperature=response_temperature,
         messages=messages,
     )
