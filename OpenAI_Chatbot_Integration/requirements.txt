@@ -10,9 +10,6 @@ httpx>=0.27.0
 # Environment Variables Management
 python-dotenv==1.0.0
 
-# MongoDB Driver
-pymongo==2.7.0
-
 # Additional Dependencies
 Werkzeug==3.0.1
 
