@@ -8,6 +8,7 @@ from datetime import datetime
 import secrets
 from pymongo import MongoClient
 from pymongo.errors import ConnectionFailure, ServerSelectionTimeoutError
+import certifi
 
 # NEW: stdlib imports used by the transfer assistant
 import re   # NEW
@@ -30,7 +31,12 @@ conversations_collection = None
 
 if mongodb_uri:
     try:
-        mongo_client = MongoClient(mongodb_uri, serverSelectionTimeoutMS=5000)
+        # Use certifi for SSL certificate verification
+        mongo_client = MongoClient(
+            mongodb_uri, 
+            serverSelectionTimeoutMS=10000,
+            tlsCAFile=certifi.where()
+        )
         # Test connection
         mongo_client.admin.command('ping')
         db = mongo_client['dvc_course_assistant']
@@ -38,6 +44,10 @@ if mongodb_uri:
         print("✅ Connected to MongoDB successfully")
     except (ConnectionFailure, ServerSelectionTimeoutError) as e:
         print(f"⚠️ MongoDB connection failed: {e}")
+        print("📝 Falling back to JSON file logging")
+        mongo_client = None
+    except Exception as e:
+        print(f"⚠️ Unexpected MongoDB error: {e}")
         print("📝 Falling back to JSON file logging")
         mongo_client = None
 else:
@@ -1524,7 +1534,6 @@ if __name__ == '__main__':
     print(f"🔧 Debug mode: {debug}")
     print("="*80 + "\n")
     app.run(debug=debug, host=host, port=port)
-
 '''
 import os
 import json
