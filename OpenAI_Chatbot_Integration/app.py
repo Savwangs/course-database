@@ -707,7 +707,7 @@ def _llm_parse_user_message(user_message):
         "filters.categories: e.g., 'major preparation','breadth'. If unsure, return null/empty."
     )
     text = _llm_chat_text(
-        model="gpt-4o-mini",
+        model="gpt-4.1",
         temperature=0,
         response_format={"type": "json_object"},
         messages=[
@@ -804,7 +804,7 @@ def _llm_format_multi(campus_keys, campus_to_rows, parsed, completed_courses, co
             "courses": items
         }
         text = _llm_chat_text(
-            model="gpt-4o-mini",
+            model="gpt-4.1",
             temperature=0.2,
             messages=[
                 {"role": "system", "content":

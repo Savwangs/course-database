@@ -33,6 +33,18 @@
                 },
                 {
                     "UC_Berkeley": {
+                        "Course_Code": "MATH-53",
+                        "Title": "Multivariable Calculus",
+                        "Units": 4
+                    },
+                    "DVC": {
+                        "Course_Code": "MATH-292",
+                        "Title": "Analytic Geometry and Calculus 3",
+                        "Units": 5
+                    }
+                },
+                {
+                    "UC_Berkeley": {
                         "Course_Code": "MATH-54",
                         "Title": "Linear Algebra and Differential Equations",
                         "Units": 4

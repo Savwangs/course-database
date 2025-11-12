@@ -2461,5 +2461,141 @@
       }
     },
     "response": "For those PHYS-130 sections on Thursdays you asked about:\n\nFound 5 section(s) for PHYS-130 (Thursdays).\n\n**PHYS-130: Physics for Engineers and Scientists A: Mechanics and Wave Motion**\n\n### HYBRID SECTIONS (includes in-person meetings)\nNo hybrid sections found.\n\n### IN-PERSON SECTIONS (fully in-person)\nInstructors teaching PHYS-130 on Thursdays:\n- Katdare, Sonia (Sections 6585, 1196)\n- Christianson, Kent (Section 1197)\n- Large, Evan (Sections 1193, 1191)\n\n### ONLINE SECTIONS\nNo online sections found.\n\nNext steps:\n- Want to see which times each instructor teaches?\n- Need details on prerequisites or open seats? Just ask!"
+  },
+  {
+    "timestamp": "2025-11-12T13:15:43.835332",
+    "user_prompt": "Show me open comsc200 courses",
+    "parsed_data": {
+      "course_codes": [
+        "COMSC-200"
+      ],
+      "subjects": [
+        "COMSC"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": "open",
+        "day": null,
+        "time": null,
+        "instructor": null
+      }
+    },
+    "response": "Found 4 section(s) for COMSC-200 (Object Oriented Programming C++) that are currently open.\n\n**COMSC-200: Object Oriented Programming C++**\n\n### HYBRID SECTIONS (includes in-person meetings)\n- Section 2521\n  - Instructor: Hrycewicz, Paul\n  - Days: Wednesdays (in-person), other instruction online\n  - Time: 11:10AM - 2:20PM (in-person)\n  - Location: Room 113 (in-person), PART-ONL (hybrid)\n  - Units: 4.00\n  - Notes: Prerequisite: COMSC-165 or equivalent. Partially online course with required meetings Wednesdays from 11:10AM-2:20PM (on-campus, see room on schedule) with all other instruction provided online through Canvas.\n\n### IN-PERSON SECTIONS (fully in-person)\n- No in-person sections found.\n\n### ONLINE SECTIONS\n- Section 5577\n  - Instructor: Stalica, Henry\n  - Days: Online\n  - Time: Asynchronous\n  - Location: ONLINE\n  - Units: 4.00\n- Section 5119\n  - Instructor: Melvin, Ryan\n  - Days: Online\n  - Time: Asynchronous\n  - Location: ONLINE\n  - Units: 4.00\n- Section 5104\n  - Instructor: Andreopoulos, William\n  - Days: Online\n  - Time: Asynchronous\n  - Location: ONLINE\n  - Units: 4.00\n\nNext steps:\n- Prefer a specific instructor or schedule? Let me know!\n- Want to see only hybrid or only online options? Just ask.\n- Need prerequisite info or help choosing? Say \"prerequisites\" or \"compare sections.\""
+  },
+  {
+    "timestamp": "2025-11-12T13:16:11.186492",
+    "user_prompt": "what about on wednesday mornings",
+    "parsed_data": {
+      "course_codes": [
+        "COMSC-200"
+      ],
+      "subjects": [
+        "COMSC"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": "open",
+        "day": "W",
+        "time": "morning",
+        "instructor": null
+      }
+    },
+    "response": "Found 1 section(s) for COMSC-200 (Wednesday mornings, open).\n\n**COMSC-200: Object Oriented Programming C++**\n\n### HYBRID SECTIONS (includes in-person meetings)\n- Section 2521\n  - Instructor: Hrycewicz, Paul\n  - Days: Wednesday (in-person), other instruction online\n  - Time: 11:10AM - 2:20PM (in-person)\n  - Location: Room 113 (in-person), PART-ONL (hybrid)\n  - Units: 4.00\n  - Notes: Prerequisite: COMSC-165 or equivalent. Partially online course with required meetings Wednesdays from 11:10AM-2:20PM (on-campus, see room on schedule) with all other instruction provided online through Canvas.\n\n### IN-PERSON SECTIONS (fully in-person)\n- No in-person sections found.\n\n### ONLINE SECTIONS\n- No online sections found.\n\nNext steps:\n- Want to see other days or times? Just ask!\n- Need help with prerequisites or want to compare with online options? Let me know."
+  },
+  {
+    "timestamp": "2025-11-12T13:17:52.458451",
+    "user_prompt": "What comsc courses do I need to take to transfer to UC Berkeley",
+    "parsed_data": {
+      "mode": "uc_transfer",
+      "parsed": {
+        "intent": "find_requirements",
+        "parameters": {
+          "campus": "UCB",
+          "campuses": [
+            "UCB"
+          ]
+        },
+        "filters": {
+          "focus_only": "cs",
+          "required_only": false,
+          "domains_completed": [],
+          "completed_courses": [],
+          "categories": [
+            "major preparation"
+          ]
+        }
+      },
+      "campuses": [
+        "UCB"
+      ],
+      "result_counts": {
+        "UCB": 0
+      }
+    },
+    "response": "Transfer prep for UC Berkeley:\n• COMSC-200 — Object Oriented Programming C++ (4 units)\n• COMSC-210 — Program Structures and Algorithms in C++ (4 units)\n• MATH-192 — Analytic Geometry and Calculus I (5 units)\n• MATH-193 — Analytic Geometry and Calculus II (5 units)\n• MATH-194 — Analytic Geometry and Calculus III (5 units)\n• MATH-290 — Linear Algebra (3 units)\n• MATH-193 or MATH-194 — Multivariable Calculus (see above)\n• PHYS-130 — Physics for Scientists and Engineers A (4 units)\n• PHYS-230 — Physics for Scientists and Engineers B (4 units)\n• PHYS-231 — Physics for Scientists and Engineers C (4 units)"
+  },
+  {
+    "timestamp": "2025-11-12T13:23:08.674549",
+    "user_prompt": "What courses do I need to take to transfer to UC Berkeley",
+    "parsed_data": {
+      "mode": "uc_transfer",
+      "parsed": {
+        "intent": "find_requirements",
+        "parameters": {
+          "campus": "UCB",
+          "campuses": [
+            "UCB"
+          ]
+        },
+        "filters": {
+          "focus_only": null,
+          "required_only": false,
+          "domains_completed": [],
+          "completed_courses": [],
+          "categories": []
+        }
+      },
+      "campuses": [
+        "UCB"
+      ],
+      "result_counts": {
+        "UCB": 6
+      }
+    },
+    "response": "Transfer prep for UC Berkeley:\n• MATH-192 — Analytic Geometry and Calculus I (5 units)\n• MATH-194/294 — Linear Algebra/Differential Equations (8 units)\n• COMSC-210 — Program Design and Data Structures (4 units)\n• COMSC-260 — Assembly Language Programming/Computer Organization (4 units)"
+  },
+  {
+    "timestamp": "2025-11-12T13:23:58.175331",
+    "user_prompt": "What comsc courses do I need to take to transfer to UC Berkeley",
+    "parsed_data": {
+      "mode": "uc_transfer",
+      "parsed": {
+        "intent": "find_requirements",
+        "parameters": {
+          "campus": "UCB",
+          "campuses": [
+            "UCB"
+          ]
+        },
+        "filters": {
+          "focus_only": "cs",
+          "required_only": false,
+          "domains_completed": [],
+          "completed_courses": [],
+          "categories": [
+            "major preparation"
+          ]
+        }
+      },
+      "campuses": [
+        "UCB"
+      ],
+      "result_counts": {
+        "UCB": 0
+      }
+    },
+    "response": "Transfer prep for UC Berkeley:\n• COMSC-200 — Object Oriented Programming C++ (4 units)"
   }
 ]
