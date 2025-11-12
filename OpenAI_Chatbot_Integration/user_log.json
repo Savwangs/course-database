@@ -1229,5 +1229,226 @@
       }
     },
     "response": "### One-line Summary:\n- Found 5 sections for PHYS-130.\n\n### PHYS-130: Physics for Engineers and Scientists A: Mechanics and Wave Motion\n#### HYBRID SECTIONS (includes in-person meetings)\nNo hybrid sections found.\n\n#### IN-PERSON SECTIONS (fully in-person)\n- **Section 6585**\n  - Instructor: Katdare, Sonia\n  - Days: T Th\n  - Time: 11:10AM - 12:35PM\n  - Location: 177\n  - Units: 4.00\n- **Section 1197**\n  - Instructor: Christianson, Kent\n  - Days: M\n  - Time: 11:10AM - 2:00PM\n  - Location: 113\n  - Units: 4.00\n- **Section 1196**\n  - Instructor: Katdare, Sonia\n  - Days: T Th\n  - Time: 11:10AM - 12:35PM\n  - Location: 177\n  - Units: 4.00\n- **Section 1195**\n  - Instructor: Speliotopoulos, Achilles\n  - Days: M\n  - Time: 9:35AM - 10:50AM\n  - Location: 113\n  - Units: 4.00\n- **Section 1194**\n  - Instructor: Speliotopoulos, Achilles\n  - Days: M\n  - Time: 8:00AM - 9:15AM\n  - Location: 113\n  - Units: 4.00\n\n#### ONLINE SECTIONS\nNo online sections found.\n\n### Friendly Wrap-Up:\n- Want to explore more courses? Just ask! \n- Interested in specific days or times? Let me know!"
+  },
+  {
+    "timestamp": "2025-11-12T09:48:35.961491",
+    "user_prompt": "🕐\n                                    Show MATH classes on Monday mornings",
+    "parsed_data": {
+      "course_codes": [],
+      "subjects": [
+        "MATH"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": "M",
+        "time": "morning",
+        "instructor": null
+      }
+    },
+    "response": "### MATH Classes on Monday Mornings\n\n#### Found 15 sections for MATH classes on Monday mornings.\n\n### HYBRID SECTIONS (includes in-person meetings)\n- **MATH-135L: College Algebra With Support**\n  - Section: 2010\n  - Instructor: Knight, Lynn Knight\n  - Days: M T W Th\n  - Time: 8:55AM - 10:05AM\n  - Location: PART-ONL\n  - Units: 6.00\n- **MATH-135L: College Algebra With Support**\n  - Section: 2010\n  - Instructor: Knight, Lynn Knight\n  - Days: M T W Th\n  - Time: 10:05AM - 11:00AM\n  - Location: PART-ONL\n  - Units: 6.00\n\n### IN-PERSON SECTIONS (fully in-person)\n- **MATH-002: Support for Math-192 Analytic Geometry And Calculus I**\n  - Section: 2974\n  - Instructor: Mircheva, Diana\n  - Days: M T W Th\n  - Time: 11:10AM - 11:30AM\n  - Location: 107\n  - Units: 2.00\n- **MATH-002: Support for Math-192 Analytic Geometry And Calculus I**\n  - Section: 2950\n  - Instructor: Sohi, Anna\n  - Days: M T W Th\n  - Time: 9:00AM - 9:20AM\n  - Location: NEED RM\n  - Units: 2.00\n- **MATH-082: Support for Calculus for Management, Life Science, and Social Science I**\n  - Section: 2569\n  - Instructor: Huynh, My\n  - Days: M T W Th\n  - Time: 9:45AM - 10:10AM\n  - Location: 105\n  - Units: 2.00\n- **MATH-082: Support for Calculus for Management, Life Science, and Social Science I**\n  - Section: 2569\n  - Instructor: Huynh, My\n  - Days: M T W Th\n  - Time: 10:10AM - 11:00AM\n  - Location: 105\n  - Units: 2.00\n- **MATH-121L: Plane Trigonometry With Support**\n  - Section: 2000\n  - Instructor: Freidenreich, Jenny\n  - Days: M W\n  - Time: 9:35AM - 12:05PM\n  - Location: 251\n  - Units: 5.00\n- **MATH-124: Mathematics for Liberal Arts**\n  - Section: 2008\n  - Instructor: Ahmadieh, Cyrous\n  - Days: M W\n  - Time: 9:35AM - 11:00AM\n  - Location: 142\n  - Units: 3.00\n- **MATH-124: Mathematics for Liberal Arts**\n  - Section: 9025\n  - Instructor: Staff, SRC\n  - Days: M W\n  - Time: 11:10AM - 12:35PM\n  - Location: W222\n  - Units: 3.00\n- **MATH-135: College Algebra**\n  - Section: 1799\n  - Instructor: Parks, Will\n  - Days: M W\n  - Time: 8:55AM - 11:00AM\n  - Location: 209\n  - Units: 4.00\n- **MATH-135: College Algebra**\n  - Section: 2590\n  - Instructor: Lantzy, Henry\n  - Days: M W\n  - Time: 11:10AM - 1:15PM\n  - Location: 105\n  - Units: 4.00\n- **MATH-135: College Algebra**\n  - Section: 2595\n  - Instructor: Narin, Stephen\n  - Days: M W\n  - Time: 11:10AM - 1:35PM\n  - Location: 118\n  - Units: 4.00\n\n### ONLINE SECTIONS\nNo online sections found.\n\n### Next Steps\n- Prefer evenings? Say \"evening.\"\n- Want online only? Say \"online.\"\n- Ask for prerequisites."
+  },
+  {
+    "timestamp": "2025-11-12T09:49:00.430462",
+    "user_prompt": "What about Tuesday evenings",
+    "parsed_data": {
+      "course_codes": [],
+      "subjects": [
+        "MATH"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": "T",
+        "time": "evening"
+      }
+    },
+    "response": "### MATH Classes on Tuesday Evenings\n\n#### Found 9 sections for MATH classes on Tuesday evenings.\n\n### HYBRID SECTIONS (includes in-person meetings)\n- **MATH-082: Support for Calculus for Management, Life Science, and Social Science I**\n  - Section: 8142\n  - Instructor: Asghary, Zahra\n  - Days: M T W Th\n  - Time: 7:20PM - 7:45PM\n  - Location: PART-ONL\n  - Units: 2.00\n- **MATH-082: Support for Calculus for Management, Life Science, and Social Science I**\n  - Section: 6301\n  - Instructor: Asghary, Zahra\n  - Days: M T W Th\n  - Time: 7:20PM - 7:45PM\n  - Location: PART-ONL\n  - Units: 2.00\n\n### IN-PERSON SECTIONS (fully in-person)\n- **MATH-081: Support for Success in Math-181 Finite Math**\n  - Section: 8154\n  - Instructor: Murai, Lauren\n  - Days: T Th\n  - Time: 7:25PM - 8:05PM\n  - Location: 103\n  - Units: 1.00\n- **MATH-081: Support for Success in Math-181 Finite Math**\n  - Section: 6035\n  - Instructor: Murai, Lauren\n  - Days: T Th\n  - Time: 7:25PM - 8:05PM\n  - Location: 103\n  - Units: 1.00\n- **MATH-121: Plane Trigonometry**\n  - Section: 8067\n  - Instructor: Knight, Lynn Knight\n  - Days: Th\n  - Time: 6:00PM - 8:00PM\n  - Location: NEED RM\n  - Units: 3.00\n\n### ONLINE SECTIONS\nNo online sections found.\n\n### Next Steps\n- Prefer mornings? Say \"morning.\"\n- Want online only? Say \"online.\"\n- Ask for prerequisites."
+  },
+  {
+    "timestamp": "2025-11-12T09:49:35.409105",
+    "user_prompt": "Show me all open math192 sections on monday mornings",
+    "parsed_data": {
+      "course_codes": [
+        "MATH-192"
+      ],
+      "subjects": [
+        "MATH"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": "open",
+        "day": "M",
+        "time": "morning",
+        "instructor": null
+      }
+    },
+    "response": "### Open MATH-192 Sections on Monday Mornings\n\n#### Found 3 sections for MATH-192 on Monday mornings.\n\n### IN-PERSON SECTIONS (fully in-person)\n- **MATH-192: Analytic Geometry and Calculus I**\n  - Section: 6133\n  - Instructor: Vincent, Marcus\n  - Days: M W\n  - Time: 8:00AM - 10:30AM\n  - Location: 108\n  - Units: 5.00\n- **MATH-192: Analytic Geometry and Calculus I**\n  - Section: 3379\n  - Instructor: Lang, Lindsey\n  - Days: M W\n  - Time: 9:35AM - 12:05PM\n  - Location: 245\n  - Units: 5.00\n- **MATH-192: Analytic Geometry and Calculus I**\n  - Section: 2972\n  - Instructor: Mircheva, Diana\n  - Days: M T W Th\n  - Time: 11:30AM - 1:00PM\n  - Location: 107\n  - Units: 5.00\n\n### Next Steps\n- Prefer evenings? Say \"evening.\"\n- Want online only? Say \"online.\"\n- Ask for prerequisites."
+  },
+  {
+    "timestamp": "2025-11-12T09:50:00.652138",
+    "user_prompt": "what about just Thursday afternoon",
+    "parsed_data": {
+      "course_codes": [],
+      "subjects": [],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": "Th",
+        "time": "afternoon",
+        "instructor": null
+      }
+    },
+    "response": "I can help you find DVC STEM courses and details like sections, instructors, and prerequisites.\n\nTry one of these:\n- \"Show me open MATH-193 sections Monday morning.\"\n- \"Who teaches PHYS-130 on Thursdays?\"\n- \"What are the prerequisites for COMSC-200?\"\n- \"Show online COMSC classes.\"\n\nPlease include a subject (e.g., COMSC, MATH, PHYS, CHEM, BIOSC, ENGIN) or a specific course code (e.g., COMSC-110)."
+  },
+  {
+    "timestamp": "2025-11-12T09:52:10.789416",
+    "user_prompt": "Show me open math192 sections on monday mornings",
+    "parsed_data": {
+      "course_codes": [
+        "MATH-192"
+      ],
+      "subjects": [
+        "MATH"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": "open",
+        "day": "M",
+        "time": "morning",
+        "instructor": null
+      }
+    },
+    "response": "**Found 4 sections for MATH-192 (Monday, morning).**\n\n### HYBRID SECTIONS (includes in-person meetings)\nNo hybrid sections found.\n\n### IN-PERSON SECTIONS (fully in-person)\n- **Section 6133**\n  - Instructor: Vincent, Marcus\n  - Days: M W\n  - Time: 8:00AM - 10:30AM\n  - Location: 108\n  - Units: 5.00\n\n- **Section 2949**\n  - Instructor: Sohi, Anna\n  - Days: M W\n  - Time: 9:35AM - 12:05PM\n  - Location: 245\n  - Units: 5.00\n\n### ONLINE SECTIONS\nNo online sections found.\n\n**Next steps:**\n- Prefer evenings? Say \"evening.\"\n- Want online only? Say \"online.\"\n- Ask for prerequisites if needed!"
+  },
+  {
+    "timestamp": "2025-11-12T09:54:00.660653",
+    "user_prompt": "What about Thursday evenings",
+    "parsed_data": {
+      "course_codes": [
+        "MATH-192"
+      ],
+      "subjects": [
+        "MATH"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": "open",
+        "day": "Th",
+        "time": "evening",
+        "instructor": null
+      }
+    },
+    "response": "I found **no sections** with your current filters (**status=open, day=Th, time=evening**) for **MATH-192**.\n\nTry relaxing one or more filters. For example:\n- Remove the **instructor** name to see all sections\n- Try a different **day** or **time** window\n- Include **hybrid** or **online** if you only searched in-person\n\nWant me to show **all available sections** for this course/subject?"
+  },
+  {
+    "timestamp": "2025-11-12T09:54:15.019210",
+    "user_prompt": "What about Thursday afternoon",
+    "parsed_data": {
+      "course_codes": [
+        "MATH-192"
+      ],
+      "subjects": [
+        "MATH"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": "open",
+        "day": "Th",
+        "time": "afternoon",
+        "instructor": null
+      }
+    },
+    "response": "**Found 3 sections for MATH-192 (Thursday, afternoon).**\n\n### HYBRID SECTIONS (includes in-person meetings)\nNo hybrid sections found.\n\n### IN-PERSON SECTIONS (fully in-person)\n- **Section 9281**\n  - Instructor: Staff, SRC\n  - Days: T Th\n  - Time: 4:05PM - 6:35PM\n  - Location: E164\n  - Units: 5.00\n\n- **Section 3689**\n  - Instructor: Knight, Lynn Knight\n  - Days: T Th\n  - Time: 2:30PM - 5:00PM\n  - Location: 103\n  - Units: 5.00\n\n- **Section 1222**\n  - Instructor: Parks, Will\n  - Days: T Th\n  - Time: 12:45PM - 3:15PM\n  - Location: 244\n  - Units: 5.00\n\n### ONLINE SECTIONS\nNo online sections found.\n\n**Next steps:**\n- Prefer evenings? Say \"evening.\"\n- Want online only? Say \"online.\"\n- Ask for prerequisites if needed!"
+  },
+  {
+    "timestamp": "2025-11-12T09:54:42.414823",
+    "user_prompt": "Are there any on Tuesday evenings?",
+    "parsed_data": {
+      "course_codes": [
+        "MATH-192"
+      ],
+      "subjects": [
+        "MATH"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": "T",
+        "time": "evening",
+        "instructor": null
+      }
+    },
+    "response": "**Found 1 section for MATH-192 (Tuesday, evening).**\n\n### HYBRID SECTIONS (includes in-person meetings)\n- **Section 8212**\n  - Instructor: Leon-Bravo, Paula\n  - Days: T\n  - Time: 5:00PM - 7:30PM\n  - Location: 107\n  - Units: 5.00\n  - Notes: Partially online course. In addition to online instruction, this class has mandatory in-person meetings on 1/27 (orientation), and 2/24, 3/31, 4/28 (exams), and 5/19 (final exam). Log into Canvas for online instruction.\n\n### IN-PERSON SECTIONS (fully in-person)\nNo in-person sections found.\n\n### ONLINE SECTIONS\nNo online sections found.\n\n**Next steps:**\n- Want to know more about prerequisites? Just ask!\n- Interested in other days or times? Let me know!"
+  },
+  {
+    "timestamp": "2025-11-12T09:55:57.993282",
+    "user_prompt": "Ok great, now show me when Professor Newton teaches differential equations",
+    "parsed_data": {
+      "course_codes": [
+        "MATH-294"
+      ],
+      "subjects": [
+        "MATH"
+      ],
+      "intent": "instructors",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": null,
+        "time": null,
+        "instructor": "Newton"
+      }
+    },
+    "response": "**Found 1 section for MATH-294 (Differential Equations) taught by Professor Newton.**\n\n### HYBRID SECTIONS (includes in-person meetings)\nNo hybrid sections found.\n\n### IN-PERSON SECTIONS (fully in-person)\n- **Section 2701**\n  - Instructor: Newton, Kit\n  - Days: T Th\n  - Time: 2:30PM - 5:00PM\n  - Location: 104\n  - Units: 5.00\n\n### ONLINE SECTIONS\nNo online sections found.\n\n**Next steps:**\n- Interested in prerequisites? They are: MATH-292 or equivalent. Advisory: MATH-194 or equivalent (may be taken concurrently).\n- Want to explore other courses or instructors? Just let me know!"
+  },
+  {
+    "timestamp": "2025-11-12T09:56:39.296750",
+    "user_prompt": "Does she teach any class on Tuesday mornings perhaps? What about afternoon?",
+    "parsed_data": {
+      "course_codes": [
+        "MATH-294"
+      ],
+      "subjects": [
+        "MATH"
+      ],
+      "intent": "instructors",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": "T",
+        "time": "morning"
+      }
+    },
+    "response": "I found **no sections** with your current filters (**day=T, time=morning**) for **MATH-294**.\n\nTry relaxing one or more filters. For example:\n- Remove the **instructor** name to see all sections\n- Try a different **day** or **time** window\n- Include **hybrid** or **online** if you only searched in-person\n\nWant me to show **all available sections** for this course/subject?"
+  },
+  {
+    "timestamp": "2025-11-12T09:57:16.982072",
+    "user_prompt": "Is there any math class taught by Professor Newton on tuesday mornings or afternoon",
+    "parsed_data": {
+      "course_codes": [
+        "MATH-294"
+      ],
+      "subjects": [
+        "MATH"
+      ],
+      "intent": "instructors",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": "T",
+        "time": "morning",
+        "instructor": "Newton"
+      }
+    },
+    "response": "I found **no sections** with your current filters (**day=T, time=morning, instructor=Newton**) for **MATH-294**.\n\nTry relaxing one or more filters. For example:\n- Remove the **instructor** name to see all sections\n- Try a different **day** or **time** window\n- Include **hybrid** or **online** if you only searched in-person\n\nWant me to show **all available sections** for this course/subject?"
   }
 ]

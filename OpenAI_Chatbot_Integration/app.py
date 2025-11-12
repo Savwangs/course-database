@@ -1,10 +1,11 @@
 import os
 import json
 from pathlib import Path
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, session
 from openai import OpenAI
 from dotenv import load_dotenv
 from datetime import datetime
+import secrets
 
 # Load environment variables
 load_dotenv()
@@ -12,6 +13,7 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 # Initialize Flask app
 app = Flask(__name__)
+app.secret_key = os.getenv("FLASK_SECRET_KEY", secrets.token_hex(32))  # For session management
 
 # Load course database
 db_path = Path(__file__).parent.parent / "dvc_scraper" / "Full_STEM_DataBase.json"
@@ -324,6 +326,12 @@ def llm_parse_query(user_query: str, *, temperature: float = 0.0):
     parsed.setdefault("intent", "find_sections")
     parsed.setdefault("filters", {"mode": None, "status": None, "day": None, "time": None, "instructor": None})
 
+    # Ensure course_codes and subjects are lists (handle None case)
+    if not isinstance(parsed["course_codes"], list):
+        parsed["course_codes"] = [] if parsed["course_codes"] is None else [parsed["course_codes"]]
+    if not isinstance(parsed["subjects"], list):
+        parsed["subjects"] = [] if parsed["subjects"] is None else [parsed["subjects"]]
+    
     parsed["course_codes"] = [str(c).upper() for c in parsed["course_codes"] if isinstance(c, str)]
     parsed["subjects"] = [str(s).upper() for s in parsed["subjects"] if isinstance(s, str)]
     if not isinstance(parsed["filters"], dict):
@@ -336,10 +344,36 @@ def llm_parse_query(user_query: str, *, temperature: float = 0.0):
     return parsed
 
 
-def ask_course_assistant(user_query: str, *, parser_temperature: float = 0.0, response_temperature: float = 0.1, enable_logging: bool = True):
-    """LLM parses → we search → LLM formats. Includes fallbacks + out-of-scope and no-results handling."""
+def ask_course_assistant(user_query: str, *, conversation_history: list = None, parser_temperature: float = 0.0, response_temperature: float = 0.1, enable_logging: bool = True):
+    """LLM parses → we search → LLM formats. Includes conversation history for follow-up questions.
+    
+    Args:
+        user_query: The current user question
+        conversation_history: List of previous messages [{"role": "user"/"assistant", "content": "..."}]
+        parser_temperature: Temperature for parsing query
+        response_temperature: Temperature for formatting response
+        enable_logging: Whether to log the interaction
+    """
+    if conversation_history is None:
+        conversation_history = []
+    
     query_lower = user_query.lower()
-    parsed = llm_parse_query(user_query, temperature=parser_temperature)
+    
+    # Check if this is a follow-up question by looking at conversation history
+    is_followup = len(conversation_history) > 0
+    
+    # Enhanced parser prompt with conversation context
+    if is_followup:
+        # Build context from recent conversation
+        context_summary = "\n".join([
+            f"{'User' if msg['role'] == 'user' else 'Assistant'}: {msg['content'][:200]}..."
+            for msg in conversation_history[-4:]  # Last 2 exchanges
+        ])
+        enhanced_query = f"Previous conversation context:\n{context_summary}\n\nCurrent question: {user_query}"
+    else:
+        enhanced_query = user_query
+    
+    parsed = llm_parse_query(enhanced_query, temperature=parser_temperature)
 
     course_codes = parsed.get("course_codes", [])
     subjects = parsed.get("subjects", [])
@@ -468,76 +502,96 @@ def ask_course_assistant(user_query: str, *, parser_temperature: float = 0.0, re
     if mode: filter_bits.append(f"Mode: {mode if isinstance(mode, str) else ','.join(mode)}")
 
     context = f"User asked: '{user_query}'\n\n"
-    context += f"I found {len(results)} matching course(s) for '{keyword_display}'.\n"
+    
+    # Count total sections across all courses
+    total_sections = sum(len(course.get("sections", [])) for course in results)
+    
+    context += f"I found {len(results)} matching course(s) with {total_sections} total section(s) for '{keyword_display}'.\n"
+    context += f"IMPORTANT: When you write the summary, say 'Found {total_sections} section(s)' - do NOT recount yourself.\n"
     if filter_bits: 
         context += "Filters applied: " + ", ".join(filter_bits) + "\n"
-        context += "IMPORTANT: The JSON data below has been PRE-FILTERED to match these exact criteria. Show ONLY the sections in this data.\n"
+        context += "The JSON data below has been PRE-FILTERED to match these exact criteria. Show ONLY the sections in this data.\n"
         if instructor_mentioned:
             context += f"NOTE: User specifically asked about instructor '{instructor_mentioned}' - show ONLY sections taught by this instructor.\n"
     context += "\nHere is the JSON data (already filtered):\n" + json.dumps(results, indent=2)[:truncate_limit]
 
-    # LLM formatter (explicit temperature)
+    # Build messages with conversation history for context-aware responses
+    system_message = {
+        "role": "system",
+        "content": """You are a DVC course assistant. Your job is to turn PRE-FILTERED JSON into a clear, student-friendly answer.
+        You maintain conversation context and can answer follow-up questions.
+
+        CORE PRINCIPLES
+        1) Use ONLY the JSON in the assistant message. Do not invent or infer missing data.
+        2) The JSON is already PRE-FILTERED to match the user's request. Respect those filters exactly.
+        3) If the assistant context lists filters (e.g., Instructor: Lo), show ONLY sections that match them.
+        4) Never include sections that fail the filters.
+        5) Present results clearly, concisely, and consistently for fast scanning.
+        6) CONVERSATION CONTEXT: Remember previous questions and answers. If the user asks a follow-up (e.g., "What about evening?", "Who teaches that?"), reference the previous course/subject they asked about.
+
+        FOLLOW-UP HANDLING
+        - If user says "that course", "those classes", "the same one", etc., refer to the most recent course discussed.
+        - If user asks "what about [filter]?", apply the new filter to the previous search.
+        - If unclear, ask for clarification while being helpful.
+
+        OUTPUT STRUCTURE
+        A) One-line Summary:
+        - Use the EXACT count from the assistant context message (it says "I found X matching course(s)"). Do NOT recount the JSON yourself.
+        - Briefly restate the user's goal and show this count (e.g., "Found 3 sections for MATH-193 (Mon, morning).").
+        - If no results, return a short, helpful message and stop (also include 1–3 next-step suggestions).
+        - For follow-ups, acknowledge the context (e.g., "For those COMSC-110 sections you asked about earlier...").
+
+        B) Per-Course Listing (for EVERY course in the JSON):
+        - Format: **COURSE_CODE: Course Title**
+        - Group sections into THREE headings (always in this order):
+            ### HYBRID SECTIONS (includes in-person meetings)
+            ### IN-PERSON SECTIONS (fully in-person)
+            ### ONLINE SECTIONS
+        - Under each heading, list ALL matching sections or write "No [category] sections found."
+        - For each section, show:
+            - Section number
+            - Instructor
+            - Days
+            - Time
+            - Location
+            - Units
+        - Keep notes brief and only when present in the JSON (e.g., essential advisories). Do not paraphrase missing notes.
+
+        C) Friendly Wrap-Up:
+        - Add 1-2 actionable "Next steps" (e.g., "Prefer evenings? Say "evening"," "Want online only? Say "online"," "Ask for prerequisites.").
+
+        STYLE & TONE
+        - Use bullet lists; avoid long paragraphs.
+        - Be consistent in label order and punctuation.
+        - Keep it positive and helpful, but terse.
+        - Be conversational and remember what the user asked before.
+
+        NEVER DO
+        - Do not reprint the raw JSON.
+        - Do not add categories beyond the three specified.
+        - Do not include sections that are not in the provided JSON.
+        - Do not forget the conversation context.
+        """
+    }
+    
+    # Build message history
+    messages = [system_message]
+    
+    # Add conversation history (limit to last 10 messages to avoid token limits)
+    if conversation_history:
+        messages.extend(conversation_history[-10:])
+    
+    # Add current user query
+    messages.append({"role": "user", "content": user_query})
+    
+    # Add the search results context
+    messages.append({"role": "assistant", "content": context})
+    
+    # LLM formatter with conversation context
     llm_response = client.chat.completions.create(
         model="gpt-4o-mini",
         temperature=response_temperature,
-        messages=[
-            {
-                "role": "system",
-                "content": """You are a DVC course assistant. Your job is to turn PRE-FILTERED JSON into a clear, student-friendly answer.
-
-            CORE PRINCIPLES
-            1) Use ONLY the JSON in the assistant message. Do not invent or infer missing data.
-            2) The JSON is already PRE-FILTERED to match the user's request. Respect those filters exactly.
-            3) If the assistant context lists filters (e.g., Instructor: Lo), show ONLY sections that match them.
-            4) Never include sections that fail the filters.
-            5) Present results clearly, concisely, and consistently for fast scanning.
-
-            OUTPUT STRUCTURE
-            A) One-line Summary:
-            - Briefly restate the user's goal and show a quick count (e.g., "Found 3 sections for MATH-193 (Mon, morning).").
-            - If no results, return a short, helpful message and stop (also include 1–3 next-step suggestions).
-
-            B) Per-Course Listing (for EVERY course in the JSON):
-            - Format: **COURSE_CODE: Course Title**
-            - Group sections into THREE headings (always in this order):
-                ### HYBRID SECTIONS (includes in-person meetings)
-                ### IN-PERSON SECTIONS (fully in-person)
-                ### ONLINE SECTIONS
-            - Under each heading, list ALL matching sections or write "No [category] sections found."
-            - For each section, show:
-                - Section number
-                - Instructor
-                - Days
-                - Time
-                - Location
-                - Units
-            - Keep notes brief and only when present in the JSON (e.g., essential advisories). Do not paraphrase missing notes.
-
-            C) Friendly Wrap-Up:
-            - Add 1-2 actionable "Next steps" (e.g., "Prefer evenings? Say "evening"," "Want online only? Say "online"," "Ask for prerequisites.").
-
-            OPTIONAL ENHANCEMENTS (only when prompted or context indicates)
-            - If the user asks for "all available", "more options", or "other available courses", include an extra section:
-            **Other available options that meet your filters**
-            - List other courses/sections from the provided JSON that satisfy the same filters (still obey all filtering rules).
-            - If the assistant context includes articulation or comparison data (e.g., alternatives array), render it in a short, bulleted block after the main listings.
-            - If the assistant context includes a flag/text indicating "Show alternatives" or similar, add the above section.
-
-            STYLE & TONE
-            - Use bullet lists; avoid long paragraphs.
-            - Be consistent in label order and punctuation.
-            - Keep it positive and helpful, but terse.
-
-            NEVER DO
-            - Do not reprint the raw JSON.
-            - Do not add categories beyond the three specified.
-            - Do not include sections that are not in the provided JSON.
-            """
-
-            },
-            {"role": "user", "content": user_query},
-            {"role": "assistant", "content": context},
-        ],
+        messages=messages,
     )
     final_response = llm_response.choices[0].message.content.strip()
     
@@ -562,7 +616,7 @@ def chatbot():
 @app.route('/ask', methods=['POST'])
 def ask():
     """
-    API endpoint to handle user queries
+    API endpoint to handle user queries with conversation memory
     
     Expects JSON: {"query": "user question here"}
     Returns JSON: {"response": "formatted answer", "success": true/false}
@@ -584,19 +638,92 @@ def ask():
                 'error': 'Empty query'
             }), 400
         
-        # Call the chatbot assistant
-        response = ask_course_assistant(user_query, enable_logging=True)
+        # Initialize conversation history in session if not exists
+        if 'conversation_history' not in session:
+            session['conversation_history'] = []
+        
+        # Get conversation history from session
+        conversation_history = session['conversation_history']
+        
+        # Call the chatbot assistant with conversation history
+        response = ask_course_assistant(
+            user_query, 
+            conversation_history=conversation_history,
+            enable_logging=True
+        )
+        
+        # Update conversation history
+        conversation_history.append({"role": "user", "content": user_query})
+        conversation_history.append({"role": "assistant", "content": response})
+        
+        # Keep only last 20 messages (10 exchanges) to prevent session from growing too large
+        if len(conversation_history) > 20:
+            conversation_history = conversation_history[-20:]
+        
+        # Save back to session
+        session['conversation_history'] = conversation_history
+        session.modified = True
         
         return jsonify({
             'success': True,
-            'response': response
+            'response': response,
+            'message_count': len(conversation_history)  # For debugging
         })
         
     except Exception as e:
         print(f"❌ Error in /ask route: {str(e)}")
+        import traceback
+        traceback.print_exc()
         return jsonify({
             'success': False,
             'error': 'An error occurred processing your request'
+        }), 500
+
+@app.route('/clear', methods=['POST'])
+def clear_conversation():
+    """
+    Clear the conversation history and start fresh
+    
+    Returns JSON: {"success": true}
+    """
+    try:
+        session['conversation_history'] = []
+        session.modified = True
+        
+        return jsonify({
+            'success': True,
+            'message': 'Conversation history cleared'
+        })
+        
+    except Exception as e:
+        print(f"❌ Error in /clear route: {str(e)}")
+        return jsonify({
+            'success': False,
+            'error': 'Failed to clear conversation'
+        }), 500
+
+@app.route('/conversation/status', methods=['GET'])
+def conversation_status():
+    """
+    Get the current conversation status
+    
+    Returns JSON: {"message_count": int, "has_history": bool}
+    """
+    try:
+        history = session.get('conversation_history', [])
+        
+        return jsonify({
+            'success': True,
+            'message_count': len(history),
+            'has_history': len(history) > 0,
+            'exchange_count': len(history) // 2  # Number of Q&A pairs
+        })
+        
+    except Exception as e:
+        print(f"❌ Error in /conversation/status route: {str(e)}")
+        return jsonify({
+            'success': False,
+            'error': 'Failed to get conversation status'
         }), 500
 
 @app.route('/health', methods=['GET'])

@@ -6,6 +6,9 @@ const chatForm = document.getElementById('chatForm');
 const userInput = document.getElementById('userInput');
 const chatMessages = document.getElementById('chatMessages');
 const sendButton = document.getElementById('sendButton');
+const clearButton = document.getElementById('clearButton');
+const conversationBadge = document.getElementById('conversationBadge');
+const exchangeCount = document.getElementById('exchangeCount');
 
 // =====================================
 // Utility Functions
@@ -135,7 +138,26 @@ function showError(errorText) {
 // =====================================
 
 /**
- * Send query to the Flask backend
+ * Update conversation status badge
+ */
+async function updateConversationStatus() {
+    try {
+        const response = await fetch('/conversation/status');
+        const data = await response.json();
+        
+        if (data.success && data.has_history) {
+            conversationBadge.style.display = 'flex';
+            exchangeCount.textContent = data.exchange_count;
+        } else {
+            conversationBadge.style.display = 'none';
+        }
+    } catch (error) {
+        console.error('Error updating conversation status:', error);
+    }
+}
+
+/**
+ * Send query to the Flask backend with conversation memory
  * @param {string} query - User's question
  */
 async function sendQuery(query) {
@@ -176,6 +198,9 @@ async function sendQuery(query) {
             // Add assistant response
             const assistantMessage = createMessage(data.response, false);
             chatMessages.appendChild(assistantMessage);
+            
+            // Update conversation status badge
+            await updateConversationStatus();
         } else {
             showError(data.error || 'Failed to get response');
         }
@@ -190,6 +215,61 @@ async function sendQuery(query) {
         userInput.disabled = false;
         userInput.focus();
         scrollToBottom();
+    }
+}
+
+/**
+ * Clear conversation history
+ */
+async function clearConversation() {
+    if (!confirm('Are you sure you want to clear the conversation history? This will start a new conversation.')) {
+        return;
+    }
+    
+    try {
+        const response = await fetch('/clear', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+        
+        const data = await response.json();
+        
+        if (data.success) {
+            // Clear chat messages (keep welcome message)
+            const welcomeMessage = chatMessages.querySelector('.message');
+            chatMessages.innerHTML = '';
+            if (welcomeMessage) {
+                chatMessages.appendChild(welcomeMessage);
+            }
+            
+            // Update conversation status
+            await updateConversationStatus();
+            
+            // Show success message
+            const notificationDiv = document.createElement('div');
+            notificationDiv.className = 'message assistant-message';
+            notificationDiv.innerHTML = `
+                <div class="message-avatar">🔄</div>
+                <div class="message-content">
+                    <div class="message-text" style="background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.3);">
+                        <p>✅ Conversation cleared! Starting fresh.</p>
+                    </div>
+                </div>
+            `;
+            chatMessages.appendChild(notificationDiv);
+            scrollToBottom();
+            
+            // Remove notification after 3 seconds
+            setTimeout(() => {
+                notificationDiv.style.opacity = '0';
+                setTimeout(() => notificationDiv.remove(), 300);
+            }, 3000);
+        }
+    } catch (error) {
+        console.error('Error clearing conversation:', error);
+        showError('Failed to clear conversation. Please try again.');
     }
 }
 
@@ -246,13 +326,21 @@ function sendExampleQuery(query) {
 window.sendExampleQuery = sendExampleQuery;
 
 // =====================================
+// Clear Button Handler
+// =====================================
+
+if (clearButton) {
+    clearButton.addEventListener('click', clearConversation);
+}
+
+// =====================================
 // Initialization
 // =====================================
 
 /**
  * Initialize the application
  */
-function init() {
+async function init() {
     // Focus on input
     userInput.focus();
     
@@ -265,6 +353,9 @@ function init() {
             mangle: false
         });
     }
+    
+    // Update conversation status on load
+    await updateConversationStatus();
     
     // Check for example query from landing page
     const exampleQuery = sessionStorage.getItem('exampleQuery');
@@ -279,6 +370,7 @@ function init() {
     }
     
     console.log('✅ DVC Course Assistant initialized');
+    console.log('💬 Conversation memory enabled - follow-up questions supported!');
 }
 
 // Run initialization when DOM is ready
