@@ -266,6 +266,18 @@ function init() {
         });
     }
     
+    // Check for example query from landing page
+    const exampleQuery = sessionStorage.getItem('exampleQuery');
+    if (exampleQuery) {
+        sessionStorage.removeItem('exampleQuery');
+        userInput.value = exampleQuery;
+        autoResizeTextarea();
+        // Auto-submit after a short delay
+        setTimeout(() => {
+            chatForm.dispatchEvent(new Event('submit'));
+        }, 500);
+    }
+    
     console.log('✅ DVC Course Assistant initialized');
 }
 

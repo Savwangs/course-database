@@ -551,8 +551,13 @@ def ask_course_assistant(user_query: str, *, parser_temperature: float = 0.0, re
 
 @app.route('/')
 def index():
-    """Serve the main page"""
-    return render_template('index.html')
+    """Serve the landing page"""
+    return render_template('landing.html')
+
+@app.route('/chatbot')
+def chatbot():
+    """Serve the chatbot interface"""
+    return render_template('chatbot.html')
 
 @app.route('/ask', methods=['POST'])
 def ask():

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DVC Course Assistant - AI-Powered Course Discovery</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='landing.css') }}">
+</head>
+<body>
+    <!-- Dotted Glow Background -->
+    <div class="dotted-background"></div>
+    
+    <!-- Spotlight Effect -->
+    <div class="spotlight" id="spotlight"></div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                
+                <h1 class="hero-title">
+                    Find Your Perfect
+                    <span class="hero-title-gradient">DVC Course</span>
+                    in Seconds
+                </h1>
+                
+                <p class="hero-description">
+                    Your intelligent assistant for navigating Diablo Valley College's STEM courses. 
+                    Get instant answers about sections, schedules, prerequisites, and instructors.
+                </p>
+                
+                <div class="hero-actions">
+                    <a href="/chatbot" class="cta-button cta-primary">
+                        <span class="button-content">
+                            <svg class="button-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                            </svg>
+                            Start Chatting
+                        </span>
+                        <div class="button-glow"></div>
+                    </a>
+                    
+                    <a href="#features" class="cta-button cta-secondary">
+                        <span class="button-content">
+                            Learn More
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Quick Stats -->
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="stat-number">1000+</div>
+                        <div class="stat-label">Course Sections</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Instant Answers</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-number">5</div>
+                        <div class="stat-label">STEM Subjects</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Visual -->
+            <div class="hero-visual">
+                <div class="chat-preview">
+                    <div class="chat-preview-header">
+                        <div class="header-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="header-title">DVC Course Assistant</span>
+                    </div>
+                    <div class="chat-preview-body">
+                        <div class="preview-message bot">
+                            <div class="message-avatar">🤖</div>
+                            <div class="message-bubble">
+                                How can I help you today?
+                            </div>
+                        </div>
+                        <div class="preview-message user">
+                            <div class="message-bubble">
+                                Show me open COMSC-110 sections
+                            </div>
+                            <div class="message-avatar">👤</div>
+                        </div>
+                        <div class="preview-message bot">
+                            <div class="message-avatar">🤖</div>
+                            <div class="message-bubble">
+                                Found 5 sections for COMSC-110...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features-section">
+            <div class="section-header">
+                <h2 class="section-title">Powerful Features</h2>
+                <p class="section-description">Everything you need to plan your perfect schedule</p>
+            </div>
+
+            <div class="features-grid">
+                <!-- Feature Card 1 -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Real-Time Availability</h3>
+                    <p class="feature-description">
+                        Check course availability, open sections, and waitlist status instantly. 
+                        Filter by day, time, and format.
+                    </p>
+                </div>
+
+                <!-- Feature Card 2 -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Instructor Information</h3>
+                    <p class="feature-description">
+                        Find out who teaches each section and search for courses by your 
+                        preferred instructor.
+                    </p>
+                </div>
+
+                <!-- Feature Card 3 -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Prerequisites Check</h3>
+                    <p class="feature-description">
+                        Quickly look up course prerequisites and requirements to plan your 
+                        academic path effectively.
+                    </p>
+                </div>
+
+                <!-- Feature Card 4 -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Smart Filtering</h3>
+                    <p class="feature-description">
+                        Filter courses by format (online, in-person, hybrid), schedule, and 
+                        availability status.
+                    </p>
+                </div>
+
+                <!-- Feature Card 5 -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Natural Language</h3>
+                    <p class="feature-description">
+                        Ask questions in plain English. No need to learn complex search syntax 
+                        or navigation.
+                    </p>
+                </div>
+
+                <!-- Feature Card 6 -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                            <polyline points="2 17 12 22 22 17"/>
+                            <polyline points="2 12 12 17 22 12"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">STEM Focus</h3>
+                    <p class="feature-description">
+                        Specialized in Computer Science, Math, Physics, Chemistry, and 
+                        Biology courses at DVC.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works-section">
+            <div class="section-header">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-description">Get started in three simple steps</p>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Ask Your Question</h3>
+                        <p class="step-description">
+                            Type your question in plain English: "Show me open MATH-193 sections on Monday mornings"
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-connector"></div>
+
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Get Instant Results</h3>
+                        <p class="step-description">
+                            Our AI understands your query and searches through 1000+ course sections instantly
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-connector"></div>
+
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Plan Your Schedule</h3>
+                        <p class="step-description">
+                            Review detailed course information and make informed decisions about your classes
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Example Queries Section -->
+        <section class="examples-section">
+            <div class="section-header">
+                <h2 class="section-title">Try These Examples</h2>
+                <p class="section-description">See what you can ask our chatbot</p>
+            </div>
+
+            <div class="examples-grid">
+                <div class="example-card">
+                    <div class="example-icon">💬</div>
+                    <p class="example-text">"Show me open COMSC-110 sections"</p>
+                </div>
+
+                <div class="example-card">
+                    <div class="example-icon">🕐</div>
+                    <p class="example-text">"Find MATH classes on Monday mornings"</p>
+                </div>
+
+                <div class="example-card">
+                    <div class="example-icon">👨‍🏫</div>
+                    <p class="example-text">"Who teaches PHYS-130?"</p>
+                </div>
+
+                <div class="example-card">
+                    <div class="example-icon">📚</div>
+                    <p class="example-text">"What are prerequisites for COMSC-200?"</p>
+                </div>
+
+                <div class="example-card">
+                    <div class="example-icon">💻</div>
+                    <p class="example-text">"Show online CHEM courses"</p>
+                </div>
+
+                <div class="example-card">
+                    <div class="example-icon">🌙</div>
+                    <p class="example-text">"Any BIOSC classes in the evening?"</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="final-cta-section">
+            <div class="cta-card">
+                <h2 class="cta-title">Ready to find your perfect course?</h2>
+                <p class="cta-description">
+                </p>
+                <a href="/chatbot" class="cta-button cta-primary cta-large">
+                    <span class="button-content">
+                        <svg class="button-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                        Launch Chatbot
+                    </span>
+                    <div class="button-glow"></div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p class="footer-text">
+                DVC Course Assistant • Built for Diablo Valley College Students
+            </p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='landing.js') }}"></script>
+</body>
+</html>
+

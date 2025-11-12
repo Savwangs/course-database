@@ -1136,5 +1136,98 @@
       }
     },
     "response": "Found 1 section for PHYS-230 (Tuesday afternoon or Wednesday afternoon).\n\n**PHYS-230: Physics for Engineers and Scientists B: Heat and Electro-Magnetism**\n\n### HYBRID SECTIONS (includes in-person meetings)\nNo hybrid sections found.\n\n### IN-PERSON SECTIONS (fully in-person)\n- **Section 1211**\n  - Instructor: Self, Matthew\n  - Days: T Th, W\n  - Time: 2:30PM - 3:55PM, 2:30PM - 5:20PM\n  - Location: 177, 113\n  - Units: 4.00\n\n### ONLINE SECTIONS\nNo online sections found.\n\n---\n\nNext steps:\n- Prefer evenings? Say \"evening.\"\n- Want online only? Say \"online.\"\n- Ask for prerequisites."
+  },
+  {
+    "timestamp": "2025-11-12T09:07:59.494048",
+    "user_prompt": "\"Show online CHEM courses\"",
+    "parsed_data": {
+      "course_codes": [
+        "CHEM-107",
+        "CHEM-108",
+        "CHEM-109",
+        "CHEM-120",
+        "CHEM-121"
+      ],
+      "subjects": [
+        "CHEM"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": "online",
+        "status": null,
+        "day": null,
+        "time": null,
+        "instructor": null
+      }
+    },
+    "response": "I found **no sections** with your current filters (**mode=online**) for **CHEM-107, CHEM-108, CHEM-109, CHEM-120, CHEM-121**.\n\nTry relaxing one or more filters. For example:\n- Remove the **instructor** name to see all sections\n- Try a different **day** or **time** window\n- Include **hybrid** or **online** if you only searched in-person\n\nWant me to show **all available sections** for this course/subject?"
+  },
+  {
+    "timestamp": "2025-11-12T09:08:03.053576",
+    "user_prompt": "\"Show online CHEM courses\"",
+    "parsed_data": {
+      "course_codes": [
+        "CHEM-107",
+        "CHEM-108",
+        "CHEM-109",
+        "CHEM-120",
+        "CHEM-121",
+        "CHEM-227"
+      ],
+      "subjects": [
+        "CHEM"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": "online",
+        "status": null,
+        "day": null,
+        "time": null,
+        "instructor": null
+      }
+    },
+    "response": "I found **no sections** with your current filters (**mode=online**) for **CHEM-107, CHEM-108, CHEM-109, CHEM-120, CHEM-121, CHEM-227**.\n\nTry relaxing one or more filters. For example:\n- Remove the **instructor** name to see all sections\n- Try a different **day** or **time** window\n- Include **hybrid** or **online** if you only searched in-person\n\nWant me to show **all available sections** for this course/subject?"
+  },
+  {
+    "timestamp": "2025-11-12T09:08:12.642625",
+    "user_prompt": "\"What are prerequisites for COMSC-200?\"",
+    "parsed_data": {
+      "course_codes": [
+        "COMSC-200"
+      ],
+      "subjects": [
+        "COMSC"
+      ],
+      "intent": "prerequisites",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": null,
+        "time": null,
+        "instructor": null
+      }
+    },
+    "response": "**COMSC-200: Object Oriented Programming C++**\n\nPrerequisites: COMSC-165 or equivalent"
+  },
+  {
+    "timestamp": "2025-11-12T09:08:35.027777",
+    "user_prompt": "\"Who teaches PHYS-130?\"",
+    "parsed_data": {
+      "course_codes": [
+        "PHYS-130"
+      ],
+      "subjects": [
+        "PHYS"
+      ],
+      "intent": "instructors",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": null,
+        "time": null,
+        "instructor": null
+      }
+    },
+    "response": "### One-line Summary:\n- Found 5 sections for PHYS-130.\n\n### PHYS-130: Physics for Engineers and Scientists A: Mechanics and Wave Motion\n#### HYBRID SECTIONS (includes in-person meetings)\nNo hybrid sections found.\n\n#### IN-PERSON SECTIONS (fully in-person)\n- **Section 6585**\n  - Instructor: Katdare, Sonia\n  - Days: T Th\n  - Time: 11:10AM - 12:35PM\n  - Location: 177\n  - Units: 4.00\n- **Section 1197**\n  - Instructor: Christianson, Kent\n  - Days: M\n  - Time: 11:10AM - 2:00PM\n  - Location: 113\n  - Units: 4.00\n- **Section 1196**\n  - Instructor: Katdare, Sonia\n  - Days: T Th\n  - Time: 11:10AM - 12:35PM\n  - Location: 177\n  - Units: 4.00\n- **Section 1195**\n  - Instructor: Speliotopoulos, Achilles\n  - Days: M\n  - Time: 9:35AM - 10:50AM\n  - Location: 113\n  - Units: 4.00\n- **Section 1194**\n  - Instructor: Speliotopoulos, Achilles\n  - Days: M\n  - Time: 8:00AM - 9:15AM\n  - Location: 113\n  - Units: 4.00\n\n#### ONLINE SECTIONS\nNo online sections found.\n\n### Friendly Wrap-Up:\n- Want to explore more courses? Just ask! \n- Interested in specific days or times? Let me know!"
   }
 ]
