@@ -428,7 +428,7 @@ def llm_parse_query(user_query: str, *, temperature: float = 0.0):
 
     try:
         resp = client.chat.completions.create(
-            model="gpt-4.1",
+            model="gpt-4o",
             temperature=temperature,  # deterministic parsing
             messages=[
                 {"role": "system", "content": parser_system},
@@ -809,7 +809,7 @@ def ask_course_assistant(user_query: str, *, conversation_history: list = None, 
     
     # LLM formatter with conversation context
     llm_response = client.chat.completions.create(
-        model="gpt-4.1",
+        model="gpt-4o",
         temperature=response_temperature,
         messages=messages,
     )
@@ -955,10 +955,18 @@ def health():
     })
 
 if __name__ == '__main__':
+    # Get port from environment variable (Render provides this) or default to 5000
+    port = int(os.environ.get("PORT", 5000))
+    # Bind to 0.0.0.0 to allow external access (required for Render)
+    host = '0.0.0.0'
+    # Disable debug mode in production
+    debug = os.environ.get("FLASK_ENV") != "production"
+    
     print("\n" + "="*80)
     print("🎓 DVC Course Assistant - Flask Web App")
     print("="*80)
     print(f"✅ Loaded {len(course_data)} courses")
-    print("🌐 Starting server at http://127.0.0.1:5000")
+    print(f"🌐 Starting server at http://{host}:{port}")
+    print(f"🔧 Debug mode: {debug}")
     print("="*80 + "\n")
-    app.run(debug=True, host='127.0.0.1', port=5000)
+    app.run(debug=debug, host=host, port=port)
