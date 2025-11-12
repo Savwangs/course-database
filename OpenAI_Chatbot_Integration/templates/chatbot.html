@@ -3,18 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DVC Course Assistant</title>
+    <title>DVC Course Assistant - Chatbot</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <!-- Markdown parsing library -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
+    <!-- Dotted Glow Background (matching landing page) -->
+    <div class="dotted-background"></div>
+
     <div class="container">
-        <!-- Header -->
+        <!-- Header with Back Button -->
         <header class="header">
             <div class="header-content">
-                <h1 class="title">🎓 DVC Course Assistant</h1>
-                <p class="subtitle">Find STEM courses, sections, instructors, and prerequisites</p>
+                <div class="header-top">
+                    <a href="/" class="back-button">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 12H5M12 19l-7-7 7-7"/>
+                        </svg>
+                        <span>Back to Home</span>
+                    </a>
+                </div>
+                <h1 class="title">
+                    🎓 <span class="title-gradient">DVC Course Assistant</span>
+                </h1>
+                <p class="subtitle">Ask me about courses, sections, instructors, and prerequisites</p>
             </div>
         </header>
 
@@ -35,10 +48,22 @@
                             </ul>
                             <p><strong>Try asking:</strong></p>
                             <div class="example-queries">
-                                <button class="example-btn" onclick="sendExampleQuery(this.textContent)">Show me open COMSC-110 sections</button>
-                                <button class="example-btn" onclick="sendExampleQuery(this.textContent)">What are the prerequisites for MATH-193?</button>
-                                <button class="example-btn" onclick="sendExampleQuery(this.textContent)">Find online PHYS classes</button>
-                                <button class="example-btn" onclick="sendExampleQuery(this.textContent)">Show MATH classes on Monday mornings</button>
+                                <button class="example-btn" onclick="sendExampleQuery(this.textContent)">
+                                    <span class="example-icon">💬</span>
+                                    Show me open COMSC-110 sections
+                                </button>
+                                <button class="example-btn" onclick="sendExampleQuery(this.textContent)">
+                                    <span class="example-icon">📚</span>
+                                    What are the prerequisites for MATH-193?
+                                </button>
+                                <button class="example-btn" onclick="sendExampleQuery(this.textContent)">
+                                    <span class="example-icon">💻</span>
+                                    Find online PHYS classes
+                                </button>
+                                <button class="example-btn" onclick="sendExampleQuery(this.textContent)">
+                                    <span class="example-icon">🕐</span>
+                                    Show MATH classes on Monday mornings
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -56,13 +81,13 @@
                             rows="1"
                         ></textarea>
                         <button type="submit" class="send-button" id="sendButton">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
                             </svg>
                         </button>
                     </div>
                     <div class="input-hint">
-                        Press Enter to send, Shift+Enter for new line
+                        Press <kbd>Enter</kbd> to send • <kbd>Shift + Enter</kbd> for new line
                     </div>
                 </form>
             </div>
@@ -72,4 +97,3 @@
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
-
