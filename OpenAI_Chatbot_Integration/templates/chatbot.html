@@ -41,7 +41,7 @@
                 <h1 class="title">
                     🎓 <span class="title-gradient">DVC Course Assistant</span>
                 </h1>
-                <p class="subtitle">Ask me about courses, sections, instructors, and prerequisites</p>
+                <p class="subtitle">Ask me about courses, sections, instructors, prerequisites, and UC transfer planning</p>
             </div>
         </header>
 
@@ -59,6 +59,7 @@
                                 <li>Course prerequisites and requirements</li>
                                 <li>Instructor information</li>
                                 <li>Filtering by format (online/in-person/hybrid), day, and time</li>
+                                <li>UC transfer planning for <strong>UC Berkeley</strong>, <strong>UC Davis</strong>, and <strong>UC San Diego</strong></li>
                             </ul>
                             <p><strong>Try asking:</strong></p>
                             <div class="example-queries">
@@ -78,6 +79,14 @@
                                     <span class="example-icon">🕐</span>
                                     Show MATH classes on Monday mornings
                                 </button>
+                                <button class="example-btn" onclick="sendExampleQuery(this.textContent)">
+                                    <span class="example-icon">🎓</span>
+                                    What courses do I need for UC Berkeley CS?
+                                </button>
+                                <button class="example-btn" onclick="sendExampleQuery(this.textContent)">
+                                    <span class="example-icon">🔄</span>
+                                    Show transfer requirements for UC Davis
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -91,7 +100,7 @@
                         <textarea 
                             id="userInput" 
                             class="chat-input" 
-                            placeholder="Ask about courses, sections, prerequisites, or instructors..."
+                            placeholder="Ask about courses, sections, prerequisites, instructors, or UC transfer requirements..."
                             rows="1"
                         ></textarea>
                         <button type="submit" class="send-button" id="sendButton">
