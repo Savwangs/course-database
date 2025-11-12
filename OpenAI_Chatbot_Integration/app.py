@@ -6,6 +6,8 @@ from openai import OpenAI
 from dotenv import load_dotenv
 from datetime import datetime
 import secrets
+from pymongo import MongoClient
+from pymongo.errors import ConnectionFailure, ServerSelectionTimeoutError
 
 # NEW: stdlib imports used by the transfer assistant
 import re   # NEW
@@ -19,6 +21,28 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 # Initialize Flask app
 app = Flask(__name__)
 app.secret_key = os.getenv("FLASK_SECRET_KEY", secrets.token_hex(32))  # For session management
+
+# Initialize MongoDB connection
+mongodb_uri = os.getenv("MONGODB_CONNECTION_URI")
+mongo_client = None
+db = None
+conversations_collection = None
+
+if mongodb_uri:
+    try:
+        mongo_client = MongoClient(mongodb_uri, serverSelectionTimeoutMS=5000)
+        # Test connection
+        mongo_client.admin.command('ping')
+        db = mongo_client['dvc_course_assistant']
+        conversations_collection = db['conversations']
+        print("✅ Connected to MongoDB successfully")
+    except (ConnectionFailure, ServerSelectionTimeoutError) as e:
+        print(f"⚠️ MongoDB connection failed: {e}")
+        print("📝 Falling back to JSON file logging")
+        mongo_client = None
+else:
+    print("⚠️ MONGODB_CONNECTION_URI not found in environment variables")
+    print("📝 Using JSON file logging")
 
 # Load course database
 db_path = Path(__file__).parent.parent / "dvc_scraper" / "Full_STEM_DataBase.json"
@@ -36,7 +60,7 @@ log_file_path = Path(__file__).parent / "user_log.json"
 
 def log_interaction(user_prompt: str, parsed_data: dict, response: str):
     """
-    Log user interactions to a JSON file with automatic appending.
+    Log user interactions to MongoDB (or JSON file as fallback).
     
     Args:
         user_prompt: The raw user query
@@ -50,7 +74,17 @@ def log_interaction(user_prompt: str, parsed_data: dict, response: str):
         "response": response
     }
     
-    # Load existing logs or create new list
+    # Try MongoDB first
+    if conversations_collection is not None:
+        try:
+            conversations_collection.insert_one(log_entry)
+            print(f"✅ Logged interaction to MongoDB")
+            return
+        except Exception as e:
+            print(f"⚠️ MongoDB logging failed: {e}")
+            print("📝 Falling back to JSON file")
+    
+    # Fallback to JSON file logging
     if log_file_path.exists():
         try:
             with open(log_file_path, "r", encoding="utf-8") as f:
@@ -62,10 +96,8 @@ def log_interaction(user_prompt: str, parsed_data: dict, response: str):
     else:
         logs = []
     
-    # Append new entry
     logs.append(log_entry)
     
-    # Write back to file
     with open(log_file_path, "w", encoding="utf-8") as f:
         json.dump(logs, f, indent=2, ensure_ascii=False)
     
@@ -1400,8 +1432,80 @@ def health():
     """Health check endpoint"""
     return jsonify({
         'status': 'healthy',
-        'courses_loaded': len(course_data)
+        'courses_loaded': len(course_data),
+        'mongodb_connected': conversations_collection is not None
     })
+
+@app.route('/logs', methods=['GET'])
+def view_logs():
+    """
+    View conversation logs from MongoDB
+    
+    Query parameters:
+        - limit: Number of logs to retrieve (default: 50, max: 500)
+        - skip: Number of logs to skip for pagination (default: 0)
+    
+    Returns JSON: {"success": bool, "count": int, "logs": [...]}
+    """
+    try:
+        # Get query parameters
+        limit = request.args.get('limit', 50, type=int)
+        skip = request.args.get('skip', 0, type=int)
+        
+        # Enforce limits
+        limit = min(limit, 500)
+        skip = max(skip, 0)
+        
+        if conversations_collection is not None:
+            # Fetch from MongoDB (newest first)
+            logs = list(conversations_collection.find(
+                {},
+                {'_id': 0}  # Exclude MongoDB's internal _id field
+            ).sort('timestamp', -1).skip(skip).limit(limit))
+            
+            total_count = conversations_collection.count_documents({})
+            
+            return jsonify({
+                'success': True,
+                'count': len(logs),
+                'total': total_count,
+                'source': 'mongodb',
+                'logs': logs
+            })
+        else:
+            # Fallback to JSON file
+            if log_file_path.exists():
+                with open(log_file_path, "r", encoding="utf-8") as f:
+                    all_logs = json.load(f)
+                
+                # Return newest first
+                all_logs.reverse()
+                logs = all_logs[skip:skip+limit]
+                
+                return jsonify({
+                    'success': True,
+                    'count': len(logs),
+                    'total': len(all_logs),
+                    'source': 'json_file',
+                    'logs': logs
+                })
+            else:
+                return jsonify({
+                    'success': True,
+                    'count': 0,
+                    'total': 0,
+                    'source': 'none',
+                    'logs': []
+                })
+    
+    except Exception as e:
+        print(f"❌ Error in /logs route: {str(e)}")
+        import traceback
+        traceback.print_exc()
+        return jsonify({
+            'success': False,
+            'error': str(e)
+        }), 500
 
 if __name__ == '__main__':
     # Get port from environment variable (Render provides this) or default to 5001
@@ -2375,8 +2479,80 @@ def health():
     """Health check endpoint"""
     return jsonify({
         'status': 'healthy',
-        'courses_loaded': len(course_data)
+        'courses_loaded': len(course_data),
+        'mongodb_connected': conversations_collection is not None
     })
+
+@app.route('/logs', methods=['GET'])
+def view_logs():
+    """
+    View conversation logs from MongoDB
+    
+    Query parameters:
+        - limit: Number of logs to retrieve (default: 50, max: 500)
+        - skip: Number of logs to skip for pagination (default: 0)
+    
+    Returns JSON: {"success": bool, "count": int, "logs": [...]}
+    """
+    try:
+        # Get query parameters
+        limit = request.args.get('limit', 50, type=int)
+        skip = request.args.get('skip', 0, type=int)
+        
+        # Enforce limits
+        limit = min(limit, 500)
+        skip = max(skip, 0)
+        
+        if conversations_collection is not None:
+            # Fetch from MongoDB (newest first)
+            logs = list(conversations_collection.find(
+                {},
+                {'_id': 0}  # Exclude MongoDB's internal _id field
+            ).sort('timestamp', -1).skip(skip).limit(limit))
+            
+            total_count = conversations_collection.count_documents({})
+            
+            return jsonify({
+                'success': True,
+                'count': len(logs),
+                'total': total_count,
+                'source': 'mongodb',
+                'logs': logs
+            })
+        else:
+            # Fallback to JSON file
+            if log_file_path.exists():
+                with open(log_file_path, "r", encoding="utf-8") as f:
+                    all_logs = json.load(f)
+                
+                # Return newest first
+                all_logs.reverse()
+                logs = all_logs[skip:skip+limit]
+                
+                return jsonify({
+                    'success': True,
+                    'count': len(logs),
+                    'total': len(all_logs),
+                    'source': 'json_file',
+                    'logs': logs
+                })
+            else:
+                return jsonify({
+                    'success': True,
+                    'count': 0,
+                    'total': 0,
+                    'source': 'none',
+                    'logs': []
+                })
+    
+    except Exception as e:
+        print(f"❌ Error in /logs route: {str(e)}")
+        import traceback
+        traceback.print_exc()
+        return jsonify({
+            'success': False,
+            'error': str(e)
+        }), 500
 
 if __name__ == '__main__':
     # Get port from environment variable (Render provides this) or default to 5001
