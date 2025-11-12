@@ -1450,5 +1450,750 @@
       }
     },
     "response": "I found **no sections** with your current filters (**day=T, time=morning, instructor=Newton**) for **MATH-294**.\n\nTry relaxing one or more filters. For example:\n- Remove the **instructor** name to see all sections\n- Try a different **day** or **time** window\n- Include **hybrid** or **online** if you only searched in-person\n\nWant me to show **all available sections** for this course/subject?"
+  },
+  {
+    "timestamp": "2025-11-12T10:08:56.404508",
+    "user_prompt": "Show me COMSC-110 sections",
+    "parsed_data": {
+      "course_codes": [
+        "COMSC-110"
+      ],
+      "subjects": [
+        "COMSC"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": null,
+        "time": null,
+        "instructor": null
+      }
+    },
+    "response": "Found 8 section(s) for COMSC-110 (Introduction to Programming).\n\n### HYBRID SECTIONS (includes in-person meetings)\n- **Section 8292**\n  - Instructor: Youn, Steve\n  - Days: T Th\n  - Time: 6:30PM - 7:55PM\n  - Location: NEED RM\n  - Units: 4.00\n  - Note: Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Partially online course with required meetings on-campus.\n\n### IN-PERSON SECTIONS (fully in-person)\nNo in-person sections found.\n\n### ONLINE SECTIONS\n- **Section 9024**\n  - Instructor: Strickland, Joanne\n  - Days: Online\n  - Time: Asynchronous\n  - Location: ONLINE\n  - Units: 4.00\n\n- **Section 5657**\n  - Instructor: Aladegbami, Kemi\n  - Days: Online\n  - Time: Asynchronous\n  - Location: ONLINE\n  - Units: 4.00\n\n- **Section 5452**\n  - Instructor: Jagpal, Rupinder\n  - Days: Online\n  - Time: Asynchronous\n  - Location: ONLINE\n  - Units: 4.00\n\n- **Section 5451**\n  - Instructor: Jagpal, Rupinder\n  - Days: Online\n  - Time: Asynchronous\n  - Location: ONLINE\n  - Units: 4.00\n\n- **Section 5404**\n  - Instructor: Khaja, Gene\n  - Days: Online\n  - Time: Asynchronous\n  - Location: ONLINE\n  - Units: 4.00\n\n- **Section 5207**\n  - Instructor: Khaja, Gene\n  - Days: Online\n  - Time: Asynchronous\n  - Location: ONLINE\n  - Units: 4.00\n\n- **Section 5523**\n  - Instructor: Amato, Nicholas\n  - Days: Online\n  - Time: Asynchronous\n  - Location: ONLINE\n  - Units: 4.00\n\n### Next Steps\n- Prefer evenings? Say \"evening.\"\n- Want online only? Say \"online.\"\n- Ask for prerequisites if needed!"
+  },
+  {
+    "timestamp": "2025-11-12T10:09:38.510889",
+    "user_prompt": "Online only",
+    "parsed_data": {
+      "course_codes": [
+        "COMSC-110"
+      ],
+      "subjects": [
+        "COMSC"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": "online",
+        "status": null,
+        "day": null,
+        "time": null,
+        "instructor": null
+      }
+    },
+    "response": "Found 7 section(s) for COMSC-110 (Introduction to Programming) online only.\n\n### ONLINE SECTIONS\n- **Section 9024**\n  - Instructor: Strickland, Joanne\n  - Days: Online\n  - Time: Asynchronous\n  - Location: ONLINE\n  - Units: 4.00\n\n- **Section 5657**\n  - Instructor: Aladegbami, Kemi\n  - Days: Online\n  - Time: Asynchronous\n  - Location: ONLINE\n  - Units: 4.00\n\n- **Section 5452**\n  - Instructor: Jagpal, Rupinder\n  - Days: Online\n  - Time: Asynchronous\n  - Location: ONLINE\n  - Units: 4.00\n\n- **Section 5451**\n  - Instructor: Jagpal, Rupinder\n  - Days: Online\n  - Time: Asynchronous\n  - Location: ONLINE\n  - Units: 4.00\n\n- **Section 5404**\n  - Instructor: Khaja, Gene\n  - Days: Online\n  - Time: Asynchronous\n  - Location: ONLINE\n  - Units: 4.00\n\n- **Section 5207**\n  - Instructor: Khaja, Gene\n  - Days: Online\n  - Time: Asynchronous\n  - Location: ONLINE\n  - Units: 4.00\n\n- **Section 5523**\n  - Instructor: Amato, Nicholas\n  - Days: Online\n  - Time: Asynchronous\n  - Location: ONLINE\n  - Units: 4.00\n\n### Next Steps\n- Interested in prerequisites? Let me know!\n- Want to explore other courses? Just ask!"
+  },
+  {
+    "timestamp": "2025-11-12T10:10:31.494581",
+    "user_prompt": "Who teaches it",
+    "parsed_data": {
+      "course_codes": [
+        "COMSC-110"
+      ],
+      "subjects": [
+        "COMSC"
+      ],
+      "intent": "instructors",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": null,
+        "time": null,
+        "instructor": null
+      }
+    },
+    "response": "Found 8 section(s) for COMSC-110 (Introduction to Programming). Here are the instructors for each section:\n\n### ONLINE SECTIONS\n- **Section 9024**\n  - Instructor: Strickland, Joanne\n\n- **Section 5657**\n  - Instructor: Aladegbami, Kemi\n\n- **Section 5452**\n  - Instructor: Jagpal, Rupinder\n\n- **Section 5451**\n  - Instructor: Jagpal, Rupinder\n\n- **Section 5404**\n  - Instructor: Khaja, Gene\n\n- **Section 5207**\n  - Instructor: Khaja, Gene\n\n- **Section 5523**\n  - Instructor: Amato, Nicholas\n\n### Next Steps\n- Interested in prerequisites? Let me know!\n- Want to explore other courses? Just ask!"
+  },
+  {
+    "timestamp": "2025-11-12T10:11:28.754742",
+    "user_prompt": "What are the prerequisites",
+    "parsed_data": {
+      "course_codes": [
+        "COMSC-110"
+      ],
+      "subjects": [
+        "COMSC"
+      ],
+      "intent": "prerequisites",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": null,
+        "time": null,
+        "instructor": null
+      }
+    },
+    "response": "**COMSC-110: Introduction to Programming**\n\nPrerequisites: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra."
+  },
+  {
+    "timestamp": "2025-11-12T10:11:58.943569",
+    "user_prompt": "Show me Joanne Strickland's sections",
+    "parsed_data": {
+      "course_codes": [
+        "COMSC-110"
+      ],
+      "subjects": [
+        "COMSC"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": null,
+        "time": null,
+        "instructor": "Joanne Strickland"
+      }
+    },
+    "response": "I found **no sections** with your current filters (**instructor=Joanne Strickland**) for **COMSC-110**.\n\nTry relaxing one or more filters. For example:\n- Remove the **instructor** name to see all sections\n- Try a different **day** or **time** window\n- Include **hybrid** or **online** if you only searched in-person\n\nWant me to show **all available sections** for this course/subject?"
+  },
+  {
+    "timestamp": "2025-11-12T10:15:58.459539",
+    "user_prompt": "Show me COMSC-110 sections",
+    "parsed_data": {
+      "course_codes": [
+        "COMSC-110"
+      ],
+      "subjects": [
+        "COMSC"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": null,
+        "time": null,
+        "instructor": null
+      }
+    },
+    "response": "Found 8 section(s) for COMSC-110 (Introduction to Programming).\n\n### HYBRID SECTIONS (includes in-person meetings)\n- **Section 8292**\n  - Instructor: Youn, Steve\n  - Days: T Th\n  - Time: 6:30PM - 7:55PM\n  - Location: NEED RM\n  - Units: 4.00\n  - Note: Partially online course with required meetings on-campus.\n\n### IN-PERSON SECTIONS (fully in-person)\nNo in-person sections found.\n\n### ONLINE SECTIONS\n- **Section 9024**\n  - Instructor: Strickland, Joanne\n  - Days: Online\n  - Time: Asynchronous\n  - Location: ONLINE\n  - Units: 4.00\n\n- **Section 5657**\n  - Instructor: Aladegbami, Kemi\n  - Days: Online\n  - Time: Asynchronous\n  - Location: ONLINE\n  - Units: 4.00\n\n- **Section 5452**\n  - Instructor: Jagpal, Rupinder\n  - Days: Online\n  - Time: Asynchronous\n  - Location: ONLINE\n  - Units: 4.00\n\n- **Section 5451**\n  - Instructor: Jagpal, Rupinder\n  - Days: Online\n  - Time: Asynchronous\n  - Location: ONLINE\n  - Units: 4.00\n\n- **Section 5404**\n  - Instructor: Khaja, Gene\n  - Days: Online\n  - Time: Asynchronous\n  - Location: ONLINE\n  - Units: 4.00\n\n- **Section 5207**\n  - Instructor: Khaja, Gene\n  - Days: Online\n  - Time: Asynchronous\n  - Location: ONLINE\n  - Units: 4.00\n\n- **Section 5523**\n  - Instructor: Amato, Nicholas\n  - Days: Online\n  - Time: Asynchronous\n  - Location: ONLINE\n  - Units: 4.00\n\n### Next steps:\n- Prefer evenings? Say \"evening.\"\n- Want online only? Say \"online.\"\n- Ask for prerequisites if needed."
+  },
+  {
+    "timestamp": "2025-11-12T10:16:15.474351",
+    "user_prompt": "Online only",
+    "parsed_data": {
+      "course_codes": [
+        "COMSC-110"
+      ],
+      "subjects": [
+        "COMSC"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": "online",
+        "status": null,
+        "day": null,
+        "time": null,
+        "instructor": null
+      }
+    },
+    "response": "Found 7 section(s) for COMSC-110 (Introduction to Programming) online only.\n\n### ONLINE SECTIONS\n- **Section 9024**\n  - Instructor: Strickland, Joanne\n  - Days: Online\n  - Time: Asynchronous\n  - Location: ONLINE\n  - Units: 4.00\n\n- **Section 5657**\n  - Instructor: Aladegbami, Kemi\n  - Days: Online\n  - Time: Asynchronous\n  - Location: ONLINE\n  - Units: 4.00\n\n- **Section 5452**\n  - Instructor: Jagpal, Rupinder\n  - Days: Online\n  - Time: Asynchronous\n  - Location: ONLINE\n  - Units: 4.00\n\n- **Section 5451**\n  - Instructor: Jagpal, Rupinder\n  - Days: Online\n  - Time: Asynchronous\n  - Location: ONLINE\n  - Units: 4.00\n\n- **Section 5404**\n  - Instructor: Khaja, Gene\n  - Days: Online\n  - Time: Asynchronous\n  - Location: ONLINE\n  - Units: 4.00\n\n- **Section 5207**\n  - Instructor: Khaja, Gene\n  - Days: Online\n  - Time: Asynchronous\n  - Location: ONLINE\n  - Units: 4.00\n\n- **Section 5523**\n  - Instructor: Amato, Nicholas\n  - Days: Online\n  - Time: Asynchronous\n  - Location: ONLINE\n  - Units: 4.00\n\n### Next steps:\n- Interested in prerequisites? Let me know!\n- Want to explore hybrid or in-person options? Just ask!"
+  },
+  {
+    "timestamp": "2025-11-12T10:16:26.551647",
+    "user_prompt": "Show me Joanne Strickland's sections",
+    "parsed_data": {
+      "course_codes": [
+        "COMSC-110"
+      ],
+      "subjects": [
+        "COMSC"
+      ],
+      "intent": "instructors",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": null,
+        "time": null,
+        "instructor": "Strickland, Joanne"
+      }
+    },
+    "response": "Found 1 section(s) for COMSC-110 (Introduction to Programming) taught by Joanne Strickland.\n\n### ONLINE SECTIONS\n- **Section 9024**\n  - Instructor: Strickland, Joanne\n  - Days: Online\n  - Time: Asynchronous\n  - Location: ONLINE\n  - Units: 4.00\n\n### Next steps:\n- Interested in prerequisites? Let me know!\n- Want to explore more sections or courses? Just ask!"
+  },
+  {
+    "timestamp": "2025-11-12T10:17:17.676090",
+    "user_prompt": "Show me calculus classes on monday mornings",
+    "parsed_data": {
+      "course_codes": [
+        "MATH-182",
+        "MATH-183"
+      ],
+      "subjects": [
+        "MATH"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": "M",
+        "time": "morning",
+        "instructor": null
+      }
+    },
+    "response": "Found 2 section(s) for calculus classes on Monday mornings.\n\n### IN-PERSON SECTIONS (fully in-person)\n- **MATH-182: Calculus for Management, Life Science, and Social Science I**\n  - **Section 2591**\n    - Instructor: Huynh, My\n    - Days: M T W Th\n    - Time: 8:55AM - 9:45AM\n    - Location: Room 105\n    - Units: 4.00\n    - Note: Linked to MATH-082-2569; students must enroll in both.\n\n- **MATH-182: Calculus for Management, Life Science, and Social Science I**\n  - **Section 1603**\n    - Instructor: Knight, Lynn Knight\n    - Days: M W\n    - Time: 11:10AM - 1:15PM\n    - Location: Room 241\n    - Units: 4.00\n\n### Next steps:\n- Interested in prerequisites? Let me know!\n- Want to explore more sections or courses? Just ask!"
+  },
+  {
+    "timestamp": "2025-11-12T10:18:51.977015",
+    "user_prompt": "Just calc 1",
+    "parsed_data": {
+      "course_codes": [
+        "MATH-182"
+      ],
+      "subjects": [
+        "MATH"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": "M",
+        "time": "morning",
+        "instructor": null
+      }
+    },
+    "response": "Found 2 section(s) for MATH-182 (Calculus for Management, Life Science, and Social Science I) on Monday mornings.\n\n### IN-PERSON SECTIONS (fully in-person)\n- **Section 2591**\n  - Instructor: Huynh, My\n  - Days: M T W Th\n  - Time: 8:55AM - 9:45AM\n  - Location: Room 105\n  - Units: 4.00\n  - Note: Linked to MATH-082-2569; students must enroll in both.\n\n- **Section 1603**\n  - Instructor: Knight, Lynn Knight\n  - Days: M W\n  - Time: 11:10AM - 1:15PM\n  - Location: Room 241\n  - Units: 4.00\n\n### Next steps:\n- Interested in prerequisites? Let me know!\n- Want to explore more sections or courses? Just ask!"
+  },
+  {
+    "timestamp": "2025-11-12T10:20:25.907140",
+    "user_prompt": "What about Wednesday instead?",
+    "parsed_data": {
+      "course_codes": [
+        "MATH-182"
+      ],
+      "subjects": [
+        "MATH"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": "W",
+        "time": "morning",
+        "instructor": null
+      }
+    },
+    "response": "Found 2 section(s) for MATH-182 (Calculus for Management, Life Science, and Social Science I) on Wednesday.\n\n### IN-PERSON SECTIONS (fully in-person)\n- **Section 2591**\n  - Instructor: Huynh, My\n  - Days: M T W Th\n  - Time: 8:55AM - 9:45AM\n  - Location: Room 105\n  - Units: 4.00\n  - Note: Linked to MATH-082-2569; students must enroll in both.\n\n- **Section 1603**\n  - Instructor: Knight, Lynn Knight\n  - Days: M W\n  - Time: 11:10AM - 1:15PM\n  - Location: Room 241\n  - Units: 4.00\n\n### Next steps:\n- Interested in prerequisites? Let me know!\n- Want to explore more sections or courses? Just ask!"
+  },
+  {
+    "timestamp": "2025-11-12T10:20:56.266719",
+    "user_prompt": "Any in the afternoon?",
+    "parsed_data": {
+      "course_codes": [
+        "MATH-182"
+      ],
+      "subjects": [
+        "MATH"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": "W",
+        "time": "afternoon",
+        "instructor": null
+      }
+    },
+    "response": "Found 2 section(s) for MATH-182 (Calculus for Management, Life Science, and Social Science I) on Wednesday afternoon.\n\n### IN-PERSON SECTIONS (fully in-person)\n- **Section 9061**\n  - Instructor: Staff, SRC\n  - Days: M W\n  - Time: 12:45PM - 2:50PM\n  - Location: Room W217\n  - Units: 4.00\n\n- **Section 2593**\n  - Instructor: Chan, Kwai-Ching\n  - Days: M T W Th\n  - Time: 1:25PM - 2:15PM\n  - Location: Room 107\n  - Units: 4.00\n  - Note: Linked to MATH-082-2452; students must enroll in both.\n\n### Next steps:\n- Interested in prerequisites? Let me know!\n- Want to explore more sections or courses? Just ask!"
+  },
+  {
+    "timestamp": "2025-11-12T10:21:35.661289",
+    "user_prompt": "Is Calc 2 available?",
+    "parsed_data": {
+      "course_codes": [
+        "MATH-183"
+      ],
+      "subjects": [
+        "MATH"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": null,
+        "time": null,
+        "instructor": null
+      }
+    },
+    "response": "Found 3 section(s) for MATH-183 (Calculus for Management, Life Science, and Social Science II).\n\n### IN-PERSON SECTIONS (fully in-person)\n- **Section 9066**\n  - Instructor: Staff, SRC\n  - Days: T Th\n  - Time: 12:45PM - 2:50PM\n  - Location: Room W217\n  - Units: 4.00\n\n- **Section 2942**\n  - Instructor: Smith, Dan\n  - Days: M W\n  - Time: 12:45PM - 2:50PM\n  - Location: Room 143\n  - Units: 4.00\n\n- **Section 1340**\n  - Instructor: Walters, Julie\n  - Days: T Th\n  - Time: 11:10AM - 1:15PM\n  - Location: Room 240\n  - Units: 4.00\n\n### Prerequisites:\n- MATH-182 or equivalent\n- Advisory: MATH-121 or equivalent\n\n### Next steps:\n- Interested in more details about a specific section? Just ask!\n- Want to explore other courses? Let me know!"
+  },
+  {
+    "timestamp": "2025-11-12T10:27:02.759123",
+    "user_prompt": "Show me calculus classes on Monday mornings",
+    "parsed_data": {
+      "course_codes": [
+        "MATH-192",
+        "MATH-193",
+        "MATH-294"
+      ],
+      "subjects": [
+        "MATH"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": "M",
+        "time": "morning",
+        "instructor": null
+      }
+    },
+    "response": "Found 14 section(s) for calculus classes on Monday mornings.\n\n### HYBRID SECTIONS (includes in-person meetings)\nNo hybrid sections found.\n\n### IN-PERSON SECTIONS (fully in-person)\n- **MATH-002: Support for Math-192 Analytic Geometry And Calculus I**\n  - Section 2974\n    - Instructor: Mircheva, Diana\n    - Days: M T W Th\n    - Time: 11:10AM - 11:30AM\n    - Location: 107\n    - Units: 2.00\n  - Section 2950\n    - Instructor: Sohi, Anna\n    - Days: M T W Th\n    - Time: 9:00AM - 9:20AM\n    - Location: NEED RM\n    - Units: 2.00\n\n- **MATH-192: Analytic Geometry and Calculus I**\n  - Section 6133\n    - Instructor: Vincent, Marcus\n    - Days: M W\n    - Time: 8:00AM - 10:30AM\n    - Location: 108\n    - Units: 5.00\n  - Section 3379\n    - Instructor: Lang, Lindsey\n    - Days: M W\n    - Time: 9:35AM - 12:05PM\n    - Location: 245\n    - Units: 5.00\n  - Section 2972\n    - Instructor: Mircheva, Diana\n    - Days: M T W Th\n    - Time: 11:30AM - 1:00PM\n    - Location: 107\n    - Units: 5.00\n\n### ONLINE SECTIONS\nNo online sections found.\n\n### Friendly Wrap-Up\nNext steps:\n- Prefer evenings? Say \"evening.\"\n- Want online only? Say \"online.\"\n- Ask for prerequisites if needed!"
+  },
+  {
+    "timestamp": "2025-11-12T10:27:28.019233",
+    "user_prompt": "Just Calc 1",
+    "parsed_data": {
+      "course_codes": [
+        "MATH-192"
+      ],
+      "subjects": [
+        "MATH"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": "M",
+        "time": "morning",
+        "instructor": null
+      }
+    },
+    "response": "Found 10 section(s) for MATH-192 (Calculus I) on Monday mornings.\n\n### HYBRID SECTIONS (includes in-person meetings)\nNo hybrid sections found.\n\n### IN-PERSON SECTIONS (fully in-person)\n- **MATH-192: Analytic Geometry and Calculus I**\n  - Section 6133\n    - Instructor: Vincent, Marcus\n    - Days: M W\n    - Time: 8:00AM - 10:30AM\n    - Location: 108\n    - Units: 5.00\n  - Section 3379\n    - Instructor: Lang, Lindsey\n    - Days: M W\n    - Time: 9:35AM - 12:05PM\n    - Location: 245\n    - Units: 5.00\n  - Section 2972\n    - Instructor: Mircheva, Diana\n    - Days: M T W Th\n    - Time: 11:30AM - 1:00PM\n    - Location: 107\n    - Units: 5.00\n\n### ONLINE SECTIONS\nNo online sections found.\n\n### Friendly Wrap-Up\nNext steps:\n- Prefer evenings? Say \"evening.\"\n- Want online only? Say \"online.\"\n- Ask for prerequisites if needed!"
+  },
+  {
+    "timestamp": "2025-11-12T10:28:03.500112",
+    "user_prompt": "What about Wednesday instead?",
+    "parsed_data": {
+      "course_codes": [
+        "MATH-192"
+      ],
+      "subjects": [
+        "MATH"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": "W",
+        "time": "morning",
+        "instructor": null
+      }
+    },
+    "response": "Found 10 section(s) for MATH-192 (Calculus I) on Wednesday mornings.\n\n### HYBRID SECTIONS (includes in-person meetings)\nNo hybrid sections found.\n\n### IN-PERSON SECTIONS (fully in-person)\n- **MATH-192: Analytic Geometry and Calculus I**\n  - Section 9300\n    - Instructor: Staff, SRC\n    - Days: M W\n    - Time: 11:25AM - 1:55PM\n    - Location: W220\n    - Units: 5.00\n  - Section 6133\n    - Instructor: Vincent, Marcus\n    - Days: M W\n    - Time: 8:00AM - 10:30AM\n    - Location: 108\n    - Units: 5.00\n  - Section 3379\n    - Instructor: Lang, Lindsey\n    - Days: M W\n    - Time: 9:35AM - 12:05PM\n    - Location: 245\n    - Units: 5.00\n  - Section 2972\n    - Instructor: Mircheva, Diana\n    - Days: M T W Th\n    - Time: 11:30AM - 1:00PM\n    - Location: 107\n    - Units: 5.00\n\n### ONLINE SECTIONS\nNo online sections found.\n\n### Friendly Wrap-Up\nNext steps:\n- Prefer evenings? Say \"evening.\"\n- Want online only? Say \"online.\"\n- Ask for prerequisites if needed!"
+  },
+  {
+    "timestamp": "2025-11-12T10:28:20.860807",
+    "user_prompt": "Any in the afternoon?",
+    "parsed_data": {
+      "course_codes": [
+        "MATH-192"
+      ],
+      "subjects": [
+        "MATH"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": "W",
+        "time": "afternoon",
+        "instructor": null
+      }
+    },
+    "response": "Found 2 section(s) for MATH-192 (Calculus I) on Wednesday afternoons.\n\n### HYBRID SECTIONS (includes in-person meetings)\nNo hybrid sections found.\n\n### IN-PERSON SECTIONS (fully in-person)\n- **MATH-192: Analytic Geometry and Calculus I**\n  - Section 2945\n    - Instructor: Ahmadieh, Cyrous\n    - Days: M W\n    - Time: 1:25PM - 3:55PM\n    - Location: 241\n    - Units: 5.00\n  - Section 1835\n    - Instructor: Leon-Bravo, Paula\n    - Days: M W\n    - Time: 12:45PM - 3:15PM\n    - Location: 251\n    - Units: 5.00\n\n### ONLINE SECTIONS\nNo online sections found.\n\n### Friendly Wrap-Up\nNext steps:\n- Prefer evenings? Say \"evening.\"\n- Want online only? Say \"online.\"\n- Ask for prerequisites if needed!"
+  },
+  {
+    "timestamp": "2025-11-12T10:28:44.715919",
+    "user_prompt": "Is Calc 2 available?",
+    "parsed_data": {
+      "course_codes": [
+        "MATH-193"
+      ],
+      "subjects": [
+        "MATH"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": null,
+        "time": null,
+        "instructor": null
+      }
+    },
+    "response": "Found 14 section(s) for MATH-193 (Calculus II).\n\n### HYBRID SECTIONS (includes in-person meetings)\n- **MATH-193: Analytic Geometry and Calculus II**\n  - Section 8084\n    - Instructor: Matlock, Elizabeth\n    - Days: T\n    - Time: 5:00PM - 7:30PM\n    - Location: 240\n    - Units: 5.00\n    - Note: Partially online course. Mandatory in-person meetings on specific dates.\n  - Section 3625\n    - Instructor: Wylie, Lindsay\n    - Days: T Th\n    - Time: 1:25PM - 3:55PM\n    - Location: PART-ONL\n    - Units: 5.00\n    - Note: Partially online course with required on-campus meetings.\n\n### IN-PERSON SECTIONS (fully in-person)\n- **MATH-193: Analytic Geometry and Calculus II**\n  - Section 9292\n    - Instructor: Staff, SRC\n    - Days: T Th\n    - Time: 4:05PM - 6:35PM\n    - Location: W219\n    - Units: 5.00\n  - Section 8085\n    - Instructor: Shah, Meetal\n    - Days: M W\n    - Time: 5:00PM - 7:30PM\n    - Location: 108\n    - Units: 5.00\n  - Section 6134\n    - Instructor: Willett, Peter\n    - Days: M W\n    - Time: 8:30AM - 11:00AM\n    - Location: 209\n    - Units: 5.00\n  - Section 2975\n    - Instructor: Newton, Kit\n    - Days: T Th\n    - Time: 11:10AM - 1:40PM\n    - Location: NEED RM\n    - Units: 5.00\n  - Section 2666\n    - Instructor: Riazati, Farzan\n    - Days: M W\n    - Time: 2:30PM - 5:00PM\n    - Location: 245\n    - Units: 5.00\n  - Section 2283\n    - Instructor: Mohan, Adhitya\n    - Days: T Th\n    - Time: 11:10AM - 1:40PM\n    - Location: 109\n    - Units: 5.00\n\n### ONLINE SECTIONS\nNo online sections found.\n\n### Friendly Wrap-Up\nNext steps:\n- Prefer evenings? Say \"evening.\"\n- Want online only? Say \"online.\"\n- Ask for prerequisites if needed!"
+  },
+  {
+    "timestamp": "2025-11-12T10:30:18.506785",
+    "user_prompt": "What are the prerequisites for comsc200?",
+    "parsed_data": {
+      "course_codes": [
+        "COMSC-200"
+      ],
+      "subjects": [
+        "COMSC"
+      ],
+      "intent": "prerequisites",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": null,
+        "time": null,
+        "instructor": null
+      }
+    },
+    "response": "**COMSC-200: Object Oriented Programming C++**\n\nPrerequisites: COMSC-165 or equivalent"
+  },
+  {
+    "timestamp": "2025-11-12T10:30:26.534827",
+    "user_prompt": "What about COMSC-165?",
+    "parsed_data": {
+      "course_codes": [
+        "COMSC-165"
+      ],
+      "subjects": [
+        "COMSC"
+      ],
+      "intent": "prerequisites",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": null,
+        "time": null,
+        "instructor": null
+      }
+    },
+    "response": "**COMSC-165: Advanced Programming with C and C++**\n\nPrerequisites: COMSC-110 or ENGIN-135 or equivalent"
+  },
+  {
+    "timestamp": "2025-11-12T10:30:42.069143",
+    "user_prompt": "Can I take 165 and 200 together?",
+    "parsed_data": {
+      "course_codes": [
+        "COMSC-165",
+        "COMSC-200"
+      ],
+      "subjects": [
+        "COMSC"
+      ],
+      "intent": "prerequisites",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": null,
+        "time": null,
+        "instructor": null
+      }
+    },
+    "response": "**COMSC-165: Advanced Programming with C and C++**\n\nPrerequisites: COMSC-110 or ENGIN-135 or equivalent"
+  },
+  {
+    "timestamp": "2025-11-12T10:39:27.873008",
+    "user_prompt": "Show me open math193 sections on monday mornings and thursday afternoons",
+    "parsed_data": {
+      "course_codes": [
+        "MATH-193"
+      ],
+      "subjects": [
+        "MATH"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": "open",
+        "day": "M and Th",
+        "time": "morning and afternoon",
+        "instructor": null
+      }
+    },
+    "response": "I found **no sections** with your current filters (**status=open, day=M and Th, time=morning and afternoon**) for **MATH-193**.\n\nTry relaxing one or more filters. For example:\n- Remove the **instructor** name to see all sections\n- Try a different **day** or **time** window\n- Include **hybrid** or **online** if you only searched in-person\n\nWant me to show **all available sections** for this course/subject?"
+  },
+  {
+    "timestamp": "2025-11-12T10:40:04.516130",
+    "user_prompt": "Show me open math193 sections on monday mornings or thursday afternoons",
+    "parsed_data": {
+      "course_codes": [
+        "MATH-193"
+      ],
+      "subjects": [
+        "MATH"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": "open",
+        "day": "M or Th",
+        "time": "morning",
+        "instructor": null
+      }
+    },
+    "response": "Found **6 sections** for **MATH-193 (Monday mornings or Thursday afternoons)**.\n\n### HYBRID SECTIONS (includes in-person meetings)\nNo hybrid sections found.\n\n### IN-PERSON SECTIONS (fully in-person)\n- **SECTION 6134**\n  - Instructor: Willett, Peter\n  - Days: M W\n  - Time: 8:30AM - 11:00AM\n  - Location: 209\n  - Units: 5.00\n- **SECTION 1341**\n  - Instructor: Willett, Peter\n  - Days: M W\n  - Time: 8:30AM - 11:00AM\n  - Location: 209\n  - Units: 5.00\n- **SECTION 1240**\n  - Instructor: Raymond, Brian\n  - Days: M W\n  - Time: 9:35AM - 12:05PM\n  - Location: 109\n  - Units: 5.00\n\n### ONLINE SECTIONS\nNo online sections found.\n\n### Friendly Wrap-Up\nIf you need more details or want to explore other options, let me know! \n- Prefer evenings? Say \"evening.\"\n- Want online only? Say \"online.\"\n- Ask for prerequisites if you're unsure!"
+  },
+  {
+    "timestamp": "2025-11-12T10:41:07.196536",
+    "user_prompt": "Show me open math193 sections on monday mornings and Wednesday afternoons",
+    "parsed_data": {
+      "course_codes": [
+        "MATH-193"
+      ],
+      "subjects": [
+        "MATH"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": "open",
+        "day": "M and W",
+        "time": "morning and afternoon",
+        "instructor": null
+      }
+    },
+    "response": "I found **no sections** with your current filters (**status=open, day=M and W, time=morning and afternoon**) for **MATH-193**.\n\nTry relaxing one or more filters. For example:\n- Remove the **instructor** name to see all sections\n- Try a different **day** or **time** window\n- Include **hybrid** or **online** if you only searched in-person\n\nWant me to show **all available sections** for this course/subject?"
+  },
+  {
+    "timestamp": "2025-11-12T10:41:26.950304",
+    "user_prompt": "Show me open math193 sections on monday and wednesday mornings",
+    "parsed_data": {
+      "course_codes": [
+        "MATH-193"
+      ],
+      "subjects": [
+        "MATH"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": "open",
+        "day": "M and W",
+        "time": "morning",
+        "instructor": null
+      }
+    },
+    "response": "Found **3 sections** for **MATH-193 (Monday and Wednesday mornings)**.\n\n### HYBRID SECTIONS (includes in-person meetings)\nNo hybrid sections found.\n\n### IN-PERSON SECTIONS (fully in-person)\n- **SECTION 6134**\n  - Instructor: Willett, Peter\n  - Days: M W\n  - Time: 8:30AM - 11:00AM\n  - Location: 209\n  - Units: 5.00\n- **SECTION 1341**\n  - Instructor: Willett, Peter\n  - Days: M W\n  - Time: 8:30AM - 11:00AM\n  - Location: 209\n  - Units: 5.00\n- **SECTION 1240**\n  - Instructor: Raymond, Brian\n  - Days: M W\n  - Time: 9:35AM - 12:05PM\n  - Location: 109\n  - Units: 5.00\n\n### ONLINE SECTIONS\nNo online sections found.\n\n### Friendly Wrap-Up\nIf you need more details or want to explore other options, let me know! \n- Prefer evenings? Say \"evening.\"\n- Want online only? Say \"online.\"\n- Ask for prerequisites if you're unsure!"
+  },
+  {
+    "timestamp": "2025-11-12T10:44:54.403516",
+    "user_prompt": "Show me open math193 sections on monday mornings or thursday afternoons",
+    "parsed_data": {
+      "course_codes": [
+        "MATH-193"
+      ],
+      "subjects": [
+        "MATH"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": "open",
+        "day": "M or Th",
+        "time": "morning or afternoon",
+        "instructor": null
+      }
+    },
+    "response": "Found 7 sections for MATH-193 (Monday mornings or Thursday afternoons).\n\n### HYBRID SECTIONS (includes in-person meetings)\nNo hybrid sections found.\n\n### IN-PERSON SECTIONS (fully in-person)\n- **MATH-193: Analytic Geometry and Calculus II**\n  - **Section 6134**\n    - Instructor: Willett, Peter\n    - Days: M W\n    - Time: 8:30AM - 11:00AM\n    - Location: 209\n    - Units: 5.00\n  - **Section 1341**\n    - Instructor: Willett, Peter\n    - Days: M W\n    - Time: 8:30AM - 11:00AM\n    - Location: 209\n    - Units: 5.00\n  - **Section 1240**\n    - Instructor: Raymond, Brian\n    - Days: M W\n    - Time: 9:35AM - 12:05PM\n    - Location: 109\n    - Units: 5.00\n\n### ONLINE SECTIONS\nNo online sections found.\n\nFriendly Wrap-Up:\n- Prefer evenings? Say \"evening.\"\n- Want online only? Say \"online.\"\n- Ask for prerequisites if needed!"
+  },
+  {
+    "timestamp": "2025-11-12T10:46:28.000359",
+    "user_prompt": "I said monday mornings or thursday afternoon",
+    "parsed_data": {
+      "course_codes": [],
+      "subjects": [],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": null,
+        "time": null,
+        "instructor": null
+      }
+    },
+    "response": "I can help you find DVC STEM courses and details like sections, instructors, and prerequisites.\n\nTry one of these:\n- \"Show me open MATH-193 sections Monday morning.\"\n- \"Who teaches PHYS-130 on Thursdays?\"\n- \"What are the prerequisites for COMSC-200?\"\n- \"Show online COMSC classes.\"\n\nPlease include a subject (e.g., COMSC, MATH, PHYS, CHEM, BIOSC, ENGIN) or a specific course code (e.g., COMSC-110)."
+  },
+  {
+    "timestamp": "2025-11-12T10:47:13.065591",
+    "user_prompt": "Show me all math193 sections on monday mornings or thursday afternoon",
+    "parsed_data": {
+      "course_codes": [
+        "MATH-193"
+      ],
+      "subjects": [
+        "MATH"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": "M or Th",
+        "time": "morning or afternoon",
+        "instructor": null
+      }
+    },
+    "response": "Found 7 section(s) for MATH-193 (Monday mornings or Thursday afternoons).\n\n### HYBRID SECTIONS (includes in-person meetings)\nNo hybrid sections found.\n\n### IN-PERSON SECTIONS (fully in-person)\n- **MATH-193: Analytic Geometry and Calculus II**\n  - **Section 6134**\n    - Instructor: Willett, Peter\n    - Days: M W\n    - Time: 8:30AM - 11:00AM\n    - Location: 209\n    - Units: 5.00\n  - **Section 1341**\n    - Instructor: Willett, Peter\n    - Days: M W\n    - Time: 8:30AM - 11:00AM\n    - Location: 209\n    - Units: 5.00\n  - **Section 1240**\n    - Instructor: Raymond, Brian\n    - Days: M W\n    - Time: 9:35AM - 12:05PM\n    - Location: 109\n    - Units: 5.00\n\n### ONLINE SECTIONS\nNo online sections found.\n\nFriendly Wrap-Up:\n- Want to explore more options? Let me know if you prefer evening classes or online sections!"
+  },
+  {
+    "timestamp": "2025-11-12T10:50:58.189273",
+    "user_prompt": "Show me open math193 sections on monday mornings or tuesday afternoons",
+    "parsed_data": {
+      "course_codes": [
+        "MATH-193"
+      ],
+      "subjects": [
+        "MATH"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": "open",
+        "day": "M or T",
+        "time": "morning or afternoon",
+        "instructor": null
+      }
+    },
+    "response": "Found 7 section(s) for MATH-193 (open, Monday mornings or Tuesday afternoons).\n\n**MATH-193: Analytic Geometry and Calculus II**\n\n### HYBRID SECTIONS (includes in-person meetings)\n- Section 3625\n  - Instructor: Wylie, Lindsay\n  - Days: T Th (hybrid online/in-person), plus in-person T (see notes)\n  - Time: 1:25PM - 3:55PM\n  - Location: PART-ONL / 143\n  - Units: 5.00\n  - Notes: Prerequisite: MATH-192 or equivalent. Partially online with required on-campus meetings on select Tuesdays for exams. Online meetings M/W 1:25-3:55PM via Zoom. Computer with audio/video required.\n\n### IN-PERSON SECTIONS (fully in-person)\n- Section 9292\n  - Instructor: Staff, SRC\n  - Days: T Th\n  - Time: 4:05PM - 6:35PM\n  - Location: W219\n  - Units: 5.00\n- Section 6134\n  - Instructor: Willett, Peter\n  - Days: M W\n  - Time: 8:30AM - 11:00AM\n  - Location: 209\n  - Units: 5.00\n- Section 1562\n  - Instructor: Gomez, Concha\n  - Days: T Th\n  - Time: 1:25PM - 3:55PM\n  - Location: 241\n  - Units: 5.00\n- Section 1341\n  - Instructor: Willett, Peter\n  - Days: M W\n  - Time: 8:30AM - 11:00AM\n  - Location: 209\n  - Units: 5.00\n- Section 1285\n  - Instructor: Pineda-Carranza, Servando\n  - Days: T Th\n  - Time: 12:45PM - 3:15PM\n  - Location: 108\n  - Units: 5.00\n- Section 1240\n  - Instructor: Raymond, Brian\n  - Days: M W\n  - Time: 9:35AM - 12:05PM\n  - Location: 109\n  - Units: 5.00\n\n### ONLINE SECTIONS\n- No online sections found.\n\nNext steps:\n- Prefer a specific instructor or time? Let me know!\n- Want to see only hybrid or only in-person? Just ask.\n- Need prerequisite info or help choosing? Say \"prerequisites\" or \"recommend a section.\""
+  },
+  {
+    "timestamp": "2025-11-12T10:51:39.613972",
+    "user_prompt": "Show me open math193 sections on monday mornings or tuesday afternoons",
+    "parsed_data": {
+      "course_codes": [],
+      "subjects": [],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": null,
+        "time": null,
+        "instructor": null
+      }
+    },
+    "response": "I can help you find DVC STEM courses and details like sections, instructors, and prerequisites.\n\nTry one of these:\n- \"Show me open MATH-193 sections Monday morning.\"\n- \"Who teaches PHYS-130 on Thursdays?\"\n- \"What are the prerequisites for COMSC-200?\"\n- \"Show online COMSC classes.\"\n\nPlease include a subject (e.g., COMSC, MATH, PHYS, CHEM, BIOSC, ENGIN) or a specific course code (e.g., COMSC-110)."
+  },
+  {
+    "timestamp": "2025-11-12T10:51:44.631676",
+    "user_prompt": "Show me open math193 sections on monday mornings or tuesday afternoons",
+    "parsed_data": {
+      "course_codes": [],
+      "subjects": [],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": null,
+        "time": null,
+        "instructor": null
+      }
+    },
+    "response": "I can help you find DVC STEM courses and details like sections, instructors, and prerequisites.\n\nTry one of these:\n- \"Show me open MATH-193 sections Monday morning.\"\n- \"Who teaches PHYS-130 on Thursdays?\"\n- \"What are the prerequisites for COMSC-200?\"\n- \"Show online COMSC classes.\"\n\nPlease include a subject (e.g., COMSC, MATH, PHYS, CHEM, BIOSC, ENGIN) or a specific course code (e.g., COMSC-110)."
+  },
+  {
+    "timestamp": "2025-11-12T10:51:57.499215",
+    "user_prompt": "Show me open math193 sections on monday mornings or tuesday afternoons",
+    "parsed_data": {
+      "course_codes": [],
+      "subjects": [],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": null,
+        "time": null,
+        "instructor": null
+      }
+    },
+    "response": "I can help you find DVC STEM courses and details like sections, instructors, and prerequisites.\n\nTry one of these:\n- \"Show me open MATH-193 sections Monday morning.\"\n- \"Who teaches PHYS-130 on Thursdays?\"\n- \"What are the prerequisites for COMSC-200?\"\n- \"Show online COMSC classes.\"\n\nPlease include a subject (e.g., COMSC, MATH, PHYS, CHEM, BIOSC, ENGIN) or a specific course code (e.g., COMSC-110)."
+  },
+  {
+    "timestamp": "2025-11-12T10:52:44.466759",
+    "user_prompt": "Show me open math193 sections on monday mornings or tuesday afternoons",
+    "parsed_data": {
+      "course_codes": [
+        "MATH-193"
+      ],
+      "subjects": [
+        "MATH"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": "open",
+        "day": "M or T",
+        "time": "morning or afternoon",
+        "instructor": null
+      }
+    },
+    "response": "Found 7 section(s) for MATH-193 (Monday mornings or Tuesday afternoons, open).\n\n**MATH-193: Analytic Geometry and Calculus II**\n\n### HYBRID SECTIONS (includes in-person meetings)\n- Section 3625\n  - Instructor: Wylie, Lindsay\n  - Days: T Th (hybrid online/in-person)\n  - Time: 1:25PM - 3:55PM\n  - Location: PART-ONL (plus in-person exams in room 143)\n  - Units: 5.00\n  - Notes: Prerequisite: MATH-192 or equivalent. Partially online with required on-campus meetings for exams. See Canvas for details.\n\n### IN-PERSON SECTIONS (fully in-person)\n- Section 9292\n  - Instructor: Staff, SRC\n  - Days: T Th\n  - Time: 4:05PM - 6:35PM\n  - Location: W219\n  - Units: 5.00\n- Section 6134\n  - Instructor: Willett, Peter\n  - Days: M W\n  - Time: 8:30AM - 11:00AM\n  - Location: 209\n  - Units: 5.00\n- Section 1562\n  - Instructor: Gomez, Concha\n  - Days: T Th\n  - Time: 1:25PM - 3:55PM\n  - Location: 241\n  - Units: 5.00\n- Section 1341\n  - Instructor: Willett, Peter\n  - Days: M W\n  - Time: 8:30AM - 11:00AM\n  - Location: 209\n  - Units: 5.00\n- Section 1285\n  - Instructor: Pineda-Carranza, Servando\n  - Days: T Th\n  - Time: 12:45PM - 3:15PM\n  - Location: 108\n  - Units: 5.00\n- Section 1240\n  - Instructor: Raymond, Brian\n  - Days: M W\n  - Time: 9:35AM - 12:05PM\n  - Location: 109\n  - Units: 5.00\n\n### ONLINE SECTIONS\n- No online sections found.\n\nNext steps:\n- Prefer a specific instructor or time? Let me know!\n- Want to see evening or online options? Just ask.\n- Need prerequisite info or help choosing? Say \"prerequisites\" or \"recommend a section.\""
+  },
+  {
+    "timestamp": "2025-11-12T10:52:56.014453",
+    "user_prompt": "Show me open math193 sections on monday mornings and tuesday afternoons",
+    "parsed_data": {
+      "course_codes": [
+        "MATH-193"
+      ],
+      "subjects": [
+        "MATH"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": "open",
+        "day": "M and T",
+        "time": "morning and afternoon",
+        "instructor": null
+      }
+    },
+    "response": "I found **no sections** with your current filters (**status=open, day=M and T, time=morning and afternoon**) for **MATH-193**.\n\nTry relaxing one or more filters. For example:\n- Remove the **instructor** name to see all sections\n- Try a different **day** or **time** window\n- Include **hybrid** or **online** if you only searched in-person\n\nWant me to show **all available sections** for this course/subject?"
+  },
+  {
+    "timestamp": "2025-11-12T10:53:15.817882",
+    "user_prompt": "What about wednesday evenings",
+    "parsed_data": {
+      "course_codes": [
+        "MATH-193"
+      ],
+      "subjects": [
+        "MATH"
+      ],
+      "intent": "find_sections",
+      "filters": {
+        "mode": null,
+        "status": "open",
+        "day": "W",
+        "time": "evening",
+        "instructor": null
+      }
+    },
+    "response": "Found 1 section(s) for MATH-193 (Wednesday evenings, open).\n\n**MATH-193: Analytic Geometry and Calculus II**\n\n### HYBRID SECTIONS (includes in-person meetings)\n- No hybrid sections found.\n\n### IN-PERSON SECTIONS (fully in-person)\n- Section 8085\n  - Instructor: Shah, Meetal\n  - Days: M W\n  - Time: 5:00PM - 7:30PM\n  - Location: 108\n  - Units: 5.00\n\n### ONLINE SECTIONS\n- No online sections found.\n\nNext steps:\n- Want to see other days or times? Just ask!\n- Need prerequisite details or want to compare instructors? Let me know."
+  },
+  {
+    "timestamp": "2025-11-12T10:53:50.743485",
+    "user_prompt": "Can I take comsc165 and 200 together?",
+    "parsed_data": {
+      "course_codes": [
+        "COMSC-165",
+        "COMSC-200"
+      ],
+      "subjects": [
+        "COMSC"
+      ],
+      "intent": "prerequisites",
+      "filters": {
+        "mode": null,
+        "status": null,
+        "day": null,
+        "time": null,
+        "instructor": null
+      }
+    },
+    "response": "**Can you take COMSC-165 and COMSC-200 together?**\n\n❌ **No** - COMSC-200 requires COMSC-165 as a prerequisite, so you must complete COMSC-165 first.\n\n**COMSC-200 prerequisites:** COMSC-165 or equivalent\n"
   }
 ]

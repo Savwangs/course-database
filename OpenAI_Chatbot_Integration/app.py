@@ -74,6 +74,9 @@ def search_courses(keyword, mode=None, status=None, day_filter=None, time_filter
        - day_filter:  "M and W", "T or Th", "Mon and Wed", "Tue/Thu"
        - time_filter: "morning or evening"
        - instructor:  "Lo or Julie"
+       
+       COMPOUND CONDITIONS: Supports day+time combos like "Monday morning or Thursday afternoon"
+       - These create specific (day, time) pairs that are checked independently
     """
     def _split_tokens(s: str):
         """Split on natural separators without regex and detect AND vs OR."""
@@ -146,6 +149,46 @@ def search_courses(keyword, mode=None, status=None, day_filter=None, time_filter
             return d, False
         return [str(d)], False
 
+    # Detect compound conditions (day+time combos separated by "or")
+    # Example: "Monday morning or Thursday afternoon"
+    compound_conditions = []
+    if day_filter and time_filter and " or " in f"{day_filter} {time_filter}".lower():
+        # Try to parse compound conditions
+        combined = f"{day_filter} {time_filter}".lower()
+        if "morning" in combined or "afternoon" in combined or "evening" in combined:
+            # Split by "or" to get individual conditions
+            or_parts = combined.split(" or ")
+            
+            name_to_code = {
+                "monday": "M", "mon": "M", "m": "M",
+                "tuesday": "T", "tue": "T", "tues": "T", "t": "T",
+                "wednesday": "W", "wed": "W", "w": "W",
+                "thursday": "Th", "thu": "Th", "thur": "Th", "thurs": "Th", "th": "Th",
+                "friday": "F", "fri": "F", "f": "F",
+            }
+            
+            for part in or_parts:
+                part = part.strip()
+                day_found = None
+                time_found = None
+                
+                # Extract day
+                for day_name, day_code in name_to_code.items():
+                    if day_name in part:
+                        day_found = day_code
+                        break
+                
+                # Extract time
+                if "morning" in part:
+                    time_found = "morning"
+                elif "afternoon" in part:
+                    time_found = "afternoon"
+                elif "evening" in part:
+                    time_found = "evening"
+                
+                if day_found and time_found:
+                    compound_conditions.append((day_found, time_found))
+    
     # Normalize flexible filters
     mode_norm = _normalize_mode(mode)                      # list[str] or None
     status_norm = _normalize_status(status)                # list[str] or None
@@ -190,14 +233,74 @@ def search_courses(keyword, mode=None, status=None, day_filter=None, time_filter
             if status_norm and not any(s in stat for s in status_norm):
                 continue
 
-            # INSTRUCTOR: OR semantics on substrings
+            # INSTRUCTOR: OR semantics with flexible name matching
             if instr_norm:
                 instructor = section.get("instructor", "").lower()
-                if not any(name.lower() in instructor for name in instr_norm):
+                # For each instructor query, split into tokens and check if all tokens match
+                matched = False
+                for name_query in instr_norm:
+                    # Split the query into tokens (handles "Joanne Strickland" → ["joanne", "strickland"])
+                    query_tokens = [token.strip().lower() for token in name_query.replace(',', ' ').split() if token.strip()]
+                    # Check if all query tokens appear anywhere in the instructor field
+                    if all(token in instructor for token in query_tokens):
+                        matched = True
+                        break
+                if not matched:
                     continue
 
-            # DAY/TIME: per-meeting checks with AND/OR semantics
-            if day_terms or time_terms:
+            # DAY/TIME: per-meeting checks with AND/OR semantics and compound conditions
+            if compound_conditions:
+                # Handle compound conditions like "Monday morning or Thursday afternoon"
+                has_matching_meeting = False
+                for meeting in section.get("meetings", []):
+                    days = meeting.get("days", "") or ""
+                    time_str = meeting.get("time", "")
+                    
+                    # Check if this meeting matches any of the compound conditions
+                    for required_day, required_time in compound_conditions:
+                        # Check day
+                        def _has_day(code):
+                            if code == "Th":
+                                return "Th" in days
+                            return code in days
+                        
+                        day_match = _has_day(required_day)
+                        
+                        # Check time
+                        time_match = False
+                        if time_str and time_str.lower() != "asynchronous":
+                            try:
+                                start_raw = time_str.split("-")[0].strip()
+                                if "PM" in start_raw and not start_raw.startswith("12"):
+                                    hour = int(start_raw.split(":")[0]) + 12
+                                elif "AM" in start_raw and start_raw.startswith("12"):
+                                    hour = 0
+                                else:
+                                    hour = int(start_raw.split(":")[0])
+                                
+                                def _bucket(h):
+                                    if h < 12: return "morning"
+                                    if 12 <= h < 17: return "afternoon"
+                                    return "evening"
+                                
+                                bucket = _bucket(hour)
+                                time_match = (bucket == required_time)
+                            except:
+                                pass
+                        
+                        # If this meeting matches this compound condition, include the section
+                        if day_match and time_match:
+                            has_matching_meeting = True
+                            break
+                    
+                    if has_matching_meeting:
+                        break
+                
+                if not has_matching_meeting:
+                    continue
+                    
+            elif day_terms or time_terms:
+                # Standard independent day/time filtering (no compound conditions)
                 has_matching_meeting = False
                 for meeting in section.get("meetings", []):
                     days = meeting.get("days", "") or ""
@@ -281,17 +384,34 @@ def llm_parse_query(user_query: str, *, temperature: float = 0.0):
         '  \"filters\": {\n'
         '     \"mode\": \"in-person\" | \"online\" | \"hybrid\" | null,\n'
         '     \"status\": \"open\" | \"closed\" | null,\n'
-        '     \"day\": \"M\" | \"T\" | \"W\" | \"Th\" | \"F\" | null,\n'
-        '     \"time\": \"morning\" | \"afternoon\" | \"evening\" | null,\n'
+        '     \"day\": \"M\" | \"T\" | \"W\" | \"Th\" | \"F\" | null (can include "and"/"or" like "M and W" or "T or Th"),\n'
+        '     \"time\": \"morning\" | \"afternoon\" | \"evening\" | null (can include "and"/"or" like "morning and afternoon"),\n'
         '     \"instructor\": string or null\n'
         "  }\n"
         "}\n"
+        "IMPORTANT - AND vs OR logic:\n"
+        "- If user says 'Monday AND Wednesday' or 'M and W', they want sections that meet on BOTH days\n"
+        "- If user says 'Monday OR Wednesday' or 'M or W', they want sections that meet on EITHER day\n"
+        "- Same logic for time: 'morning AND afternoon' (meets both) vs 'morning OR afternoon' (meets either)\n"
+        "- Include the 'and'/'or' in your filter string so backend can process it correctly\n"
+        "\n"
+        "COMPOUND CONDITIONS (VERY IMPORTANT):\n"
+        "- If user says 'Monday morning OR Thursday afternoon', this is a COMPOUND condition\n"
+        "- Pass it as: day='Monday or Thursday', time='morning or afternoon' (backend will parse the compound logic)\n"
+        "- The backend detects compound patterns and matches sections with (Monday AND morning) OR (Thursday AND afternoon)\n"
+        "- Other examples: 'Tuesday evening or Friday morning', 'Wednesday afternoon or Monday evening'\n"
         "Rules:\n"
         "- Only choose course_codes from ALLOWED_COURSE_CODES.\n"
         "- Only choose subjects from ALLOWED_SUBJECT_PREFIXES.\n"
-        "- If the user mentions a course by TITLE (e.g., 'differential equations', 'human biology'), "
-        "  map it to the corresponding code(s) by looking it up in ALLOWED_TITLES (case/typo-insensitive) "
-        "  and place those into course_codes.\n"
+        "- TITLE MAPPING (VERY IMPORTANT):\n"
+        "  * If user says 'calculus classes' or 'calculus courses' (plural/general), find ALL courses with 'Calculus' in title\n"
+        "  * If user says 'Calc 1' or 'Calculus 1' or 'Calculus I', match ONLY courses with 'Calculus I' in title\n"
+        "  * If user says 'Calc 2' or 'Calculus 2' or 'Calculus II', match ONLY courses with 'Calculus II' in title\n"
+        "  * If user says 'Calc 3' or 'Calculus 3' or 'Calculus III', match ONLY courses with 'Calculus III' in title\n"
+        "  * Similar logic for 'Physics', 'Chemistry', 'Biology', 'Computer Science', etc.\n"
+        "  * Be precise: 'Calc 1' ≠ 'Calculus for Business' (only match courses with roman numeral I)\n"
+        "- Search ALLOWED_TITLES by matching course titles (case/typo-insensitive substring matching).\n"
+        "- When mapping titles to codes, look at the actual course_title field in ALLOWED_TITLES.\n"
         "- If the user asks about prerequisites/prereq, set intent='prerequisites'.\n"
         "- If the user asks about professor/instructor/teacher/who teaches, set intent='instructors'.\n"
         "- Otherwise default to intent='find_sections'.\n"
@@ -308,7 +428,7 @@ def llm_parse_query(user_query: str, *, temperature: float = 0.0):
 
     try:
         resp = client.chat.completions.create(
-            model="gpt-4o-mini",
+            model="gpt-4.1",
             temperature=temperature,  # deterministic parsing
             messages=[
                 {"role": "system", "content": parser_system},
@@ -419,6 +539,56 @@ def ask_course_assistant(user_query: str, *, conversation_history: list = None, 
     if intent == "prerequisites":
         keywords_for_prereq = course_codes or subjects
         results = search_courses(keywords_for_prereq)
+        
+        # Check if this is a "can I take together" question
+        can_take_together_patterns = ["can i take", "take together", "take at the same time", "together with", "take both"]
+        is_take_together_question = any(pattern in query_lower for pattern in can_take_together_patterns)
+        
+        if is_take_together_question and len(course_codes) >= 2:
+            # User asking about taking multiple courses together
+            # Find prerequisite info for each course
+            course_prereqs = {}
+            for code in course_codes:
+                for r in results:
+                    if r["course_code"].upper() == code.upper():
+                        course_prereqs[code] = r.get("prerequisites", "")
+                        break
+            
+            # Build response explaining relationships
+            response = f"**Can you take {' and '.join(course_codes)} together?**\n\n"
+            
+            # Check if any course is a prerequisite for another
+            conflict_found = False
+            for i, code1 in enumerate(course_codes):
+                for code2 in course_codes[i+1:]:
+                    prereq1 = course_prereqs.get(code1, "").upper()
+                    prereq2 = course_prereqs.get(code2, "").upper()
+                    
+                    if code1.upper() in prereq2:
+                        response += f"❌ **No** - {code2} requires {code1} as a prerequisite, so you must complete {code1} first.\n\n"
+                        response += f"**{code2} prerequisites:** {course_prereqs.get(code2, 'Not listed')}\n"
+                        conflict_found = True
+                        break
+                    elif code2.upper() in prereq1:
+                        response += f"❌ **No** - {code1} requires {code2} as a prerequisite, so you must complete {code2} first.\n\n"
+                        response += f"**{code1} prerequisites:** {course_prereqs.get(code1, 'Not listed')}\n"
+                        conflict_found = True
+                        break
+                if conflict_found:
+                    break
+            
+            if not conflict_found:
+                response += f"✅ **Yes** - Based on prerequisites, these courses can be taken together as neither requires the other.\n\n"
+                for code in course_codes:
+                    prereq = course_prereqs.get(code, "No prerequisites listed")
+                    response += f"**{code}:** {prereq}\n"
+                response += "\n💡 Just make sure there are no schedule conflicts between the sections you choose!"
+            
+            if enable_logging:
+                log_interaction(user_query, parsed, response)
+            return response
+        
+        # Regular prerequisite lookup
         if results:
             chosen = None
             if course_codes:
@@ -503,17 +673,59 @@ def ask_course_assistant(user_query: str, *, conversation_history: list = None, 
 
     context = f"User asked: '{user_query}'\n\n"
     
-    # Count total sections across all courses
-    total_sections = sum(len(course.get("sections", [])) for course in results)
+    # Serialize results to JSON and check if truncation needed
+    results_json = json.dumps(results, indent=2)
     
-    context += f"I found {len(results)} matching course(s) with {total_sections} total section(s) for '{keyword_display}'.\n"
-    context += f"IMPORTANT: When you write the summary, say 'Found {total_sections} section(s)' - do NOT recount yourself.\n"
+    if len(results_json) > truncate_limit:
+        # If we need to truncate, reduce number of sections per course to fit
+        truncated_results = []
+        char_count = 0
+        
+        for course in results:
+            # Keep course metadata
+            course_copy = {
+                "course_code": course["course_code"],
+                "course_title": course["course_title"],
+                "sections": []
+            }
+            
+            # Add sections until we hit the limit
+            for section in course.get("sections", []):
+                section_json = json.dumps(section, indent=2)
+                if char_count + len(section_json) < truncate_limit - 500:  # Leave room for metadata
+                    course_copy["sections"].append(section)
+                    char_count += len(section_json)
+                else:
+                    break
+            
+            if course_copy["sections"]:  # Only add courses that have sections
+                truncated_results.append(course_copy)
+                
+        results_to_send = truncated_results
+        results_json = json.dumps(truncated_results, indent=2)
+        truncated = True
+    else:
+        results_to_send = results
+        truncated = False
+    
+    # Count sections from what we're actually sending
+    sections_to_send = sum(len(course.get("sections", [])) for course in results_to_send)
+    total_sections_original = sum(len(course.get("sections", [])) for course in results)
+    
+    context += f"I found {len(results)} matching course(s) with {total_sections_original} total section(s) for '{keyword_display}'.\n"
+    
+    if truncated:
+        context += f"NOTE: Showing {sections_to_send} sections below (truncated for brevity). When you write your summary, say 'Found {sections_to_send} section(s)' to match what you're displaying.\n"
+    else:
+        context += f"IMPORTANT: When you write the summary, say 'Found {sections_to_send} section(s)' - this matches the exact count in the JSON below.\n"
+    
     if filter_bits: 
         context += "Filters applied: " + ", ".join(filter_bits) + "\n"
         context += "The JSON data below has been PRE-FILTERED to match these exact criteria. Show ONLY the sections in this data.\n"
         if instructor_mentioned:
             context += f"NOTE: User specifically asked about instructor '{instructor_mentioned}' - show ONLY sections taught by this instructor.\n"
-    context += "\nHere is the JSON data (already filtered):\n" + json.dumps(results, indent=2)[:truncate_limit]
+    
+    context += "\nHere is the JSON data (already filtered):\n" + results_json
 
     # Build messages with conversation history for context-aware responses
     system_message = {
@@ -533,6 +745,14 @@ def ask_course_assistant(user_query: str, *, conversation_history: list = None, 
         - If user says "that course", "those classes", "the same one", etc., refer to the most recent course discussed.
         - If user asks "what about [filter]?", apply the new filter to the previous search.
         - If unclear, ask for clarification while being helpful.
+        
+        PREREQUISITE CHAIN ANALYSIS
+        - If user asks "Can I take X and Y together?" or "Can I take X with Y?" check prerequisites:
+          * Look at X's prerequisites - does it require Y? If yes, must take Y first.
+          * Look at Y's prerequisites - does it require X? If yes, must take X first.
+          * If one requires the other → NO, they cannot be taken together.
+          * If neither requires the other → YES, they can be taken together (check for time conflicts too).
+        - Provide clear recommendation: "No, COMSC-200 requires COMSC-165 as prerequisite, so take 165 first" or "Yes, these can be taken together as neither is a prerequisite for the other."
 
         OUTPUT STRUCTURE
         A) One-line Summary:
@@ -589,7 +809,7 @@ def ask_course_assistant(user_query: str, *, conversation_history: list = None, 
     
     # LLM formatter with conversation context
     llm_response = client.chat.completions.create(
-        model="gpt-4o-mini",
+        model="gpt-4.1",
         temperature=response_temperature,
         messages=messages,
     )
