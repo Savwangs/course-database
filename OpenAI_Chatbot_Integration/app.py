@@ -955,8 +955,9 @@ def health():
     })
 
 if __name__ == '__main__':
-    # Get port from environment variable (Render provides this) or default to 5000
-    port = int(os.environ.get("PORT", 5000))
+    # Get port from environment variable (Render provides this) or default to 5001
+    # Note: Using 5001 locally to avoid conflict with macOS AirPlay Receiver on port 5000
+    port = int(os.environ.get("PORT", 5001))
     # Bind to 0.0.0.0 to allow external access (required for Render)
     host = '0.0.0.0'
     # Disable debug mode in production
