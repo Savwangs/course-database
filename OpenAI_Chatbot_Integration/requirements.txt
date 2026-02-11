@@ -10,7 +10,11 @@ httpx>=0.27.0
 # Environment Variables Management
 python-dotenv==1.0.0
 
-# MongoDB Database
+# SQLAlchemy ORM & Flask integration
+Flask-SQLAlchemy>=3.1.0
+SQLAlchemy>=2.0.0
+
+# MongoDB Database (legacy, kept for backward compatibility)
 pymongo==4.6.0
 certifi>=2023.7.22
 
