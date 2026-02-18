@@ -505,7 +505,7 @@ class CourseSearcher:
                 '- "What GE courses should I take at DVC for UC Berkeley?"'
             )
             if enable_logging:
-                self.log_interaction(user_query, parsed, response, start_ms)
+                self.log_interaction(user_query, parsed, response, start_ms, status="needs_clarification")
             return response
 
         # ------ Prerequisite intent ------
@@ -535,38 +535,87 @@ class CourseSearcher:
         )
 
         if enable_logging:
-            self.log_interaction(user_query, parsed, response, start_ms)
+            self.log_interaction(user_query, parsed, response, start_ms, status="success")
         return response
 
     # ------------------------------------------------------------------
     #  Logging  (writes to InteractionLog SQL table)
     # ------------------------------------------------------------------
-    def log_interaction(self, user_query: str, parsed_data: dict,
-                        response: str, start_ms: float | None = None):
-        """Persist an interaction to the interaction_logs table."""
+    
+    def log_interaction(
+        self,
+        user_query: str,
+        parsed_data: dict,
+        response: str,
+        start_ms: float | None = None,
+        *,
+        status: str | None = None,
+        confidence_level: str | None = None,
+        result_count: int | None = None,
+        confidence: float | None = None,
+    ):
+        """Persist an interaction to the interaction_logs table (Cloud SQL) safely."""
         latency = None
         if start_ms is not None:
             latency = int((time.perf_counter() - start_ms) * 1000)
 
+        def _clean_text(s: str | None, max_len: int | None = None) -> str | None:
+            if not s:
+                return None
+            # normalize whitespace (turn newlines/tabs into single spaces)
+            s = " ".join(s.replace("\t", " ").replace("\r", " ").split())
+            # optional: remove a leading UI emoji
+            if s.startswith("💬"):
+                s = s.lstrip("💬").strip()
+            return s[:max_len] if (max_len and len(s) > max_len) else s
+
+        # If not passed, infer simple confidence_level
+        if confidence_level is None:
+            if status == "success":
+                confidence_level = "high"
+            elif status in {"needs_clarification", "no_results"}:
+                confidence_level = "low"
+            else:
+                confidence_level = "medium"
+
+        payload = {
+            "timestamp": datetime.now(timezone.utc),
+            "project_name": "CourseGenie",
+            "user_prompt": _clean_text(user_query, 5000),
+            "chatbot_response_summary": _clean_text(response, 5000),
+            "status": status,
+            "confidence_level": confidence_level,
+            "confidence": confidence,
+            "latency_ms": latency,
+            "result_count": result_count,
+            # legacy (only used if your model/table still has them)
+            "user_query": _clean_text(user_query, 5000),
+            "parsed_data": parsed_data,
+            "ai_response": response,
+        }
+
         try:
-            log_entry = InteractionLog(
-                timestamp=datetime.now(timezone.utc),
-                user_query=user_query,
-                parsed_data=parsed_data,
-                ai_response=response,
-                latency_ms=latency,
-            )
+            model_cols = set(InteractionLog.__table__.columns.keys())
+            safe_payload = {k: v for k, v in payload.items() if k in model_cols}
+
+            if "parsed_data" in safe_payload and not isinstance(safe_payload["parsed_data"], (str, type(None))):
+                safe_payload["parsed_data"] = json.dumps(safe_payload["parsed_data"], default=str)
+
+            log_entry = InteractionLog(**safe_payload)
             db.session.add(log_entry)
             db.session.commit()
+
         except Exception as e:
             db.session.rollback()
             print(f"⚠️ Failed to log interaction to DB: {e}")
+
+
 
     # ------------------------------------------------------------------
     #  Private helpers
     # ------------------------------------------------------------------
     def _handle_prerequisites(self, user_query, query_lower, parsed,
-                              course_codes, subjects, enable_logging, start_ms):
+                            course_codes, subjects, enable_logging, start_ms):
         keywords_for_prereq = course_codes or subjects
         results = self.search(keywords_for_prereq)
 
@@ -625,7 +674,7 @@ class CourseSearcher:
                 )
 
             if enable_logging:
-                self.log_interaction(user_query, parsed, response, start_ms)
+                self.log_interaction(user_query, parsed, response, start_ms, status="success")
             return response
 
         # Regular prerequisite lookup
@@ -642,7 +691,7 @@ class CourseSearcher:
             prereqs = chosen.get("prerequisites", "No prerequisites listed")
             response = f"**{chosen['course_code']}: {chosen['course_title']}**\n\nPrerequisites: {prereqs}"
             if enable_logging:
-                self.log_interaction(user_query, parsed, response, start_ms)
+                self.log_interaction(user_query, parsed, response, start_ms, status="success")
             return response
 
         kw_display = ", ".join(keywords_for_prereq) if isinstance(keywords_for_prereq, list) else keywords_for_prereq
@@ -651,7 +700,7 @@ class CourseSearcher:
             "Double-check the course code/subject, or try another course (e.g., COMSC-110, MATH-193)."
         )
         if enable_logging:
-            self.log_interaction(user_query, parsed, response, start_ms)
+            self.log_interaction(user_query, parsed, response, start_ms, status="no_results")
         return response
 
     def _handle_no_results(self, user_query, parsed, keyword, mode, status,
@@ -695,7 +744,7 @@ class CourseSearcher:
             )
 
         if enable_logging:
-            self.log_interaction(user_query, parsed, response, start_ms)
+            self.log_interaction(user_query, parsed, response, start_ms, status="no_results")
         return response
 
     def _format_results(self, user_query, keyword, results,

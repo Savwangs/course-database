@@ -38,7 +38,13 @@ app.secret_key = os.getenv("FLASK_SECRET_KEY", secrets.token_hex(32))
 
 # SQLAlchemy configuration
 # Default to a local SQLite DB; set DATABASE_URL for Cloud SQL / Postgres in production
-app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL", "sqlite:///courses.db")
+db_url = os.getenv("DATABASE_URL", "sqlite:///courses.db")
+
+# Heroku-style URLs sometimes use "postgres://", but SQLAlchemy expects "postgresql://"
+if db_url.startswith("postgres://"):
+    db_url = db_url.replace("postgres://", "postgresql://", 1)
+
+app.config["SQLALCHEMY_DATABASE_URI"] = db_url
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 # Initialize the database (creates tables if they don't exist)

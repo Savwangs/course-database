@@ -21,3 +21,8 @@ certifi>=2023.7.22
 # Additional Dependencies
 Werkzeug==3.0.1
 
+# Production server for Cloud Run
+gunicorn==21.2.0
+
+# PostgreSQL adapter for Cloud SQL
+psycopg2-binary==2.9.9
