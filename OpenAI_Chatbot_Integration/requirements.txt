@@ -1,5 +1,6 @@
 # Flask Web Framework
 Flask==3.0.0
+Flask-Limiter==3.8.0
 
 # OpenAI API Client
 openai>=1.40.0

@@ -10,6 +10,10 @@ import os
 import re
 import glob
 
+import httpx
+import os
+
+OPENAI_TIMEOUT_SECONDS = float(os.getenv("OPENAI_TIMEOUT_SECONDS", "20"))
 
 # ---------------------------------------------------------------------------
 #  Constants
@@ -380,11 +384,27 @@ class TransferAssistant:
     #  LLM helpers
     # ------------------------------------------------------------------
     def _llm_chat_text(self, messages, model, temperature=0.0, response_format=None):
-        params = dict(model=model, temperature=temperature, messages=messages)
+        params = dict(
+            model=model,
+            temperature=temperature,
+            messages=messages,
+            timeout=OPENAI_TIMEOUT_SECONDS,
+        )
+
         if response_format is not None:
             params["response_format"] = response_format
-        resp = self.client.chat.completions.create(**params)
-        return resp.choices[0].message.content.strip()
+
+        try:
+            resp = self.client.chat.completions.create(**params)
+            return resp.choices[0].message.content.strip()
+
+        except (httpx.TimeoutException, httpx.ReadTimeout):
+            print("⚠️ OpenAI request timed out.")
+            return "The assistant is taking too long to respond. Please try again in a moment."
+
+        except Exception as e:
+            print(f"⚠️ OpenAI error: {e}")
+            return "The assistant encountered an unexpected error. Please try again."
 
     def _llm_parse_user_message(self, user_message):
         system = (
@@ -409,6 +429,7 @@ class TransferAssistant:
                 {"role": "system", "content": system},
                 {"role": "user", "content": user_message},
             ],
+            timeout=OPENAI_TIMEOUT_SECONDS,
         )
         try:
             data = json.loads(text)
@@ -530,6 +551,7 @@ class TransferAssistant:
                     },
                     {"role": "user", "content": json.dumps(payload, ensure_ascii=False)},
                 ],
+                timeout=OPENAI_TIMEOUT_SECONDS,
             )
             chunks.append(
                 text.strip() if text

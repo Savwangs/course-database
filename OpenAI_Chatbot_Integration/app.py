@@ -15,6 +15,10 @@ import json
 import secrets
 import traceback
 from pathlib import Path
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
+from openai import APITimeoutError, APIConnectionError, RateLimitError
+from backend.models.interaction_log import InteractionLog
 
 from flask import Flask, render_template, request, jsonify, session
 from openai import OpenAI
@@ -28,13 +32,26 @@ from backend.services.transfer_service import TransferAssistant
 #  Environment & clients
 # ---------------------------------------------------------------------------
 load_dotenv()
-openai_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+if not os.getenv("OPENAI_API_KEY"):
+    raise RuntimeError("OPENAI_API_KEY is not set.")
+openai_client = OpenAI(
+    api_key=os.getenv("OPENAI_API_KEY"),
+    timeout=20.0,
+    max_retries=2
+)
 
 # ---------------------------------------------------------------------------
 #  Flask app
 # ---------------------------------------------------------------------------
 app = Flask(__name__)
 app.secret_key = os.getenv("FLASK_SECRET_KEY", secrets.token_hex(32))
+limiter = Limiter(
+    get_remote_address,
+    app=app,
+    default_limits=["200 per day", "50 per hour"],
+)
+MAX_PROMPT_CHARS = int(os.getenv("MAX_PROMPT_CHARS", "2000"))
+MAX_HISTORY_MESSAGES = int(os.getenv("MAX_HISTORY_MESSAGES", "20"))  # 10 exchanges
 
 # SQLAlchemy configuration
 # Default to a local SQLite DB; set DATABASE_URL for Cloud SQL / Postgres in production
@@ -73,6 +90,59 @@ transfer = TransferAssistant(
     log_callback=lambda q, p, r: searcher.log_interaction(q, p, r),
 )
 
+def error_response(code: str, message: str, http_status: int = 400, *, meta: dict | None = None):
+    payload = {"success": False, "error": {"code": code, "message": message}}
+    if meta:
+        payload["error"]["meta"] = meta
+    return jsonify(payload), http_status
+
+
+def validate_ask_request(req):
+    # Require JSON
+    if not req.is_json:
+        return None, error_response("INVALID_CONTENT_TYPE", "Request must be application/json.", 415)
+
+    data = req.get_json(silent=True)
+    if not isinstance(data, dict):
+        return None, error_response("INVALID_JSON", "Invalid JSON body.", 400)
+
+    if "query" not in data:
+        return None, error_response("MISSING_FIELD", "Missing required field: query", 400)
+
+    q = data.get("query")
+    if not isinstance(q, str):
+        return None, error_response("INVALID_FIELD_TYPE", "Field 'query' must be a string.", 400)
+
+    q = q.strip()
+    if not q:
+        return None, error_response("EMPTY_QUERY", "Query cannot be empty.", 400)
+
+    if len(q) > MAX_PROMPT_CHARS:
+        return None, error_response(
+            "QUERY_TOO_LONG",
+            f"Query is too long. Max is {MAX_PROMPT_CHARS} characters.",
+            413,
+            meta={"max_chars": MAX_PROMPT_CHARS, "actual_chars": len(q)}
+        )
+
+    return q, None
+
+
+def log_guardrail(user_prompt: str, guardrail_type: str, reason: str, http_status: int, meta: dict | None = None):
+    # Keep it compatible with your existing log_interaction signature
+    parsed_data = {
+        "guardrail_triggered": True,
+        "guardrail_type": guardrail_type,
+        "reason": reason,
+        "http_status": http_status,
+    }
+    if meta:
+        parsed_data["meta"] = meta
+    searcher.log_interaction(user_prompt, parsed_data, f"[GUARDRAIL] {guardrail_type}: {reason}", status="guardrail")
+
+def require_admin(req) -> bool:
+    expected = os.getenv("ADMIN_TOKEN")
+    return bool(expected) and req.headers.get("X-Admin-Token") == expected
 # ---------------------------------------------------------------------------
 #  Routes
 # ---------------------------------------------------------------------------
@@ -90,46 +160,144 @@ def chatbot():
 
 
 @app.route("/ask", methods=["POST"])
+@limiter.limit("3 per minute")  # Rate limit guardrail
 def ask():
-    """API endpoint to handle user queries with conversation memory.
+    """
+    API endpoint to handle user queries with conversation memory.
 
     Expects JSON: {"query": "user question here"}
     Returns JSON: {"response": "formatted answer", "success": true/false}
     """
     try:
-        data = request.get_json()
+        # -----------------------------
+        # Input Guardrails
+        # -----------------------------
 
-        if not data or "query" not in data:
-            return jsonify({"success": False, "error": "No query provided"}), 400
+        if not request.is_json:
+            log_guardrail("<invalid_request>", "input", "INVALID_CONTENT_TYPE", 415)
+            return error_response(
+                "INVALID_CONTENT_TYPE",
+                "Request must be application/json.",
+                415
+            )
 
-        user_query = data["query"].strip()
+        data = request.get_json(silent=True)
+        if not isinstance(data, dict):
+            log_guardrail("<invalid_request>", "input", "INVALID_JSON", 400)
+            return error_response("INVALID_JSON", "Invalid JSON body.", 400)
+
+        if "query" not in data:
+            log_guardrail("<invalid_request>", "input", "MISSING_FIELD", 400)
+            return error_response("MISSING_FIELD", "Missing required field: query", 400)
+
+        user_query = data["query"]
+
+        if not isinstance(user_query, str):
+            log_guardrail("<invalid_request>", "input", "INVALID_FIELD_TYPE", 400)
+            return error_response(
+                "INVALID_FIELD_TYPE",
+                "Field 'query' must be a string.",
+                400
+            )
+
+        user_query = user_query.strip()
+
         if not user_query:
-            return jsonify({"success": False, "error": "Empty query"}), 400
+            log_guardrail("<invalid_request>", "input", "EMPTY_QUERY", 400)
+            return error_response("EMPTY_QUERY", "Query cannot be empty.", 400)
 
-        # Initialize conversation history in session if not exists
+        if len(user_query) > MAX_PROMPT_CHARS:
+            log_guardrail(
+                user_query,
+                "input",
+                "QUERY_TOO_LONG",
+                413,
+                {"max_chars": MAX_PROMPT_CHARS, "actual_chars": len(user_query)}
+            )
+            return error_response(
+                "QUERY_TOO_LONG",
+                f"Query exceeds maximum length of {MAX_PROMPT_CHARS} characters.",
+                413
+            )
+
+        # -----------------------------
+        # Session / Conversation Memory
+        # -----------------------------
+
         if "conversation_history" not in session:
             session["conversation_history"] = []
 
         conversation_history = session["conversation_history"]
 
-        # Delegate to service layer
-        response = searcher.ask(
-            user_query,
-            conversation_history=conversation_history,
-            enable_logging=True,
-            transfer_handler=transfer.maybe_handle,
-        )
+        # -----------------------------
+        # Call Service Layer (LLM call)
+        # -----------------------------
 
-        # Update conversation history
+        try:
+            response = searcher.ask(
+                user_query,
+                conversation_history=conversation_history,
+                enable_logging=True,
+                transfer_handler=transfer.maybe_handle,
+            )
+
+        except (APITimeoutError, APIConnectionError) as e:
+            # OpenAI request timed out or network failed
+            log_guardrail(
+                user_query,
+                "timeout",
+                "OPENAI_TIMEOUT",
+                504,
+                {"error": str(e)}
+            )
+            return error_response(
+                "UPSTREAM_TIMEOUT",
+                "The assistant timed out. Please try again.",
+                504
+            )
+        except RateLimitError as e:
+            # OpenAI upstream rate limit (NOT your Flask limiter)
+            log_guardrail(
+                user_query,
+                "upstream_rate_limit",
+                "OPENAI_RATE_LIMIT",
+                503,
+                {"error": str(e)}
+            )
+            return error_response(
+                "UPSTREAM_RATE_LIMIT",
+                "Upstream rate limit reached. Please try again shortly.",
+                503
+            )
+
+        # -----------------------------
+        # Output Guardrail: Empty Response
+        # -----------------------------
+
+        if not response or not isinstance(response, str):
+            log_guardrail(user_query, "output", "EMPTY_RESPONSE", 500)
+            return error_response(
+                "INVALID_RESPONSE",
+                "The assistant returned an invalid response.",
+                500
+            )
+
+        # -----------------------------
+        # Update Conversation History
+        # -----------------------------
+
         conversation_history.append({"role": "user", "content": user_query})
         conversation_history.append({"role": "assistant", "content": response})
 
-        # Keep only last 20 messages (10 exchanges)
-        if len(conversation_history) > 20:
-            conversation_history = conversation_history[-20:]
+        if len(conversation_history) > MAX_HISTORY_MESSAGES:
+            conversation_history = conversation_history[-MAX_HISTORY_MESSAGES:]
 
         session["conversation_history"] = conversation_history
         session.modified = True
+
+        # -----------------------------
+        # Success Response
+        # -----------------------------
 
         return jsonify({
             "success": True,
@@ -140,10 +308,20 @@ def ask():
     except Exception as e:
         print(f"Error in /ask route: {e}")
         traceback.print_exc()
-        return jsonify({
-            "success": False,
-            "error": "An error occurred processing your request",
-        }), 500
+
+        log_guardrail(
+            "<server_error>",
+            "server",
+            "UNHANDLED_EXCEPTION",
+            500,
+            {"error": str(e)}
+        )
+
+        return error_response(
+            "SERVER_ERROR",
+            "An error occurred processing your request.",
+            500
+        )
 
 
 @app.route("/clear", methods=["POST"])
@@ -185,6 +363,7 @@ def health():
 
 
 @app.route("/logs", methods=["GET"])
+@limiter.limit("3 per minute")
 def view_logs():
     """View interaction logs from the database.
 
@@ -192,7 +371,9 @@ def view_logs():
         limit – Number of logs to retrieve (default 50, max 500)
         skip  – Number of logs to skip for pagination (default 0)
     """
-    from backend.models.interaction_log import InteractionLog
+    if not require_admin(request):
+        log_guardrail("<logs>", "security", "UNAUTHORIZED_LOG_ACCESS", 403)
+        return error_response("FORBIDDEN", "Not authorized.", 403)
 
     try:
         limit = min(request.args.get("limit", 50, type=int), 500)
@@ -220,6 +401,25 @@ def view_logs():
         traceback.print_exc()
         return jsonify({"success": False, "error": str(e)}), 500
 
+
+@app.errorhandler(429)
+def ratelimit_handler(e):
+    try:
+        log_guardrail(
+            "<rate_limited>",
+            "rate_limit",
+            "TOO_MANY_REQUESTS",
+            429,
+            {"detail": str(e)}
+        )
+    except Exception:
+        pass
+
+    return error_response(
+        "RATE_LIMITED",
+        "Too many requests. Please slow down.",
+        429
+    )
 
 # ---------------------------------------------------------------------------
 #  Main

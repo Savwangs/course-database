@@ -10,11 +10,16 @@ Encapsulates:
 
 import json
 import time
+import re
 from datetime import datetime, timezone
 
 from backend.models import db
 from backend.models.interaction_log import InteractionLog
 
+import httpx
+import os
+
+OPENAI_TIMEOUT_SECONDS = float(os.getenv("OPENAI_TIMEOUT_SECONDS", "20"))
 
 # ---------------------------------------------------------------------------
 #  Private helper functions (un-nested from the old search_courses)
@@ -397,10 +402,17 @@ class CourseSearcher:
                     {"role": "system", "content": parser_system},
                     {"role": "user", "content": parser_user},
                 ],
+                timeout=OPENAI_TIMEOUT_SECONDS,
             )
             parsed = json.loads(resp.choices[0].message.content.strip())
-        except Exception:
-            parsed = {}
+
+        except (httpx.TimeoutException, httpx.ReadTimeout):
+            print("⚠️ OpenAI parser request timed out.")
+            return {}
+
+        except Exception as e:
+            print(f"⚠️ OpenAI parser error: {e}")
+            return {}
 
         # ---- Normalize + guard ----
         parsed = parsed if isinstance(parsed, dict) else {}
@@ -534,6 +546,23 @@ class CourseSearcher:
             response_temperature,
         )
 
+        allowed_codes = {c["course_code"].upper() for c in results}
+        upper_resp = response.upper()
+
+        # If the model mentions a course code not in allowed list (basic heuristic)
+        mentioned = set(re.findall(r"[A-Z]{3,5}-\d{2,3}[A-Z]?", upper_resp))
+        unexpected = {c for c in mentioned if c not in allowed_codes}
+
+        if unexpected:
+            safe = (
+                "I can only summarize the sections returned from the database for your request, "
+                "and I may have referenced something not in the results. "
+                "Can you confirm the exact course code you want (e.g., COMSC-110)?"
+            )
+            if enable_logging:
+                self.log_interaction(user_query, parsed, safe, start_ms, status="output_guardrail_triggered")
+            return safe
+
         if enable_logging:
             self.log_interaction(user_query, parsed, response, start_ms, status="success")
         return response
@@ -580,18 +609,10 @@ class CourseSearcher:
 
         payload = {
             "timestamp": datetime.now(timezone.utc),
-            "project_name": "CourseGenie",
-            "user_prompt": _clean_text(user_query, 5000),
-            "chatbot_response_summary": _clean_text(response, 5000),
-            "status": status,
-            "confidence_level": confidence_level,
-            "confidence": confidence,
-            "latency_ms": latency,
-            "result_count": result_count,
-            # legacy (only used if your model/table still has them)
             "user_query": _clean_text(user_query, 5000),
             "parsed_data": parsed_data,
-            "ai_response": response,
+            "ai_response": _clean_text(response, 5000),
+            "latency_ms": latency,
         }
 
         try:
@@ -841,7 +862,7 @@ class CourseSearcher:
                 "into a clear, student-friendly answer.\n"
                 "You maintain conversation context and can answer follow-up questions.\n\n"
                 "CORE PRINCIPLES\n"
-                "1) Use ONLY the JSON in the assistant message. Do not invent or infer missing data.\n"
+                "1) Use ONLY the JSON provided in the conversation. Do not invent or infer missing data.\n"
                 "2) The JSON is already PRE-FILTERED to match the user's request. Respect those filters exactly.\n"
                 "3) If the assistant context lists filters (e.g., Instructor: Lo), show ONLY sections that match them.\n"
                 "4) Never include sections that fail the filters.\n"
@@ -852,7 +873,7 @@ class CourseSearcher:
                 "FOLLOW-UP HANDLING\n"
                 "- If user says \"that course\", \"those classes\", \"the same one\", etc., "
                 "refer to the most recent course discussed.\n"
-                "- If user asks \"what about [filter]?\", apply the new filter to the previous search.\n"
+                "- - If the user asks for a new filter (e.g., \"what about evening?\") that is NOT already reflected in the provided JSON, do NOT claim you filtered. Ask a short clarifying question or instruct the user to run a new search with that filter."
                 "- If unclear, ask for clarification while being helpful.\n\n"
                 "PREREQUISITE CHAIN ANALYSIS\n"
                 "- If user asks \"Can I take X and Y together?\" or \"Can I take X with Y?\" check prerequisites:\n"
@@ -894,13 +915,23 @@ class CourseSearcher:
 
         messages = [system_message]
         if conversation_history:
-            messages.extend(conversation_history[-10:])
+            messages.extend(conversation_history[-4:])
         messages.append({"role": "user", "content": user_query})
-        messages.append({"role": "assistant", "content": context})
+        messages.append({"role": "user", "content": context})
 
-        llm_response = self.client.chat.completions.create(
-            model="gpt-4.1",
-            temperature=response_temperature,
-            messages=messages,
-        )
-        return llm_response.choices[0].message.content.strip()
+        try:
+            llm_response = self.client.chat.completions.create(
+                model="gpt-4.1",
+                temperature=response_temperature,
+                messages=messages,
+                timeout=OPENAI_TIMEOUT_SECONDS,
+            )
+            return llm_response.choices[0].message.content.strip()
+
+        except (httpx.TimeoutException, httpx.ReadTimeout):
+            print("⚠️ OpenAI formatting request timed out.")
+            return "The assistant is taking too long to respond. Please try again."
+
+        except Exception as e:
+            print(f"⚠️ OpenAI formatting error: {e}")
+            return "The assistant encountered an unexpected error. Please try again."
