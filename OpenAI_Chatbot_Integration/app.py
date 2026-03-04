@@ -67,6 +67,7 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 # Initialize the database (creates tables if they don't exist)
 init_db(app)
 
+''' Will cause errors
 # ---------------------------------------------------------------------------
 #  Load course data
 # ---------------------------------------------------------------------------
@@ -79,11 +80,13 @@ with open(db_path, "r", encoding="utf-8") as f:
     course_data = json.load(f)
 
 print(f"Loaded {len(course_data)} courses from {db_path}")
+'''
+
 
 # ---------------------------------------------------------------------------
 #  Instantiate services
 # ---------------------------------------------------------------------------
-searcher = CourseSearcher(course_data, openai_client)
+searcher = CourseSearcher(openai_client)
 
 transfer = TransferAssistant(
     openai_client,
@@ -357,8 +360,8 @@ def health():
     """Health check endpoint."""
     return jsonify({
         "status": "healthy",
-        "courses_loaded": len(course_data),
         "database": app.config["SQLALCHEMY_DATABASE_URI"].split("://")[0],
+        "service": "coursegenie"
     })
 
 
@@ -432,7 +435,6 @@ if __name__ == "__main__":
     print("\n" + "=" * 80)
     print("DVC Course Assistant – Flask Web App")
     print("=" * 80)
-    print(f"Loaded {len(course_data)} courses")
     print(f"Database: {app.config['SQLALCHEMY_DATABASE_URI']}")
     print(f"Starting server at http://{host}:{port}")
     print(f"Debug mode: {debug}")
