@@ -188,11 +188,19 @@ async function sendQuery(query) {
         // Remove loading indicator
         loadingIndicator.remove();
         
-        if (!response.ok) {
-            throw new Error(`Server error: ${response.status}`);
+        let data;
+        try {
+            data = await response.json();
+        } catch (_) {
+            data = {};
         }
         
-        const data = await response.json();
+        if (!response.ok) {
+            const err = data.error;
+            const message = (err && (err.message || (typeof err === 'string' ? err : null))) || `Server error: ${response.status}`;
+            showError(message || 'Something went wrong. Please try again.');
+            return;
+        }
         
         if (data.success) {
             // Add assistant response
@@ -202,7 +210,8 @@ async function sendQuery(query) {
             // Update conversation status badge
             await updateConversationStatus();
         } else {
-            showError(data.error || 'Failed to get response');
+            const err = data.error;
+            showError((err && err.message) || (typeof err === 'string' ? err : null) || 'Failed to get response');
         }
         
     } catch (error) {
@@ -234,7 +243,19 @@ async function clearConversation() {
             }
         });
         
-        const data = await response.json();
+        let data;
+        try {
+            data = await response.json();
+        } catch (_) {
+            data = {};
+        }
+        
+        if (!response.ok) {
+            const err = data.error;
+            const message = (err && err.message) || `Server error: ${response.status}`;
+            showError(message || 'Failed to clear conversation. Please try again.');
+            return;
+        }
         
         if (data.success) {
             // Clear chat messages (keep welcome message)
@@ -266,10 +287,13 @@ async function clearConversation() {
                 notificationDiv.style.opacity = '0';
                 setTimeout(() => notificationDiv.remove(), 300);
             }, 3000);
+        } else {
+            const err = data.error;
+            showError((err && err.message) || 'Failed to clear conversation. Please try again.');
         }
     } catch (error) {
         console.error('Error clearing conversation:', error);
-        showError('Failed to clear conversation. Please try again.');
+        showError('Unable to connect to the server. Please check your connection and try again.');
     }
 }
 

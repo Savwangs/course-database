@@ -173,7 +173,7 @@ def chatbot():
 
 
 @app.route("/ask", methods=["POST"])
-@limiter.limit("3 per minute")  # Rate limit guardrail
+@limiter.limit("10 per minute")  # Rate limit guardrail
 def ask():
     """
     API endpoint to handle user queries with conversation memory.
@@ -416,7 +416,7 @@ def health():
 
 
 @app.route("/logs", methods=["GET"])
-@limiter.limit("3 per minute")
+@limiter.limit("10 per minute")
 def view_logs():
     """View interaction logs from the database.
 
