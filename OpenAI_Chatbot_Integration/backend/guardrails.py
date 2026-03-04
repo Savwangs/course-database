@@ -110,8 +110,14 @@ _OFF_TOPIC_KEYWORDS = frozenset({
     "recipe", "recipes", "cook", "baking", "chocolate cake", "how to cook",
     "election", "president", "vote", "political", "republican", "democrat",
     "trivia", "quiz", "random fact", "medical advice", "legal advice",
-    "financial advice", "invest", "stock market", "tax advice", "lawyer",
+    "financial advice", "financial aid", "invest", "stock market", "tax advice", "lawyer",
     "doctor", "diagnosis", "therapy", "relationship advice", "breakup",
+})
+
+# Emotional/relationship support: return fixed message only (no course search)
+_EMOTIONAL_SUPPORT_PHRASES = frozenset({
+    "stressed about my relationship", "relationship advice", "emotional support",
+    "feeling stressed", "feeling anxious", "breakup", "my relationship", "mental health",
 })
 
 
@@ -122,5 +128,22 @@ def check_off_topic(query: str) -> Tuple[str | None, str | None]:
     lower = query.lower()
     for kw in _OFF_TOPIC_KEYWORDS:
         if kw in lower:
+            if "financial aid" in lower or "financial advice" in lower:
+                return "OFF_TOPIC", "I can only help with DVC courses and transfer info—I can't advise on financial aid, legal, or medical matters. Ask me about course sections, prerequisites, or UC transfer."
             return "OFF_TOPIC", "I can only help with DVC courses and transfer info. Please ask about courses, sections, prerequisites, or UC transfer."
     return None, None
+
+
+def get_emotional_support_response(query: str) -> str | None:
+    """If query is asking for emotional/relationship support, return the fixed short response; else None."""
+    if not query or not query.strip():
+        return None
+    lower = query.lower()
+    for phrase in _EMOTIONAL_SUPPORT_PHRASES:
+        if phrase in lower:
+            return (
+                "I'm really sorry you're feeling stressed. I can only help with DVC courses and transfer information. "
+                "If you're looking for support, I recommend reaching out to DVC's Counseling or Student Services—they have professionals who can help with personal and relationship concerns.\n\n"
+                "I can only answer questions about course sections, prerequisites, and UC transfer. Ask me about those anytime."
+            )
+    return None

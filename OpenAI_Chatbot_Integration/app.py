@@ -249,12 +249,12 @@ def ask():
             log_guardrail(user_query, "input", code, 400)
             return error_response(code, msg, 400)
 
-        code, msg = input_guardrails.check_language(user_query)
+        code, msg = input_guardrails.check_off_topic(user_query)
         if code:
             log_guardrail(user_query, "input", code, 400)
             return error_response(code, msg, 400)
 
-        code, msg = input_guardrails.check_off_topic(user_query)
+        code, msg = input_guardrails.check_language(user_query)
         if code:
             log_guardrail(user_query, "input", code, 400)
             return error_response(code, msg, 400)

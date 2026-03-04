@@ -567,6 +567,17 @@ class CourseSearcher:
             if transfer_try:
                 return transfer_try  # already logged inside transfer handler
 
+        # Emotional/relationship support: fixed short response only, no course search
+        try:
+            from backend import guardrails
+            emotional_response = guardrails.get_emotional_support_response(user_query)
+            if emotional_response:
+                if enable_logging:
+                    self.log_interaction(user_query, {"emotional_support_redirect": True}, emotional_response, start_ms, status="emotional_support_redirect")
+                return emotional_response
+        except Exception:
+            pass
+
         query_lower = user_query.lower()
 
         # Follow-up detection
@@ -609,23 +620,43 @@ class CourseSearcher:
                     instructor_mentioned = words[i + 1].strip(",.?!")
                     break
 
-        # Nothing useful parsed → guide the user
+        # Nothing useful parsed → guide the user or ask for clarification
         if not course_codes and not subjects:
-            response = (
-                "I can help you find DVC STEM courses and details and transfer from DVC agreements.\n\n"
-                "Try one of these:\n"
-                '- "Show me open MATH-193 sections Monday morning."\n'
-                '- "Who teaches PHYS-130 on Thursdays?"\n'
-                '- "What are the prerequisites for COMSC-200?"\n'
-                '- "I have completed Math 192, what does that cover at UCB?"\n'
-                '- "What GE courses should I take at DVC for UC Berkeley?"'
-            )
+            # UC / GE / transfer without campus → ask which campus
+            q_low = user_query.lower()
+            if any(x in q_low for x in ("ge ", "ge courses", "uc ", "uc transfer", "for uc", "for berkeley", "for davis", "for san diego", "which uc")):
+                response = (
+                    "Which campus? I can help with **UC Berkeley (UCB)**, **UC Davis (UCD)**, or **UC San Diego (UCSD)**. "
+                    "Try: \"What GE courses for UC Berkeley?\" or \"What should I take for UCB transfer?\""
+                )
+            else:
+                response = (
+                    "I can help you find DVC STEM courses and details and transfer from DVC agreements.\n\n"
+                    "Try one of these:\n"
+                    '- "Show me open MATH-193 sections Monday morning."\n'
+                    '- "Who teaches PHYS-130 on Thursdays?"\n'
+                    '- "What are the prerequisites for COMSC-200?"\n'
+                    '- "I have completed Math 192, what does that cover at UCB?"\n'
+                    '- "What GE courses should I take at DVC for UC Berkeley?"'
+                )
             if enable_logging:
                 self.log_interaction(user_query, parsed, response, start_ms, status="needs_clarification")
             return response
 
         # ------ Prerequisite intent ------
         if intent == "prerequisites":
+            # If user asked for a specific course that wasn't parsed (filtered out), return no-such-course
+            requested_in_query = set(re.findall(r"[A-Za-z]{3,5}-\d{2,3}[A-Za-z]?", user_query, re.IGNORECASE))
+            requested_in_query = {c.replace(" ", "").upper() for c in requested_in_query}
+            if requested_in_query and not course_codes and not subjects:
+                code_display = ", ".join(sorted(requested_in_query))
+                response = (
+                    f"I couldn't find that course in the catalog (**{code_display}**). "
+                    "Please check the course code (e.g. COMSC-200, MATH-193) and try again."
+                )
+                if enable_logging:
+                    self.log_interaction(user_query, parsed, response, start_ms, status="no_results")
+                return response
             return self._handle_prerequisites(
                 user_query, query_lower, parsed, course_codes, subjects,
                 enable_logging, start_ms,
@@ -658,11 +689,22 @@ class CourseSearcher:
         unexpected = {c for c in mentioned if c not in allowed_codes}
 
         if unexpected:
-            safe = (
-                "I can only summarize the sections returned from the database for your request, "
-                "and I may have referenced something not in the results. "
-                "Can you confirm the exact course code you want (e.g., COMSC-110)?"
-            )
+            # If user clearly asked for a specific course that's in unexpected, they likely got no/few results for it
+            requested_in_query = set(re.findall(r"[A-Za-z]{3,5}-\d{2,3}[A-Za-z]?", user_query, re.IGNORECASE))
+            requested_in_query = {c.replace(" ", "").upper() for c in requested_in_query}
+            asked_but_missing = requested_in_query & unexpected
+            if asked_but_missing:
+                code_display = ", ".join(sorted(asked_but_missing))
+                safe = (
+                    f"I couldn't find any courses for **{code_display}**.\n"
+                    "Please check the course code or try a broader search (e.g. \"Show me MATH sections\")."
+                )
+            else:
+                safe = (
+                    "I can only summarize the sections returned from the database for your request, "
+                    "and I may have referenced something not in the results. "
+                    "Can you confirm the exact course code you want (e.g., COMSC-110)?"
+                )
             if enable_logging:
                 self.log_interaction(user_query, parsed, safe, start_ms, status="output_guardrail_triggered")
             return safe
@@ -803,12 +845,31 @@ class CourseSearcher:
             return response
 
         # Regular prerequisite lookup
+        requested_in_query = set(re.findall(r"[A-Za-z]{3,5}-\d{2,3}[A-Za-z]?", user_query, re.IGNORECASE))
+        requested_in_query = {c.replace(" ", "").upper() for c in requested_in_query}
+        result_codes = {r["course_code"].upper() for r in results} if results else set()
+
         if results:
+            # If user clearly asked for a specific course that's not in results, say we couldn't find it
+            if requested_in_query and not (requested_in_query & result_codes):
+                code_display = ", ".join(sorted(requested_in_query))
+                response = (
+                    f"I couldn't find that course in the catalog (**{code_display}**). "
+                    "Please check the course code (e.g. COMSC-200, MATH-193) and try again."
+                )
+                if enable_logging:
+                    self.log_interaction(user_query, parsed, response, start_ms, status="no_results")
+                return response
             chosen = None
             if course_codes:
                 wanted = set(course_codes)
                 for r in results:
                     if r["course_code"].upper() in wanted:
+                        chosen = r
+                        break
+            if not chosen and requested_in_query & result_codes:
+                for r in results:
+                    if r["course_code"].upper() in requested_in_query:
                         chosen = r
                         break
             if not chosen:
@@ -820,10 +881,17 @@ class CourseSearcher:
             return response
 
         kw_display = ", ".join(keywords_for_prereq) if isinstance(keywords_for_prereq, list) else keywords_for_prereq
-        response = (
-            f"I couldn't find any courses for **{kw_display}**.\n"
-            "Double-check the course code/subject, or try another course (e.g., COMSC-110, MATH-193)."
-        )
+        if requested_in_query:
+            code_display = ", ".join(sorted(requested_in_query))
+            response = (
+                f"I couldn't find that course in the catalog (**{code_display}**). "
+                "Please check the course code (e.g. COMSC-200, MATH-193) and try again."
+            )
+        else:
+            response = (
+                f"I couldn't find any courses for **{kw_display}**.\n"
+                "Double-check the course code/subject, or try another course (e.g., COMSC-110, MATH-193)."
+            )
         if enable_logging:
             self.log_interaction(user_query, parsed, response, start_ms, status="no_results")
         return response
@@ -926,24 +994,12 @@ class CourseSearcher:
             truncated = False
 
         sections_to_send = sum(len(c.get("sections", [])) for c in results_to_send)
-        total_sections_original = sum(len(c.get("sections", [])) for c in results)
 
         context += (
-            f"I found {len(results)} matching course(s) with "
-            f"{total_sections_original} total section(s) for '{keyword_display}'.\n"
+            f"There are exactly {sections_to_send} section(s) in the JSON below for '{keyword_display}'.\n"
+            f"IMPORTANT: In your one-line summary you MUST say exactly 'Found {sections_to_send} section(s)' "
+            f"(or 'Found {sections_to_send} matching section(s)')—the count must match the number of sections you list.\n"
         )
-
-        if truncated:
-            context += (
-                f"NOTE: Showing {sections_to_send} sections below (truncated for brevity). "
-                f"When you write your summary, say 'Found {sections_to_send} section(s)' "
-                "to match what you're displaying.\n"
-            )
-        else:
-            context += (
-                f"IMPORTANT: When you write the summary, say 'Found {sections_to_send} section(s)' "
-                "- this matches the exact count in the JSON below.\n"
-            )
 
         if filter_bits:
             context += "Filters applied: " + ", ".join(filter_bits) + "\n"
