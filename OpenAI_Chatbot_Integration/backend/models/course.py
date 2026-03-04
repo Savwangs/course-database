@@ -1,6 +1,20 @@
-"""Table 1: courses_catalog – Static course data scraped from the DVC catalog."""
+"""Tables: courses_catalog (static catalog), course_sections (section/availability data)."""
 
 from backend.models import db
+
+
+class CourseSection(db.Model):
+    """Section-level data (schedule, instructor, availability). Used by search/parser allow-lists."""
+    __tablename__ = "course_sections"
+
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    course_code = db.Column(db.String(20), nullable=False, index=True)
+    section_number = db.Column(db.String(20), nullable=True)
+    instructor = db.Column(db.String(100), nullable=True)
+    schedule = db.Column(db.String(100), nullable=True)  # e.g. "MW 10:00-11:00" or "Asynchronous"
+    modality = db.Column(db.String(50), nullable=True)   # in-person, online, hybrid
+    seat_availability = db.Column(db.String(20), nullable=True)
+    units = db.Column(db.String(10), nullable=True)
 
 
 class CoursesCatalog(db.Model):

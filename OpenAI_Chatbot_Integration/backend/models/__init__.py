@@ -8,7 +8,7 @@ def init_db(app):
     db.init_app(app)
 
     # Import models so SQLAlchemy registers their tables before create_all()
-    from backend.models.course import CoursesCatalog  # noqa: F401
+    from backend.models.course import CourseSection, CoursesCatalog  # noqa: F401
     from backend.models.interaction_log import InteractionLog  # noqa: F401
 
     with app.app_context():

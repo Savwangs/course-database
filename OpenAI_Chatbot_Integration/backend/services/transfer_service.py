@@ -546,7 +546,10 @@ class TransferAssistant:
                             "• Optional parenthetical note "
                             "'(excluding completed domains: ...; completed courses: ... )'\n"
                             "• Bullets: '• COMSC-200 — Object Oriented Programming C++ (4 units)'\n"
-                            "If empty, say: 'No DVC course mappings found.'"
+                            "If empty, say: 'No DVC course mappings found.'\n\n"
+                            "POLICY: Do not make definitive guarantees about admission (e.g. 'You will get into X'). "
+                            "Requirements are based on articulation data; students should verify with assist.org and the university. "
+                            "If the user asks whether they will get in, say they should verify with assist.org and the UC campus."
                         ),
                     },
                     {"role": "user", "content": json.dumps(payload, ensure_ascii=False)},

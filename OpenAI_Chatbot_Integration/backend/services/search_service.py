@@ -224,42 +224,77 @@ class CourseSearcher:
 
         # ...
 
+        is_sqlite = db.engine.dialect.name == "sqlite"
+
         if is_course_code_search:
             wanted_norm = [_normalize_code(k) for k in keywords]
 
-            sql = text("""
-                SELECT
-                cs.course_code,
-                cs.section_number,
-                cs.instructor,
-                cs.schedule,
-                cs.modality,
-                cs.seat_availability,
-                cs.units
-                FROM course_sections cs
-                WHERE upper(regexp_replace(cs.course_code, '[^A-Za-z0-9]', '', 'g')) IN :codes_norm
-                ORDER BY cs.course_code, cs.section_number
-            """).bindparams(bindparam("codes_norm", expanding=True))
+            if is_sqlite:
+                # SQLite: no regexp_replace; normalize with REPLACE(UPPER(...))
+                sql = text("""
+                    SELECT
+                    cs.course_code,
+                    cs.section_number,
+                    cs.instructor,
+                    cs.schedule,
+                    cs.modality,
+                    cs.seat_availability,
+                    cs.units
+                    FROM course_sections cs
+                    WHERE UPPER(REPLACE(REPLACE(REPLACE(REPLACE(cs.course_code, '-', ''), ' ', ''), '_', ''), '.', '')) IN :codes_norm
+                    ORDER BY cs.course_code, cs.section_number
+                """).bindparams(bindparam("codes_norm", expanding=True))
+            else:
+                sql = text("""
+                    SELECT
+                    cs.course_code,
+                    cs.section_number,
+                    cs.instructor,
+                    cs.schedule,
+                    cs.modality,
+                    cs.seat_availability,
+                    cs.units
+                    FROM course_sections cs
+                    WHERE upper(regexp_replace(cs.course_code, '[^A-Za-z0-9]', '', 'g')) IN :codes_norm
+                    ORDER BY cs.course_code, cs.section_number
+                """).bindparams(bindparam("codes_norm", expanding=True))
 
             params = {"codes_norm": wanted_norm}
 
         else:
-            # keep your existing subject-prefix query as-is
-            sql = text("""
-                SELECT
-                cs.course_code,
-                cs.section_number,
-                cs.instructor,
-                cs.schedule,
-                cs.modality,
-                cs.seat_availability,
-                cs.units
-                FROM course_sections cs
-                WHERE split_part(cs.course_code, '-', 1) IN :subjects
-                ORDER BY cs.course_code, cs.section_number
-            """).bindparams(bindparam("subjects", expanding=True))
-
-            params = {"subjects": [k.upper() for k in keywords]}
+            subjects_upper = [k.upper() for k in keywords]
+            if is_sqlite:
+                # SQLite: no split_part; use LIKE for subject prefix
+                placeholders = ", ".join([f"cs.course_code LIKE :s{i}" for i in range(len(subjects_upper))])
+                sql = text(f"""
+                    SELECT
+                    cs.course_code,
+                    cs.section_number,
+                    cs.instructor,
+                    cs.schedule,
+                    cs.modality,
+                    cs.seat_availability,
+                    cs.units
+                    FROM course_sections cs
+                    WHERE {placeholders}
+                    ORDER BY cs.course_code, cs.section_number
+                """)
+                params = {f"s{i}": f"{s}-%" for i, s in enumerate(subjects_upper)}
+            else:
+                sql = text("""
+                    SELECT
+                    cs.course_code,
+                    cs.section_number,
+                    cs.instructor,
+                    cs.schedule,
+                    cs.modality,
+                    cs.seat_availability,
+                    cs.units
+                    FROM course_sections cs
+                    WHERE split_part(cs.course_code, '-', 1) IN :subjects
+                    ORDER BY cs.course_code, cs.section_number
+                """).bindparams(bindparam("subjects", expanding=True))
+                params = {"subjects": subjects_upper}
 
         rows = db.session.execute(sql, params).mappings().all()
         if not rows:
@@ -974,6 +1009,9 @@ class CourseSearcher:
                 "- Be consistent in label order and punctuation.\n"
                 "- Keep it positive and helpful, but terse.\n"
                 "- Be conversational and remember what the user asked before.\n\n"
+                "POLICY BOUNDARIES\n"
+                "- Do not give medical, legal, or financial advice. If the user asks, say you can only help with DVC courses and transfer info.\n"
+                "- Do not provide relationship or emotional support advice. If the user needs such support, politely say you can only help with DVC courses and transfer and suggest they contact campus counseling or student services.\n\n"
                 "NEVER DO\n"
                 "- Do not reprint the raw JSON.\n"
                 "- Do not add categories beyond the three specified.\n"

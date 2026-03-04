@@ -27,6 +27,7 @@ from dotenv import load_dotenv
 from backend.models import db, init_db
 from backend.services.search_service import CourseSearcher
 from backend.services.transfer_service import TransferAssistant
+from backend import guardrails as input_guardrails
 
 # ---------------------------------------------------------------------------
 #  Environment & clients
@@ -51,6 +52,7 @@ limiter = Limiter(
     default_limits=["200 per day", "50 per hour"],
 )
 MAX_PROMPT_CHARS = int(os.getenv("MAX_PROMPT_CHARS", "2000"))
+MIN_QUERY_CHARS = int(os.getenv("MIN_QUERY_CHARS", "3"))
 MAX_HISTORY_MESSAGES = int(os.getenv("MAX_HISTORY_MESSAGES", "20"))  # 10 exchanges
 
 # SQLAlchemy configuration
@@ -119,6 +121,14 @@ def validate_ask_request(req):
     q = q.strip()
     if not q:
         return None, error_response("EMPTY_QUERY", "Query cannot be empty.", 400)
+
+    if len(q) < MIN_QUERY_CHARS:
+        return None, error_response(
+            "QUERY_TOO_SHORT",
+            f"Query must be at least {MIN_QUERY_CHARS} characters.",
+            400,
+            meta={"min_chars": MIN_QUERY_CHARS, "actual_chars": len(q)}
+        )
 
     if len(q) > MAX_PROMPT_CHARS:
         return None, error_response(
@@ -208,6 +218,46 @@ def ask():
         if not user_query:
             log_guardrail("<invalid_request>", "input", "EMPTY_QUERY", 400)
             return error_response("EMPTY_QUERY", "Query cannot be empty.", 400)
+
+        if len(user_query) < MIN_QUERY_CHARS:
+            log_guardrail(
+                user_query,
+                "input",
+                "QUERY_TOO_SHORT",
+                400,
+                {"min_chars": MIN_QUERY_CHARS, "actual_chars": len(user_query)}
+            )
+            return error_response(
+                "QUERY_TOO_SHORT",
+                f"Query must be at least {MIN_QUERY_CHARS} characters.",
+                400,
+                meta={"min_chars": MIN_QUERY_CHARS, "actual_chars": len(user_query)}
+            )
+
+        code, msg = input_guardrails.check_profanity(user_query)
+        if code:
+            log_guardrail(user_query, "input", code, 400)
+            return error_response(code, msg, 400)
+
+        code, msg = input_guardrails.check_pii(user_query)
+        if code:
+            log_guardrail(user_query, "input", code, 400)
+            return error_response(code, msg, 400)
+
+        code, msg = input_guardrails.check_prompt_injection(user_query)
+        if code:
+            log_guardrail(user_query, "input", code, 400)
+            return error_response(code, msg, 400)
+
+        code, msg = input_guardrails.check_language(user_query)
+        if code:
+            log_guardrail(user_query, "input", code, 400)
+            return error_response(code, msg, 400)
+
+        code, msg = input_guardrails.check_off_topic(user_query)
+        if code:
+            log_guardrail(user_query, "input", code, 400)
+            return error_response(code, msg, 400)
 
         if len(user_query) > MAX_PROMPT_CHARS:
             log_guardrail(
