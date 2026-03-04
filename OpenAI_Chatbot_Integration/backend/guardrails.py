@@ -118,6 +118,7 @@ _OFF_TOPIC_KEYWORDS = frozenset({
 _EMOTIONAL_SUPPORT_PHRASES = frozenset({
     "stressed about my relationship", "relationship advice", "emotional support",
     "feeling stressed", "feeling anxious", "breakup", "my relationship", "mental health",
+    "relationship troubles", "having relationship", "relationship problems", "having troubles",
 })
 
 

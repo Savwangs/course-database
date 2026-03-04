@@ -492,10 +492,12 @@ class CourseSearcher:
             '             "instructor": string|null}\n'
             "}\n"
             "Rules:\n"
+            "- Extract course_codes and subjects ONLY from the current user message. Do not use course codes or subjects from example prompts or from previous assistant or user messages.\n"
             "- Only choose course_codes from ALLOWED_COURSE_CODES.\n"
             "- Only choose subjects from ALLOWED_SUBJECT_PREFIXES.\n"
             "- If user asks about prerequisites, set intent='prerequisites'.\n"
             "- If user asks about instructor, set intent='instructors'.\n"
+            "- If the user is only asking about GE requirements, transfer, or which UC campus (e.g. 'What GE for UC?', 'What do I need for UC?'), return empty course_codes and empty subjects so the assistant can ask which campus.\n"
             "- Otherwise intent='find_sections'.\n"
         )
 
@@ -591,7 +593,7 @@ class CourseSearcher:
         else:
             enhanced_query = user_query
 
-        parsed = self.parse_query(enhanced_query, temperature=parser_temperature)
+        parsed = self.parse_query(user_query, temperature=parser_temperature)
 
         course_codes = parsed.get("course_codes", [])
         subjects = parsed.get("subjects", [])
@@ -602,6 +604,21 @@ class CourseSearcher:
         day_filter = filters.get("day")
         time_filter = filters.get("time")
         instructor_mentioned = filters.get("instructor")
+
+        # GE/UC safeguard: if current message is GE/UC-only and has no course code, force "Which campus?" path
+        q_low = user_query.lower()
+        ge_uc_intent = any(
+            x in q_low for x in (
+                "what ge", "ge for", "ge do", "ge courses", "need for uc", "for uc transfer",
+                "for uc", "uc transfer", "which uc", "for berkeley", "for davis", "for san diego"
+            )
+        )
+        course_code_in_message = bool(
+            re.search(r"[A-Za-z]{3,5}\s*-\s*\d{2,3}", user_query, re.I)
+            or re.search(r"\b[A-Za-z]{3,5}\s+\d{2,3}\b", user_query, re.I)
+        )
+        if ge_uc_intent and not course_code_in_message:
+            course_codes, subjects = [], []
 
         # Map "available" → open
         if not status and ("available" in query_lower or "avaliable" in query_lower or "avail" in query_lower):
@@ -798,7 +815,7 @@ class CourseSearcher:
             for code in course_codes:
                 for r in results:
                     if r["course_code"].upper() == code.upper():
-                        course_prereqs[code] = r.get("prerequisites", "")
+                        course_prereqs[code] = r.get("prerequisites") or ""
                         break
 
             response = f"**Can you take {' and '.join(course_codes)} together?**\n\n"
@@ -812,7 +829,7 @@ class CourseSearcher:
                         response += (
                             f"❌ **No** - {code2} requires {code1} as a prerequisite, "
                             f"so you must complete {code1} first.\n\n"
-                            f"**{code2} prerequisites:** {course_prereqs.get(code2, 'Not listed')}\n"
+                            f"**{code2} prerequisites:** {course_prereqs.get(code2) or 'Not listed'}\n"
                         )
                         conflict_found = True
                         break
@@ -820,7 +837,7 @@ class CourseSearcher:
                         response += (
                             f"❌ **No** - {code1} requires {code2} as a prerequisite, "
                             f"so you must complete {code2} first.\n\n"
-                            f"**{code1} prerequisites:** {course_prereqs.get(code1, 'Not listed')}\n"
+                            f"**{code1} prerequisites:** {course_prereqs.get(code1) or 'Not listed'}\n"
                         )
                         conflict_found = True
                         break
@@ -833,7 +850,7 @@ class CourseSearcher:
                     "together as neither requires the other.\n\n"
                 )
                 for code in course_codes:
-                    prereq = course_prereqs.get(code, "No prerequisites listed")
+                    prereq = course_prereqs.get(code) or "No prerequisites listed"
                     response += f"**{code}:** {prereq}\n"
                 response += (
                     "\n💡 Just make sure there are no schedule conflicts "
@@ -874,7 +891,7 @@ class CourseSearcher:
                         break
             if not chosen:
                 chosen = results[0]
-            prereqs = chosen.get("prerequisites", "No prerequisites listed")
+            prereqs = chosen.get("prerequisites") or "No prerequisites listed"
             response = f"**{chosen['course_code']}: {chosen['course_title']}**\n\nPrerequisites: {prereqs}"
             if enable_logging:
                 self.log_interaction(user_query, parsed, response, start_ms, status="success")
@@ -1068,6 +1085,8 @@ class CourseSearcher:
                 "POLICY BOUNDARIES\n"
                 "- Do not give medical, legal, or financial advice. If the user asks, say you can only help with DVC courses and transfer info.\n"
                 "- Do not provide relationship or emotional support advice. If the user needs such support, politely say you can only help with DVC courses and transfer and suggest they contact campus counseling or student services.\n\n"
+                "SCOPE / REDIRECT\n"
+                "- If the user's latest message is only about emotional support, relationship issues, GE requirements without a specific course, or is off-topic, respond with a brief redirect only (e.g. suggest DVC Counseling for personal/relationship issues, or \"Which campus? I can help with UCB, UCD, UCSD\" for GE/UC). Do not list any course sections and do not reuse section data from previous turns.\n\n"
                 "NEVER DO\n"
                 "- Do not reprint the raw JSON.\n"
                 "- Do not add categories beyond the three specified.\n"
