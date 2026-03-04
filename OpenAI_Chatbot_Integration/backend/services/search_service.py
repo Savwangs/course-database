@@ -19,11 +19,15 @@ from backend.models.interaction_log import InteractionLog
 import httpx
 import os
 
+import re
+from sqlalchemy import text, bindparam
+
 OPENAI_TIMEOUT_SECONDS = float(os.getenv("OPENAI_TIMEOUT_SECONDS", "20"))
 
 # ---------------------------------------------------------------------------
 #  Private helper functions (un-nested from the old search_courses)
 # ---------------------------------------------------------------------------
+
 
 def _split_tokens(s: str):
     """Split on natural separators without regex and detect AND vs OR."""
@@ -135,33 +139,45 @@ def _parse_start_hour(time_str: str) -> int | None:
 # ---------------------------------------------------------------------------
 
 class CourseSearcher:
-    """Stateless service that searches course data and orchestrates the LLM."""
+    """Stateless service that searches Cloud SQL tables and orchestrates the LLM."""
 
-    def __init__(self, course_data: list, openai_client):
-        """
-        Args:
-            course_data: The list of course dicts loaded from Full_STEM_DataBase.json
-            openai_client: An initialized ``openai.OpenAI`` client instance
-        """
-        self.data = course_data
+    def __init__(self, openai_client):
         self.client = openai_client
 
     # ------------------------------------------------------------------
     #  search_courses  (was the top-level function in app.py, lines 116-406)
     # ------------------------------------------------------------------
     def search(self, keyword, mode=None, status=None,
-               day_filter=None, time_filter=None, instructor_filter=None):
-        """Return courses filtered by code/title, and optionally by format/status/day/time/instructor.
-
-        Supports 'or'/'and' in filters and compound day+time conditions.
+            day_filter=None, time_filter=None, instructor_filter=None):
         """
-        # Detect compound conditions (day+time combos separated by "or")
-        compound_conditions = []
-        if day_filter and time_filter and " or " in f"{day_filter} {time_filter}".lower():
-            combined = f"{day_filter} {time_filter}".lower()
-            if "morning" in combined or "afternoon" in combined or "evening" in combined:
-                or_parts = combined.split(" or ")
+        Cloud SQL version of the original JSON search:
+        - Pull candidate rows from course_sections (by course_code or subject prefix)
+        - Apply OG filtering logic in Python (mode/status/day/time/instructor + compound OR)
+        - Return same shape:
+        [
+            {"course_code": "...", "course_title": "", "sections": [ ... ] }
+        ]
+        """
 
+        # ----------------------------
+        # 0) Normalize keywords
+        # ----------------------------
+        keywords = keyword if isinstance(keyword, list) else [keyword]
+        keywords = [str(k).strip() for k in keywords if k and str(k).strip()]
+        if not keywords:
+            return []
+
+        is_course_code_search = any("-" in k for k in keywords)
+
+        # ----------------------------
+        # 1) Detect compound day+time OR pairs (OG behavior)
+        # Example: "Monday morning or Thursday afternoon"
+        # ----------------------------
+        compound_conditions = []
+        if day_filter and time_filter:
+            combined = f"{day_filter} {time_filter}".lower()
+            if " or " in combined and any(x in combined for x in ("morning", "afternoon", "evening")):
+                or_parts = [p.strip() for p in combined.split(" or ") if p.strip()]
                 name_to_code = {
                     "monday": "M", "mon": "M", "m": "M",
                     "tuesday": "T", "tue": "T", "tues": "T", "t": "T",
@@ -171,7 +187,6 @@ class CourseSearcher:
                 }
 
                 for part in or_parts:
-                    part = part.strip()
                     day_found = None
                     time_found = None
 
@@ -190,34 +205,127 @@ class CourseSearcher:
                     if day_found and time_found:
                         compound_conditions.append((day_found, time_found))
 
-        # Normalize flexible filters
-        mode_norm = _normalize_mode(mode)
-        status_norm = _normalize_status(status)
-        instr_norm = _normalize_instructor(instructor_filter)
-        time_terms, time_all = _normalize_time(time_filter)
-        day_terms, day_all = _normalize_day(day_filter)
+        # ----------------------------
+        # 2) Normalize filters (OG helpers)
+        # ----------------------------
+        mode_norm = _normalize_mode(mode)               # list or None
+        status_norm = _normalize_status(status)         # list or None
+        instr_norm = _normalize_instructor(instructor_filter)  # list or None
+        day_terms, day_all = _normalize_day(day_filter)         # (list|None, bool)
+        time_terms, time_all = _normalize_time(time_filter)     # (list|None, bool)
 
-        # Handle keyword as list or string
-        keywords = [k.lower() for k in (keyword if isinstance(keyword, list) else [keyword])]
+        # ----------------------------
+        # 3) Query candidate rows (minimal DB filtering only)
+        # ----------------------------
 
-        results = []
-        for course in self.data:
-            course_code_lower = course["course_code"].lower()
-            course_title_lower = course["course_title"].lower()
 
-            if not any(kw in course_code_lower or kw in course_title_lower for kw in keywords):
+        def _normalize_code(s: str) -> str:
+            return re.sub(r"[^A-Za-z0-9]", "", (s or "")).upper()
+
+        # ...
+
+        if is_course_code_search:
+            wanted_norm = [_normalize_code(k) for k in keywords]
+
+            sql = text("""
+                SELECT
+                cs.course_code,
+                cs.section_number,
+                cs.instructor,
+                cs.schedule,
+                cs.modality,
+                cs.seat_availability,
+                cs.units
+                FROM course_sections cs
+                WHERE upper(regexp_replace(cs.course_code, '[^A-Za-z0-9]', '', 'g')) IN :codes_norm
+                ORDER BY cs.course_code, cs.section_number
+            """).bindparams(bindparam("codes_norm", expanding=True))
+
+            params = {"codes_norm": wanted_norm}
+
+        else:
+            # keep your existing subject-prefix query as-is
+            sql = text("""
+                SELECT
+                cs.course_code,
+                cs.section_number,
+                cs.instructor,
+                cs.schedule,
+                cs.modality,
+                cs.seat_availability,
+                cs.units
+                FROM course_sections cs
+                WHERE split_part(cs.course_code, '-', 1) IN :subjects
+                ORDER BY cs.course_code, cs.section_number
+            """).bindparams(bindparam("subjects", expanding=True))
+
+            params = {"subjects": [k.upper() for k in keywords]}
+
+        rows = db.session.execute(sql, params).mappings().all()
+        if not rows:
+            return []
+
+        # ----------------------------
+        # 4) Row -> course->sections (OG shape)
+        # Also normalize schedule into (days, time) for OG day/time logic
+        # ----------------------------
+        def _schedule_to_days_time(schedule_raw: str):
+            s = (schedule_raw or "").strip()
+            if not s:
+                return "", ""
+            if s.lower() == "asynchronous":
+                return "", "Asynchronous"
+
+            parts = s.split(None, 1)
+            if len(parts) == 2:
+                return parts[0].strip(), parts[1].strip()
+            return "", s  # fallback
+
+        by_course = {}
+        for r in rows:
+            code = (r.get("course_code") or "").replace(" ", "").upper()
+            if not code:
                 continue
 
-            filtered_sections = []
-            for section in course["sections"]:
-                stat = section["status"].lower()
+            if code not in by_course:
+                by_course[code] = {
+                    "course_code": code,
+                    "course_title": "",
+                    "sections": [],
+                }
 
-                if not section.get("meetings"):
+            days_part, time_part = _schedule_to_days_time(r.get("schedule") or "")
+
+            by_course[code]["sections"].append({
+                "section_number": r.get("section_number"),
+                "instructor": r.get("instructor"),
+                "status": r.get("seat_availability") or "",
+                "units": r.get("units"),
+                "meetings": [{
+                    "days": days_part,
+                    "time": time_part,
+                    "format": (r.get("modality") or "").lower(),
+                    "location": None,
+                }],
+            })
+
+        # ----------------------------
+        # 5) Apply OG filtering logic in Python
+        # ----------------------------
+        out_courses = []
+
+        for code, course in by_course.items():
+            filtered_sections = []
+
+            for section in course.get("sections", []):
+                meetings = section.get("meetings") or []
+                if not meetings:
                     continue
 
-                # Derive section_format from all meetings
+                # Derive section_format EXACTLY like OG approach
                 all_formats = set(
-                    m["format"].lower() for m in section["meetings"] if m.get("format")
+                    (m.get("format") or "").lower()
+                    for m in meetings if m.get("format")
                 )
                 if "hybrid" in all_formats or len(all_formats) > 1:
                     section_format = "hybrid"
@@ -228,170 +336,138 @@ class CourseSearcher:
                 else:
                     section_format = list(all_formats)[0] if all_formats else ""
 
-                # MODE: OR semantics
+                # MODE
                 if mode_norm and section_format not in mode_norm:
                     continue
 
-                # STATUS: OR semantics on substring tokens
+                # STATUS (substring OR)
+                stat = (section.get("status") or "").lower()
                 if status_norm and not any(s in stat for s in status_norm):
                     continue
 
-                # INSTRUCTOR: OR semantics with flexible name matching
+                # INSTRUCTOR (token AND inside each query; OR across queries)
                 if instr_norm:
-                    instructor = section.get("instructor", "").lower()
+                    instructor = (section.get("instructor") or "").lower()
                     matched = False
                     for name_query in instr_norm:
-                        query_tokens = [
-                            token.strip().lower()
-                            for token in name_query.replace(",", " ").split()
-                            if token.strip()
+                        q_tokens = [
+                            t.strip().lower()
+                            for t in str(name_query).replace(",", " ").split()
+                            if t.strip()
                         ]
-                        if all(token in instructor for token in query_tokens):
+                        if q_tokens and all(t in instructor for t in q_tokens):
                             matched = True
                             break
                     if not matched:
                         continue
 
-                # DAY/TIME: per-meeting checks with AND/OR semantics and compound conditions
-                if compound_conditions:
-                    has_matching_meeting = False
-                    for meeting in section.get("meetings", []):
-                        days = meeting.get("days", "") or ""
-                        time_str = meeting.get("time", "")
+                # DAY/TIME matching (meetings loop) + compound support
+                def _meeting_matches_day_time(m):
+                    days = (m.get("days") or "")
+                    time_str = (m.get("time") or "")
 
+                    # Compound: (day+time) OR (day+time)
+                    if compound_conditions:
                         for required_day, required_time in compound_conditions:
-                            day_match = _has_day_code(required_day, days)
+                            if not _has_day_code(required_day, days):
+                                continue
 
-                            time_match = False
-                            if time_str and time_str.lower() != "asynchronous":
-                                hour = _parse_start_hour(time_str)
-                                if hour is not None:
-                                    time_match = (_time_bucket(hour) == required_time)
+                            if not time_str or str(time_str).lower() == "asynchronous":
+                                continue
 
-                            if day_match and time_match:
-                                has_matching_meeting = True
-                                break
-
-                        if has_matching_meeting:
-                            break
-
-                    if not has_matching_meeting:
-                        continue
-
-                elif day_terms or time_terms:
-                    has_matching_meeting = False
-                    for meeting in section.get("meetings", []):
-                        days = meeting.get("days", "") or ""
-                        time_str = meeting.get("time", "")
-
-                        # Day check
-                        day_ok = True
-                        if day_terms:
-                            if day_all:
-                                day_ok = all(_has_day_code(c, days) for c in day_terms)
-                            else:
-                                day_ok = any(_has_day_code(c, days) for c in day_terms)
-
-                        # Time check
-                        time_ok = True
-                        if time_terms and time_str and time_str.lower() != "asynchronous":
                             hour = _parse_start_hour(time_str)
-                            if hour is not None:
+                            if hour is None:
+                                continue
+                            if _time_bucket(hour) == required_time:
+                                return True
+                        return False
+
+                    # Non-compound: independent day/time filters
+                    day_ok = True
+                    if day_terms:
+                        if day_all:
+                            day_ok = all(_has_day_code(c, days) for c in day_terms)
+                        else:
+                            day_ok = any(_has_day_code(c, days) for c in day_terms)
+
+                    time_ok = True
+                    if time_terms:
+                        if not time_str or str(time_str).lower() == "asynchronous":
+                            time_ok = False
+                        else:
+                            hour = _parse_start_hour(time_str)
+                            if hour is None:
+                                time_ok = False
+                            else:
                                 bucket = _time_bucket(hour)
                                 if time_all:
                                     time_ok = all(t == bucket for t in time_terms)
                                 else:
                                     time_ok = any(t == bucket for t in time_terms)
-                            else:
-                                time_ok = False
 
-                        if day_ok and time_ok:
-                            has_matching_meeting = True
-                            break
+                    return day_ok and time_ok
 
-                    if not has_matching_meeting:
-                        continue
+                if (day_terms or time_terms or compound_conditions) and not any(_meeting_matches_day_time(m) for m in meetings):
+                    continue
 
                 filtered_sections.append(section)
 
             if filtered_sections:
-                result = {
+                out_courses.append({
                     "course_code": course["course_code"],
-                    "course_title": course["course_title"],
+                    "course_title": course.get("course_title") or "",
                     "sections": filtered_sections,
-                }
-                if "prerequisites" in course:
-                    result["prerequisites"] = course["prerequisites"]
-                results.append(result)
+                })
 
-        return results
-
+        return out_courses
     # ------------------------------------------------------------------
     #  llm_parse_query  (was top-level in app.py, lines 408-511)
     # ------------------------------------------------------------------
     def parse_query(self, user_query: str, *, temperature: float = 0.0) -> dict:
         """LLM-first parser -> course_codes, subjects, intent, filters (constrained to DB)."""
-        all_course_codes = sorted({c["course_code"].upper() for c in self.data})
-        all_subject_prefixes = sorted({c["course_code"].split("-")[0].upper() for c in self.data})
 
-        allowed_titles_payload = [
-            {"course_code": c["course_code"].upper(), "course_title": c.get("course_title", "")}
-            for c in self.data
-            if c.get("course_title")
-        ]
+        # Build allow-lists from course_sections only
+        rows = db.session.execute(text("""
+            SELECT DISTINCT course_code
+            FROM course_sections
+            WHERE course_code IS NOT NULL AND course_code <> ''
+        """)).mappings().all()
+
+        all_course_codes = sorted({r["course_code"].upper() for r in rows if r.get("course_code")})
+        all_subject_prefixes = sorted({c.split("-")[0].upper() for c in all_course_codes if "-" in c})
+
+        # Hard fallback extraction so COMSC-110 always works
+        hard_codes = set(re.findall(r"\b[A-Za-z]{3,5}\s*-\s*\d{2,3}[A-Za-z]?\b", user_query))
+        hard_codes = {c.replace(" ", "").upper() for c in hard_codes}
+
+        hard_subjects = set(re.findall(r"\b[A-Za-z]{3,5}\b", user_query))
+        hard_subjects = {s.upper() for s in hard_subjects if s.upper() in all_subject_prefixes}
 
         parser_system = (
             "You are an intent and entity parser for a community college course finder. "
-            "Normalize and correct typos in the user's text (e.g., 'avalibale'→'available', "
-            "'phycs'→'PHYS', 'prof julli'→'Julie') before extracting entities. "
-            "Return STRICT JSON ONLY (no prose/markdown) with keys:\n"
+            "Return STRICT JSON ONLY with keys:\n"
             "{\n"
-            '  \"course_codes\": [list of exact course codes like \"COMSC-110\"],\n'
-            '  \"subjects\": [list of subject prefixes like \"COMSC\",\"MATH\"],\n'
-            '  \"intent\": \"find_sections\" | \"prerequisites\" | \"instructors\",\n'
-            '  \"filters\": {\n'
-            '     \"mode\": \"in-person\" | \"online\" | \"hybrid\" | null,\n'
-            '     \"status\": \"open\" | \"closed\" | null,\n'
-            '     \"day\": \"M\" | \"T\" | \"W\" | \"Th\" | \"F\" | null (can include "and"/"or" like "M and W" or "T or Th"),\n'
-            '     \"time\": \"morning\" | \"afternoon\" | \"evening\" | null (can include "and"/"or" like "morning and afternoon"),\n'
-            '     \"instructor\": string or null\n'
-            "  }\n"
+            '  "course_codes": ["COMSC-110"],\n'
+            '  "subjects": ["COMSC"],\n'
+            '  "intent": "find_sections" | "prerequisites" | "instructors",\n'
+            '  "filters": {"mode": "in-person" | "online" | "hybrid" | null,'
+            '             "status": "open" | "closed" | null,'
+            '             "day": "M"|"T"|"W"|"Th"|"F"|null,'
+            '             "time": "morning"|"afternoon"|"evening"|null,'
+            '             "instructor": string|null}\n'
             "}\n"
-            "IMPORTANT - AND vs OR logic:\n"
-            "- If user says 'Monday AND Wednesday' or 'M and W', they want sections that meet on BOTH days\n"
-            "- If user says 'Monday OR Wednesday' or 'M or W', they want sections that meet on EITHER day\n"
-            "- Same logic for time: 'morning AND afternoon' (meets both) vs 'morning OR afternoon' (meets either)\n"
-            "- Include the 'and'/'or' in your filter string so backend can process it correctly\n"
-            "\n"
-            "COMPOUND CONDITIONS (VERY IMPORTANT):\n"
-            "- If user says 'Monday morning OR Thursday afternoon', this is a COMPOUND condition\n"
-            "- Pass it as: day='Monday or Thursday', time='morning or afternoon' (backend will parse the compound logic)\n"
-            "- The backend detects compound patterns and matches sections with (Monday AND morning) OR (Thursday AND afternoon)\n"
-            "- Other examples: 'Tuesday evening or Friday morning', 'Wednesday afternoon or Monday evening'\n"
             "Rules:\n"
             "- Only choose course_codes from ALLOWED_COURSE_CODES.\n"
             "- Only choose subjects from ALLOWED_SUBJECT_PREFIXES.\n"
-            "- TITLE MAPPING (VERY IMPORTANT):\n"
-            "  * If user says 'calculus classes' or 'calculus courses' (plural/general), find ALL courses with 'Calculus' in title\n"
-            "  * If user says 'Calc 1' or 'Calculus 1' or 'Calculus I', match ONLY courses with 'Calculus I' in title\n"
-            "  * If user says 'Calc 2' or 'Calculus 2' or 'Calculus II', match ONLY courses with 'Calculus II' in title\n"
-            "  * If user says 'Calc 3' or 'Calculus 3' or 'Calculus III', match ONLY courses with 'Calculus III' in title\n"
-            "  * Similar logic for 'Physics', 'Chemistry', 'Biology', 'Computer Science', etc.\n"
-            "  * Be precise: 'Calc 1' ≠ 'Calculus for Business' (only match courses with roman numeral I)\n"
-            "- Search ALLOWED_TITLES by matching course titles (case/typo-insensitive substring matching).\n"
-            "- When mapping titles to codes, look at the actual course_title field in ALLOWED_TITLES.\n"
-            "- If the user asks about prerequisites/prereq, set intent='prerequisites'.\n"
-            "- If the user asks about professor/instructor/teacher/who teaches, set intent='instructors'.\n"
-            "- Otherwise default to intent='find_sections'.\n"
-            "- Extract simple filters if present; else use nulls."
+            "- If user asks about prerequisites, set intent='prerequisites'.\n"
+            "- If user asks about instructor, set intent='instructors'.\n"
+            "- Otherwise intent='find_sections'.\n"
         )
 
         parser_user = json.dumps({
             "USER_QUERY": user_query,
             "ALLOWED_COURSE_CODES": all_course_codes,
             "ALLOWED_SUBJECT_PREFIXES": all_subject_prefixes,
-            "ALLOWED_TITLES": allowed_titles_payload,
-            "NOTES": "Days may be written as Monday/Mon/Tues/Thursday/etc.; map to M,T,W,Th,F.",
         })
 
         try:
@@ -405,16 +481,9 @@ class CourseSearcher:
                 timeout=OPENAI_TIMEOUT_SECONDS,
             )
             parsed = json.loads(resp.choices[0].message.content.strip())
+        except Exception:
+            parsed = {}
 
-        except (httpx.TimeoutException, httpx.ReadTimeout):
-            print("⚠️ OpenAI parser request timed out.")
-            return {}
-
-        except Exception as e:
-            print(f"⚠️ OpenAI parser error: {e}")
-            return {}
-
-        # ---- Normalize + guard ----
         parsed = parsed if isinstance(parsed, dict) else {}
         parsed.setdefault("course_codes", [])
         parsed.setdefault("subjects", [])
@@ -428,16 +497,16 @@ class CourseSearcher:
         if not isinstance(parsed["subjects"], list):
             parsed["subjects"] = [] if parsed["subjects"] is None else [parsed["subjects"]]
 
-        parsed["course_codes"] = [str(c).upper() for c in parsed["course_codes"] if isinstance(c, str)]
+        parsed["course_codes"] = [str(c).replace(" ", "").upper() for c in parsed["course_codes"] if isinstance(c, str)]
         parsed["subjects"] = [str(s).upper() for s in parsed["subjects"] if isinstance(s, str)]
-        if not isinstance(parsed["filters"], dict):
-            parsed["filters"] = {
-                "mode": None, "status": None, "day": None, "time": None, "instructor": None,
-            }
 
-        # ---- Final allow-list enforcement ----
+        # Enforce allow-lists
         parsed["course_codes"] = [c for c in parsed["course_codes"] if c in all_course_codes]
         parsed["subjects"] = [s for s in parsed["subjects"] if s in all_subject_prefixes]
+
+        # Merge hard fallbacks (restores “always works” behavior)
+        parsed["course_codes"] = sorted(set(parsed["course_codes"]) | (hard_codes & set(all_course_codes)))
+        parsed["subjects"] = sorted(set(parsed["subjects"]) | hard_subjects)
 
         return parsed
 
