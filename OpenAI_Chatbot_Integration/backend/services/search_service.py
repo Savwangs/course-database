@@ -25,6 +25,7 @@ from sqlalchemy import text, bindparam
 OPENAI_TIMEOUT_SECONDS = float(os.getenv("OPENAI_TIMEOUT_SECONDS", "20"))
 
 COURSE_SECTIONS_TABLE = os.getenv("COURSE_SECTIONS_TABLE", "course_sections_fall_2026")
+COURSE_CATALOG_TABLE = os.getenv("COURSE_CATALOG_TABLE", "courses_catalog")
 
 # ---------------------------------------------------------------------------
 #  Private helper functions (un-nested from the old search_courses)
@@ -233,7 +234,7 @@ class CourseSearcher:
 
             if is_sqlite:
                 # SQLite: no regexp_replace; normalize with REPLACE(UPPER(...))
-                sql = text("""
+                sql = text(f"""
                     SELECT
                     cs.course_code,
                     cs.section_number,
@@ -245,12 +246,12 @@ class CourseSearcher:
                     cs.comments,
                     cs.prereq,
                     cs.advisory
-                    FROM course_sections_fall_2026 cs
+                    FROM {COURSE_SECTIONS_TABLE} cs
                     WHERE UPPER(REPLACE(REPLACE(REPLACE(REPLACE(cs.course_code, '-', ''), ' ', ''), '_', ''), '.', '')) IN :codes_norm
                     ORDER BY cs.course_code, cs.section_number
                 """).bindparams(bindparam("codes_norm", expanding=True))
             else:
-                sql = text("""
+                sql = text(f"""
                     SELECT
                     cs.course_code,
                     cs.section_number,
@@ -262,7 +263,7 @@ class CourseSearcher:
                     cs.comments,
                     cs.prereq,
                     cs.advisory
-                    FROM course_sections_fall_2026 cs
+                    FROM {COURSE_SECTIONS_TABLE} cs
                     WHERE upper(regexp_replace(cs.course_code, '[^A-Za-z0-9]', '', 'g')) IN :codes_norm
                     ORDER BY cs.course_code, cs.section_number
                 """).bindparams(bindparam("codes_norm", expanding=True))
@@ -286,13 +287,13 @@ class CourseSearcher:
                     cs.comments,
                     cs.prereq,
                     cs.advisory
-                    FROM course_sections_fall_2026 cs
+                    FROM {COURSE_SECTIONS_TABLE} cs
                     WHERE {placeholders}
                     ORDER BY cs.course_code, cs.section_number
                 """)
                 params = {f"s{i}": f"{s}-%" for i, s in enumerate(subjects_upper)}
             else:
-                sql = text("""
+                sql = text(f"""
                     SELECT
                     cs.course_code,
                     cs.section_number,
@@ -304,7 +305,7 @@ class CourseSearcher:
                     cs.comments,
                     cs.prereq,
                     cs.advisory
-                    FROM course_sections_fall_2026 cs
+                    FROM {COURSE_SECTIONS_TABLE} cs
                     WHERE split_part(cs.course_code, '-', 1) IN :subjects
                     ORDER BY cs.course_code, cs.section_number
                 """).bindparams(bindparam("subjects", expanding=True))
@@ -503,6 +504,22 @@ class CourseSearcher:
         all_course_codes = sorted({r["course_code"].upper() for r in rows if r.get("course_code")})
         all_subject_prefixes = sorted({c.split("-")[0].upper() for c in all_course_codes if "-" in c})
 
+        # Optional: load code+title for title-to-code mapping (catalog may not exist in Cloud SQL)
+        allowed_titles_payload = []
+        if COURSE_CATALOG_TABLE:
+            try:
+                catalog_rows = db.session.execute(text(f"""
+                    SELECT course_code, title
+                    FROM {COURSE_CATALOG_TABLE}
+                    WHERE course_code IS NOT NULL AND title IS NOT NULL AND title <> ''
+                """)).mappings().all()
+                allowed_titles_payload = [
+                    {"course_code": (r.get("course_code") or "").upper(), "course_title": (r.get("title") or "").strip()}
+                    for r in catalog_rows if r.get("course_code")
+                ]
+            except Exception:
+                allowed_titles_payload = []
+
         # Hard fallback extraction so COMSC-110 always works (hyphen form)
         hard_codes = set(re.findall(r"\b[A-Za-z]{3,5}\s*-\s*\d{2,3}[A-Za-z]?\b", user_query))
         hard_codes = {c.replace(" ", "").upper() for c in hard_codes}
@@ -524,13 +541,22 @@ class CourseSearcher:
             '             "status": "open" | "closed" | null,'
             '             "day": "M"|"T"|"W"|"Th"|"F"|null,'
             '             "time": "morning"|"afternoon"|"evening"|null,'
-            '             "instructor": string|null}\n'
+            '             "instructor": string|null},\n'
+            '  "needs_campus_clarification": boolean,\n'
+            '  "prereq_sub_intent": "single" | "can_take_together" | null\n'
             "}\n"
             "Rules:\n"
             "- Extract course_codes and subjects ONLY from the current user message. Do not use course codes or subjects from example prompts or from previous assistant or user messages.\n"
-            "- Only choose course_codes from ALLOWED_COURSE_CODES.\n"
-            "- Only choose subjects from ALLOWED_SUBJECT_PREFIXES.\n"
-            "- If user asks about prerequisites, set intent='prerequisites'.\n"
+            "- Extract every course the user refers to, with or without a hyphen (e.g. MATH-192, math 192, COMSC 260). Normalize to SUBJECT-NUMBER and include only codes that appear in ALLOWED_COURSE_CODES.\n"
+            "- If ALLOWED_TITLES is non-empty and the user mentions a course by name or title (e.g. 'differential equations', 'linear algebra'), map it to the corresponding course_code(s) using ALLOWED_TITLES (case and typo insensitive) and add those codes to course_codes.\n"
+            "- Only choose course_codes from ALLOWED_COURSE_CODES. Only choose subjects from ALLOWED_SUBJECT_PREFIXES.\n"
+            "- If the user asks for available, open, or open seats, set filters.status to 'open'. If they ask for closed or full sections, set filters.status to 'closed'.\n"
+            "- If the user mentions a professor, instructor, or teacher by name (e.g. 'Professor Lo', 'taught by Smith'), set filters.instructor to that person's name (last name or as given).\n"
+            "- Map day names to codes: Monday/Mon -> M, Tuesday/Tue -> T, Wednesday/Wed -> W, Thursday/Thu/Th -> Th, Friday/Fri -> F.\n"
+            "- Map time-of-day to filters.time: morning (before noon), afternoon (noon-5pm), evening (after 5pm).\n"
+            "- If the user is asking about GE requirements, transfer requirements, or what they need for UC without specifying a campus or a specific course code, set needs_campus_clarification to true and leave course_codes and subjects empty.\n"
+            "- If the user asks whether they can take two or more courses together, at the same time, or both (e.g. 'Can I take X and Y together?'), set intent to 'prerequisites' and prereq_sub_intent to 'can_take_together' and include all mentioned course codes.\n"
+            "- If user asks about prerequisites (single course or general), set intent='prerequisites'; set prereq_sub_intent to null or 'single'.\n"
             "- If user asks about instructor, set intent='instructors'.\n"
             "- If the user is only asking about GE requirements, transfer, or which UC campus (e.g. 'What GE for UC?', 'What do I need for UC?'), return empty course_codes and empty subjects so the assistant can ask which campus.\n"
             "- Otherwise intent='find_sections'.\n"
@@ -540,6 +566,7 @@ class CourseSearcher:
             "USER_QUERY": user_query,
             "ALLOWED_COURSE_CODES": all_course_codes,
             "ALLOWED_SUBJECT_PREFIXES": all_subject_prefixes,
+            "ALLOWED_TITLES": allowed_titles_payload,
         })
 
         try:
@@ -563,6 +590,8 @@ class CourseSearcher:
         parsed.setdefault("filters", {
             "mode": None, "status": None, "day": None, "time": None, "instructor": None,
         })
+        parsed.setdefault("needs_campus_clarification", False)
+        parsed.setdefault("prereq_sub_intent", None)
 
         if not isinstance(parsed["course_codes"], list):
             parsed["course_codes"] = [] if parsed["course_codes"] is None else [parsed["course_codes"]]
@@ -640,43 +669,17 @@ class CourseSearcher:
         time_filter = filters.get("time")
         instructor_mentioned = filters.get("instructor")
 
-        # GE/UC safeguard: if current message is GE/UC-only and has no course code, force "Which campus?" path
-        q_low = user_query.lower()
-        ge_uc_intent = any(
-            x in q_low for x in (
-                "what ge", "ge for", "ge do", "ge courses", "need for uc", "for uc transfer",
-                "for uc", "uc transfer", "which uc", "for berkeley", "for davis", "for san diego"
-            )
-        )
-        course_code_in_message = bool(
-            re.search(r"[A-Za-z]{3,5}\s*-\s*\d{2,3}", user_query, re.I)
-            or re.search(r"\b[A-Za-z]{3,5}\s+\d{2,3}\b", user_query, re.I)
-        )
-        if ge_uc_intent and not course_code_in_message:
+        # GE/UC: use parser flag so assistant can ask which campus
+        if parsed.get("needs_campus_clarification", False):
             course_codes, subjects = [], []
-
-        # Map "available" → open
-        if not status and ("available" in query_lower or "avaliable" in query_lower or "avail" in query_lower):
-            status = "open"
 
         # "in-person" also includes "hybrid"
         if mode == "in-person":
             mode = ["in-person", "hybrid"]
 
-        # Instructor title fallback
-        if not instructor_mentioned:
-            titles = {"professor", "prof", "dr", "instructor", "teacher"}
-            words = user_query.split()
-            for i, w in enumerate(words):
-                if w.strip(",.?!").lower() in titles and i + 1 < len(words):
-                    instructor_mentioned = words[i + 1].strip(",.?!")
-                    break
-
         # Nothing useful parsed → guide the user or ask for clarification
         if not course_codes and not subjects:
-            # UC / GE / transfer without campus → ask which campus
-            q_low = user_query.lower()
-            if any(x in q_low for x in ("ge ", "ge courses", "uc ", "uc transfer", "for uc", "for berkeley", "for davis", "for san diego", "which uc")):
+            if parsed.get("needs_campus_clarification", False):
                 response = (
                     "Which campus? I can help with **UC Berkeley (UCB)**, **UC Davis (UCD)**, or **UC San Diego (UCSD)**. "
                     "Try: \"What GE courses for UC Berkeley?\" or \"What should I take for UCB transfer?\""
@@ -838,14 +841,9 @@ class CourseSearcher:
         keywords_for_prereq = course_codes or subjects
         results = self.search(keywords_for_prereq)
 
-        # "Can I take X and Y together?" pattern
-        can_take_together_patterns = [
-            "can i take", "take together", "take at the same time",
-            "together with", "take both",
-        ]
-        is_take_together = any(p in query_lower for p in can_take_together_patterns)
+        is_take_together = parsed.get("prereq_sub_intent") == "can_take_together" and len(course_codes) >= 2
 
-        if is_take_together and len(course_codes) >= 2:
+        if is_take_together:
             course_prereqs = {}
             for code in course_codes:
                 for r in results:
