@@ -1,0 +1,3 @@
+MATH-121 sections (2026-03-11T01:26:00):
+Term;Location;Section #;Course;Start Date - End Date;Meeting Days/Time/Building/Room;Units;Instructor(s);Prereq;Advisory;Comments;Status;Seats Available
+2026FA;SRC;9226;MATH-121 - Plane Trigonometry;8/24/2026 - 12/11/2026;T Th;9:35AM - 11:00AM;SRC;W219;3.00;Staff, SRC;Prerequisite: Placement as determined by the college's multiple measures assessment process or completion of a course taught at or above the level of intermediate algebra. Advisory: High school geometry or equivalent;;Note: Class?meets at the scheduled times on the San Ramon Campus.;Open;36

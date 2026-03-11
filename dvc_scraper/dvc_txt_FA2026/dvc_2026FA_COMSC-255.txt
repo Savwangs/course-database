@@ -1,0 +1,4 @@
+COMSC-255 sections (2026-03-11T01:21:27):
+Term;Location;Section #;Course;Start Date - End Date;Meeting Days/Time/Building/Room;Units;Instructor(s);Prereq;Advisory;Comments;Status;Seats Available
+2026FA;DVC;5302;COMSC-255 - Programming With Java;8/24/2026 - 12/11/2026;OFF;ONLINE;4.00;Khaja, Gene;;Advisory: COMSC-110 or equivalent;Note: 100% online course. All instruction will be online. Go to www.dvc.edu/online for course access information.;Open;35
+2026FA;DVC;5109;COMSC-255 - Programming With Java;8/24/2026 - 12/11/2026;OFF;ONLINE;4.00;Khaja, Gene;;Advisory: COMSC-110 or equivalent;Note: 100% online course. All instruction will be online. Go to www.dvc.edu/online for course access information.;Open;35

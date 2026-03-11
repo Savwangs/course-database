@@ -1,0 +1,3 @@
+ENGL-175 sections (2026-03-11T01:24:28):
+Term;Location;Section #;Course;Start Date - End Date;Meeting Days/Time/Building/Room;Units;Instructor(s);Prereq;Advisory;Comments;Status;Seats Available
+2026FA;SRC;9092;ENGL-175 - Science Fiction and Fantasy Literature;8/24/2026 - 12/11/2026;OFF;ONLINE;3.00;Colson, Michael;;Advisory: ENGL-C1000 or equivalent;Note: 100% online course - no scheduled meetings. Instruction will be provided through the college learning management system CANVAS. On the course start date, log into Canvas, www.dvc.edu/online to begin.;Open;45

@@ -1,0 +1,6 @@
+MATH-194 sections (2026-03-11T01:29:41):
+Term;Location;Section #;Course;Start Date - End Date;Meeting Days/Time/Building/Room;Units;Instructor(s);Prereq;Advisory;Comments;Status;Seats Available
+2026FA;SRC;9481;MATH-194 - Linear Algebra;8/24/2026 - 12/11/2026;M W;12:45PM - 2:10PM;SRC;W219;3.00;Staff, SRC;Prerequisite: MATH-193 or equivalent;;Note: Class?meets at the scheduled times on the San Ramon Campus.;Open;36
+2026FA;DVC;8197;MATH-194 - Linear Algebra;8/24/2026 - 12/11/2026;OFF;PART-ONL;Th;5:30PM - 7:30PM;MA;101;3.00;Gomez, Concha;Prerequisite: MATH-193 or equivalent;;Note: Partially online course with required in-person meetings 5:30-7:30pm on Thursdays 9/24, 10/15, 11/19 (exams) and 12/10 (final exam). All other instruction provided online through the college learning management system Canvas. On the course start date, log into Canvas, www.dvc.edu/online to locate course. for course access information.;Open;36
+2026FA;DVC;2919;MATH-194 - Linear Algebra;8/24/2026 - 12/11/2026;T Th;11:10AM - 12:35PM;LA;209;3.00;Parks, Will;Prerequisite: MATH-193 or equivalent;;Note: Class meets weekly as scheduled.;Open;36
+2026FA;DVC;0350;MATH-194 - Linear Algebra;8/24/2026 - 12/11/2026;M W;9:35AM - 11:00AM;MA;103;3.00;Pineda-Carranza, Servando;Prerequisite: MATH-193 or equivalent;;Note: Class meets weekly as scheduled.;Open;36
