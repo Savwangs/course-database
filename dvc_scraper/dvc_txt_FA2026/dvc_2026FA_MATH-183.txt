@@ -1,0 +1,3 @@
+MATH-183 sections (2026-03-11T01:28:06):
+Term;Location;Section #;Course;Start Date - End Date;Meeting Days/Time/Building/Room;Units;Instructor(s);Prereq;Advisory;Comments;Status;Seats Available
+2026FA;DVC;2495;MATH-183 - Calculus for Management, Life Science, and Social Science II;8/24/2026 - 12/11/2026;M W;8:55AM - 11:00AM;L;142;4.00;Huynh, My;Prerequisite: MATH-182 or equivalent Advisory: MATH-121 or equivalent;;Note: Class meets weekly as scheduled.;Open;36

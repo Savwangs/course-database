@@ -1,0 +1,4 @@
+PHYS-121 sections (2026-03-11T01:31:56):
+Term;Location;Section #;Course;Start Date - End Date;Meeting Days/Time/Building/Room;Units;Instructor(s);Prereq;Advisory;Comments;Status;Seats Available
+2026FA;DVC;2294;PHYS-121 - General College Physics II;8/24/2026 - 12/11/2026;T;11:10AM - 12:25PM;PS;117;Th;11:10AM - 2:00PM;PS;113;M W;12:45PM - 2:10PM;PS;175;4.00;Colwell, Kitran;Prerequisite: PHYS-120 or equivalent;;Note: Class meets weekly as scheduled.;Open;25
+2026FA;DVC;2293;PHYS-121 - General College Physics II;8/24/2026 - 12/11/2026;F;8:00AM - 10:50AM;PS;117;T Th;8:00AM - 9:25AM;PS;175;T;9:35AM - 10:50AM;PS;117;4.00;Staff, DVC;Prerequisite: PHYS-120 or equivalent;;Note: Class meets weekly as scheduled.;Open;25

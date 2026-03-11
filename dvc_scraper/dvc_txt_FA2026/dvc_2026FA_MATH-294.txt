@@ -1,0 +1,5 @@
+MATH-294 sections (2026-03-11T01:30:43):
+Term;Location;Section #;Course;Start Date - End Date;Meeting Days/Time/Building/Room;Units;Instructor(s);Prereq;Advisory;Comments;Status;Seats Available
+2026FA;DVC;3692;MATH-294 - Differential Equations;8/24/2026 - 12/11/2026;M W;9:35AM - 12:05PM;OFF;NEED RM;5.00;Lum, Munlok;Prerequisite: MATH-292 or equivalent Advisory: MATH-194 or equivalent (may be taken concurrently) Note: TI-83 or TI-84 graphing calculator required.;;Note: Class meets weekly as scheduled.;Open;36
+2026FA;DVC;2955;MATH-294 - Differential Equations;8/24/2026 - 12/11/2026;T Th;2:30PM - 5:00PM;MA;104;5.00;Newton, Kit;Prerequisite: MATH-292 or equivalent Advisory: MATH-194 or equivalent (may be taken concurrently) Note: TI-83 or TI-84 graphing calculator required.;;Note: Class meets weekly as scheduled.;Open;36
+2026FA;DVC;1964;MATH-294 - Differential Equations;8/24/2026 - 12/11/2026;T Th;8:30AM - 11:00AM;MA;241;5.00;Mohan, Adhitya;Prerequisite: MATH-292 or equivalent Advisory: MATH-194 or equivalent (may be taken concurrently) Note: TI-83 or TI-84 graphing calculator required.;;Note: Class meets weekly as scheduled.;Open;36
