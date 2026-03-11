@@ -24,6 +24,8 @@ from sqlalchemy import text, bindparam
 
 OPENAI_TIMEOUT_SECONDS = float(os.getenv("OPENAI_TIMEOUT_SECONDS", "20"))
 
+COURSE_SECTIONS_TABLE = "course_sections_fall_2026"
+
 # ---------------------------------------------------------------------------
 #  Private helper functions (un-nested from the old search_courses)
 # ---------------------------------------------------------------------------
@@ -239,8 +241,11 @@ class CourseSearcher:
                     cs.schedule,
                     cs.modality,
                     cs.seat_availability,
-                    cs.units
-                    FROM course_sections cs
+                    cs.units,
+                    cs.comments,
+                    cs.prereq,
+                    cs.advisory
+                    FROM course_sections_fall_2026 cs
                     WHERE UPPER(REPLACE(REPLACE(REPLACE(REPLACE(cs.course_code, '-', ''), ' ', ''), '_', ''), '.', '')) IN :codes_norm
                     ORDER BY cs.course_code, cs.section_number
                 """).bindparams(bindparam("codes_norm", expanding=True))
@@ -253,8 +258,11 @@ class CourseSearcher:
                     cs.schedule,
                     cs.modality,
                     cs.seat_availability,
-                    cs.units
-                    FROM course_sections cs
+                    cs.units,
+                    cs.comments,
+                    cs.prereq,
+                    cs.advisory
+                    FROM course_sections_fall_2026 cs
                     WHERE upper(regexp_replace(cs.course_code, '[^A-Za-z0-9]', '', 'g')) IN :codes_norm
                     ORDER BY cs.course_code, cs.section_number
                 """).bindparams(bindparam("codes_norm", expanding=True))
@@ -274,8 +282,11 @@ class CourseSearcher:
                     cs.schedule,
                     cs.modality,
                     cs.seat_availability,
-                    cs.units
-                    FROM course_sections cs
+                    cs.units,
+                    cs.comments,
+                    cs.prereq,
+                    cs.advisory
+                    FROM course_sections_fall_2026 cs
                     WHERE {placeholders}
                     ORDER BY cs.course_code, cs.section_number
                 """)
@@ -289,8 +300,11 @@ class CourseSearcher:
                     cs.schedule,
                     cs.modality,
                     cs.seat_availability,
-                    cs.units
-                    FROM course_sections cs
+                    cs.units,
+                    cs.comments,
+                    cs.prereq,
+                    cs.advisory
+                    FROM course_sections_fall_2026 cs
                     WHERE split_part(cs.course_code, '-', 1) IN :subjects
                     ORDER BY cs.course_code, cs.section_number
                 """).bindparams(bindparam("subjects", expanding=True))
@@ -304,17 +318,6 @@ class CourseSearcher:
         # 4) Row -> course->sections (OG shape)
         # Also normalize schedule into (days, time) for OG day/time logic
         # ----------------------------
-        def _schedule_to_days_time(schedule_raw: str):
-            s = (schedule_raw or "").strip()
-            if not s:
-                return "", ""
-            if s.lower() == "asynchronous":
-                return "", "Asynchronous"
-
-            parts = s.split(None, 1)
-            if len(parts) == 2:
-                return parts[0].strip(), parts[1].strip()
-            return "", s  # fallback
 
         by_course = {}
         for r in rows:
@@ -329,19 +332,50 @@ class CourseSearcher:
                     "sections": [],
                 }
 
-            days_part, time_part = _schedule_to_days_time(r.get("schedule") or "")
+            schedule_raw = r.get("schedule")
+            meetings = []
+
+            if isinstance(schedule_raw, list):
+                for m in schedule_raw:
+                    if isinstance(m, dict):
+                        meetings.append({
+                            "days": m.get("days") or "",
+                            "time": m.get("time") or "",
+                            "format": (m.get("format") or r.get("modality") or "").lower(),
+                            "location": " ".join(
+                                x for x in [m.get("building"), m.get("room")] if x
+                            ) or None,
+                            "building": m.get("building"),
+                            "room": m.get("room"),
+                        })
+            elif isinstance(schedule_raw, str) and schedule_raw.strip():
+                try:
+                    parsed_schedule = json.loads(schedule_raw)
+                    if isinstance(parsed_schedule, list):
+                        for m in parsed_schedule:
+                            if isinstance(m, dict):
+                                meetings.append({
+                                    "days": m.get("days") or "",
+                                    "time": m.get("time") or "",
+                                    "format": (m.get("format") or r.get("modality") or "").lower(),
+                                    "location": " ".join(
+                                        x for x in [m.get("building"), m.get("room")] if x
+                                    ) or None,
+                                    "building": m.get("building"),
+                                    "room": m.get("room"),
+                                })
+                except Exception:
+                    pass
 
             by_course[code]["sections"].append({
                 "section_number": r.get("section_number"),
                 "instructor": r.get("instructor"),
                 "status": r.get("seat_availability") or "",
                 "units": r.get("units"),
-                "meetings": [{
-                    "days": days_part,
-                    "time": time_part,
-                    "format": (r.get("modality") or "").lower(),
-                    "location": None,
-                }],
+                "prereq": r.get("prereq"),
+                "advisory": r.get("advisory"),
+                "comments": r.get("comments"),
+                "meetings": meetings,
             })
 
         # ----------------------------
@@ -354,8 +388,6 @@ class CourseSearcher:
 
             for section in course.get("sections", []):
                 meetings = section.get("meetings") or []
-                if not meetings:
-                    continue
 
                 # Derive section_format EXACTLY like OG approach
                 all_formats = set(
@@ -462,9 +494,9 @@ class CourseSearcher:
         """LLM-first parser -> course_codes, subjects, intent, filters (constrained to DB)."""
 
         # Build allow-lists from course_sections only
-        rows = db.session.execute(text("""
+        rows = db.session.execute(text(f"""
             SELECT DISTINCT course_code
-            FROM course_sections
+            FROM {COURSE_SECTIONS_TABLE}
             WHERE course_code IS NOT NULL AND course_code <> ''
         """)).mappings().all()
 
@@ -815,21 +847,26 @@ class CourseSearcher:
             for code in course_codes:
                 for r in results:
                     if r["course_code"].upper() == code.upper():
-                        course_prereqs[code] = r.get("prerequisites") or ""
+                        course_prereqs[code] = {
+                            "prereq": r["sections"][0].get("prereq") or "",
+                            "advisory": r["sections"][0].get("advisory") or "",
+                            "comments": r["sections"][0].get("comments") or "",
+                        }
                         break
 
             response = f"**Can you take {' and '.join(course_codes)} together?**\n\n"
             conflict_found = False
             for i, code1 in enumerate(course_codes):
                 for code2 in course_codes[i + 1:]:
-                    prereq1 = course_prereqs.get(code1, "").upper()
-                    prereq2 = course_prereqs.get(code2, "").upper()
+                    prereq1 = course_prereqs.get(code1, {}).get("prereq", "").upper()
+                    prereq2 = course_prereqs.get(code2, {}).get("prereq", "").upper()
 
                     if code1.upper() in prereq2:
                         response += (
                             f"❌ **No** - {code2} requires {code1} as a prerequisite, "
                             f"so you must complete {code1} first.\n\n"
-                            f"**{code2} prerequisites:** {course_prereqs.get(code2) or 'Not listed'}\n"
+                            f"**{code2} prerequisites (required):** {course_prereqs.get(code2, {}).get('prereq') or 'Not listed'}\n"
+                            f"**{code2} advisory (recommended):** {course_prereqs.get(code2, {}).get('advisory') or 'Not listed'}\n"
                         )
                         conflict_found = True
                         break
@@ -837,7 +874,8 @@ class CourseSearcher:
                         response += (
                             f"❌ **No** - {code1} requires {code2} as a prerequisite, "
                             f"so you must complete {code2} first.\n\n"
-                            f"**{code1} prerequisites:** {course_prereqs.get(code1) or 'Not listed'}\n"
+                            f"**{code1} prerequisites (required):** {course_prereqs.get(code1, {}).get('prereq') or 'Not listed'}\n"
+                            f"**{code1} advisory (recommended):** {course_prereqs.get(code1, {}).get('advisory') or 'Not listed'}\n"
                         )
                         conflict_found = True
                         break
@@ -850,8 +888,12 @@ class CourseSearcher:
                     "together as neither requires the other.\n\n"
                 )
                 for code in course_codes:
-                    prereq = course_prereqs.get(code) or "No prerequisites listed"
-                    response += f"**{code}:** {prereq}\n"
+                    prereq = course_prereqs.get(code, {}).get("prereq") or "No prerequisites listed"
+                    advisory = course_prereqs.get(code, {}).get("advisory") or "No advisory listed"
+                    response += (
+                        f"**{code} prerequisites (required):** {prereq}\n"
+                        f"**{code} advisory (recommended):** {advisory}\n"
+                    )
                 response += (
                     "\n💡 Just make sure there are no schedule conflicts "
                     "between the sections you choose!"
@@ -891,8 +933,22 @@ class CourseSearcher:
                         break
             if not chosen:
                 chosen = results[0]
-            prereqs = chosen.get("prerequisites") or "No prerequisites listed"
-            response = f"**{chosen['course_code']}: {chosen['course_title']}**\n\nPrerequisites: {prereqs}"
+            prereqs = ""
+            advisory = ""
+            comments = ""
+
+            if chosen.get("sections"):
+                first_section = chosen["sections"][0]
+                prereqs = first_section.get("prereq") or ""
+                advisory = first_section.get("advisory") or ""
+                comments = first_section.get("comments") or ""
+
+            response = f"**{chosen['course_code']}: {chosen['course_title']}**\n\n"
+            response += f"**Prerequisites (required):** {prereqs or 'No prerequisites listed'}\n"
+            response += f"**Advisory (recommended, not required):** {advisory or 'No advisory listed'}"
+
+            if comments:
+                response += f"\n**Notes:** {comments}"
             if enable_logging:
                 self.log_interaction(user_query, parsed, response, start_ms, status="success")
             return response
@@ -1053,12 +1109,14 @@ class CourseSearcher:
                 "- - If the user asks for a new filter (e.g., \"what about evening?\") that is NOT already reflected in the provided JSON, do NOT claim you filtered. Ask a short clarifying question or instruct the user to run a new search with that filter."
                 "- If unclear, ask for clarification while being helpful.\n\n"
                 "PREREQUISITE CHAIN ANALYSIS\n"
-                "- If user asks \"Can I take X and Y together?\" or \"Can I take X with Y?\" check prerequisites:\n"
-                "  * Look at X's prerequisites - does it require Y? If yes, must take Y first.\n"
-                "  * Look at Y's prerequisites - does it require X? If yes, must take X first.\n"
-                "  * If one requires the other → NO, they cannot be taken together.\n"
-                "  * If neither requires the other → YES, they can be taken together (check for time conflicts too).\n"
-                "- Provide clear recommendation.\n\n"
+                "- If user asks \"Can I take X and Y together?\" or \"Can I take X with Y?\" check required prerequisites only:\n"
+                "  * Use 'prereq' as required prerequisites.\n"
+                "  * Use 'advisory' as recommended background only, not a blocker.\n"
+                "  * If X is listed inside Y's required prerequisites, then X must be completed first.\n"
+                "  * If Y is listed inside X's required prerequisites, then Y must be completed first.\n"
+                "  * Advisory alone should never be treated as a hard requirement.\n"
+                "  * If neither course requires the other, they can be taken together unless there is a schedule conflict.\n"
+                "- Provide a clear recommendation and distinguish required vs recommended.\n\n"
                 "OUTPUT STRUCTURE\n"
                 "A) One-line Summary:\n"
                 "- Use the EXACT count from the assistant context message. "
@@ -1074,7 +1132,10 @@ class CourseSearcher:
                 "    ### ONLINE SECTIONS\n"
                 "- Under each heading, list ALL matching sections or write \"No [category] sections found.\"\n"
                 "- For each section, show: Section number, Instructor, Days, Time, Location, Units\n"
-                "- Keep notes brief and only when present in the JSON.\n\n"
+                "- When present and relevant, also mention Notes, Prerequisites, and Advisory.\n"
+                "- Keep notes brief and only when present in the JSON.\n"
+                "- If a section has comments/notes, include them when relevant, especially for restrictions, learning communities, online access instructions, or special enrollment requirements.\n"
+                "- If a section has prerequisites or advisory and the user's question relates to requirements, mention them clearly and distinguish required prerequisites from recommended advisory.\n\n"
                 "C) Friendly Wrap-Up:\n"
                 "- Add 1-2 actionable \"Next steps\".\n\n"
                 "STYLE & TONE\n"
