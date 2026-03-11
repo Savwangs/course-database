@@ -34,6 +34,12 @@ def check_profanity(query: str) -> Tuple[str | None, str | None]:
 #  PII detection (SSN, obvious password phrasing)
 # ---------------------------------------------------------------------------
 
+# Solicitation: offering to share SSN/password (catches e.g. "Do you want my ssn")
+_PII_SOLICITATION_PATTERN = re.compile(
+    r"\b(want\s+my\s+ssn|my\s+ssn|give\s+you\s+my\s+ssn|here\s+is\s+my\s+ssn|share\s+my\s+ssn|give\s+my\s+ssn"
+    r"|want\s+my\s+password|give\s+you\s+my\s+password|here\s+is\s+my\s+password|share\s+my\s+password)\b",
+    re.IGNORECASE,
+)
 _SSN_PATTERN = re.compile(r"\b\d{3}[-\s]?\d{2}[-\s]?\d{4}\b")
 _PASSWORD_PHRASES = re.compile(
     r"\b(password|passwd|pwd)\s*[=:]\s*\S+|\bmy\s+password\s+is\s+\S+",
@@ -45,6 +51,8 @@ def check_pii(query: str) -> Tuple[str | None, str | None]:
     """Return (reason_code, message) if PII detected, else (None, None)."""
     if not query or not query.strip():
         return None, None
+    if _PII_SOLICITATION_PATTERN.search(query):
+        return "PII_DETECTED", "Please do not share SSN or other sensitive personal information. I can only help with DVC courses and transfer info."
     if _SSN_PATTERN.search(query):
         return "PII_DETECTED", "Please do not share SSN or other sensitive personal information. I can only help with DVC courses and transfer info."
     if _PASSWORD_PHRASES.search(query):

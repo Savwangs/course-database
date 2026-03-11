@@ -24,7 +24,7 @@ from sqlalchemy import text, bindparam
 
 OPENAI_TIMEOUT_SECONDS = float(os.getenv("OPENAI_TIMEOUT_SECONDS", "20"))
 
-COURSE_SECTIONS_TABLE = "course_sections_fall_2026"
+COURSE_SECTIONS_TABLE = os.getenv("COURSE_SECTIONS_TABLE", "course_sections_fall_2026")
 
 # ---------------------------------------------------------------------------
 #  Private helper functions (un-nested from the old search_courses)
@@ -503,9 +503,12 @@ class CourseSearcher:
         all_course_codes = sorted({r["course_code"].upper() for r in rows if r.get("course_code")})
         all_subject_prefixes = sorted({c.split("-")[0].upper() for c in all_course_codes if "-" in c})
 
-        # Hard fallback extraction so COMSC-110 always works
+        # Hard fallback extraction so COMSC-110 always works (hyphen form)
         hard_codes = set(re.findall(r"\b[A-Za-z]{3,5}\s*-\s*\d{2,3}[A-Za-z]?\b", user_query))
         hard_codes = {c.replace(" ", "").upper() for c in hard_codes}
+        # Space-separated form: "math 192", "COMSC 260" -> MATH-192, COMSC-260
+        space_matches = re.findall(r"\b([A-Za-z]{3,5})\s+(\d{2,3}[A-Za-z]?)\b", user_query)
+        hard_codes |= {f"{s.upper()}-{n.upper()}" for s, n in space_matches}
 
         hard_subjects = set(re.findall(r"\b[A-Za-z]{3,5}\b", user_query))
         hard_subjects = {s.upper() for s in hard_subjects if s.upper() in all_subject_prefixes}
