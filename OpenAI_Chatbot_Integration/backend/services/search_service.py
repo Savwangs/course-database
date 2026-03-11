@@ -68,29 +68,46 @@ def _normalize_status(s):
     return [str(s).lower()]
 
 
+# Title words to strip from instructor filter so "Professor Lo" matches DB "Lo, Lan"
+_INSTRUCTOR_TITLE_WORDS = frozenset({"professor", "prof", "dr", "instructor", "teacher"})
+
 def _normalize_instructor(i):
     if not i:
         return None
     if isinstance(i, str):
         parts, _ = _split_tokens(i)
-        return parts if parts else [i]
+        out = []
+        for part in parts:
+            words = [w.strip() for w in part.replace(",", " ").split() if w.strip()]
+            name_words = [w for w in words if w.lower() not in _INSTRUCTOR_TITLE_WORDS]
+            if name_words:
+                out.append(" ".join(name_words))
+        return out if out else [i]
     return [str(i)]
 
+
+# Accept plural time words so "mornings" / "Tuesdays" still match
+_TIME_WORDS = {"morning", "afternoon", "evening", "mornings", "afternoons", "evenings"}
+_TIME_NORM = {"mornings": "morning", "afternoons": "afternoon", "evenings": "evening"}
 
 def _normalize_time(t):
     if not t:
         return None, False
     if isinstance(t, str):
         parts, is_and = _split_tokens(t)
-        parts = [p for p in parts if p in {"morning", "afternoon", "evening"}]
-        return (parts if parts else [t]), is_and
+        normalized = []
+        for p in parts:
+            low = p.lower().strip()
+            if low in _TIME_WORDS:
+                normalized.append(_TIME_NORM.get(low, low))
+        return (normalized if normalized else [t]), is_and
     if isinstance(t, list):
         return [x for x in t], False
     return [str(t)], False
 
 
 def _normalize_day(d):
-    """Return (tokens_as_codes, require_all). Accepts names or codes."""
+    """Return (tokens_as_codes, require_all). Accepts names or codes (including plurals)."""
     if not d:
         return None, False
     name_to_code = {
@@ -100,9 +117,16 @@ def _normalize_day(d):
         "thursday": "Th", "thu": "Th", "thur": "Th", "thurs": "Th", "th": "Th",
         "friday": "F", "fri": "F", "f": "F",
     }
+    def _part_to_code(p):
+        key = p.lower().strip()
+        if key in name_to_code:
+            return name_to_code[key]
+        if key.endswith("s") and key[:-1] in name_to_code:
+            return name_to_code[key[:-1]]
+        return p
     if isinstance(d, str):
         parts, is_and = _split_tokens(d)
-        codes = [name_to_code.get(p, p) for p in parts]
+        codes = [_part_to_code(p) for p in parts]
         return codes, is_and
     if isinstance(d, list):
         return d, False
@@ -551,9 +575,9 @@ class CourseSearcher:
             "- If ALLOWED_TITLES is non-empty and the user mentions a course by name or title (e.g. 'differential equations', 'linear algebra'), map it to the corresponding course_code(s) using ALLOWED_TITLES (case and typo insensitive) and add those codes to course_codes.\n"
             "- Only choose course_codes from ALLOWED_COURSE_CODES. Only choose subjects from ALLOWED_SUBJECT_PREFIXES.\n"
             "- If the user asks for available, open, or open seats, set filters.status to 'open'. If they ask for closed or full sections, set filters.status to 'closed'.\n"
-            "- If the user mentions a professor, instructor, or teacher by name (e.g. 'Professor Lo', 'taught by Smith'), set filters.instructor to that person's name (last name or as given).\n"
-            "- Map day names to codes: Monday/Mon -> M, Tuesday/Tue -> T, Wednesday/Wed -> W, Thursday/Thu/Th -> Th, Friday/Fri -> F.\n"
-            "- Map time-of-day to filters.time: morning (before noon), afternoon (noon-5pm), evening (after 5pm).\n"
+            "- For filters.instructor: use ONLY the person's last name (or single name as given). Do not include titles like Professor, Prof, Dr, Instructor, Teacher. E.g. 'Professor Lo' or 'taught by Lo' -> 'Lo'; 'Dr. Smith' -> 'Smith'. This ensures matching against the database.\n"
+            "- For filters.day: output ONLY the single-letter codes M, T, W, Th, F. Map Monday/Mon/Mondays -> M, Tuesday/Tue/Tuesdays -> T, Wednesday/Wed/Wednesdays -> W, Thursday/Thu/Thursdays -> Th, Friday/Fri/Fridays -> F.\n"
+            "- For filters.time: output ONLY 'morning', 'afternoon', or 'evening' (singular). Map mornings -> morning, afternoons -> afternoon, evenings -> evening. Morning = before noon, afternoon = noon-5pm, evening = after 5pm.\n"
             "- If the user is asking about GE requirements, transfer requirements, or what they need for UC without specifying a campus or a specific course code, set needs_campus_clarification to true and leave course_codes and subjects empty.\n"
             "- If the user asks whether they can take two or more courses together, at the same time, or both (e.g. 'Can I take X and Y together?'), set intent to 'prerequisites' and prereq_sub_intent to 'can_take_together' and include all mentioned course codes.\n"
             "- If user asks about prerequisites (single course or general), set intent='prerequisites'; set prereq_sub_intent to null or 'single'.\n"
