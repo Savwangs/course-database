@@ -95,9 +95,15 @@ def check_prompt_injection(query: str) -> Tuple[str | None, str | None]:
 #  Language detection (English-only)
 # ---------------------------------------------------------------------------
 
+# Short queries (course codes, "math 192", "COMSC 260 professor Lo") are often
+# misclassified by langdetect; skip the check and let the rest of the pipeline handle them.
+_MIN_QUERY_LENGTH_FOR_LANG_CHECK = 40
+
 def check_language(query: str) -> Tuple[str | None, str | None]:
     """Return (reason_code, message) if non-English detected, else (None, None)."""
     if not query or not query.strip():
+        return None, None
+    if len(query.strip()) < _MIN_QUERY_LENGTH_FOR_LANG_CHECK:
         return None, None
     try:
         import langdetect
