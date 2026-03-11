@@ -254,11 +254,6 @@ def ask():
             log_guardrail(user_query, "input", code, 400)
             return error_response(code, msg, 400)
 
-        code, msg = input_guardrails.check_sensitive_offer(user_query)
-        if code:
-            log_guardrail(user_query, "input", code, 400)
-            return error_response(code, msg, 400)
-
         code, msg = input_guardrails.check_language(user_query)
         if code:
             log_guardrail(user_query, "input", code, 400)

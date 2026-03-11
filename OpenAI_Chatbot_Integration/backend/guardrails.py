@@ -53,42 +53,6 @@ def check_pii(query: str) -> Tuple[str | None, str | None]:
 
 
 # ---------------------------------------------------------------------------
-#  Sensitive-info offer (user offering to share SSN, password, etc.)
-#  Run before language so "Do you want me ssn" gets this message, not "English only".
-# ---------------------------------------------------------------------------
-
-_SENSITIVE_OFFER_PHRASES = (
-    "want my ssn",
-    "do you want me ssn",
-    "do you want my ssn",
-    "want me ssn",
-    "give you my ssn",
-    "share my ssn",
-    "give you my password",
-    "share my password",
-    "want my password",
-    "should i give you my",
-    "want me to give you my",
-    "give you my social",
-    "share my social",
-)
-
-
-def check_sensitive_offer(query: str) -> Tuple[str | None, str | None]:
-    """Return (reason_code, message) if user is offering to share SSN/password/sensitive info, else (None, None)."""
-    if not query or not query.strip():
-        return None, None
-    lower = query.lower()
-    for phrase in _SENSITIVE_OFFER_PHRASES:
-        if phrase in lower:
-            return (
-                "SENSITIVE_OFFER_DETECTED",
-                "Please do not share SSN, passwords, or other sensitive information. I can only help with DVC courses and transfer info.",
-            )
-    return None, None
-
-
-# ---------------------------------------------------------------------------
 #  Prompt injection (phrase blocklist)
 # ---------------------------------------------------------------------------
 

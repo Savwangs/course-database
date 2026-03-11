@@ -14,7 +14,6 @@ import re
 from datetime import datetime, timezone
 
 from backend.models import db
-from backend.models.course import CoursesCatalog
 from backend.models.interaction_log import InteractionLog
 
 import httpx
@@ -497,7 +496,6 @@ class CourseSearcher:
             "- Only choose course_codes from ALLOWED_COURSE_CODES.\n"
             "- Only choose subjects from ALLOWED_SUBJECT_PREFIXES.\n"
             "- If user asks about prerequisites, set intent='prerequisites'.\n"
-            "- For 'Can I take X and Y at the same time?', 'take X and Y together?', or 'take X with Y?', set intent='prerequisites' and include BOTH course codes in course_codes (e.g. COMSC-200 and COMSC-165).\n"
             "- If user asks about instructor, set intent='instructors'.\n"
             "- If the user is only asking about GE requirements, transfer, or which UC campus (e.g. 'What GE for UC?', 'What do I need for UC?'), return empty course_codes and empty subjects so the assistant can ask which campus.\n"
             "- Otherwise intent='find_sections'.\n"
@@ -800,47 +798,6 @@ class CourseSearcher:
     # ------------------------------------------------------------------
     #  Private helpers
     # ------------------------------------------------------------------
-
-    _PREREQ_FROM_INSTRUCTOR_RE = re.compile(
-        r"Prerequisite:\s*([^.]+?)(?:\s+Note:|\s+Advisory:|\s*$)",
-        re.IGNORECASE | re.DOTALL,
-    )
-
-    def _get_prerequisites_for_courses(self, course_codes, results):
-        """Build {course_code: prereq_string} from courses_catalog, with fallback from section instructor text."""
-        codes_upper = [c.upper() for c in course_codes]
-        out = {}
-
-        try:
-            rows = db.session.query(CoursesCatalog.course_code, CoursesCatalog.prerequisites).filter(
-                db.func.upper(CoursesCatalog.course_code).in_(codes_upper),
-            ).all()
-            for row in rows:
-                code_key = (row.course_code or "").upper()
-                if code_key and row.prerequisites:
-                    out[code_key] = (row.prerequisites or "").strip()
-        except Exception:
-            pass
-
-        for code in course_codes:
-            key = code.upper()
-            if key in out:
-                continue
-            for r in results:
-                if (r.get("course_code") or "").upper() == key:
-                    for sec in r.get("sections") or []:
-                        instr = (sec.get("instructor") or "") or ""
-                        m = self._PREREQ_FROM_INSTRUCTOR_RE.search(instr)
-                        if m:
-                            out[key] = m.group(1).strip()
-                            break
-                    if key not in out:
-                        out[key] = ""
-                    break
-            if key not in out:
-                out[key] = ""
-        return out
-
     def _handle_prerequisites(self, user_query, query_lower, parsed,
                             course_codes, subjects, enable_logging, start_ms):
         keywords_for_prereq = course_codes or subjects
@@ -854,7 +811,12 @@ class CourseSearcher:
         is_take_together = any(p in query_lower for p in can_take_together_patterns)
 
         if is_take_together and len(course_codes) >= 2:
-            course_prereqs = self._get_prerequisites_for_courses(course_codes, results)
+            course_prereqs = {}
+            for code in course_codes:
+                for r in results:
+                    if r["course_code"].upper() == code.upper():
+                        course_prereqs[code] = r.get("prerequisites") or ""
+                        break
 
             response = f"**Can you take {' and '.join(course_codes)} together?**\n\n"
             conflict_found = False
@@ -929,8 +891,7 @@ class CourseSearcher:
                         break
             if not chosen:
                 chosen = results[0]
-            prereq_map = self._get_prerequisites_for_courses([chosen["course_code"]], results)
-            prereqs = prereq_map.get(chosen["course_code"].upper()) or chosen.get("prerequisites") or "No prerequisites listed"
+            prereqs = chosen.get("prerequisites") or "No prerequisites listed"
             response = f"**{chosen['course_code']}: {chosen['course_title']}**\n\nPrerequisites: {prereqs}"
             if enable_logging:
                 self.log_interaction(user_query, parsed, response, start_ms, status="success")
@@ -1092,7 +1053,7 @@ class CourseSearcher:
                 "- - If the user asks for a new filter (e.g., \"what about evening?\") that is NOT already reflected in the provided JSON, do NOT claim you filtered. Ask a short clarifying question or instruct the user to run a new search with that filter."
                 "- If unclear, ask for clarification while being helpful.\n\n"
                 "PREREQUISITE CHAIN ANALYSIS\n"
-                "- If user asks \"Can I take X and Y together?\" or \"Can I take X with Y?\" check prerequisites using ONLY the data provided in the context; do not invent or assume prerequisites.\n"
+                "- If user asks \"Can I take X and Y together?\" or \"Can I take X with Y?\" check prerequisites:\n"
                 "  * Look at X's prerequisites - does it require Y? If yes, must take Y first.\n"
                 "  * Look at Y's prerequisites - does it require X? If yes, must take X first.\n"
                 "  * If one requires the other → NO, they cannot be taken together.\n"
@@ -1123,8 +1084,7 @@ class CourseSearcher:
                 "- Be conversational and remember what the user asked before.\n\n"
                 "POLICY BOUNDARIES\n"
                 "- Do not give medical, legal, or financial advice. If the user asks, say you can only help with DVC courses and transfer info.\n"
-                "- Do not provide relationship or emotional support advice. If the user needs such support, politely say you can only help with DVC courses and transfer and suggest they contact campus counseling or student services.\n"
-                "- Do not ask for or encourage sharing of SSN, passwords, or other sensitive information; if the user offers to share such information, politely decline and remind them not to share it.\n\n"
+                "- Do not provide relationship or emotional support advice. If the user needs such support, politely say you can only help with DVC courses and transfer and suggest they contact campus counseling or student services.\n\n"
                 "SCOPE / REDIRECT\n"
                 "- If the user's latest message is only about emotional support, relationship issues, GE requirements without a specific course, or is off-topic, respond with a brief redirect only (e.g. suggest DVC Counseling for personal/relationship issues, or \"Which campus? I can help with UCB, UCD, UCSD\" for GE/UC). Do not list any course sections and do not reuse section data from previous turns.\n\n"
                 "NEVER DO\n"

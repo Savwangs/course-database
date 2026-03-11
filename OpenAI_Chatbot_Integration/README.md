@@ -206,15 +206,6 @@ pip install gunicorn
 gunicorn -w 4 -b 0.0.0.0:5000 app:app
 ```
 
-### Populating courses_catalog for prerequisites
-
-Accurate answers for "What are the prerequisites for X?" and "Can I take X and Y at the same time?" require the **courses_catalog** table to be populated with course-level data, including the **prerequisites** column. The chatbot reads this table when answering prerequisite questions; `course_sections` alone does not contain prerequisites.
-
-- **Source data:** Use the same source as your section data (e.g. `Full_STEM_DataBase.json` in the repo root, or per-course JSON files under `dvc_scraper/dvc_json/`). Each course object has a top-level `prerequisites` field (e.g. `"COMSC-165 or equivalent"`).
-- **ETL/script:** Add a step in your deploy or data pipeline that upserts rows into `courses_catalog` with at least `course_code`, `title`, and `prerequisites`. Keep this in sync when you refresh section data so new or updated courses have correct prerequisite info.
-
-If `courses_catalog` is empty for a course, the assistant will try to infer prerequisites from section instructor notes (e.g. "Prerequisite: COMSC-165 or equivalent" in the instructor string) when available; the canonical source should be `courses_catalog`.
-
 ## Technologies Used
 
 - **Backend**: Flask (Python)
