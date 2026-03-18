@@ -659,7 +659,31 @@ class CourseSearcher:
         else:
             enhanced_query = user_query
 
-        parsed = self.parse_query(user_query, temperature=parser_temperature)
+        # For short follow-up queries, inject the last mentioned course so
+        # parse_query can extract it even from phrases like "how about tuesdays"
+        followup_triggers = (
+            "what about", "how about", "any on", "show on",
+            "those on", "and on", "but on", "evening", "morning",
+            "afternoon", "tuesday", "wednesday", "thursday",
+            "friday", "monday", "online", "in-person", "hybrid",
+            "open", "closed", "sections", "classes"
+        )
+        query_to_parse = user_query
+        if (
+            is_followup
+            and len(user_query.strip().split()) <= 8
+            and any(t in user_query.lower() for t in followup_triggers)
+        ):
+            last_code = None
+            for msg in reversed(conversation_history[-6:]):
+                codes = re.findall(r"[A-Z]{3,5}-\d{2,3}[A-Za-z]?", msg.get("content", "").upper())
+                if codes:
+                    last_code = codes[0]
+                    break
+            if last_code:
+                query_to_parse = f"{last_code} {user_query}"
+
+        parsed = self.parse_query(query_to_parse, temperature=parser_temperature)
 
         course_codes = parsed.get("course_codes", [])
         subjects = parsed.get("subjects", [])
@@ -1016,7 +1040,7 @@ class CourseSearcher:
         else:
             is_subject_search = "-" not in keyword
             keyword_display = keyword
-        truncate_limit = 8000 if is_subject_search else 4000
+        truncate_limit = 12000 if is_subject_search else 8000
 
         filter_bits = []
         if day_filter:
