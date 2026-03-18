@@ -11,6 +11,7 @@ Encapsulates:
 import json
 import time
 import re
+import functools
 from datetime import datetime, timezone
 
 from backend.models import db
@@ -140,25 +141,58 @@ def _time_bucket(hour: int) -> str:
         return "afternoon"
     return "evening"
 
-
 def _has_day_code(code: str, days_str: str) -> bool:
-    """Check whether *code* (e.g. 'Th', 'M') appears in *days_str*."""
-    if code == "Th":
-        return "Th" in days_str
-    return code in days_str
-
+    """Check whether *code* appears as a whole token in *days_str*.
+    Handles space-separated format like 'T Th', 'M W F', and rejects 'OFF'.
+    """
+    if not days_str or days_str.strip().upper() == "OFF":
+        return False
+    tokens = days_str.strip().split()
+    return code in tokens
 
 def _parse_start_hour(time_str: str) -> int | None:
-    """Extract the starting hour (24-h) from a time string like '6:30PM - 7:55PM'."""
+    """Extract starting hour (24h) from e.g. '11:10AM - 12:35PM'."""
     try:
-        start_raw = time_str.split("-")[0].strip()
-        if "PM" in start_raw and not start_raw.startswith("12"):
-            return int(start_raw.split(":")[0]) + 12
-        if "AM" in start_raw and start_raw.startswith("12"):
-            return 0
-        return int(start_raw.split(":")[0])
+        from datetime import datetime as dt
+        start_raw = time_str.split("-")[0].strip().replace(" ", "")
+        for fmt in ("%I:%M%p", "%I%p"):
+            try:
+                return dt.strptime(start_raw, fmt).hour
+            except ValueError:
+                continue
+        return None
     except Exception:
         return None
+
+@functools.lru_cache(maxsize=1)
+def _load_allow_lists():
+    """Load course codes and catalog titles once and cache in memory."""
+    rows = db.session.execute(text(f"""
+        SELECT DISTINCT course_code
+        FROM {COURSE_SECTIONS_TABLE}
+        WHERE course_code IS NOT NULL AND course_code <> ''
+    """)).mappings().all()
+
+    all_course_codes = sorted({r["course_code"].upper() for r in rows if r.get("course_code")})
+    all_subject_prefixes = sorted({c.split("-")[0].upper() for c in all_course_codes if "-" in c})
+
+    try:
+        catalog_rows = db.session.execute(text(f"""
+            SELECT course_code, title
+            FROM {COURSE_CATALOG_TABLE}
+            WHERE course_code IS NOT NULL AND title IS NOT NULL AND title <> ''
+        """)).mappings().all()
+        allowed_titles = [
+            {
+                "course_code": (r.get("course_code") or "").upper(),
+                "course_title": (r.get("title") or "").strip(),
+            }
+            for r in catalog_rows if r.get("course_code")
+        ]
+    except Exception:
+        allowed_titles = []
+
+    return all_course_codes, all_subject_prefixes, allowed_titles
 
 
 # ---------------------------------------------------------------------------
@@ -249,17 +283,12 @@ class CourseSearcher:
         def _normalize_code(s: str) -> str:
             return re.sub(r"[^A-Za-z0-9]", "", (s or "")).upper()
 
-        # ...
-
-        is_sqlite = db.engine.dialect.name == "sqlite"
+        
 
         if is_course_code_search:
             wanted_norm = [_normalize_code(k) for k in keywords]
-
-            if is_sqlite:
-                # SQLite: no regexp_replace; normalize with REPLACE(UPPER(...))
-                sql = text(f"""
-                    SELECT
+            sql = text(f"""
+                SELECT
                     cs.course_code,
                     cs.section_number,
                     cs.instructor,
@@ -269,38 +298,20 @@ class CourseSearcher:
                     cs.units,
                     cs.comments,
                     cs.prereq,
-                    cs.advisory
-                    FROM {COURSE_SECTIONS_TABLE} cs
-                    WHERE UPPER(REPLACE(REPLACE(REPLACE(REPLACE(cs.course_code, '-', ''), ' ', ''), '_', ''), '.', '')) IN :codes_norm
-                    ORDER BY cs.course_code, cs.section_number
-                """).bindparams(bindparam("codes_norm", expanding=True))
-            else:
-                sql = text(f"""
-                    SELECT
-                    cs.course_code,
-                    cs.section_number,
-                    cs.instructor,
-                    cs.schedule,
-                    cs.modality,
-                    cs.seat_availability,
-                    cs.units,
-                    cs.comments,
-                    cs.prereq,
-                    cs.advisory
-                    FROM {COURSE_SECTIONS_TABLE} cs
-                    WHERE upper(regexp_replace(cs.course_code, '[^A-Za-z0-9]', '', 'g')) IN :codes_norm
-                    ORDER BY cs.course_code, cs.section_number
-                """).bindparams(bindparam("codes_norm", expanding=True))
-
+                    cs.advisory,
+                    cc.title AS course_title
+                FROM {COURSE_SECTIONS_TABLE} cs
+                LEFT JOIN {COURSE_CATALOG_TABLE} cc
+                    ON upper(cs.course_code) = upper(cc.course_code)
+                WHERE upper(regexp_replace(cs.course_code, '[^A-Za-z0-9]', '', 'g')) IN :codes_norm
+                ORDER BY cs.course_code, cs.section_number
+            """).bindparams(bindparam("codes_norm", expanding=True))
             params = {"codes_norm": wanted_norm}
 
         else:
             subjects_upper = [k.upper() for k in keywords]
-            if is_sqlite:
-                # SQLite: no split_part; use LIKE for subject prefix
-                placeholders = ", ".join([f"cs.course_code LIKE :s{i}" for i in range(len(subjects_upper))])
-                sql = text(f"""
-                    SELECT
+            sql = text(f"""
+                SELECT
                     cs.course_code,
                     cs.section_number,
                     cs.instructor,
@@ -310,30 +321,15 @@ class CourseSearcher:
                     cs.units,
                     cs.comments,
                     cs.prereq,
-                    cs.advisory
-                    FROM {COURSE_SECTIONS_TABLE} cs
-                    WHERE {placeholders}
-                    ORDER BY cs.course_code, cs.section_number
-                """)
-                params = {f"s{i}": f"{s}-%" for i, s in enumerate(subjects_upper)}
-            else:
-                sql = text(f"""
-                    SELECT
-                    cs.course_code,
-                    cs.section_number,
-                    cs.instructor,
-                    cs.schedule,
-                    cs.modality,
-                    cs.seat_availability,
-                    cs.units,
-                    cs.comments,
-                    cs.prereq,
-                    cs.advisory
-                    FROM {COURSE_SECTIONS_TABLE} cs
-                    WHERE split_part(cs.course_code, '-', 1) IN :subjects
-                    ORDER BY cs.course_code, cs.section_number
-                """).bindparams(bindparam("subjects", expanding=True))
-                params = {"subjects": subjects_upper}
+                    cs.advisory,
+                    cc.title AS course_title
+                FROM {COURSE_SECTIONS_TABLE} cs
+                LEFT JOIN {COURSE_CATALOG_TABLE} cc
+                    ON upper(cs.course_code) = upper(cc.course_code)
+                WHERE split_part(cs.course_code, '-', 1) IN :subjects
+                ORDER BY cs.course_code, cs.section_number
+            """).bindparams(bindparam("subjects", expanding=True))
+            params = {"subjects": subjects_upper}
 
         rows = db.session.execute(sql, params).mappings().all()
         if not rows:
@@ -353,7 +349,7 @@ class CourseSearcher:
             if code not in by_course:
                 by_course[code] = {
                     "course_code": code,
-                    "course_title": "",
+                    "course_title": r.get("course_title") or "",
                     "sections": [],
                 }
 
@@ -455,18 +451,19 @@ class CourseSearcher:
 
                 # DAY/TIME matching (meetings loop) + compound support
                 def _meeting_matches_day_time(m):
-                    days = (m.get("days") or "")
-                    time_str = (m.get("time") or "")
+                    days = (m.get("days") or "").strip()
+                    time_str = (m.get("time") or "").strip()
+
+                    # Async/online sections have no physical day or time
+                    is_async = days.upper() == "OFF" or time_str.lower() == "asynchronous"
 
                     # Compound: (day+time) OR (day+time)
                     if compound_conditions:
+                        if is_async:
+                            return False
                         for required_day, required_time in compound_conditions:
                             if not _has_day_code(required_day, days):
                                 continue
-
-                            if not time_str or str(time_str).lower() == "asynchronous":
-                                continue
-
                             hour = _parse_start_hour(time_str)
                             if hour is None:
                                 continue
@@ -477,14 +474,16 @@ class CourseSearcher:
                     # Non-compound: independent day/time filters
                     day_ok = True
                     if day_terms:
-                        if day_all:
+                        if is_async:
+                            day_ok = False
+                        elif day_all:
                             day_ok = all(_has_day_code(c, days) for c in day_terms)
                         else:
                             day_ok = any(_has_day_code(c, days) for c in day_terms)
 
                     time_ok = True
                     if time_terms:
-                        if not time_str or str(time_str).lower() == "asynchronous":
+                        if is_async:
                             time_ok = False
                         else:
                             hour = _parse_start_hour(time_str)
@@ -518,31 +517,8 @@ class CourseSearcher:
     def parse_query(self, user_query: str, *, temperature: float = 0.0) -> dict:
         """LLM-first parser -> course_codes, subjects, intent, filters (constrained to DB)."""
 
-        # Build allow-lists from course_sections only
-        rows = db.session.execute(text(f"""
-            SELECT DISTINCT course_code
-            FROM {COURSE_SECTIONS_TABLE}
-            WHERE course_code IS NOT NULL AND course_code <> ''
-        """)).mappings().all()
-
-        all_course_codes = sorted({r["course_code"].upper() for r in rows if r.get("course_code")})
-        all_subject_prefixes = sorted({c.split("-")[0].upper() for c in all_course_codes if "-" in c})
-
-        # Optional: load code+title for title-to-code mapping (catalog may not exist in Cloud SQL)
-        allowed_titles_payload = []
-        if COURSE_CATALOG_TABLE:
-            try:
-                catalog_rows = db.session.execute(text(f"""
-                    SELECT course_code, title
-                    FROM {COURSE_CATALOG_TABLE}
-                    WHERE course_code IS NOT NULL AND title IS NOT NULL AND title <> ''
-                """)).mappings().all()
-                allowed_titles_payload = [
-                    {"course_code": (r.get("course_code") or "").upper(), "course_title": (r.get("title") or "").strip()}
-                    for r in catalog_rows if r.get("course_code")
-                ]
-            except Exception:
-                allowed_titles_payload = []
+        # Load allow-lists from cache (only hits DB once per process lifetime)
+        all_course_codes, all_subject_prefixes, allowed_titles_payload = _load_allow_lists()
 
         # Hard fallback extraction so COMSC-110 always works (hyphen form)
         hard_codes = set(re.findall(r"\b[A-Za-z]{3,5}\s*-\s*\d{2,3}[A-Za-z]?\b", user_query))
