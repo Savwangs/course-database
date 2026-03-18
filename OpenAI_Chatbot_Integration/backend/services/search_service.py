@@ -433,7 +433,6 @@ class CourseSearcher:
                 if status_norm and not any(s in stat for s in status_norm):
                     continue
 
-                # INSTRUCTOR (token AND inside each query; OR across queries)
                 if instr_norm:
                     instructor = (section.get("instructor") or "").lower()
                     matched = False
@@ -443,7 +442,10 @@ class CourseSearcher:
                             for t in str(name_query).replace(",", " ").split()
                             if t.strip()
                         ]
-                        if q_tokens and all(t in instructor for t in q_tokens):
+                        if q_tokens and all(
+                            re.search(r'\b' + re.escape(t) + r'\b', instructor)
+                            for t in q_tokens
+                        ):
                             matched = True
                             break
                     if not matched:
@@ -737,29 +739,19 @@ class CourseSearcher:
         )
 
         allowed_codes = {c["course_code"].upper() for c in results}
-        upper_resp = response.upper()
 
-        # If the model mentions a course code not in allowed list (basic heuristic)
-        mentioned = set(re.findall(r"[A-Z]{3,5}-\d{2,3}[A-Z]?", upper_resp))
-        unexpected = {c for c in mentioned if c not in allowed_codes}
+        # Only check codes the user explicitly asked for — ignore codes mentioned
+        # inside prereq/notes text of the response
+        requested_in_query = set(re.findall(r"[A-Za-z]{3,5}-\d{2,3}[A-Za-z]?", user_query, re.IGNORECASE))
+        requested_in_query = {c.replace(" ", "").upper() for c in requested_in_query}
+        asked_but_missing = requested_in_query - allowed_codes
 
-        if unexpected:
-            # If user clearly asked for a specific course that's in unexpected, they likely got no/few results for it
-            requested_in_query = set(re.findall(r"[A-Za-z]{3,5}-\d{2,3}[A-Za-z]?", user_query, re.IGNORECASE))
-            requested_in_query = {c.replace(" ", "").upper() for c in requested_in_query}
-            asked_but_missing = requested_in_query & unexpected
-            if asked_but_missing:
-                code_display = ", ".join(sorted(asked_but_missing))
-                safe = (
-                    f"I couldn't find any courses for **{code_display}**.\n"
-                    "Please check the course code or try a broader search (e.g. \"Show me MATH sections\")."
-                )
-            else:
-                safe = (
-                    "I can only summarize the sections returned from the database for your request, "
-                    "and I may have referenced something not in the results. "
-                    "Can you confirm the exact course code you want (e.g., COMSC-110)?"
-                )
+        if asked_but_missing:
+            code_display = ", ".join(sorted(asked_but_missing))
+            safe = (
+                f"I couldn't find any sections for **{code_display}**.\n"
+                "Please check the course code or try a broader search (e.g. \"Show me MATH sections\")."
+            )
             if enable_logging:
                 self.log_interaction(user_query, parsed, safe, start_ms, status="output_guardrail_triggered")
             return safe
