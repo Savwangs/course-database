@@ -1040,7 +1040,7 @@ class CourseSearcher:
         else:
             is_subject_search = "-" not in keyword
             keyword_display = keyword
-        truncate_limit = 12000 if is_subject_search else 8000
+        truncate_limit = 20000 if is_subject_search else 8000
 
         filter_bits = []
         if day_filter:
