@@ -664,7 +664,7 @@ class CourseSearcher:
         followup_triggers = (
             "what about", "how about", "any on", "show on",
             "those on", "and on", "but on", "evening", "morning",
-            "afternoon", "tuesday", "wednesday", "thursday",
+            "afternoon", "tuesday", "wednesday", "only", "thursday",
             "friday", "monday", "online", "in-person", "hybrid",
             "open", "closed", "sections", "classes"
         )
@@ -681,7 +681,7 @@ class CourseSearcher:
         if (
             is_followup
             and not user_has_course
-            and len(user_query.strip().split()) <= 8
+            and len(user_query.strip().split()) <= 12
             and any(t in user_query.lower() for t in followup_triggers)
         ):
             for msg in reversed(conversation_history[-6:]):
@@ -698,7 +698,9 @@ class CourseSearcher:
         # (meaning the user's query has its own course intent), re-parse the original alone
         if query_to_parse != user_query:
             injected_codes = set(parsed.get("course_codes", []))
-            only_has_injected = last_code and injected_codes == {last_code}
+            parsed_filters = parsed.get("filters", {}) or {}
+            has_new_filter = any(v for v in parsed_filters.values() if v)
+            only_has_injected = last_code and injected_codes == {last_code} and not has_new_filter
             nothing_found = not injected_codes and not parsed.get("subjects")
             if nothing_found or only_has_injected:
                 parsed = self.parse_query(user_query, temperature=parser_temperature)
