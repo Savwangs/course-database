@@ -550,7 +550,7 @@ class CourseSearcher:
             "Rules:\n"
             "- Extract course_codes and subjects ONLY from the current user message. Do not use course codes or subjects from example prompts or from previous assistant or user messages.\n"
             "- Extract every course the user refers to, with or without a hyphen (e.g. MATH-192, math 192, COMSC 260). Normalize to SUBJECT-NUMBER and include only codes that appear in ALLOWED_COURSE_CODES.\n"
-            "- If ALLOWED_TITLES is non-empty and the user mentions a course by name or title (e.g. 'differential equations', 'linear algebra'), map it to the corresponding course_code(s) using ALLOWED_TITLES (case and typo insensitive) and add those codes to course_codes. Pay close attention to ordinals and numbers in course names (e.g. 'Calculus 1' vs 'Calculus 2', 'English 1' vs 'English 2') — match the exact level the user specified, do not substitute a similar course at a different level.\n"
+            "- If ALLOWED_TITLES is non-empty and the user mentions a course by name or title (e.g. 'differential equations', 'linear algebra'), map it to the corresponding course_code(s) using ALLOWED_TITLES ONLY — do NOT use outside knowledge of what course numbers typically mean. Search ALLOWED_TITLES for the best fuzzy match to what the user said, paying close attention to ordinals and numbers (e.g. 'Calculus 1' vs 'Calculus 2') — match the exact level specified. If no match is found in ALLOWED_TITLES, leave course_codes empty rather than guessing. Note that course titles at this college may differ from common names (e.g. Calculus II may be titled 'Analytic Geometry and Calculus II'), so always defer to ALLOWED_TITLES.\n"
             "- Only choose course_codes from ALLOWED_COURSE_CODES. Only choose subjects from ALLOWED_SUBJECT_PREFIXES.\n"
             "- If the user asks for available, open, or open seats, set filters.status to 'open'. If they ask for closed or full sections, set filters.status to 'closed'.\n"
             "- For filters.instructor: use ONLY the person's last name (or single name as given). Do not include titles like Professor, Prof, Dr, Instructor, Teacher. E.g. 'Professor Lo' or 'taught by Lo' -> 'Lo'; 'Dr. Smith' -> 'Smith'. This ensures matching against the database.\n"
@@ -693,6 +693,10 @@ class CourseSearcher:
                 query_to_parse = f"{last_code} {user_query}"
 
         parsed = self.parse_query(query_to_parse, temperature=parser_temperature)
+
+        # If injection produced nothing useful, re-parse the original query alone
+        if query_to_parse != user_query and not parsed.get("course_codes") and not parsed.get("subjects"):
+            parsed = self.parse_query(user_query, temperature=parser_temperature)
 
         course_codes = parsed.get("course_codes", [])
         subjects = parsed.get("subjects", [])
