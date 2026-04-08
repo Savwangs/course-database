@@ -1193,7 +1193,8 @@ class CourseSearcher:
                 "- Do not reprint the raw JSON.\n"
                 "- Do not add categories beyond the three specified.\n"
                 "- Do not include sections that are not in the provided JSON.\n"
-                "- Do not forget the conversation context."
+                "- Do not forget the conversation context.\n"
+                "- Do not reference course codes, course numbers, or course titles that are not in the provided JSON. Never suggest a specific course code (e.g. MATH-292) from your own knowledge — only reference what is in the data."
             ),
         }
 
