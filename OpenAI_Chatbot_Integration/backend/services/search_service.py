@@ -550,7 +550,7 @@ class CourseSearcher:
             "Rules:\n"
             "- Extract course_codes and subjects ONLY from the current user message. Do not use course codes or subjects from example prompts or from previous assistant or user messages.\n"
             "- Extract every course the user refers to, with or without a hyphen (e.g. MATH-192, math 192, COMSC 260). Normalize to SUBJECT-NUMBER and include only codes that appear in ALLOWED_COURSE_CODES.\n"
-            "- If ALLOWED_TITLES is non-empty and the user mentions a course by name or title (e.g. 'differential equations', 'linear algebra'), map it to the corresponding course_code(s) using ALLOWED_TITLES (case and typo insensitive) and add those codes to course_codes.\n"
+            "- If ALLOWED_TITLES is non-empty and the user mentions a course by name or title (e.g. 'differential equations', 'linear algebra'), map it to the corresponding course_code(s) using ALLOWED_TITLES (case and typo insensitive) and add those codes to course_codes. Pay close attention to ordinals and numbers in course names (e.g. 'Calculus 1' vs 'Calculus 2', 'English 1' vs 'English 2') — match the exact level the user specified, do not substitute a similar course at a different level.\n"
             "- Only choose course_codes from ALLOWED_COURSE_CODES. Only choose subjects from ALLOWED_SUBJECT_PREFIXES.\n"
             "- If the user asks for available, open, or open seats, set filters.status to 'open'. If they ask for closed or full sections, set filters.status to 'closed'.\n"
             "- For filters.instructor: use ONLY the person's last name (or single name as given). Do not include titles like Professor, Prof, Dr, Instructor, Teacher. E.g. 'Professor Lo' or 'taught by Lo' -> 'Lo'; 'Dr. Smith' -> 'Smith'. This ensures matching against the database.\n"
@@ -1016,12 +1016,14 @@ class CourseSearcher:
                 '- "Any **online PHYS** this **evening**?"'
             )
         else:
+            filter_desc = f" in the **{time_filter}**" if time_filter and not day_filter else ""
+            filter_desc += f" on **{day_filter}**" if day_filter and not time_filter else ""
+            filter_desc += f" on **{day_filter}** in the **{time_filter}**" if day_filter and time_filter else ""
             response = (
-                f"I found **no sections** with your current filters (**{applied_str}**) for "
-                f"**{kw_display}**.\n\n"
+                f"There are no **{kw_display}** sections{filter_desc} that match your filters (**{applied_str}**).\n\n"
                 "Try relaxing one or more filters. For example:\n"
-                "- Remove the **instructor** name to see all sections\n"
                 "- Try a different **day** or **time** window\n"
+                "- Remove the **instructor** name to see all sections\n"
                 "- Include **hybrid** or **online** if you only searched in-person\n\n"
                 "Want me to show **all available sections** for this course/subject?"
             )
