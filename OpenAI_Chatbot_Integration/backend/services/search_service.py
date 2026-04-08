@@ -669,8 +669,17 @@ class CourseSearcher:
             "open", "closed", "sections", "classes"
         )
         query_to_parse = user_query
+        all_subject_prefixes = _load_allow_lists()[1]
+        # Only inject last course code if the user's message has no course reference of its own
+        user_has_course = bool(
+            re.search(r"\b[A-Za-z]{3,5}\s*-\s*\d{2,3}[A-Za-z]?\b", user_query)      # COMSC-110
+            or re.search(r"\b[A-Za-z]{3,5}\s+\d{2,3}[A-Za-z]?\b", user_query)        # COMSC 110
+            or any(w.upper() in all_subject_prefixes for w in user_query.split()       # bare subject
+                   if len(w) >= 3)
+        )
         if (
             is_followup
+            and not user_has_course
             and len(user_query.strip().split()) <= 8
             and any(t in user_query.lower() for t in followup_triggers)
         ):
