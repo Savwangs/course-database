@@ -669,6 +669,7 @@ class CourseSearcher:
             "open", "closed", "sections", "classes"
         )
         query_to_parse = user_query
+        last_code = None
         all_subject_prefixes = _load_allow_lists()[1]
         # Only inject last course code if the user's message has no course reference of its own
         user_has_course = bool(
@@ -683,7 +684,6 @@ class CourseSearcher:
             and len(user_query.strip().split()) <= 8
             and any(t in user_query.lower() for t in followup_triggers)
         ):
-            last_code = None
             for msg in reversed(conversation_history[-6:]):
                 codes = re.findall(r"[A-Z]{3,5}-\d{2,3}[A-Za-z]?", msg.get("content", "").upper())
                 if codes:
@@ -694,9 +694,14 @@ class CourseSearcher:
 
         parsed = self.parse_query(query_to_parse, temperature=parser_temperature)
 
-        # If injection produced nothing useful, re-parse the original query alone
-        if query_to_parse != user_query and not parsed.get("course_codes") and not parsed.get("subjects"):
-            parsed = self.parse_query(user_query, temperature=parser_temperature)
+        # If injection produced nothing useful, or only returned the injected code itself
+        # (meaning the user's query has its own course intent), re-parse the original alone
+        if query_to_parse != user_query:
+            injected_codes = set(parsed.get("course_codes", []))
+            only_has_injected = last_code and injected_codes == {last_code}
+            nothing_found = not injected_codes and not parsed.get("subjects")
+            if nothing_found or only_has_injected:
+                parsed = self.parse_query(user_query, temperature=parser_temperature)
 
         course_codes = parsed.get("course_codes", [])
         subjects = parsed.get("subjects", [])
