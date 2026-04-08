@@ -652,8 +652,8 @@ class CourseSearcher:
         is_followup = len(conversation_history) > 0
         if is_followup:
             context_summary = "\n".join([
-                f"{'User' if msg['role'] == 'user' else 'Assistant'}: {msg['content'][:200]}..."
-                for msg in conversation_history[-4:]
+                f"{'User' if msg['role'] == 'user' else 'Assistant'}: {msg['content'][:300]}..."
+                for msg in conversation_history[-6:]
             ])
             enhanced_query = f"Previous conversation context:\n{context_summary}\n\nCurrent question: {user_query}"
         else:
@@ -1040,7 +1040,7 @@ class CourseSearcher:
         else:
             is_subject_search = "-" not in keyword
             keyword_display = keyword
-        truncate_limit = 20000 if is_subject_search else 8000
+        truncate_limit = 60000 if is_subject_search else 30000
 
         filter_bits = []
         if day_filter:
@@ -1084,12 +1084,21 @@ class CourseSearcher:
             truncated = False
 
         sections_to_send = sum(len(c.get("sections", [])) for c in results_to_send)
+        total_sections = sum(len(c.get("sections", [])) for c in results)
 
-        context += (
-            f"There are exactly {sections_to_send} section(s) in the JSON below for '{keyword_display}'.\n"
-            f"IMPORTANT: In your one-line summary you MUST say exactly 'Found {sections_to_send} section(s)' "
-            f"(or 'Found {sections_to_send} matching section(s)')—the count must match the number of sections you list.\n"
-        )
+        if truncated:
+            count_note = (
+                f"NOTE: Results were truncated. Showing {sections_to_send} of {total_sections} total section(s) "
+                f"for '{keyword_display}'. Tell the user results were truncated and suggest narrowing filters.\n"
+            )
+        else:
+            count_note = (
+                f"There are exactly {sections_to_send} section(s) in the JSON below for '{keyword_display}'.\n"
+                f"IMPORTANT: In your one-line summary you MUST say exactly 'Found {sections_to_send} section(s)' "
+                f"(or 'Found {sections_to_send} matching section(s)')—the count must match the number of sections you list.\n"
+            )
+
+        context += count_note
 
         if filter_bits:
             context += "Filters applied: " + ", ".join(filter_bits) + "\n"
@@ -1175,7 +1184,7 @@ class CourseSearcher:
 
         messages = [system_message]
         if conversation_history:
-            messages.extend(conversation_history[-4:])
+            messages.extend(conversation_history[-6:])
         messages.append({"role": "user", "content": user_query})
         messages.append({"role": "user", "content": context})
 
