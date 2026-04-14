@@ -247,6 +247,25 @@ def _resolve_title_to_codes(user_query: str, allowed_titles: list[dict]) -> list
 
     return matched_codes
 
+
+@functools.lru_cache(maxsize=1)
+def _get_catalog_title_col() -> str:
+    """Detect whether the catalog table uses 'course_title' or 'title' column.
+
+    Tries 'course_title' first (preferred), falls back to 'title'.
+    Result is cached so the probe query only runs once per process.
+    """
+    for col in ("course_title", "title"):
+        try:
+            db.session.execute(
+                text(f"SELECT {col} FROM {COURSE_CATALOG_TABLE} LIMIT 0")
+            )
+            return col
+        except Exception:
+            db.session.rollback()
+    return "course_title"  # shouldn't reach here
+
+
 @functools.lru_cache(maxsize=1)
 def _load_allow_lists():
     """Load course codes and catalog titles once and cache in memory."""
@@ -260,10 +279,13 @@ def _load_allow_lists():
     all_subject_prefixes = sorted({c.split("-")[0].upper() for c in all_course_codes if "-" in c})
 
     try:
+        title_col = _get_catalog_title_col()
         catalog_rows = db.session.execute(text(f"""
-            SELECT course_code, course_title
+            SELECT course_code, {title_col} AS course_title
             FROM {COURSE_CATALOG_TABLE}
-            WHERE course_code IS NOT NULL AND course_title IS NOT NULL AND course_title <> ''
+            WHERE course_code IS NOT NULL
+              AND {title_col} IS NOT NULL
+              AND {title_col} <> ''
         """)).mappings().all()
         allowed_titles = [
             {
@@ -368,6 +390,8 @@ class CourseSearcher:
 
         
 
+        title_col = _get_catalog_title_col()
+
         if is_course_code_search:
             wanted_norm = [_normalize_code(k) for k in keywords]
             sql = text(f"""
@@ -382,7 +406,7 @@ class CourseSearcher:
                     cs.comments,
                     cs.prereq,
                     cs.advisory,
-                    cc.course_title
+                    cc.{title_col} AS course_title
                 FROM {COURSE_SECTIONS_TABLE} cs
                 LEFT JOIN {COURSE_CATALOG_TABLE} cc
                     ON upper(cs.course_code) = upper(cc.course_code)
@@ -405,7 +429,7 @@ class CourseSearcher:
                     cs.comments,
                     cs.prereq,
                     cs.advisory,
-                    cc.course_title
+                    cc.{title_col} AS course_title
                 FROM {COURSE_SECTIONS_TABLE} cs
                 LEFT JOIN {COURSE_CATALOG_TABLE} cc
                     ON upper(cs.course_code) = upper(cc.course_code)
