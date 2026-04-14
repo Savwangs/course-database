@@ -165,6 +165,32 @@ def _parse_start_hour(time_str: str) -> int | None:
     except Exception:
         return None
 
+_NUM_TO_ROMAN = {"1": "i", "2": "ii", "3": "iii", "4": "iv", "5": "v",
+                 "6": "vi", "7": "vii", "8": "viii", "9": "ix", "10": "x"}
+_ROMAN_TO_NUM = {v: k for k, v in _NUM_TO_ROMAN.items()}
+
+
+def _normalize_ordinals(text: str) -> str:
+    """Normalize standalone Arabic numerals to Roman numerals and vice-versa.
+
+    'calculus 2' → 'calculus ii', 'calculus ii' → 'calculus ii' (unchanged),
+    'analytic geometry and calculus ii' stays as-is.
+    Both directions are applied so the query and the title map converge.
+    """
+    tokens = text.split()
+    out = []
+    for tok in tokens:
+        low = tok.lower().strip(".,;:")
+        if low in _NUM_TO_ROMAN:
+            out.append(_NUM_TO_ROMAN[low])
+        elif low in _ROMAN_TO_NUM:
+            # keep the roman form (already normalized)
+            out.append(low)
+        else:
+            out.append(tok.lower())
+    return " ".join(out)
+
+
 def _resolve_title_to_codes(user_query: str, allowed_titles: list[dict]) -> list[str]:
     """Match course titles mentioned in the query to course codes using Python fuzzy matching."""
     if not allowed_titles:
@@ -173,11 +199,17 @@ def _resolve_title_to_codes(user_query: str, allowed_titles: list[dict]) -> list
     query_lower = user_query.lower()
     matched_codes = []
 
-    title_map = {
-        entry["course_title"].lower().strip(): entry["course_code"].upper()
-        for entry in allowed_titles
-        if entry.get("course_title") and entry.get("course_code")
-    }
+    # Build title map with ordinal-normalized keys so "Calculus II" == "Calculus 2"
+    title_map: dict[str, str] = {}  # normalized_title -> course_code
+    raw_title_map: dict[str, str] = {}  # original_lower_title -> course_code
+    for entry in allowed_titles:
+        if not entry.get("course_title") or not entry.get("course_code"):
+            continue
+        raw = entry["course_title"].lower().strip()
+        normalized = _normalize_ordinals(raw)
+        code = entry["course_code"].upper()
+        raw_title_map[raw] = code
+        title_map[normalized] = code
 
     # Strip common filler words so "show me differential equations open sections"
     # becomes "differential equations" for matching
@@ -190,23 +222,26 @@ def _resolve_title_to_codes(user_query: str, allowed_titles: list[dict]) -> list
         "thursday", "friday", "online", "hybrid", "person", "in-person",
     }
     query_words = [w for w in query_lower.split() if w not in filler]
-    cleaned_query = " ".join(query_words)
+    cleaned_query = _normalize_ordinals(" ".join(query_words))
 
-    # 1) Fuzzy match the cleaned query against full titles
-    close = difflib.get_close_matches(cleaned_query, title_map.keys(), n=5, cutoff=0.4)
+    # 1) Fuzzy match the ordinal-normalized cleaned query against normalized title keys
+    # Cutoff raised to 0.55 to avoid false-positive matches between similar titles
+    close = difflib.get_close_matches(cleaned_query, title_map.keys(), n=5, cutoff=0.55)
     for match in close:
         matched_codes.append(title_map[match])
 
-    # 2) Word overlap: check if enough title words appear in the original query
-    for title, code in title_map.items():
+    # 2) Word-set fallback: if the majority of significant title words appear in
+    # the query (after ordinal normalization), count as a match even without
+    # a high fuzzy ratio.  This catches "calculus 2" → "analytic geometry and calculus ii".
+    normalized_query_lower = _normalize_ordinals(query_lower)
+    for norm_title, code in title_map.items():
         if code in matched_codes:
             continue
-        title_words = set(title.split())
+        title_words = set(norm_title.split())
         significant = {w for w in title_words if len(w) > 3}
         if not significant:
             continue
-        # Require majority of significant title words to appear in the query
-        matches_in_query = sum(1 for w in significant if w in query_lower)
+        matches_in_query = sum(1 for w in significant if w in normalized_query_lower)
         if matches_in_query / len(significant) >= 0.75:
             matched_codes.append(code)
 
@@ -226,14 +261,14 @@ def _load_allow_lists():
 
     try:
         catalog_rows = db.session.execute(text(f"""
-            SELECT course_code, title
+            SELECT course_code, course_title
             FROM {COURSE_CATALOG_TABLE}
-            WHERE course_code IS NOT NULL AND title IS NOT NULL AND title <> ''
+            WHERE course_code IS NOT NULL AND course_title IS NOT NULL AND course_title <> ''
         """)).mappings().all()
         allowed_titles = [
             {
                 "course_code": (r.get("course_code") or "").upper(),
-                "course_title": (r.get("title") or "").strip(),
+                "course_title": (r.get("course_title") or "").strip(),
             }
             for r in catalog_rows if r.get("course_code")
         ]
@@ -347,7 +382,7 @@ class CourseSearcher:
                     cs.comments,
                     cs.prereq,
                     cs.advisory,
-                    cc.title AS course_title
+                    cc.course_title
                 FROM {COURSE_SECTIONS_TABLE} cs
                 LEFT JOIN {COURSE_CATALOG_TABLE} cc
                     ON upper(cs.course_code) = upper(cc.course_code)
@@ -370,7 +405,7 @@ class CourseSearcher:
                     cs.comments,
                     cs.prereq,
                     cs.advisory,
-                    cc.title AS course_title
+                    cc.course_title
                 FROM {COURSE_SECTIONS_TABLE} cs
                 LEFT JOIN {COURSE_CATALOG_TABLE} cc
                     ON upper(cs.course_code) = upper(cc.course_code)
@@ -564,8 +599,16 @@ class CourseSearcher:
     # ------------------------------------------------------------------
     #  llm_parse_query  (was top-level in app.py, lines 408-511)
     # ------------------------------------------------------------------
-    def parse_query(self, user_query: str, *, temperature: float = 0.0) -> dict:
-        """LLM-first parser -> course_codes, subjects, intent, filters (constrained to DB)."""
+    def parse_query(self, user_query: str, *, temperature: float = 0.0,
+                    prior_context: str | None = None) -> dict:
+        """LLM-first parser -> course_codes, subjects, intent, filters (constrained to DB).
+
+        Args:
+            prior_context: Optional short summary of the last few conversation turns.
+                           Passed to the LLM as PRIOR_CONTEXT so it can resolve
+                           follow-up queries (e.g. "what about mornings?") against the
+                           course most recently discussed.
+        """
 
         # Load allow-lists from cache (only hits DB once per process lifetime)
         all_course_codes, all_subject_prefixes, allowed_titles_payload = _load_allow_lists()
@@ -616,14 +659,25 @@ class CourseSearcher:
             "- If user asks about instructor, set intent='instructors'.\n"
             "- If the user is only asking about GE requirements, transfer, or which UC campus (e.g. 'What GE for UC?', 'What do I need for UC?'), return empty course_codes and empty subjects so the assistant can ask which campus.\n"
             "- Otherwise intent='find_sections'.\n"
+            "PRIOR CONTEXT HANDLING\n"
+            "- If PRIOR_CONTEXT is provided it contains recent conversation turns.\n"
+            "- If the current USER_QUERY has no explicit course code or course title but "
+            "PRIOR_CONTEXT shows a specific course was recently discussed, extract that "
+            "course's code for course_codes ONLY when the user's message is clearly a "
+            "follow-up (e.g. starts with 'what about', 'how about', 'any on', 'those on', "
+            "'what time', 'who teaches', 'is it open'). Do NOT carry over a prior course "
+            "when the user is asking about a different or new course.\n"
         )
 
-        parser_user = json.dumps({
+        parser_payload: dict = {
             "USER_QUERY": user_query,
             "ALLOWED_COURSE_CODES": all_course_codes,
             "ALLOWED_SUBJECT_PREFIXES": all_subject_prefixes,
             "ALLOWED_TITLES": allowed_titles_payload,
-        })
+        }
+        if prior_context:
+            parser_payload["PRIOR_CONTEXT"] = prior_context
+        parser_user = json.dumps(parser_payload)
 
         try:
             resp = self.client.chat.completions.create(
@@ -704,23 +758,25 @@ class CourseSearcher:
 
         # Follow-up detection
         is_followup = len(conversation_history) > 0
+        context_summary = ""
         if is_followup:
+            # Summarise the last 4 messages (2 exchanges) for the parser's PRIOR_CONTEXT.
+            # Keep each message short so we don't inflate token count.
             context_summary = "\n".join([
-                f"{'User' if msg['role'] == 'user' else 'Assistant'}: {msg['content'][:300]}..."
-                for msg in conversation_history[-6:]
+                f"{'User' if msg['role'] == 'user' else 'Assistant'}: {msg['content'][:200]}"
+                for msg in conversation_history[-4:]
             ])
-            enhanced_query = f"Previous conversation context:\n{context_summary}\n\nCurrent question: {user_query}"
-        else:
-            enhanced_query = user_query
 
-        # For short follow-up queries, inject the last mentioned course so
-        # parse_query can extract it even from phrases like "how about tuesdays"
+        # Only inject the last course code for *explicitly* referential follow-ups
+        # (e.g. "what about mornings?" after searching MATH-192).
+        # Generic words like "open", "sections", "online" are intentionally excluded
+        # to avoid injecting wrong codes when the user asks about a new course by title.
         followup_triggers = (
             "what about", "how about", "any on", "show on",
-            "those on", "and on", "but on", "evening", "morning",
-            "afternoon", "tuesday", "wednesday", "only", "thursday",
-            "friday", "monday", "online", "in-person", "hybrid",
-            "open", "closed", "sections", "classes"
+            "those on", "and on", "but on", "that course",
+            "those classes", "same course", "the same one",
+            "also show", "what time does that", "who teaches that",
+            "what days", "any other", "how many seats", "is it open",
         )
         query_to_parse = user_query
         last_code = None
@@ -732,10 +788,17 @@ class CourseSearcher:
             or any(w.upper() in all_subject_prefixes for w in user_query.split()       # bare subject
                    if len(w) >= 3)
         )
+        # If the query resolves to a course title, skip injection entirely
+        all_course_codes_set, _, allowed_titles_payload = _load_allow_lists()
+        title_resolved = _resolve_title_to_codes(user_query, allowed_titles_payload)
+        title_resolved = [c for c in title_resolved if c in set(all_course_codes_set)]
+
+        # Word-count guard tightened to ≤7 words: longer queries likely reference a new course
         if (
             is_followup
             and not user_has_course
-            and len(user_query.strip().split()) <= 12
+            and not title_resolved
+            and len(user_query.strip().split()) <= 7
             and any(t in user_query.lower() for t in followup_triggers)
         ):
             for msg in reversed(conversation_history[-6:]):
@@ -746,10 +809,14 @@ class CourseSearcher:
             if last_code:
                 query_to_parse = f"{last_code} {user_query}"
 
-        parsed = self.parse_query(query_to_parse, temperature=parser_temperature)
+        parsed = self.parse_query(
+            query_to_parse,
+            temperature=parser_temperature,
+            prior_context=context_summary if is_followup else None,
+        )
 
         # If injection produced nothing useful, or only returned the injected code itself
-        # (meaning the user's query has its own course intent), re-parse the original alone
+        # with no new filter, re-parse the original query alone.
         if query_to_parse != user_query:
             injected_codes = set(parsed.get("course_codes", []))
             parsed_filters = parsed.get("filters", {}) or {}
@@ -757,7 +824,11 @@ class CourseSearcher:
             only_has_injected = last_code and injected_codes == {last_code} and not has_new_filter
             nothing_found = not injected_codes and not parsed.get("subjects")
             if nothing_found or only_has_injected:
-                parsed = self.parse_query(user_query, temperature=parser_temperature)
+                parsed = self.parse_query(
+                    user_query,
+                    temperature=parser_temperature,
+                    prior_context=context_summary if is_followup else None,
+                )
 
         course_codes = parsed.get("course_codes", [])
         subjects = parsed.get("subjects", [])
@@ -785,15 +856,40 @@ class CourseSearcher:
                     "Try: \"What GE courses for UC Berkeley?\" or \"What should I take for UCB transfer?\""
                 )
             else:
-                response = (
-                    "I can help you find DVC STEM courses and details and transfer from DVC agreements.\n\n"
-                    "Try one of these:\n"
-                    '- "Show me open MATH-193 sections Monday morning."\n'
-                    '- "Who teaches PHYS-130 on Thursdays?"\n'
-                    '- "What are the prerequisites for COMSC-200?"\n'
-                    '- "I have completed Math 192, what does that cover at UCB?"\n'
-                    '- "What GE courses should I take at DVC for UC Berkeley?"'
-                )
+                # Give a more targeted message when the user typed something that looks
+                # like a course name but couldn't be matched.
+                query_words = [
+                    w for w in user_query.split()
+                    if len(w) > 3 and w.lower() not in {
+                        "show", "find", "give", "list", "what", "where", "which",
+                        "open", "sections", "classes", "courses", "available",
+                    }
+                ]
+                if query_words:
+                    response = (
+                        f"I couldn't find a course matching **\"{user_query}\"**.\n\n"
+                        "This could mean:\n"
+                        "- The course name may differ from what's expected "
+                        "(e.g. \"Calculus 2\" is listed as **Analytic Geometry and Calculus II** at DVC)\n"
+                        "- The course may not be offered this term\n\n"
+                        "Try the course **code** instead (e.g. `MATH-192`, `COMSC-110`), "
+                        "or ask: **\"Show me all MATH sections\"** to browse.\n\n"
+                        "Other examples:\n"
+                        '- "Show me open MATH-193 sections Monday morning."\n'
+                        '- "Who teaches PHYS-130 on Thursdays?"\n'
+                        '- "What are the prerequisites for COMSC-200?"'
+                    )
+                else:
+                    response = (
+                        "I can help you find DVC STEM courses, section schedules, prerequisites, "
+                        "and UC transfer information.\n\n"
+                        "Try one of these:\n"
+                        '- "Show me open MATH-193 sections Monday morning."\n'
+                        '- "Who teaches PHYS-130 on Thursdays?"\n'
+                        '- "What are the prerequisites for COMSC-200?"\n'
+                        '- "Show me Calculus 2 sections."\n'
+                        '- "What GE courses should I take at DVC for UC Berkeley?"'
+                    )
             if enable_logging:
                 self.log_interaction(user_query, parsed, response, start_ms, status="needs_clarification")
             return response
@@ -1093,13 +1189,15 @@ class CourseSearcher:
             filter_desc = f" in the **{time_filter}**" if time_filter and not day_filter else ""
             filter_desc += f" on **{day_filter}**" if day_filter and not time_filter else ""
             filter_desc += f" on **{day_filter}** in the **{time_filter}**" if day_filter and time_filter else ""
+            # Build a direct "try this" suggestion with the real keyword
+            kw_example = kw_display if isinstance(kw_display, str) else " ".join(keyword)
             response = (
-                f"There are no **{kw_display}** sections{filter_desc} that match your filters (**{applied_str}**).\n\n"
-                "Try relaxing one or more filters. For example:\n"
+                f"No **{kw_display}** sections{filter_desc} match your filters (**{applied_str}**).\n\n"
+                "Try relaxing one or more filters:\n"
                 "- Try a different **day** or **time** window\n"
                 "- Remove the **instructor** name to see all sections\n"
                 "- Include **hybrid** or **online** if you only searched in-person\n\n"
-                "Want me to show **all available sections** for this course/subject?"
+                f"To see all available sections, try: **\"Show me all {kw_example} sections\"**"
             )
 
         if enable_logging:
@@ -1208,7 +1306,7 @@ class CourseSearcher:
                 "FOLLOW-UP HANDLING\n"
                 "- If user says \"that course\", \"those classes\", \"the same one\", etc., "
                 "refer to the most recent course discussed.\n"
-                "- - If the user asks for a new filter (e.g., \"what about evening?\") that is NOT already reflected in the provided JSON, do NOT claim you filtered. Ask a short clarifying question or instruct the user to run a new search with that filter."
+                "- If the user asks for a new filter (e.g., \"what about evening?\") that is NOT already reflected in the provided JSON, do NOT claim you filtered. Ask a short clarifying question or instruct the user to run a new search with that filter.\n"
                 "- If unclear, ask for clarification while being helpful.\n\n"
                 "PREREQUISITE CHAIN ANALYSIS\n"
                 "- If user asks \"Can I take X and Y together?\" or \"Can I take X with Y?\" check required prerequisites only:\n"
@@ -1227,7 +1325,9 @@ class CourseSearcher:
                 "- If no results, return a short, helpful message and stop.\n"
                 "- For follow-ups, acknowledge the context.\n\n"
                 "B) Per-Course Listing (for EVERY course in the JSON):\n"
-                "- Format: **COURSE_CODE: Course Title**\n"
+                "- Header format: **COURSE_CODE: course_title** — always use the exact "
+                "'course_title' field from the JSON. Never omit it, never substitute your "
+                "own knowledge of what the title should be.\n"
                 "- Group sections into THREE headings (always in this order):\n"
                 "    ### HYBRID SECTIONS (includes in-person meetings)\n"
                 "    ### IN-PERSON SECTIONS (fully in-person)\n"
@@ -1262,8 +1362,9 @@ class CourseSearcher:
         messages = [system_message]
         if conversation_history:
             messages.extend(conversation_history[-6:])
-        messages.append({"role": "user", "content": user_query})
-        messages.append({"role": "user", "content": context})
+        # Combine the user's question and the course-data context into a single user turn
+        # to avoid ambiguity from back-to-back user messages.
+        messages.append({"role": "user", "content": f"{user_query}\n\n---\n{context}"})
 
         try:
             llm_response = self.client.chat.completions.create(

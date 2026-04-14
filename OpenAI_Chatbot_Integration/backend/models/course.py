@@ -26,19 +26,19 @@ class CoursesCatalog(db.Model):
 
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     course_code = db.Column(db.String(20), nullable=False, unique=True, index=True)
-    title = db.Column(db.String(200), nullable=False)
+    course_title = db.Column(db.String(200), nullable=False)
     units = db.Column(db.String(10), nullable=True)
     description = db.Column(db.Text, nullable=True)
     prerequisites = db.Column(db.Text, nullable=True)
 
     def __repr__(self):
-        return f"<CoursesCatalog {self.course_code}: {self.title}>"
+        return f"<CoursesCatalog {self.course_code}: {self.course_title}>"
 
     def to_dict(self):
         return {
             "id": self.id,
             "course_code": self.course_code,
-            "title": self.title,
+            "course_title": self.course_title,
             "units": self.units,
             "description": self.description,
             "prerequisites": self.prerequisites,
