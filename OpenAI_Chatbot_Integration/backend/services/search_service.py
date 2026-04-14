@@ -11,6 +11,7 @@ Encapsulates:
 import json
 import time
 import re
+import difflib
 import functools
 from datetime import datetime, timezone
 
@@ -163,6 +164,34 @@ def _parse_start_hour(time_str: str) -> int | None:
         return None
     except Exception:
         return None
+
+def _resolve_title_to_codes(user_query: str, allowed_titles: list[dict]) -> list[str]:
+    """Match course titles mentioned in the query to course codes using Python fuzzy matching."""
+    if not allowed_titles:
+        return []
+
+    query_lower = user_query.lower()
+    matched_codes = []
+
+    title_map = {
+        entry["course_title"].lower().strip(): entry["course_code"].upper()
+        for entry in allowed_titles
+        if entry.get("course_title") and entry.get("course_code")
+    }
+
+    close = difflib.get_close_matches(query_lower, title_map.keys(), n=5, cutoff=0.4)
+    for match in close:
+        matched_codes.append(title_map[match])
+
+    for title, code in title_map.items():
+        title_words = set(title.split())
+        query_words = set(query_lower.split())
+        overlap = title_words & query_words
+        significant = {w for w in overlap if len(w) > 3}
+        if len(significant) >= 2 and code not in matched_codes:
+            matched_codes.append(code)
+
+    return matched_codes
 
 @functools.lru_cache(maxsize=1)
 def _load_allow_lists():
@@ -522,12 +551,18 @@ class CourseSearcher:
         # Load allow-lists from cache (only hits DB once per process lifetime)
         all_course_codes, all_subject_prefixes, allowed_titles_payload = _load_allow_lists()
 
+        # Resolve course titles to codes in Python before the LLM (avoids hallucination)
+        pre_resolved_codes = _resolve_title_to_codes(user_query, allowed_titles_payload)
+        pre_resolved_codes = [c for c in pre_resolved_codes if c in set(all_course_codes)]
+
         # Hard fallback extraction so COMSC-110 always works (hyphen form)
         hard_codes = set(re.findall(r"\b[A-Za-z]{3,5}\s*-\s*\d{2,3}[A-Za-z]?\b", user_query))
         hard_codes = {c.replace(" ", "").upper() for c in hard_codes}
         # Space-separated form: "math 192", "COMSC 260" -> MATH-192, COMSC-260
         space_matches = re.findall(r"\b([A-Za-z]{3,5})\s+(\d{2,3}[A-Za-z]?)\b", user_query)
         hard_codes |= {f"{s.upper()}-{n.upper()}" for s, n in space_matches}
+        # Merge pre-resolved title matches
+        hard_codes |= set(pre_resolved_codes)
 
         hard_subjects = set(re.findall(r"\b[A-Za-z]{3,5}\b", user_query))
         hard_subjects = {s.upper() for s in hard_subjects if s.upper() in all_subject_prefixes}
