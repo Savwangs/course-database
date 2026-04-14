@@ -10,6 +10,7 @@ class CourseSection(db.Model):
 
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     course_code = db.Column(db.String(32), nullable=False, index=True)
+    course_title = db.Column(db.String(200), nullable=True)
     section_number = db.Column(db.String(16), nullable=True)
     instructor = db.Column(db.Text, nullable=True)
     schedule = db.Column(JSONB, nullable=True)
