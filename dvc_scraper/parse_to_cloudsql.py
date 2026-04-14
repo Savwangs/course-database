@@ -304,6 +304,7 @@ def parse_course_txt_to_object(txt_path: Path) -> dict | None:
 
 def upsert_course_to_db(conn, course_obj: dict) -> int:
     course_code = (course_obj.get("course_code") or "").strip()
+    course_title = (course_obj.get("course_title") or "").strip() or None
     if not course_code:
         return 0
 
@@ -321,21 +322,22 @@ def upsert_course_to_db(conn, course_obj: dict) -> int:
             cur.execute(
                 f"""
                 INSERT INTO public.{TABLE_NAME}
-                    (
-                        course_code,
-                        section_number,
-                        instructor,
-                        schedule,
-                        modality,
-                        seat_availability,
-                        units,
-                        comments,
-                        prereq,
-                        advisory,
-                        last_update
-                    )
+                (
+                    course_code,
+                    course_title,
+                    section_number,
+                    instructor,
+                    schedule,
+                    modality,
+                    seat_availability,
+                    units,
+                    comments,
+                    prereq,
+                    advisory,
+                    last_update
+                )
                 VALUES
-                    (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                    (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
                 ON CONFLICT (course_code, section_number)
                 DO UPDATE SET
                     instructor = EXCLUDED.instructor,
@@ -346,10 +348,12 @@ def upsert_course_to_db(conn, course_obj: dict) -> int:
                     comments = EXCLUDED.comments,
                     prereq = EXCLUDED.prereq,
                     advisory = EXCLUDED.advisory,
-                    last_update = EXCLUDED.last_update
+                    last_update = EXCLUDED.last_update,
+                    course_title = EXCLUDED.course_title
                 """,
                 (
                     course_code,
+                    course_title,
                     section_number,
                     sec.get("instructor"),
                     Json(sec.get("schedule", [])),
@@ -360,7 +364,7 @@ def upsert_course_to_db(conn, course_obj: dict) -> int:
                     sec.get("prereq"),
                     sec.get("advisory"),
                     last_update,
-                ),
+                )
             )
 
         if seen_sections:
