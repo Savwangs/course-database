@@ -179,16 +179,35 @@ def _resolve_title_to_codes(user_query: str, allowed_titles: list[dict]) -> list
         if entry.get("course_title") and entry.get("course_code")
     }
 
-    close = difflib.get_close_matches(query_lower, title_map.keys(), n=5, cutoff=0.4)
+    # Strip common filler words so "show me differential equations open sections"
+    # becomes "differential equations" for matching
+    filler = {
+        "show", "me", "find", "get", "list", "open", "closed", "sections",
+        "section", "classes", "class", "courses", "course", "available",
+        "any", "all", "the", "a", "an", "for", "in", "on", "at", "with",
+        "please", "what", "are", "is", "there", "i", "want", "need",
+        "morning", "afternoon", "evening", "monday", "tuesday", "wednesday",
+        "thursday", "friday", "online", "hybrid", "person", "in-person",
+    }
+    query_words = [w for w in query_lower.split() if w not in filler]
+    cleaned_query = " ".join(query_words)
+
+    # 1) Fuzzy match the cleaned query against full titles
+    close = difflib.get_close_matches(cleaned_query, title_map.keys(), n=5, cutoff=0.4)
     for match in close:
         matched_codes.append(title_map[match])
 
+    # 2) Word overlap: check if enough title words appear in the original query
     for title, code in title_map.items():
+        if code in matched_codes:
+            continue
         title_words = set(title.split())
-        query_words = set(query_lower.split())
-        overlap = title_words & query_words
-        significant = {w for w in overlap if len(w) > 3}
-        if len(significant) >= 2 and code not in matched_codes:
+        significant = {w for w in title_words if len(w) > 3}
+        if not significant:
+            continue
+        # Require majority of significant title words to appear in the query
+        matches_in_query = sum(1 for w in significant if w in query_lower)
+        if matches_in_query / len(significant) >= 0.75:
             matched_codes.append(code)
 
     return matched_codes
