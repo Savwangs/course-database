@@ -669,9 +669,19 @@ class CourseSearcher:
             '  "prereq_sub_intent": "single" | "can_take_together" | null\n'
             "}\n"
             "Rules:\n"
-            "- Extract course_codes and subjects ONLY from the current user message. Do not use course codes or subjects from example prompts or from previous assistant or user messages.\n"
+            "- Extract course_codes and subjects from the current user message. "
+            "Exception: when PRIOR_CONTEXT is provided and the current message is a follow-up "
+            "(see PRIOR CONTEXT HANDLING below), you may carry over the course code from context. "
+            "Do not hallucinate codes that appear in neither the current message nor PRIOR_CONTEXT.\n"
             "- Extract every course the user refers to, with or without a hyphen (e.g. MATH-192, math 192, COMSC 260). Normalize to SUBJECT-NUMBER and include only codes that appear in ALLOWED_COURSE_CODES.\n"
             "- If ALLOWED_TITLES is non-empty and the user mentions a course by name or title (e.g. 'differential equations', 'linear algebra'), map it to the corresponding course_code(s) using ALLOWED_TITLES ONLY — do NOT use outside knowledge of what course numbers typically mean. Search ALLOWED_TITLES for the best fuzzy match to what the user said, paying close attention to ordinals and numbers (e.g. 'Calculus 1' vs 'Calculus 2') — match the exact level specified. If no match is found in ALLOWED_TITLES, leave course_codes empty rather than guessing. Note that course titles at this college may differ from common names (e.g. Calculus II may be titled 'Analytic Geometry and Calculus II'), so always defer to ALLOWED_TITLES.\n"
+            "- If the user mentions a well-known academic course topic (e.g. 'differential equations', "
+            "'data structures', 'organic chemistry', 'linear algebra', 'statistics', 'physics', "
+            "'calculus', 'computer science', 'discrete math') that does NOT appear in ALLOWED_TITLES, "
+            "you MAY use your general knowledge to infer the most likely subject prefix — but ONLY if "
+            "that prefix exists in ALLOWED_SUBJECT_PREFIXES. Add it to subjects[] and leave "
+            "course_codes empty. This enables a subject-level search when the catalog title is "
+            "unavailable rather than returning an unhelpful no-match error.\n"
             "- Only choose course_codes from ALLOWED_COURSE_CODES. Only choose subjects from ALLOWED_SUBJECT_PREFIXES.\n"
             "- If the user asks for available, open, or open seats, set filters.status to 'open'. If they ask for closed or full sections, set filters.status to 'closed'.\n"
             "- For filters.instructor: use ONLY the person's last name (or single name as given). Do not include titles like Professor, Prof, Dr, Instructor, Teacher. E.g. 'Professor Lo' or 'taught by Lo' -> 'Lo'; 'Dr. Smith' -> 'Smith'. This ensures matching against the database.\n"
@@ -684,13 +694,27 @@ class CourseSearcher:
             "- If the user is only asking about GE requirements, transfer, or which UC campus (e.g. 'What GE for UC?', 'What do I need for UC?'), return empty course_codes and empty subjects so the assistant can ask which campus.\n"
             "- Otherwise intent='find_sections'.\n"
             "PRIOR CONTEXT HANDLING\n"
-            "- If PRIOR_CONTEXT is provided it contains recent conversation turns.\n"
-            "- If the current USER_QUERY has no explicit course code or course title but "
-            "PRIOR_CONTEXT shows a specific course was recently discussed, extract that "
-            "course's code for course_codes ONLY when the user's message is clearly a "
-            "follow-up (e.g. starts with 'what about', 'how about', 'any on', 'those on', "
-            "'what time', 'who teaches', 'is it open'). Do NOT carry over a prior course "
-            "when the user is asking about a different or new course.\n"
+            "When PRIOR_CONTEXT is provided and the current USER_QUERY does NOT contain "
+            "an explicit course code or a recognizable course title from ALLOWED_TITLES:\n"
+            "  1. Check whether a specific course (or subject) was discussed in PRIOR_CONTEXT.\n"
+            "  2. If yes, AND the current query is clearly a filter or refinement of that "
+            "discussion (asks about an instructor, day, time, modality, availability, "
+            "or is otherwise a short follow-up phrase ≤8 words without a new course topic), "
+            "extract that course's code into course_codes and extract whatever new filter "
+            "the current message implies.\n"
+            "  3. For filters.instructor in follow-up context: accept any recognizable name "
+            "fragment — first name, last name, or partial name (e.g. 'gene', 'walters', "
+            "'dr. smith', 'taught by jones', 'any from lee'). Output the name fragment as "
+            "given; prefer the last name when both are present.\n"
+            "  4. Treat these as follow-up signals regardless of exact phrasing: 'how about', "
+            "'what about', 'any by', 'any from', 'any taught', 'taught by', 'sections by', "
+            "'sections from', 'who else', 'taught from', 'only', 'just', 'what days', "
+            "'any open', 'is it open', 'any on', 'show on', 'those on', 'that course', "
+            "'same course', 'the same one', 'what time', 'how many seats'.\n"
+            "  5. Do NOT carry over a prior course when the user clearly introduces a new "
+            "course name, code, or an unrelated topic.\n"
+            "  6. When in doubt and the query is short (≤8 words) with no new course "
+            "reference, treat it as a follow-up on the most recently discussed course.\n"
         )
 
         parser_payload: dict = {
@@ -839,15 +863,14 @@ class CourseSearcher:
             prior_context=context_summary if is_followup else None,
         )
 
-        # If injection produced nothing useful, or only returned the injected code itself
-        # with no new filter, re-parse the original query alone.
+        # Only re-parse if the parser returned absolutely nothing (no codes, no subjects).
+        # If a course code was found (even with no extra filter), keep it — the LLM
+        # formatter will scope the response to the user's actual question.
         if query_to_parse != user_query:
-            injected_codes = set(parsed.get("course_codes", []))
-            parsed_filters = parsed.get("filters", {}) or {}
-            has_new_filter = any(v for v in parsed_filters.values() if v)
-            only_has_injected = last_code and injected_codes == {last_code} and not has_new_filter
-            nothing_found = not injected_codes and not parsed.get("subjects")
-            if nothing_found or only_has_injected:
+            nothing_found = (
+                not parsed.get("course_codes") and not parsed.get("subjects")
+            )
+            if nothing_found:
                 parsed = self.parse_query(
                     user_query,
                     temperature=parser_temperature,
@@ -1349,8 +1372,10 @@ class CourseSearcher:
                 "- If no results, return a short, helpful message and stop.\n"
                 "- For follow-ups, acknowledge the context.\n\n"
                 "B) Per-Course Listing (for EVERY course in the JSON):\n"
-                "- Header format: **COURSE_CODE: course_title** — always use the exact "
-                "'course_title' field from the JSON. Never omit it, never substitute your "
+                "- Header format: **COURSE_CODE: course_title** — use the course_title "
+                "field from the JSON when it is present and non-empty. If course_title is "
+                "empty or absent, write just **COURSE_CODE** with no placeholder, note, "
+                "parenthetical, or any comment about missing data. Never substitute your "
                 "own knowledge of what the title should be.\n"
                 "- Group sections into THREE headings (always in this order):\n"
                 "    ### HYBRID SECTIONS (includes in-person meetings)\n"
