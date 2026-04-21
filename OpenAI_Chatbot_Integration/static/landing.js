@@ -81,12 +81,121 @@ document.querySelectorAll('.feature-card, .step-item, .example-card').forEach(el
 document.querySelectorAll('.example-card').forEach(card => {
     card.addEventListener('click', () => {
         const exampleText = card.querySelector('.example-text').textContent;
-        
-        // Store the example query in sessionStorage
+
         sessionStorage.setItem('exampleQuery', exampleText);
-        
-        // Navigate to chatbot
-        window.location.href = '/chatbot';
+
+        openNameModal('/chatbot');
+    });
+});
+
+// =====================================
+// Name Capture Modal
+// =====================================
+
+const nameModal = document.getElementById('nameModal');
+const nameForm = document.getElementById('nameForm');
+const nameInput = document.getElementById('userNameInput');
+const nameError = document.getElementById('nameError');
+const nameSubmitBtn = nameForm ? nameForm.querySelector('.name-submit') : null;
+
+let pendingRedirect = '/chatbot';
+
+const NAME_PATTERN = /^[\p{L}\p{M}\p{N} .'\-]{1,40}$/u;
+
+function openNameModal(redirectTo) {
+    if (!nameModal) return;
+    pendingRedirect = redirectTo || '/chatbot';
+    nameModal.hidden = false;
+    document.body.classList.add('name-modal-open');
+    nameError.textContent = '';
+    nameInput.classList.remove('invalid');
+
+    // Try to restore a previously entered name for convenience.
+    const saved = (localStorage.getItem('userScreenName') || '').trim();
+    if (saved) nameInput.value = saved;
+
+    setTimeout(() => nameInput && nameInput.focus(), 40);
+}
+
+function closeNameModal() {
+    if (!nameModal) return;
+    nameModal.hidden = true;
+    document.body.classList.remove('name-modal-open');
+}
+
+function showNameError(msg) {
+    nameError.textContent = msg;
+    nameInput.classList.add('invalid');
+}
+
+if (nameModal) {
+    nameModal.querySelectorAll('[data-close-name-modal]').forEach(el => {
+        el.addEventListener('click', closeNameModal);
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !nameModal.hidden) {
+            closeNameModal();
+        }
+    });
+
+    nameInput.addEventListener('input', () => {
+        nameInput.classList.remove('invalid');
+        nameError.textContent = '';
+    });
+
+    nameForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const name = (nameInput.value || '').trim();
+
+        if (!name) {
+            showNameError('Please enter your name.');
+            return;
+        }
+        if (name.length > 40) {
+            showNameError('Please keep your name under 40 characters.');
+            return;
+        }
+        if (!NAME_PATTERN.test(name)) {
+            showNameError("Use letters, spaces, hyphens, apostrophes or periods only.");
+            return;
+        }
+
+        nameSubmitBtn.disabled = true;
+        try {
+            const res = await fetch('/session/start', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name }),
+            });
+
+            let data = {};
+            try { data = await res.json(); } catch (_) {}
+
+            if (!res.ok || !data.success) {
+                const msg = (data && data.error && data.error.message)
+                    || `Could not start session (status ${res.status}).`;
+                showNameError(msg);
+                return;
+            }
+
+            localStorage.setItem('userScreenName', data.name || name);
+            window.location.href = pendingRedirect || '/chatbot';
+        } catch (err) {
+            console.error('session/start failed', err);
+            showNameError('Unable to reach the server. Please try again.');
+        } finally {
+            nameSubmitBtn.disabled = false;
+        }
+    });
+}
+
+// Intercept any Start Chatting / Launch Chatbot buttons to show the modal first.
+document.querySelectorAll('[data-start-chat]').forEach(el => {
+    el.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = el.getAttribute('href') || '/chatbot';
+        openNameModal(target);
     });
 });
 

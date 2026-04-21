@@ -11,6 +11,7 @@ All data models live in:
 """
 
 import os
+import re
 import json
 import secrets
 import traceback
@@ -55,6 +56,10 @@ MAX_PROMPT_CHARS = int(os.getenv("MAX_PROMPT_CHARS", "2000"))
 MIN_QUERY_CHARS = int(os.getenv("MIN_QUERY_CHARS", "3"))
 MAX_HISTORY_MESSAGES = int(os.getenv("MAX_HISTORY_MESSAGES", "20"))  # 10 exchanges
 
+# User screen-name validation
+NAME_MAX_CHARS = 40
+NAME_PATTERN = re.compile(r"^[\w .'\-\u00C0-\u024F\u1E00-\u1EFF]{1,40}$", re.UNICODE)
+
 # SQLAlchemy configuration
 # Default to a local SQLite DB; set DATABASE_URL for Cloud SQL / Postgres in production
 db_url = os.getenv("DATABASE_URL", "sqlite:///courses.db")
@@ -90,9 +95,23 @@ print(f"Loaded {len(course_data)} courses from {db_path}")
 # ---------------------------------------------------------------------------
 searcher = CourseSearcher(openai_client)
 
+
+def current_user_name() -> str | None:
+    """Return the current user's screen name from the Flask session, if set.
+
+    Safe to call inside a request context; returns None otherwise.
+    """
+    try:
+        return session.get("user_screen_name")
+    except RuntimeError:
+        return None
+
+
 transfer = TransferAssistant(
     openai_client,
-    log_callback=lambda q, p, r: searcher.log_interaction(q, p, r),
+    log_callback=lambda q, p, r: searcher.log_interaction(
+        q, p, r, user_screen_name=current_user_name()
+    ),
 )
 
 def error_response(code: str, message: str, http_status: int = 400, *, meta: dict | None = None):
@@ -151,7 +170,13 @@ def log_guardrail(user_prompt: str, guardrail_type: str, reason: str, http_statu
     }
     if meta:
         parsed_data["meta"] = meta
-    searcher.log_interaction(user_prompt, parsed_data, f"[GUARDRAIL] {guardrail_type}: {reason}", status="guardrail")
+    searcher.log_interaction(
+        user_prompt,
+        parsed_data,
+        f"[GUARDRAIL] {guardrail_type}: {reason}",
+        status="guardrail",
+        user_screen_name=current_user_name(),
+    )
 
 def require_admin(req) -> bool:
     expected = os.getenv("ADMIN_TOKEN")
@@ -172,6 +197,67 @@ def chatbot():
     return render_template("chatbot.html")
 
 
+@app.route("/session/start", methods=["POST"])
+@limiter.limit("20 per minute")
+def start_session():
+    """Capture the user's screen name at the start of a chat session.
+
+    The name is stored in the Flask session cookie and used purely for
+    per-user logging (GCP + interaction_logs table). No AI, no PII storage
+    beyond what the user voluntarily types in.
+    """
+    if not request.is_json:
+        return error_response("INVALID_CONTENT_TYPE", "Request must be application/json.", 415)
+
+    data = request.get_json(silent=True)
+    if not isinstance(data, dict):
+        return error_response("INVALID_JSON", "Invalid JSON body.", 400)
+
+    raw = data.get("name")
+    if not isinstance(raw, str):
+        return error_response("INVALID_NAME", "Name must be a string.", 400)
+
+    name = raw.strip()
+    if not name:
+        return error_response("INVALID_NAME", "Please enter your name to start chatting.", 400)
+
+    if len(name) > NAME_MAX_CHARS:
+        return error_response(
+            "INVALID_NAME",
+            f"Name is too long. Max is {NAME_MAX_CHARS} characters.",
+            400,
+            meta={"max_chars": NAME_MAX_CHARS, "actual_chars": len(name)},
+        )
+
+    if not NAME_PATTERN.match(name):
+        return error_response(
+            "INVALID_NAME",
+            "Use letters, spaces, hyphens, apostrophes or periods only.",
+            400,
+        )
+
+    session["user_screen_name"] = name
+    session["conversation_history"] = []
+    session.modified = True
+
+    # Structured stdout line so Cloud Run ships it to Cloud Logging.
+    print(json.dumps({
+        "event": "session_start",
+        "user_screen_name": name,
+    }, ensure_ascii=False), flush=True)
+
+    return jsonify({"success": True, "name": name})
+
+
+@app.route("/session/me", methods=["GET"])
+def session_me():
+    """Return the current session's user_screen_name, if any."""
+    return jsonify({
+        "success": True,
+        "name": session.get("user_screen_name"),
+    })
+
+
 @app.route("/ask", methods=["POST"])
 @limiter.limit("10 per minute")  # Rate limit guardrail
 def ask():
@@ -182,6 +268,17 @@ def ask():
     Returns JSON: {"response": "formatted answer", "success": true/false}
     """
     try:
+        # -----------------------------
+        # Require a user screen name before any chat is allowed
+        # -----------------------------
+        if not current_user_name():
+            log_guardrail("<no_name>", "auth", "NAME_REQUIRED", 401)
+            return error_response(
+                "NAME_REQUIRED",
+                "Please enter your name on the home page to start chatting.",
+                401,
+            )
+
         # -----------------------------
         # Input Guardrails
         # -----------------------------
@@ -292,6 +389,7 @@ def ask():
                 conversation_history=conversation_history,
                 enable_logging=True,
                 transfer_handler=transfer.maybe_handle,
+                user_screen_name=current_user_name(),
             )
 
         except (APITimeoutError, APIConnectionError) as e:
@@ -381,8 +479,19 @@ def ask():
 def clear_conversation():
     """Clear the conversation history and start fresh."""
     try:
+        if not current_user_name():
+            return error_response(
+                "NAME_REQUIRED",
+                "Please enter your name on the home page to start chatting.",
+                401,
+            )
+
         session["conversation_history"] = []
         session.modified = True
+        print(json.dumps({
+            "event": "conversation_cleared",
+            "user_screen_name": current_user_name(),
+        }, ensure_ascii=False), flush=True)
         return jsonify({"success": True, "message": "Conversation history cleared"})
     except Exception as e:
         print(f"Error in /clear route: {e}")

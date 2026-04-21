@@ -741,11 +741,14 @@ class CourseSearcher:
     # ------------------------------------------------------------------
     def ask(self, user_query: str, *, conversation_history: list | None = None,
             parser_temperature: float = 0.0, response_temperature: float = 0.1,
-            enable_logging: bool = True, transfer_handler=None):
+            enable_logging: bool = True, transfer_handler=None,
+            user_screen_name: str | None = None):
         """LLM parses → we search → LLM formats.
 
         Args:
             transfer_handler: callable(user_query) -> str|None  (UC transfer hook)
+            user_screen_name: The user's self-chosen display name captured at
+                session start. Used purely for logging (GCP + interaction_logs).
         """
         start_ms = time.perf_counter()
 
@@ -764,7 +767,7 @@ class CourseSearcher:
             emotional_response = guardrails.get_emotional_support_response(user_query)
             if emotional_response:
                 if enable_logging:
-                    self.log_interaction(user_query, {"emotional_support_redirect": True}, emotional_response, start_ms, status="emotional_support_redirect")
+                    self.log_interaction(user_query, {"emotional_support_redirect": True}, emotional_response, start_ms, status="emotional_support_redirect", user_screen_name=user_screen_name)
                 return emotional_response
         except Exception:
             pass
@@ -905,7 +908,7 @@ class CourseSearcher:
                         '- "What GE courses should I take at DVC for UC Berkeley?"'
                     )
             if enable_logging:
-                self.log_interaction(user_query, parsed, response, start_ms, status="needs_clarification")
+                self.log_interaction(user_query, parsed, response, start_ms, status="needs_clarification", user_screen_name=user_screen_name)
             return response
 
         # ------ Prerequisite intent ------
@@ -920,11 +923,12 @@ class CourseSearcher:
                     "Please check the course code (e.g. COMSC-200, MATH-193) and try again."
                 )
                 if enable_logging:
-                    self.log_interaction(user_query, parsed, response, start_ms, status="no_results")
+                    self.log_interaction(user_query, parsed, response, start_ms, status="no_results", user_screen_name=user_screen_name)
                 return response
             return self._handle_prerequisites(
                 user_query, query_lower, parsed, course_codes, subjects,
                 enable_logging, start_ms,
+                user_screen_name=user_screen_name,
             )
 
         # ------ Section search ------
@@ -937,6 +941,7 @@ class CourseSearcher:
                 user_query, parsed, keyword, mode, status,
                 day_filter, time_filter, instructor_mentioned,
                 enable_logging, start_ms,
+                user_screen_name=user_screen_name,
             )
 
         # Format results via LLM
@@ -961,11 +966,11 @@ class CourseSearcher:
                 "Please check the course code or try a broader search (e.g. \"Show me MATH sections\")."
             )
             if enable_logging:
-                self.log_interaction(user_query, parsed, safe, start_ms, status="output_guardrail_triggered")
+                self.log_interaction(user_query, parsed, safe, start_ms, status="output_guardrail_triggered", user_screen_name=user_screen_name)
             return safe
 
         if enable_logging:
-            self.log_interaction(user_query, parsed, response, start_ms, status="success")
+            self.log_interaction(user_query, parsed, response, start_ms, status="success", user_screen_name=user_screen_name)
         return response
 
     # ------------------------------------------------------------------
@@ -983,8 +988,15 @@ class CourseSearcher:
         confidence_level: str | None = None,
         result_count: int | None = None,
         confidence: float | None = None,
+        user_screen_name: str | None = None,
     ):
-        """Persist an interaction to the interaction_logs table (Cloud SQL) safely."""
+        """Persist an interaction to the interaction_logs table and emit a
+        structured log line to stdout for GCP Cloud Logging.
+
+        The stdout JSON line is what shows up per-user in Cloud Logging
+        (Cloud Run captures stdout → Cloud Logging). The SQL row is the
+        durable record in the `interaction_logs` table.
+        """
         latency = None
         if start_ms is not None:
             latency = int((time.perf_counter() - start_ms) * 1000)
@@ -1008,12 +1020,19 @@ class CourseSearcher:
             else:
                 confidence_level = "medium"
 
+        timestamp = datetime.now(timezone.utc)
+        cleaned_query = _clean_text(user_query, 5000)
+        cleaned_response = _clean_text(response, 5000)
+
         payload = {
-            "timestamp": datetime.now(timezone.utc),
-            "user_query": _clean_text(user_query, 5000),
+            "timestamp": timestamp,
+            "user_query": cleaned_query,
             "parsed_data": parsed_data,
-            "ai_response": _clean_text(response, 5000),
+            "ai_response": cleaned_response,
             "latency_ms": latency,
+            "status": status,
+            "confidence_level": confidence_level,
+            "user_screen_name": user_screen_name,
         }
 
         try:
@@ -1031,13 +1050,33 @@ class CourseSearcher:
             db.session.rollback()
             print(f"⚠️ Failed to log interaction to DB: {e}")
 
+        # GCP Cloud Logging: one structured JSON line per interaction on stdout.
+        # Cloud Run auto-promotes JSON stdout into `jsonPayload` in Logs Explorer,
+        # so you can filter with e.g. jsonPayload.user_screen_name="Savir".
+        try:
+            print(json.dumps({
+                "event": "chatbot_interaction",
+                "severity": "INFO",
+                "timestamp": timestamp.isoformat(),
+                "user_screen_name": user_screen_name,
+                "status": status,
+                "confidence_level": confidence_level,
+                "latency_ms": latency,
+                "user_query": _clean_text(cleaned_query, 500),
+                "ai_response": _clean_text(cleaned_response, 500),
+            }, ensure_ascii=False), flush=True)
+        except Exception as e:
+            # Logging must never break the request.
+            print(f"⚠️ Failed to emit GCP log line: {e}", flush=True)
+
 
 
     # ------------------------------------------------------------------
     #  Private helpers
     # ------------------------------------------------------------------
     def _handle_prerequisites(self, user_query, query_lower, parsed,
-                            course_codes, subjects, enable_logging, start_ms):
+                            course_codes, subjects, enable_logging, start_ms,
+                            *, user_screen_name: str | None = None):
         keywords_for_prereq = course_codes or subjects
         results = self.search(keywords_for_prereq)
 
@@ -1101,7 +1140,7 @@ class CourseSearcher:
                 )
 
             if enable_logging:
-                self.log_interaction(user_query, parsed, response, start_ms, status="success")
+                self.log_interaction(user_query, parsed, response, start_ms, status="success", user_screen_name=user_screen_name)
             return response
 
         # Regular prerequisite lookup
@@ -1118,7 +1157,7 @@ class CourseSearcher:
                     "Please check the course code (e.g. COMSC-200, MATH-193) and try again."
                 )
                 if enable_logging:
-                    self.log_interaction(user_query, parsed, response, start_ms, status="no_results")
+                    self.log_interaction(user_query, parsed, response, start_ms, status="no_results", user_screen_name=user_screen_name)
                 return response
             chosen = None
             if course_codes:
@@ -1151,7 +1190,7 @@ class CourseSearcher:
             if comments:
                 response += f"\n**Notes:** {comments}"
             if enable_logging:
-                self.log_interaction(user_query, parsed, response, start_ms, status="success")
+                self.log_interaction(user_query, parsed, response, start_ms, status="success", user_screen_name=user_screen_name)
             return response
 
         kw_display = ", ".join(keywords_for_prereq) if isinstance(keywords_for_prereq, list) else keywords_for_prereq
@@ -1167,12 +1206,13 @@ class CourseSearcher:
                 "Double-check the course code/subject, or try another course (e.g., COMSC-110, MATH-193)."
             )
         if enable_logging:
-            self.log_interaction(user_query, parsed, response, start_ms, status="no_results")
+            self.log_interaction(user_query, parsed, response, start_ms, status="no_results", user_screen_name=user_screen_name)
         return response
 
     def _handle_no_results(self, user_query, parsed, keyword, mode, status,
                            day_filter, time_filter, instructor_mentioned,
-                           enable_logging, start_ms):
+                           enable_logging, start_ms,
+                           *, user_screen_name: str | None = None):
         baseline = self.search(keyword)
 
         applied = []
@@ -1215,7 +1255,7 @@ class CourseSearcher:
             )
 
         if enable_logging:
-            self.log_interaction(user_query, parsed, response, start_ms, status="no_results")
+            self.log_interaction(user_query, parsed, response, start_ms, status="no_results", user_screen_name=user_screen_name)
         return response
 
     def _format_results(self, user_query, keyword, results,

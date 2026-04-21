@@ -24,6 +24,10 @@ class InteractionLog(db.Model):
     status = db.Column(db.Text, nullable=True)
     confidence_level = db.Column(db.Text, nullable=True)
 
+    # The screen name the user typed on the landing page for this session.
+    # Used to tag logs in GCP Cloud Logging and per-row in interaction_logs.
+    user_screen_name = db.Column(db.Text, nullable=True)
+
     def to_dict(self):
         return {
             "id": self.id,
@@ -39,4 +43,5 @@ class InteractionLog(db.Model):
             "chatbot_response_summary": self.chatbot_response_summary,
             "status": self.status,
             "confidence_level": self.confidence_level,
+            "user_screen_name": self.user_screen_name,
         }

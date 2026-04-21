@@ -167,7 +167,7 @@
                 </p>
                 
                 <div class="hero-actions">
-                    <a href="/chatbot" class="cta-button cta-primary">
+                    <a href="/chatbot" class="cta-button cta-primary start-chat-trigger" data-start-chat>
                         <span class="button-content">
                             <svg class="button-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
@@ -436,7 +436,7 @@
                 <h2 class="cta-title">Ready to find your perfect course?</h2>
                 <p class="cta-description">
                 </p>
-                <a href="/chatbot" class="cta-button cta-primary cta-large">
+                <a href="/chatbot" class="cta-button cta-primary cta-large start-chat-trigger" data-start-chat>
                     <span class="button-content">
                         <svg class="button-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
@@ -454,6 +454,35 @@
                 ✨ CourseGenie • Built for Diablo Valley College Students
             </p>
         </footer>
+    </div>
+
+    <!-- Name capture modal (shown when user clicks Start Chatting / Launch Chatbot) -->
+    <div class="name-modal" id="nameModal" role="dialog" aria-modal="true" aria-labelledby="nameModalTitle" hidden>
+        <div class="name-modal-backdrop" data-close-name-modal></div>
+        <div class="name-modal-card">
+            <button type="button" class="name-modal-close" data-close-name-modal aria-label="Close">×</button>
+            <div class="name-modal-icon">✨</div>
+            <h2 class="name-modal-title" id="nameModalTitle">What's your name?</h2>
+            <p class="name-modal-subtitle">We'll use it to personalize your chat session.</p>
+            <form id="nameForm" class="name-form" autocomplete="on" novalidate>
+                <input
+                    id="userNameInput"
+                    name="name"
+                    class="name-input"
+                    type="text"
+                    maxlength="40"
+                    minlength="1"
+                    required
+                    autocomplete="given-name"
+                    placeholder="e.g. Alex"
+                />
+                <button type="submit" class="cta-button cta-primary name-submit">
+                    <span class="button-content">Start Chatting</span>
+                    <div class="button-glow"></div>
+                </button>
+                <p class="name-error" id="nameError" role="alert" aria-live="polite"></p>
+            </form>
+        </div>
     </div>
 
     <script src="{{ url_for('static', filename='landing.js') }}"></script>

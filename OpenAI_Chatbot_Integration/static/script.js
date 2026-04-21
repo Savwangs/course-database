@@ -9,6 +9,9 @@ const sendButton = document.getElementById('sendButton');
 const clearButton = document.getElementById('clearButton');
 const conversationBadge = document.getElementById('conversationBadge');
 const exchangeCount = document.getElementById('exchangeCount');
+const welcomeGreeting = document.getElementById('welcomeGreeting');
+
+let currentUserName = null;
 
 // =====================================
 // Utility Functions
@@ -133,6 +136,49 @@ function showError(errorText) {
     scrollToBottom();
 }
 
+/**
+ * Escape HTML in a user-typed name before inserting into the DOM.
+ */
+function escapeName(name) {
+    return escapeHtml(String(name || '').trim()).slice(0, 60);
+}
+
+/**
+ * Send the user back to the landing page to enter their name.
+ */
+function redirectToLanding(reason) {
+    if (reason) {
+        try { sessionStorage.setItem('nameRequiredReason', reason); } catch (_) {}
+    }
+    window.location.href = '/';
+}
+
+/**
+ * Fetch the current user's screen name from the server.
+ * Returns a string or null.
+ */
+async function fetchUserName() {
+    try {
+        const res = await fetch('/session/me', { credentials: 'same-origin' });
+        if (!res.ok) return null;
+        const data = await res.json();
+        return (data && data.name) ? data.name : null;
+    } catch (err) {
+        console.warn('Could not fetch /session/me:', err);
+        return null;
+    }
+}
+
+/**
+ * Personalize the welcome message using the captured user name.
+ */
+function personalizeGreeting(name) {
+    if (!welcomeGreeting || !name) return;
+    const safe = escapeName(name);
+    welcomeGreeting.innerHTML =
+        `Welcome, <strong>${safe}</strong>! ✨ Ready to continue chatting — I can help you with:`;
+}
+
 // =====================================
 // API Communication
 // =====================================
@@ -197,6 +243,11 @@ async function sendQuery(query) {
         
         if (!response.ok) {
             const err = data.error;
+            const code = err && err.code;
+            if (response.status === 401 || code === 'NAME_REQUIRED') {
+                redirectToLanding('name_required');
+                return;
+            }
             const message = (err && (err.message || (typeof err === 'string' ? err : null))) || `Server error: ${response.status}`;
             showError(message || 'Something went wrong. Please try again.');
             return;
@@ -211,6 +262,10 @@ async function sendQuery(query) {
             await updateConversationStatus();
         } else {
             const err = data.error;
+            if (err && err.code === 'NAME_REQUIRED') {
+                redirectToLanding('name_required');
+                return;
+            }
             showError((err && err.message) || (typeof err === 'string' ? err : null) || 'Failed to get response');
         }
         
@@ -252,6 +307,11 @@ async function clearConversation() {
         
         if (!response.ok) {
             const err = data.error;
+            const code = err && err.code;
+            if (response.status === 401 || code === 'NAME_REQUIRED') {
+                redirectToLanding('name_required');
+                return;
+            }
             const message = (err && err.message) || `Server error: ${response.status}`;
             showError(message || 'Failed to clear conversation. Please try again.');
             return;
@@ -365,6 +425,16 @@ if (clearButton) {
  * Initialize the application
  */
 async function init() {
+    // Require a user screen name before rendering / enabling the chat.
+    // If none is set, bounce back to the landing page's name capture modal.
+    currentUserName = await fetchUserName();
+    if (!currentUserName) {
+        redirectToLanding('name_required');
+        return;
+    }
+
+    personalizeGreeting(currentUserName);
+
     // Focus on input
     userInput.focus();
     
@@ -393,7 +463,7 @@ async function init() {
         }, 500);
     }
     
-    console.log('✅ DVC Course Assistant initialized');
+    console.log('✅ DVC Course Assistant initialized for', currentUserName);
     console.log('💬 Conversation memory enabled - follow-up questions supported!');
 }
 
